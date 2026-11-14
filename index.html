@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="EcoMenu AI helps Cal Poly students discover campus meals using verified dining data." />
-    <title>CampusFuel SLO | Cal Poly</title>
+    <meta name="description" content="Campus Fuel helps you plan meals, track your nutrition and discover campus favorites." />
+    <title>Campus Fuel | Your daily fuel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
@@ -12,16 +12,16 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="CampusFuel SLO home"><span class="brand-mark">✦</span> CampusFuel <em>SLO</em></a>
+      <a class="brand" href="#top" aria-label="Campus Fuel home"><span class="brand-mark">✦</span> Campus Fuel</a>
       <nav class="app-tabs" aria-label="CampusFuel views">
-        <button class="app-tab active" data-view="dashboard" type="button" aria-current="page">Daily plan</button>
+        <button class="app-tab active" data-view="dashboard" type="button" aria-current="page">Your Fuel</button>
         <button class="app-tab" data-view="finder" type="button">Find meals</button>
-        <button class="app-tab" data-view="history" type="button">History</button>
+        <button class="app-tab" data-view="history" type="button">History</button><button class="app-tab" data-view="board" type="button">The Fuel Board</button>
       </nav>
-      <span class="campus-pill">Cal Poly SLO</span>
+      <button id="account-button" class="campus-pill" type="button">Sign in →</button>
     </header>
 
-    <main id="top">
+    <main id="top"><div id="account-status" class="account-status" role="status" aria-live="polite"></div><section id="guest-welcome" class="guest-welcome"><p class="eyebrow">GOOD FOOD. YOUR ROUTINE.</p><h1>Campus Fuel<span>Make room for your goals.</span></h1><p>Build your daily plan. Sign in to save your progress and find your campus favorites.</p></section><section id="campus-notice" class="account-notice" hidden></section>
       <section id="daily-summary" class="daily-dashboard daily-summary" aria-label="Today's nutrition summary">
         <p class="eyebrow summary-heading">TODAY'S PROGRESS</p>
         <div class="progress-grid">
@@ -35,7 +35,7 @@
       <section class="hero">
         <p class="eyebrow">FUEL YOUR CAMPUS ROUTINE</p>
         <h1>Keep your goals.<br /><i>Eat on campus.</i></h1>
-        <p class="hero-copy">CampusFuel helps Cal Poly students find campus meals that fit their protein, macro, and calorie goals.</p>
+        <p class="hero-copy">Campus Fuel helps students find campus meals that fit their protein, macro, and calorie goals.</p>
 
         <form id="search-form" class="search-shell">
           <label class="sr-only" for="meal-query">Describe the meal you want</label>
@@ -65,7 +65,7 @@
         <div class="dashboard-intro">
           <p class="eyebrow">TODAY'S PLAN</p>
           <h2 id="dashboard-title">Your fuel dashboard</h2>
-          <p>Start here: set and save your daily goals, then choose Find meals. Your plan stays saved in this browser until you change it.</p>
+          <p>Set your daily targets here. Sign in to save your plan across devices, then choose a school to explore its menus.</p>
         </div>
         <form id="goals-form" class="goals-form">
           <label>Daily calories <input id="goal-calories" type="number" min="0" step="1" placeholder="e.g. 2200" /></label>
@@ -133,7 +133,7 @@
       <section id="history-view" class="history-view" hidden aria-labelledby="history-title">
         <div class="history-heading">
           <div>
-            <p class="eyebrow">PRIVATE ON-DEVICE RECORD</p>
+            <p class="eyebrow">YOUR PRIVATE RECORD</p>
             <h1 id="history-title">Your fuel history</h1>
             <p>Review your logged campus meals and daily verified totals, newest first.</p>
           </div>
@@ -147,6 +147,8 @@
           <button class="go-finder" type="button">Find meals</button>
         </div>
       </section>
+      <section id="account-view" class="fuel-panel" hidden></section>
+      <section id="board-view" class="fuel-panel" hidden></section>
     </main>
 
     <dialog id="meal-detail-dialog" class="meal-detail-dialog" aria-labelledby="meal-detail-title">
@@ -155,14 +157,14 @@
     </dialog>
     <div id="log-confirmation" class="log-confirmation" role="status" aria-live="polite" aria-atomic="true" hidden></div>
 
+    <dialog id="auth-dialog" class="fuel-dialog" aria-labelledby="auth-title"><button class="dialog-close" data-close="auth-dialog" aria-label="Close sign in">×</button><p class="eyebrow">YOUR NEXT CHAPTER</p><h2 id="auth-title">Keep your fuel flowing.</h2><p>Save your plan, follow your progress, and discover your campus.</p><p id="auth-setup" class="account-notice" hidden>Sign-in is awaiting the Campus Fuel Supabase configuration. You can still draft your plan.</p><button id="google-login" class="primary wide">Continue with Google</button><p class="auth-divider">or use your email</p><form id="email-form"><label>Email address<input id="auth-email" type="email" autocomplete="email" required placeholder="you@example.com"></label><button class="primary wide">Email me a code</button></form><form id="code-form" hidden><label>Code from your email<input id="auth-code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6,10}" required></label><button class="primary wide">Verify and continue</button></form><p id="auth-message" role="status" aria-live="polite"></p><p class="fine-print">Your school is selected after sign-in. No school email required. <button data-legal="terms" class="text-button">Terms</button> · <button data-legal="privacy" class="text-button">Privacy</button></p></dialog>
+    <dialog id="legal-dialog" class="fuel-dialog" aria-labelledby="legal-title"><button class="dialog-close" data-close="legal-dialog" aria-label="Close document">×</button><div id="legal-content"></div></dialog>
     <footer>
-      <strong>CampusFuel SLO</strong>
+      <strong>Campus Fuel</strong>
       <p>Showing a selected dining snapshot. Availability may change.</p>
-      <p id="coverage-note"></p>
+      <p id="coverage-note"></p><p><button class="text-button" data-legal="terms">Terms</button> · <button class="text-button" data-legal="privacy">Privacy</button></p>
     </footer>
 
-    <script src="data/meals.js"></script>
-    <script src="data/meal-ideas.js"></script>
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
