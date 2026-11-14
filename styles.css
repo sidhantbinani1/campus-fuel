@@ -36,3 +36,25 @@ footer { padding: 35px clamp(22px, 6vw, 92px); color: #dcefe1; background: var(-
 .browse-category { margin-top: 10px; padding: 0 15px; border: 1px solid var(--line); border-radius: 12px; background: #fffefa; }.browse-category summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 15px 0; color: #315e3e; cursor: pointer; font-weight: 700; }.browse-category summary::before { content: "+"; font-size: 20px; font-weight: 400; }.browse-category[open] summary::before { content: "−"; }.browse-category summary span { flex: 1; }.browse-category summary small { color: var(--muted); font-size: 11px; font-weight: 400; }.browse-category .meal-grid { margin: 0 0 16px; }
 @media (max-width: 800px) { .meal-grid { grid-template-columns: 1fr 1fr; } .hero { padding-top: 72px; } .daily-dashboard { margin: 0; border-radius: 0; }.dashboard-intro { align-items: start; flex-direction: column; gap: 12px; }.dashboard-intro p:last-child { margin: 0; }.goals-form { grid-template-columns: 1fr 1fr; }.goals-form label:nth-child(3), .goals-form button { grid-column: span 2; }.best-match { grid-template-columns: auto 1fr; }.best-stats, .best-compare { grid-column: 2; }.logged-meals { align-items: start; flex-direction: column; } }
 @media (max-width: 540px) { .site-header { height: 64px; padding: 0 14px; }.brand { font-size: 17px; }.campus-pill { display: none; }.app-tabs { margin-left: auto; }.app-tab { padding: 6px 8px; font-size: 11px; }.search-shell { padding: 7px; }.search-shell input { font-size: 14px; }.search-shell button { padding: 11px; font-size: 0; }.search-shell button span { font-size: 19px; margin: 0; }.meal-grid { grid-template-columns: 1fr; }.section-heading, .comparison-heading { align-items: start; flex-direction: column; }.filters { align-items: flex-end; }.filters label:not(.toggle-label) { flex: 1; }.filters select { min-width: 100%; }.history-heading, .history-date { align-items: start; flex-direction: column; }.history-totals { grid-template-columns: 1fr; } }
+
+/* Keep goal setup first on the plan tab, and the daily summary first on Find meals. */
+main { display: flex; flex-direction: column; }
+#dashboard-view { order: 0; width: 100%; }
+#daily-summary { order: 1; }
+#finder-view { order: 2; }
+#finder-results { order: 3; }
+#history-view { order: 4; width: 100%; }
+
+/* All cells in a comparison row always stay aligned, including on phones. */
+.compare-head, .compare-row { min-width: 0; grid-template-columns: minmax(0, .8fr) repeat(2, minmax(0, 1fr)); }
+.one-meal .compare-head, .one-meal .compare-row { grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); }
+.compare-head > *, .compare-row > * { min-width: 0; overflow-wrap: anywhere; }
+.compare-head > *:last-child { border-right: 0; }
+.comparison-help { margin: -12px 0 16px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.compare-fit { display: block; margin-top: 8px; color: #28613b; font-size: 11px; font-weight: 700; line-height: 1.35; }
+.comparison-advice { margin: 14px 0 0; color: #49665a; font-size: 13px; line-height: 1.55; }
+.stats > div { min-width: 0; }.stats strong { overflow-wrap: anywhere; }
+.partial-note { color: #755b27; font-size: 11px; line-height: 1.4; margin: -5px 0 12px; }
+.log-confirmation { position: fixed; z-index: 100; left: 50%; bottom: max(22px, env(safe-area-inset-bottom)); transform: translateX(-50%); width: max-content; max-width: calc(100vw - 32px); padding: 13px 18px; border: 1px solid #a6d29f; border-radius: 12px; color: #173b27; background: #e6f8d1; box-shadow: 0 8px 25px rgba(23, 51, 45, .2); font-size: 14px; font-weight: 700; text-align: center; }
+.log-confirmation[hidden] { display: none; }
+@media (max-width: 540px) { .compare-head > *, .compare-row > * { padding: 11px 8px; } .compare-row > span, .compare-head > span, .compare-row strong, .compare-head strong { font-size: 12px; } }

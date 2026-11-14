@@ -19,6 +19,7 @@ jq '[
     servingSize,
     calories,
     proteinGrams,
+    proteinDisplay: (if .proteinGrams == null and (nutrient(["Protein", "Protein (g)"]) | type) == "string" and (nutrient(["Protein", "Protein (g)"]) | ascii_downcase | test("^less than 1 gram$")) then "Less than 1g" else null end),
     fatGrams,
     carbsGrams,
     fiberGrams: nutrient(["Dietary Fiber", "Dietary Fiber (g)"]),

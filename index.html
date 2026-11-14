@@ -14,8 +14,8 @@
     <header class="site-header">
       <a class="brand" href="#top" aria-label="CampusFuel SLO home"><span class="brand-mark">✦</span> CampusFuel <em>SLO</em></a>
       <nav class="app-tabs" aria-label="CampusFuel views">
-        <button class="app-tab active" data-view="finder" type="button">Find meals</button>
-        <button class="app-tab" data-view="dashboard" type="button">Daily plan</button>
+        <button class="app-tab active" data-view="dashboard" type="button" aria-current="page">Daily plan</button>
+        <button class="app-tab" data-view="finder" type="button">Find meals</button>
         <button class="app-tab" data-view="history" type="button">History</button>
       </nav>
       <span class="campus-pill">Cal Poly SLO</span>
@@ -31,7 +31,7 @@
         <div id="optional-progress" class="optional-progress" aria-live="polite"></div>
         <div class="logged-meals"><div><strong>Today's meal log</strong><p id="log-note">Log a meal to update your plan.</p></div><div id="log-list" class="log-list"></div><button id="clear-log" class="clear-button" type="button">Clear today</button></div>
       </section>
-      <div id="finder-view">
+      <div id="finder-view" hidden>
       <section class="hero">
         <p class="eyebrow">FUEL YOUR CAMPUS ROUTINE</p>
         <h1>Keep your goals.<br /><i>Eat on campus.</i></h1>
@@ -61,11 +61,11 @@
       </section>
       </div>
 
-      <section id="dashboard-view" class="daily-dashboard plan-view" aria-labelledby="dashboard-title" hidden>
+      <section id="dashboard-view" class="daily-dashboard plan-view" aria-labelledby="dashboard-title">
         <div class="dashboard-intro">
           <p class="eyebrow">TODAY'S PLAN</p>
           <h2 id="dashboard-title">Your fuel dashboard</h2>
-          <p>Set your targets once and they stay saved in this browser until you change them. Logged meals update your on-device totals.</p>
+          <p>Start here: set and save your daily goals, then choose Find meals. Your plan stays saved in this browser until you change it.</p>
         </div>
         <form id="goals-form" class="goals-form">
           <label>Daily calories <input id="goal-calories" type="number" min="0" step="1" placeholder="e.g. 2200" /></label>
@@ -89,7 +89,7 @@
         </details>
       </section>
 
-      <div id="finder-results">
+      <div id="finder-results" hidden>
       <section class="discover-section" aria-labelledby="discover-title">
         <div class="section-heading">
           <div>
@@ -125,6 +125,7 @@
           </div>
           <button id="close-comparison" class="clear-button" type="button">Clear comparison</button>
         </div>
+        <p class="comparison-help">Compare up to two meals. To choose a different meal, deselect one above or clear the comparison.</p>
         <div id="comparison-content"></div>
       </section>
       </div>
@@ -152,6 +153,7 @@
       <button id="close-meal-detail" class="detail-close" type="button" aria-label="Close meal details">×</button>
       <div id="meal-detail-content"></div>
     </dialog>
+    <div id="log-confirmation" class="log-confirmation" role="status" aria-live="polite" aria-atomic="true" hidden></div>
 
     <footer>
       <strong>CampusFuel SLO</strong>
