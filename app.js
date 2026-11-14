@@ -455,6 +455,7 @@ function updatePlanStatus(status, message) {
 function renderGoalSummary() {
   const selected = OPTIONAL_NUTRIENTS.filter(({ key }) => Object.hasOwn(planDraft.optionalGoals, key));
   $("#optional-goal-count").textContent = `${selected.length} selected`;
+  $("#bento-goal-summary").textContent = selected.length ? selected.map(n => n.label).join(" · ") : "No extra targets yet";
   $("#plan-goal-count").textContent = `${selected.length + Number(planDraft.calories !== "") + Number(planDraft.protein !== "")} daily goals`;
   $("#optional-goal-summary").innerHTML = selected.map(({ key, label, unit }) => `<span>${label} <b>${text(planDraft.optionalGoals[key], "—")}${unit}</b></span>`).join("") || '<span class="goal-summary-empty">No extra targets yet</span>';
 }
@@ -1085,11 +1086,17 @@ $("#meal-query").addEventListener("input", (event) => {
 });
 [["#goal-calories", "calories"], ["#goal-protein", "protein"]].forEach(([selector, key]) => $(selector).addEventListener("input", event => { planDraft[key] = event.target.value; updatePlanStatus("dirty", "Unsaved changes — select Save my plan."); renderGoalSummary(); }));
 [["#pref-vegetarian", "vegetarian"], ["#pref-vegan", "vegan"], ["#pref-avoiding-gluten", "avoidingGluten"]].forEach(([selector, key]) => $(selector).addEventListener("change", event => { planDraft[key] = event.target.checked; updatePlanStatus("dirty", "Unsaved changes — select Save my plan."); }));
+document.querySelectorAll("[data-plan-category]").forEach(button => button.addEventListener("click", () => {
+  $("#goal-details").open = true;
+  planCategory = button.dataset.planCategory;
+  renderOptionalGoals();
+  $("#goal-details").scrollIntoView({ behavior: "smooth", block: "nearest" });
+}));
 document.querySelectorAll(".goal-category").forEach(button => button.addEventListener("click", () => { planCategory = button.dataset.category; renderOptionalGoals(); }));
 $("#goals-form").addEventListener("submit", (event) => {
   event.preventDefault();
   const invalid = OPTIONAL_NUTRIENTS.find(({key}) => Object.hasOwn(planDraft.optionalGoals,key) && (planDraft.optionalGoals[key] === "" || !Number.isFinite(Number(planDraft.optionalGoals[key])) || Number(planDraft.optionalGoals[key]) < 0));
-  if(invalid){planCategory=Object.keys(GOAL_CATEGORIES).find(category=>GOAL_CATEGORIES[category].includes(invalid.key));renderOptionalGoals();updatePlanStatus("error",`Enter a non-negative ${invalid.label} target before saving.`);document.querySelector(`[data-nutrient="${invalid.key}"]`)?.focus();return;}
+  if(invalid){$("#goal-details").open=true;planCategory=Object.keys(GOAL_CATEGORIES).find(category=>GOAL_CATEGORIES[category].includes(invalid.key));renderOptionalGoals();updatePlanStatus("error",`Enter a non-negative ${invalid.label} target before saving.`);document.querySelector(`[data-nutrient="${invalid.key}"]`)?.focus();return;}
   state.goals=structuredClone(planDraft);
   state.planMessage=account?.user ? "Saving your plan…" : "Draft kept in this browser. Sign in to save your plan.";
   state.planStatus="dirty";

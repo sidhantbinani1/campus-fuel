@@ -27,6 +27,7 @@ test("account UI loads private state, onboards, charts, settings, gated rankings
     revision = 0;
   let snap = { goals: { calories: "2100" }, entries: [], dailyGoals: {} };
   const calls = [];
+  let savedPayload;
   const fake = {
     auth: {
       onAuthStateChange(fn) {
@@ -59,6 +60,7 @@ test("account UI loads private state, onboards, charts, settings, gated rankings
         return {};
       }
       if (name === "save_fuel_state") {
+        savedPayload = structuredClone(args);
         assert.equal(args.expected_revision, revision);
         return { data: ++revision };
       }
@@ -118,6 +120,14 @@ test("account UI loads private state, onboards, charts, settings, gated rankings
   assert.equal(document.title, 'Poly Plates | Your daily fuel');
   for (const view of ["dashboard", "finder", "history", "board"]) assert.equal(account.allowView(view), true);
   assert.equal(document.body.classList.contains("setup-required"), false);
+  const fullPlan = {calories:"2250",protein:"145",vegetarian:true,vegan:false,avoidingGluten:true,optionalGoals:{fiberGrams:"28",sodiumMilligrams:"2100",vitaminCMilligrams:"85.5"}};
+  snap.goals=fullPlan;
+  snap.dailyGoals={"2026-11-13":{calories:"2000",protein:"130"}};
+  account.savePlan();
+  await settle();
+  assert.deepEqual(savedPayload.p_goals,fullPlan);
+  assert.deepEqual(savedPayload.p_daily_goals,snap.dailyGoals);
+  assert.deepEqual(savedPayload.p_entries,[]);
   account.view("account");
   assert.ok(document.querySelector(".chart-bars"));
   assert.equal(document.querySelectorAll(".metric-card").length, 4);
