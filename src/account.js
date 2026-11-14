@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "./public-config.js";
 import {
   SCHOOLS,
   VERSION,
@@ -9,16 +10,10 @@ import {
 } from "./model.js";
 import { legal } from "./legal.js";
 const $ = (s) => document.querySelector(s);
-const configured = Boolean(
-  import.meta.env?.VITE_SUPABASE_URL &&
-    import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY,
-);
-const defaultClient = configured
-  ? createClient(
-      import.meta.env?.VITE_SUPABASE_URL,
-      import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY,
-    )
-  : null;
+const supabaseUrl = import.meta.env?.VITE_SUPABASE_URL || SUPABASE_URL;
+const supabaseKey = import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY || SUPABASE_PUBLISHABLE_KEY;
+const configured = Boolean(supabaseUrl && supabaseKey);
+const defaultClient = configured ? createClient(supabaseUrl, supabaseKey) : null;
 const blank = () => ({
   goals: { calories: "", protein: "", optionalGoals: {} },
   entries: [],
