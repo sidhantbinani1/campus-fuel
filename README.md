@@ -11,10 +11,11 @@ Ask Codex: **“Start the EcoMenu site locally and show me the preview.”**
 Or, from this folder, run:
 
 ```bash
-python3 -m http.server 4173
+npm ci
+npm run dev -- --port 4173
 ```
 
-Then visit `http://localhost:4173` in your browser.
+Then visit `http://127.0.0.1:4173` in your browser.
 
 ## Data integrity
 
@@ -33,3 +34,7 @@ The website also generates meal ideas from the imported components in `data/meal
 - A real AI API connection (the current natural-language interpretation is local and rule-based)
 - Expanded verified meal data
 - Deployment
+
+## Accounts, dashboards and The Fuel Board
+
+This feature branch adds Google/email-code authentication through Supabase, school onboarding, account-backed history and nutrition charts, and campus meal rankings. See [SETUP.md](SETUP.md) for database migrations, Google/SMTP setup, Vercel preview steps and verification limits. Run `npm test` and `npm run build` before review.
