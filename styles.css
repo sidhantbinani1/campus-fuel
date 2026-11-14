@@ -164,3 +164,69 @@ main { display: flex; flex-direction: column; }
 .plan-view .save-plan.is-saved { background:#d5f1cf; }
 @media(max-width:900px) { .bento-goals{grid-template-columns:1fr 1fr;} .bento-extras{grid-column:1/-1;min-height:0;} .bento-extras .bento-tile-top{margin-bottom:14px;} }
 @media(max-width:540px) { #dashboard-view.plan-view{padding:6px 18px 24px;} .bento-heading{align-items:flex-start;} .bento-heading h1{font-size:27px;} .bento-heading>.plan-count{display:none;} .bento-goals{gap:10px;} .bento-tile{padding:18px;min-height:220px;} .bento-tile>input{font-size:31px;} .bento-tile-top>small{font-size:7px;} .bento-extras{min-height:0;} .bento-extras h2{font-size:20px;} .plan-view .plan-actions{flex-direction:column-reverse;align-items:stretch;} .plan-view .save-plan{width:100%;} }
+
+/* One forest / sage / cream palette across planning, progress and discovery. */
+:root { --forest:#294d38;--sage:#e4efdf;--soft-sage:#f3f7ed;--lime:#dcebd5;--blue:#e4efdf; }
+.bento-protein { background:var(--sage);color:var(--forest); }
+.bento-calories { background:var(--forest); }
+.bento-heading .plan-count,.board-count,.plan-count { background:var(--sage);color:#4e6f43; }
+.bento-goals { grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch; }
+#custom-goal-cards { display:contents; }
+.custom-goal-card { background:var(--soft-sage);border:1px solid #d5e2cd;color:var(--forest); }
+.custom-goal-card input::placeholder { font-size:26px; }
+.bento-tile-top button { display:grid;place-items:center;width:34px;height:34px;padding:0;border:1px solid #d4e0ca;border-radius:50%;background:#edf3e7;color:#597c47;font-size:25px;font-weight:400; }
+.bento-extras .bento-tile-top { margin-bottom:23px; }
+#goal-details { margin-top:18px;border-top:1px solid #e1e8d8;padding-top:13px; }
+#goal-details>.plan-count,#goal-details>.plan-help,#goal-details .goal-tracking { display:none; }
+#goal-details .goal-explorer-layout { display:block;margin-top:0; }
+#goal-details .goal-category-heading { font-size:12px;padding-bottom:9px; }
+#goal-details .goal-category-heading strong { font-size:12px; }
+.plan-view #optional-goal-picker { display:grid;grid-template-columns:1fr;gap:6px;margin-top:9px; }
+.nutrient-choice { display:flex;align-items:center;gap:9px;border:1px solid #dce5d3;border-radius:8px;background:#fafcf5;padding:9px;color:#4c6d40;cursor:pointer; }
+.nutrient-choice>span:first-of-type { flex:1;font-size:12px; }
+.nutrient-choice small { font-size:10px;color:#8b9a7e;margin-left:6px; }
+.nutrient-choice input { width:14px;height:14px;accent-color:#527846; }
+.nutrient-choice:has(input:checked) { background:var(--sage);border-color:#a5be90; }
+.plan-view .save-plan.is-saved { background:#c8e0b6;color:#2a5131;border:1px solid #9dbd83;box-shadow:none; }
+.plan-view .save-plan { min-width:155px; }
+#daily-summary.daily-summary { padding:8px clamp(22px,6vw,92px);gap:24px; }
+.progress-scroll { display:flex;align-items:center;gap:24px;min-width:0;flex:1;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#b6cba5 transparent;padding-bottom:3px; }
+#daily-summary .progress-grid,#daily-summary .optional-progress { display:contents; }
+#daily-summary .summary-heading { flex:0 0 auto; }
+#daily-summary .progress-card,#daily-summary .optional-progress-card { flex:0 0 auto;width:170px;min-width:170px;padding-left:16px;border-left:1px solid #e0e8d7; }
+#daily-summary .progress-card small,#daily-summary .optional-progress-card small { display:inline; }
+#daily-summary .logged-meals { margin-left:0; }
+#finder-view .finder-with-assistant { display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:40px;align-items:start;background:radial-gradient(ellipse at 15% 80%,#dcebd5,transparent 60%),linear-gradient(110deg,#eef6e7,#faf9f3); }
+.finder-copy { min-width:0;align-self:center; }
+#finder-view .hero h1 { font-size:clamp(38px,4.5vw,62px); }
+.finder-copy .hero-copy { max-width:560px;font-size:14px;line-height:1.65; }
+.finder-copy .search-shell { width:100%;max-width:none; }
+.finder-copy .quick-browse { max-width:none; }
+.finder-copy .browse-group { flex-wrap:wrap; }
+.meal-assistant { background:#fffefa;border:1px solid #d8e3ce;border-radius:18px;padding:22px;box-shadow:0 8px 25px #294d3806;min-width:0; }
+.assistant-heading { display:flex;align-items:center;gap:12px;justify-content:space-between; }
+.assistant-heading .eyebrow { font-size:8px;letter-spacing:1px;margin:0 0 7px; }
+.assistant-heading h2 { font:500 24px/1.2 Fraunces,Georgia,serif;margin:0;letter-spacing:-.5px; }
+.assistant-reset { border:0;background:none;color:#6e875d;font-size:10px;padding:0;text-decoration:underline; }
+.assistant-note { color:#8b987d;font-size:10px;line-height:1.6;margin:9px 0 0; }
+.assistant-prompts { display:flex;gap:6px;flex-wrap:wrap;margin:15px 0; }
+.assistant-prompts button { font-size:10px;border:1px solid #d8e3cd;background:var(--soft-sage);color:#678053;border-radius:20px;padding:7px 9px; }
+.assistant-messages { max-height:320px;overflow-y:auto;display:flex;flex-direction:column;gap:12px;scrollbar-width:thin; }
+.assistant-message { padding:12px;border-radius:12px;background:#f1f6e9;color:#527043;max-width:95%;font-size:12px;line-height:1.65; }
+.assistant-message p { margin:0; }
+.assistant-message.user { background:#e2edd8;align-self:flex-end;color:#3d6035; }
+.assistant-meal { display:block;width:100%;text-align:left;padding:10px;margin-top:8px;border:1px solid #d4e0c8;border-radius:8px;background:#fffefa;color:#3e6035; }
+.assistant-meal strong { display:block;font-size:11px; }
+.assistant-meal small { display:block;color:#819471;font-size:9px;margin-top:3px; }
+.assistant-form { display:flex;align-items:center;gap:8px;background:#f5f8ef;border:1px solid #d8e3cd;border-radius:10px;padding:6px;margin-top:15px; }
+.assistant-form input { min-width:0;flex:1;border:0;padding:8px;background:none;font-size:11px;color:#42613a; }
+.assistant-form button { border:0;border-radius:8px;background:#416c48;color:white;width:32px;height:32px; }
+.assistant-form button:disabled { opacity:.5; }
+@media(max-width:1000px) { #finder-view .finder-with-assistant { gap:24px;grid-template-columns:minmax(0,1fr) minmax(290px,.9fr);padding:32px 24px;} }
+@media(max-width:800px) { #finder-view .finder-with-assistant{grid-template-columns:1fr;} .finder-copy{text-align:center;} .finder-copy .quick-browse{justify-content:center;} .finder-copy .hero-copy{margin:16px auto 22px;} .meal-assistant{width:100%;max-width:600px;margin:0 auto;} .bento-goals{grid-template-columns:repeat(2,minmax(0,1fr));} .bento-extras{grid-column:auto;} }
+@media(max-width:540px) { .bento-goals{grid-template-columns:1fr;} .bento-tile{min-height:230px;} #daily-summary.daily-summary{height:56px;flex-wrap:nowrap;padding:6px 18px;gap:14px;} #daily-summary .summary-heading{flex-basis:auto;} .progress-scroll{gap:18px;} #daily-summary .progress-card,#daily-summary .optional-progress-card{width:160px;min-width:160px;} #daily-summary .logged-meals{flex-shrink:0;} }
+.suggest-chip { background:var(--sage);border-color:#b4c9a4;color:var(--forest); }
+.assistant-form input:focus-visible { outline-offset:1px; }
+.plan-view .bento-extras #goal-details { background:transparent;padding:13px 0 0;margin:18px 0 0;border-radius:0; }
+#daily-summary .progress-card,#daily-summary .optional-progress-card { width:max-content;min-width:170px; }
+@media(max-width:540px) { #daily-summary .progress-card,#daily-summary .optional-progress-card {width:max-content;min-width:160px;} }

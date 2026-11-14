@@ -159,12 +159,13 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
       if (error) throw error;
       if (currentEpoch !== epoch) return;
       revision = next;
-      bridge.message("Plan saved to your account.");
+      bridge.message("Plan saved to your account.", "saved");
       status("All changes saved.");
       if (currentView === "account") renderCharts();
     } catch (e) {
       if (currentEpoch !== epoch) return;
       dirty = true;
+      bridge.message(`Not saved: ${e.message}. Retry when ready.`, "error");
       conflict = /revision conflict/i.test(e.message);
       status(
         conflict
@@ -707,7 +708,7 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
           "fuel-pending-plan",
           JSON.stringify(bridge.snapshot().goals),
         );
-        auth();
+        bridge.message("Saved on this device. Sign in to sync across devices.", "saved");
       } else if (requireUser()) {
         changed();
         flush();

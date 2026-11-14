@@ -108,3 +108,24 @@ No database migration, storage-key rename, institution license, ordering-provide
 integration, or hosted deployment is included in this change. The existing 22-CSU
 school directory remains in place; broader school coverage needs a separate change.
 Configure a real inquiry backend and reviewed privacy copy before accepting leads.
+
+## Meal assistant provider seam
+
+`src/meal-assistant.js` separates the UI (`mountMealAssistant`) from recommendations
+(`menuProvider`). The default provider is local, deterministic menu matching; no
+external model calls or credentials are used.
+
+To connect an AI service later, pass an async `provider` to `mountMealAssistant` in
+`app.js`. It receives `{ message, history, catalog, context }` and returns
+`{ text: string, mealIds: string[] }`. `context` contains the selected school and
+user-entered goals. History is in memory only and clears when account data changes.
+The UI resolves returned IDs against the current campus catalog, limits cards to
+three, and renders provider text as plain text.
+
+Use an authenticated server endpoint for the future provider. Keep model keys on
+the server (never in `VITE_` variables). Resolve the campus catalog server-side,
+validate returned meal IDs and numeric facts, and retain the same policy: recommend
+meals using explicit user inputs, never prescribe calorie or nutrient targets.
+Do not silently relax exclusions or invent menus for unsupported campuses. Unknown
+nutrition values must stay unknown. Return the response shape above; no UI rewrite
+is needed. The server should also enforce request limits and account authorization.

@@ -3,7 +3,9 @@ import "./data/meal-ideas.js";
 import "./styles.css";
 import "./src/account.css";
 import { createAccount } from "./src/account.js";
+import { mountMealAssistant } from "./src/meal-assistant.js";
 let account;
+let mealAssistant;
 const appStorage = {
   getItem: (key) => localStorage.getItem(key),
   setItem(key, value) {
@@ -321,16 +323,6 @@ function filteredMeals(applyPreferences = true) {
     )
       return false;
     if (state.diet && meal[state.diet] !== true) return false;
-    if (applyPreferences && state.goals.vegetarian && meal.vegetarian !== true)
-      return false;
-    if (applyPreferences && state.goals.vegan && meal.vegan !== true)
-      return false;
-    if (
-      applyPreferences &&
-      state.goals.avoidingGluten &&
-      meal.avoidingGluten !== true
-    )
-      return false;
     return (
       !words.length ||
       words.some((word) =>
@@ -358,8 +350,7 @@ function mealReason(meal) {
     reasons.push(`${meal.proteinGrams}g protein, meeting your goal`);
   if (state.diet && meal[state.diet] === true)
     reasons.push(`verified ${state.diet}`);
-  if (state.goals.avoidingGluten && meal.avoidingGluten === true)
-    reasons.push("verified avoiding-gluten label");
+
   return reasons.length
     ? reasons.join(" · ")
     : meal.isMealIdea
@@ -448,7 +439,7 @@ function updatePlanStatus(status, message) {
   state.planStatus = status;
   state.planMessage = message;
   $("#plan-status").textContent = message;
-  $("#save-plan").textContent = status === "saved" ? "✓ Plan saved" : "Save my plan ↗";
+  $("#save-plan").textContent = status === "saved" ? "✓ Saved" : status === "saving" ? "Saving…" : "Save my plan ↗";
   $("#save-plan").classList.toggle("is-saved", status === "saved");
 }
 
@@ -456,15 +447,29 @@ function renderGoalSummary() {
   const selected = OPTIONAL_NUTRIENTS.filter(({ key }) => Object.hasOwn(planDraft.optionalGoals, key));
   $("#optional-goal-count").textContent = `${selected.length} selected`;
   $("#bento-goal-summary").textContent = selected.length ? selected.map(n => n.label).join(" · ") : "No extra targets yet";
-  $("#plan-goal-count").textContent = `${selected.length + Number(planDraft.calories !== "") + Number(planDraft.protein !== "")} daily goals`;
+  $("#plan-goal-count").textContent = `${selected.length + Number(planDraft.calories !== "") + Number(planDraft.protein !== "")} daily goal${selected.length + Number(planDraft.calories !== "") + Number(planDraft.protein !== "") === 1 ? "" : "s"}`;
   $("#optional-goal-summary").innerHTML = selected.map(({ key, label, unit }) => `<span>${label} <b>${text(planDraft.optionalGoals[key], "—")}${unit}</b></span>`).join("") || '<span class="goal-summary-empty">No extra targets yet</span>';
 }
 
 function renderOptionalGoals() {
   $("#goal-category-title").textContent = planCategory;
   document.querySelectorAll(".goal-category").forEach(button => { const selected = button.dataset.category === planCategory; button.classList.toggle("active", selected); button.setAttribute("aria-pressed", String(selected)); });
-  $("#optional-goal-picker").innerHTML = OPTIONAL_NUTRIENTS.filter(({ key }) => GOAL_CATEGORIES[planCategory].includes(key)).map(({ key, label, unit }) => { const selected = Object.hasOwn(planDraft.optionalGoals, key); return `<div class="goal-tile ${selected ? "selected" : ""}"><label><input class="optional-goal-toggle" type="checkbox" value="${key}" ${selected ? "checked" : ""} /><span class="goal-check">${selected ? "✓" : "+"}</span><span><strong>${label}</strong><small>Daily target · ${unit}</small></span></label>${selected ? `<label class="goal-tile-input"><span class="sr-only">${label} daily target (${unit})</span><input class="optional-goal-value" data-nutrient="${key}" type="number" min="0" step="any" value="${planDraft.optionalGoals[key]}" placeholder="0" /><small>${unit}</small></label>` : ""}</div>`; }).join("");
-  document.querySelectorAll(".optional-goal-toggle").forEach(input => input.addEventListener("change", () => { if (input.checked) planDraft.optionalGoals[input.value] = ""; else delete planDraft.optionalGoals[input.value]; updatePlanStatus("dirty", "Unsaved changes — select Save my plan."); renderOptionalGoals(); }));
+  $("#optional-goal-picker").innerHTML = OPTIONAL_NUTRIENTS.filter(({key}) => GOAL_CATEGORIES[planCategory].includes(key)).map(({key,label,unit}) => {
+    const selected = Object.hasOwn(planDraft.optionalGoals,key);
+    return `<label class="nutrient-choice"><input class="optional-goal-toggle" type="checkbox" aria-label="${label} target (${unit})" value="${key}" ${selected ? "checked" : ""}><span>${label}<small>${unit}</small></span><span aria-hidden="true">${selected ? "✓" : "+"}</span></label>`;
+  }).join("");
+  $("#custom-goal-cards").innerHTML = OPTIONAL_NUTRIENTS.filter(({key}) => Object.hasOwn(planDraft.optionalGoals,key)).map(({key,label,unit}) => `<section class="bento-tile custom-goal-card"><div class="bento-tile-top"><span aria-hidden="true">✦</span><button type="button" data-remove-nutrient="${key}" aria-label="Remove ${label} goal">×</button></div><label for="target-${key}">Daily ${label.toLowerCase()}</label><input id="target-${key}" class="optional-goal-value" data-nutrient="${key}" type="number" min="0" step="any" value="${planDraft.optionalGoals[key]}" placeholder="Set your target"><p>${unit} per day · your target</p></section>`).join("");
+  document.querySelectorAll(".optional-goal-toggle").forEach(input => input.addEventListener("change", () => {
+    if (input.checked) planDraft.optionalGoals[input.value] = "";
+    else delete planDraft.optionalGoals[input.value];
+    updatePlanStatus("dirty", "Unsaved changes — select Save my plan.");
+    renderOptionalGoals();
+    if (input.checked) document.querySelector(`[data-nutrient="${input.value}"]`)?.focus();
+  }));
+  document.querySelectorAll("[data-remove-nutrient]").forEach(button => button.onclick = () => {
+    delete planDraft.optionalGoals[button.dataset.removeNutrient];
+    updatePlanStatus("dirty", "Unsaved changes — select Save my plan."); renderOptionalGoals();
+  });
   document.querySelectorAll(".optional-goal-value").forEach(input => input.addEventListener("input", () => { planDraft.optionalGoals[input.dataset.nutrient] = input.value; updatePlanStatus("dirty", "Unsaved changes — select Save my plan."); renderGoalSummary(); }));
   renderGoalSummary();
   renderOptionalProgress();
@@ -510,7 +515,7 @@ function renderDashboard() {
           `<span>${meal.name}<button class="remove-log" data-entry-id="${entry.entryId}" type="button" aria-label="Remove ${meal.name} from today's log">×</button></span>`,
       )
       .join("") || '<span class="empty-log">Nothing logged yet</span>';
-  $("#plan-status").textContent = state.planMessage;
+  updatePlanStatus(state.planStatus || "idle", state.planMessage);
   renderOptionalGoals();
 }
 
@@ -953,8 +958,8 @@ function render() {
     button.setAttribute("aria-pressed", String(selected));
   });
   $("#browse-note").textContent = active
-    ? "Showing results matching your search and saved dietary preferences. Choose a category to browse."
-    : "Choose a restaurant and open a category to explore. This full browse is not filtered by saved dietary preferences; check labels before choosing.";
+    ? "Showing results matching your search. Choose a category to browse."
+    : "Choose a restaurant and open a category to explore. Check menu labels before choosing.";
   $("#empty-title").textContent =
     state.location && state.mealType
       ? `No verified ${state.mealType} options at ${state.location} yet.`
@@ -1086,20 +1091,26 @@ $("#meal-query").addEventListener("input", (event) => {
 });
 [["#goal-calories", "calories"], ["#goal-protein", "protein"]].forEach(([selector, key]) => $(selector).addEventListener("input", event => { planDraft[key] = event.target.value; updatePlanStatus("dirty", "Unsaved changes — select Save my plan."); renderGoalSummary(); }));
 [["#pref-vegetarian", "vegetarian"], ["#pref-vegan", "vegan"], ["#pref-avoiding-gluten", "avoidingGluten"]].forEach(([selector, key]) => $(selector).addEventListener("change", event => { planDraft[key] = event.target.checked; updatePlanStatus("dirty", "Unsaved changes — select Save my plan."); }));
+$("#add-nutrient").onclick = () => {
+  const expanded = $("#goal-details").hidden;
+  $("#goal-details").hidden = !expanded;
+  $("#add-nutrient").setAttribute("aria-expanded", String(expanded));
+};
 document.querySelectorAll("[data-plan-category]").forEach(button => button.addEventListener("click", () => {
-  $("#goal-details").open = true;
+  $("#goal-details").hidden = false;
+  $("#add-nutrient").setAttribute("aria-expanded", "true");
   planCategory = button.dataset.planCategory;
   renderOptionalGoals();
-  $("#goal-details").scrollIntoView({ behavior: "smooth", block: "nearest" });
+
 }));
 document.querySelectorAll(".goal-category").forEach(button => button.addEventListener("click", () => { planCategory = button.dataset.category; renderOptionalGoals(); }));
 $("#goals-form").addEventListener("submit", (event) => {
   event.preventDefault();
   const invalid = OPTIONAL_NUTRIENTS.find(({key}) => Object.hasOwn(planDraft.optionalGoals,key) && (planDraft.optionalGoals[key] === "" || !Number.isFinite(Number(planDraft.optionalGoals[key])) || Number(planDraft.optionalGoals[key]) < 0));
-  if(invalid){$("#goal-details").open=true;planCategory=Object.keys(GOAL_CATEGORIES).find(category=>GOAL_CATEGORIES[category].includes(invalid.key));renderOptionalGoals();updatePlanStatus("error",`Enter a non-negative ${invalid.label} target before saving.`);document.querySelector(`[data-nutrient="${invalid.key}"]`)?.focus();return;}
+  if(invalid){$("#goal-details").hidden=false;$("#add-nutrient").setAttribute("aria-expanded","true");planCategory=Object.keys(GOAL_CATEGORIES).find(category=>GOAL_CATEGORIES[category].includes(invalid.key));renderOptionalGoals();updatePlanStatus("error",`Enter a non-negative ${invalid.label} target before saving.`);document.querySelector(`[data-nutrient="${invalid.key}"]`)?.focus();return;}
   state.goals=structuredClone(planDraft);
-  state.planMessage=account?.user ? "Saving your plan…" : "Draft kept in this browser. Sign in to save your plan.";
-  state.planStatus="dirty";
+  state.planMessage=account?.user ? "Saving your plan…" : "Saved on this device. Sign in to sync across devices.";
+  state.planStatus=account?.user ? "saving" : "saved";
   appStorage.setItem("campusfuel-goals",JSON.stringify(state.goals));
   if(todaysEntries().length)saveTodaysGoals();
   render();account?.savePlan();
@@ -1184,6 +1195,7 @@ account = createAccount({
       dailyGoals: state.dailyGoals,
     }),
   replace(data) {
+    mealAssistant?.reset();
     state.goals = {
       calories: "",
       protein: "",
@@ -1201,9 +1213,10 @@ account = createAccount({
     if (state.view === "history") switchView("history");
   },
   navigate: switchView,
-  message(value) {
-    state.planMessage = value;
-    $("#plan-status").textContent = value;
+  message(value, status) {
+    if (status === "saved" && JSON.stringify(planDraft) !== JSON.stringify(state.goals)) {
+      updatePlanStatus("dirty", "Your earlier plan was saved. Save your new changes when ready.");
+    } else updatePlanStatus(status || state.planStatus || "idle", value);
   },
   nutrients: OPTIONAL_NUTRIENTS,
   meals: window.MEALS,
@@ -1215,3 +1228,9 @@ if (new URLSearchParams(location.search).get("signin") === "1") {
   document.querySelector("#account-button").click();
   history.replaceState(null, "", location.pathname);
 }
+
+mealAssistant = mountMealAssistant(document.querySelector("#meal-assistant"), {
+  getCatalog: () => account?.hasMenus() ? window.MEALS : [],
+  getContext: () => ({ school: account?.school, goals: structuredClone(state.goals) }),
+  openMeal: id => { const meal = window.MEALS.find(m => m.id === id); if (meal) showMealDetails(meal); },
+});
