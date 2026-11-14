@@ -18,7 +18,13 @@ Then visit `http://localhost:4173` in your browser.
 
 ## Data integrity
 
-The meal data lives in `data/meals.js`. Use `null` for missing or uncertain facts. Do not treat missing labels as false, and do not invent prices, nutrition, dietary labels, or climate-friendly labels.
+The team's original verified nutrition export lives in `data/meals.json`. The website reads the compact generated version in `data/meals.js`. After the team updates the export, run:
+
+```bash
+bash scripts/build-meals-data.sh > data/meals.js
+```
+
+Use `null` for missing or uncertain facts. Do not treat missing labels as false, and do not invent prices, nutrition, dietary labels, or climate-friendly labels. The Snack and Meal browse tags are interface categories based on the source menu category, not Cal Poly dietary or nutrition claims.
 
 ## Not yet included
 
