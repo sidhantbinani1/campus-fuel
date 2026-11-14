@@ -2,6 +2,7 @@ const $ = (selector) => document.querySelector(selector);
 const mealGrid = $("#meal-grid");
 const emptyState = $("#empty-state");
 const storedGoals = JSON.parse(localStorage.getItem("campusfuel-goals") || "{}");
+const hasSavedPlan = Object.keys(storedGoals).length > 0;
 const storedLog = JSON.parse(localStorage.getItem("campusfuel-meal-history") || localStorage.getItem("campusfuel-today-log") || "[]");
 const storedDailyGoals = JSON.parse(localStorage.getItem("campusfuel-daily-goals") || "{}");
 const dateKey = (date = new Date()) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
@@ -25,7 +26,7 @@ const state = {
   query: "", maxCalories: "", minProtein: "", diet: "", location: "", mealType: "", restaurantTab: "", suggestionMode: false, selected: [],
   goals: { calories: storedGoals.calories || "", protein: storedGoals.protein || "", vegetarian: Boolean(storedGoals.vegetarian), vegan: Boolean(storedGoals.vegan), avoidingGluten: Boolean(storedGoals.avoidingGluten), optionalGoals: storedOptionalGoals },
   entries: normalizedEntries, dailyGoals: storedDailyGoals,
-  view: "dashboard", planMessage: "", planStatus: "idle",
+  view: hasSavedPlan ? "finder" : "dashboard", planMessage: "", planStatus: "idle",
   builder: { restaurant: "Panda Express", selections: {} },
   school: SCHOOLS[storedSchool] ? storedSchool : "cal-poly"
 };
@@ -569,6 +570,7 @@ $("#school-select").addEventListener("change", event => {
 });
 updateSchoolBrand();
 render();
+switchView(state.view);
 let displayedDate = dateKey();
 let dayRefreshTimer;
 function refreshForNewDay() {
