@@ -193,7 +193,8 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
       bridge.replace(guest);
       loaded = true;
       status("Guest plan · saved only in this browser.");
-      bridge.navigate("dashboard");
+      const requested = new URLSearchParams(location.search).get("view");
+      bridge.navigate(["dashboard", "finder", "history", "board"].includes(requested) ? requested : "dashboard");
       return;
     }
     status("Loading your private account…");
@@ -227,7 +228,8 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
       status("");
       if (!profile?.school || profile.terms_version !== VERSION) showAccount();
       else {
-        bridge.navigate("account");
+        const requested = new URLSearchParams(location.search).get("view");
+        bridge.navigate(["dashboard", "finder", "history", "board"].includes(requested) ? requested : "account");
         if (sessionStorage.getItem("fuel-pending-plan")) {
           const pending = JSON.parse(
             sessionStorage.getItem("fuel-pending-plan"),
