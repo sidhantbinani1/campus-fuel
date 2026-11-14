@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="EcoMenu AI helps Cal Poly students discover campus meals using verified dining data." />
+    <title>CampusFuel SLO | Cal Poly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="CampusFuel SLO home"><span class="brand-mark">✦</span> CampusFuel <em>SLO</em></a>
+      <nav class="app-tabs" aria-label="CampusFuel views">
+        <button class="app-tab active" data-view="dashboard" type="button">Dashboard</button>
+        <button class="app-tab" data-view="history" type="button">History</button>
+      </nav>
+      <span class="campus-pill">Cal Poly SLO</span>
+    </header>
+
+    <main id="top">
+      <div id="dashboard-view">
+      <section class="hero">
+        <p class="eyebrow">FUEL YOUR CAMPUS ROUTINE</p>
+        <h1>Keep your goals.<br /><i>Eat on campus.</i></h1>
+        <p class="hero-copy">CampusFuel helps Cal Poly students find verified campus meals that fit their protein, macro, calorie, and Dining Dollar goals.</p>
+
+        <form id="search-form" class="search-shell">
+          <label class="sr-only" for="meal-query">Describe the meal you want</label>
+          <span class="search-icon">⌕</span>
+          <input id="meal-query" type="search" placeholder="Try “I need protein under 700 calories”" autocomplete="off" />
+          <button type="submit">Find meals <span>→</span></button>
+        </form>
+        <div class="prompt-row" aria-label="Example searches">
+          <button class="prompt-chip" data-query="under 12 dollars">$12 lunch</button>
+          <button class="prompt-chip" data-query="at least 30 grams protein">30g+ protein</button>
+          <button class="prompt-chip" data-query="vegetarian">Vegetarian</button>
+          <button class="prompt-chip" data-query="under 600 calories">Under 600 cal</button>
+          <button class="prompt-chip" data-query="climate friendly">Climate-friendly</button>
+        </div>
+        <div class="quick-browse" aria-label="Quick meal browsing">
+          <div class="browse-group" aria-label="Browse by location">
+            <span>Location</span>
+            <button class="browse-chip location-chip" data-location="1901 Marketplace" type="button">1901 Marketplace</button>
+            <button class="browse-chip location-chip" data-location="Vista Grande" type="button">Vista Grande</button>
+          </div>
+          <div class="browse-group" aria-label="Browse all campus food by type">
+            <span>Across campus</span>
+            <button class="browse-chip type-chip" data-meal-type="snack" type="button">Snack</button>
+            <button class="browse-chip type-chip" data-meal-type="meal" type="button">Meal</button>
+          </div>
+          <button id="suggest-next" class="suggest-chip" type="button">Suggest my next meal ✦</button>
+        </div>
+        <p id="quick-status" class="quick-status" aria-live="polite"></p>
+      </section>
+
+      <section class="daily-dashboard" aria-labelledby="dashboard-title">
+        <div class="dashboard-intro">
+          <p class="eyebrow">TODAY'S PLAN</p>
+          <h2 id="dashboard-title">Your fuel dashboard</h2>
+          <p>Set your targets once and they stay saved in this browser until you change them. Logged meals update your on-device estimate; CampusFuel never accesses your Cal Poly account.</p>
+        </div>
+        <form id="goals-form" class="goals-form">
+          <label>Daily calories <input id="goal-calories" type="number" min="0" step="1" placeholder="e.g. 2200" /></label>
+          <label>Daily protein (g) <input id="goal-protein" type="number" min="0" step="1" placeholder="e.g. 150" /></label>
+          <label>Dining Dollars <span class="input-dollar">$</span><input id="balance-input" type="number" min="0" step="0.01" placeholder="e.g. 85" /></label>
+          <button type="submit">Save my plan</button>
+        </form>
+        <p id="plan-status" class="plan-status" aria-live="polite"></p>
+        <fieldset class="needs-fieldset">
+          <legend>Optional needs and preferences</legend>
+          <label><input id="pref-vegetarian" type="checkbox" /> Vegetarian</label>
+          <label><input id="pref-vegan" type="checkbox" /> Vegan</label>
+          <label><input id="pref-avoiding-gluten" type="checkbox" /> Avoiding gluten</label>
+          <label><input id="pref-climate-friendly" type="checkbox" /> Climate-friendly</label>
+          <p>These apply only when a meal has a verified label. “Avoiding gluten” does not guarantee allergen safety—always confirm with dining staff.</p>
+        </fieldset>
+        <div class="progress-grid">
+          <div class="progress-card"><span>Calories remaining</span><strong id="remaining-calories">Set a goal</strong><small id="calorie-detail">No meals logged</small></div>
+          <div class="progress-card"><span>Protein remaining</span><strong id="remaining-protein">Set a goal</strong><small id="protein-detail">No meals logged</small></div>
+          <div class="progress-card"><span>Dining Dollars</span><strong id="remaining-balance">Set balance</strong><small id="balance-detail">Private planning estimate</small></div>
+        </div>
+        <div class="logged-meals"><div><strong>Today's meal log</strong><p id="log-note">Log a verified meal below to update your plan.</p></div><div id="log-list" class="log-list"></div><button id="clear-log" class="clear-button" type="button">Clear today</button></div>
+      </section>
+
+      <section class="discover-section" aria-labelledby="discover-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">DISCOVER</p>
+            <h2 id="discover-title">Meals for you</h2>
+          </div>
+          <p id="result-summary" class="result-summary" aria-live="polite"></p>
+        </div>
+
+        <div class="filters" aria-label="Meal filters">
+          <label>Max price
+            <select id="price-filter">
+              <option value="">Any price</option>
+              <option value="10">$10 or less</option>
+              <option value="12">$12 or less</option>
+              <option value="15">$15 or less</option>
+            </select>
+          </label>
+          <label>Max calories
+            <select id="calorie-filter">
+              <option value="">Any amount</option>
+              <option value="300">300 or less</option>
+              <option value="500">500 or less</option>
+              <option value="700">700 or less</option>
+            </select>
+          </label>
+          <label>Minimum protein
+            <select id="protein-filter">
+              <option value="">Any amount</option>
+              <option value="10">10g or more</option>
+              <option value="25">25g or more</option>
+              <option value="30">30g or more</option>
+            </select>
+          </label>
+          <label>Dietary
+            <select id="diet-filter">
+              <option value="">Any dietary option</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="vegan">Vegan</option>
+            </select>
+          </label>
+          <label class="toggle-label">Climate-friendly
+            <input id="climate-filter" type="checkbox" />
+            <span class="toggle" aria-hidden="true"></span>
+          </label>
+          <button id="clear-filters" class="clear-button" type="button">Clear all</button>
+        </div>
+
+        <section id="best-match" class="best-match" aria-live="polite"></section>
+
+        <div id="meal-grid" class="meal-grid"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <span>⌕</span>
+          <h3 id="empty-title">No verified exact matches yet.</h3>
+          <p id="empty-copy">Try removing a filter. CampusFuel will show transparent alternatives as the verified dataset grows.</p>
+          <button id="reset-empty" type="button">Show all meals</button>
+        </div>
+      </section>
+
+      <section id="comparison" class="comparison" hidden aria-labelledby="compare-title">
+        <div class="comparison-heading">
+          <div>
+            <p class="eyebrow">COMPARE</p>
+            <h2 id="compare-title">Your meal choices</h2>
+          </div>
+          <button id="close-comparison" class="clear-button" type="button">Clear comparison</button>
+        </div>
+        <div id="comparison-content"></div>
+      </section>
+      </div>
+
+      <section id="history-view" class="history-view" hidden aria-labelledby="history-title">
+        <div class="history-heading">
+          <div>
+            <p class="eyebrow">PRIVATE ON-DEVICE RECORD</p>
+            <h1 id="history-title">Your fuel history</h1>
+            <p>Review your logged campus meals and daily verified totals, newest first.</p>
+          </div>
+          <button id="clear-history" class="clear-button" type="button">Clear all history</button>
+        </div>
+        <div id="history-list" class="history-list"></div>
+        <div id="empty-history" class="empty-state history-empty">
+          <span>◷</span>
+          <h3>Your log will appear here.</h3>
+          <p>Log a meal from the Dashboard to build a day-by-day picture of your campus dining.</p>
+          <button class="go-dashboard" type="button">Go to Dashboard</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <strong>CampusFuel SLO</strong>
+      <p>Showing a selected, verified dining snapshot. Availability and prices may change.</p>
+      <p id="coverage-note"></p>
+    </footer>
+
+    <script src="data/meals.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
