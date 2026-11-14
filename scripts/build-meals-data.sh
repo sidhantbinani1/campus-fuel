@@ -10,6 +10,7 @@ printf '%s\n' '// Generated from data/meals.json with scripts/build-meals-data.s
 printf '%s\n' '// Prices and dietary labels remain null unless they are present in the verified source export.'
 printf '%s' 'window.MEALS = '
 jq '[
+  def nutrient($names): [ .nutritionValues[]? | select(.name as $name | $names | index($name)) | .value ] | map(select(. != null)) | first // null;
   .[] | .category as $category | {
     id,
     name,
@@ -20,11 +21,23 @@ jq '[
     proteinGrams,
     fatGrams,
     carbsGrams,
+    fiberGrams: nutrient(["Dietary Fiber", "Dietary Fiber (g)"]),
+    sugarGrams: nutrient(["Sugars", "Sugar (g)"]),
+    saturatedFatGrams: nutrient(["Saturated Fat", "Saturated Fat (g)"]),
+    transFatGrams: nutrient(["Trans Fat", "Trans Fat (g)"]),
+    sodiumMilligrams: nutrient(["Sodium", "Sodium (mg)"]),
+    cholesterolMilligrams: nutrient(["Cholesterol", "Cholesterol (mg)"]),
+    potassiumMilligrams: nutrient(["Potassium", "Potassium (mg)"]),
+    calciumMilligrams: nutrient(["Calcium", "Calcium (mg)"]),
+    ironMilligrams: nutrient(["Iron", "Iron (mg)"]),
+    vitaminARe: nutrient(["Vitamin A", "Vitamin A (RE)"]),
+    vitaminCMilligrams: nutrient(["Vitamin C", "Vitamin C (mg)"]),
+    vitaminDIu: nutrient(["Vitamin D (IU)"]),
+    fatCalories: nutrient(["Fat Calories", "Calories From Fat"]),
     price,
     vegetarian,
     vegan,
     avoidingGluten,
-    climateFriendly,
     description,
     mealType: (if (["Sides", "Desserts", "Drinks", "Condiments", "Dipping Sauces"] | index($category)) then "snack" else "meal" end),
     menuSource: .sourceUrl,

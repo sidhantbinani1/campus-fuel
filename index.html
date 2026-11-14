@@ -38,7 +38,6 @@
           <button class="prompt-chip" data-query="at least 30 grams protein">30g+ protein</button>
           <button class="prompt-chip" data-query="vegetarian">Vegetarian</button>
           <button class="prompt-chip" data-query="under 600 calories">Under 600 cal</button>
-          <button class="prompt-chip" data-query="climate friendly">Climate-friendly</button>
         </div>
         <div class="quick-browse" aria-label="Quick meal browsing">
           <div class="browse-group" aria-label="Browse the currently verified restaurants">
@@ -75,14 +74,21 @@
           <label><input id="pref-vegetarian" type="checkbox" /> Vegetarian</label>
           <label><input id="pref-vegan" type="checkbox" /> Vegan</label>
           <label><input id="pref-avoiding-gluten" type="checkbox" /> Avoiding gluten</label>
-          <label><input id="pref-climate-friendly" type="checkbox" /> Climate-friendly</label>
           <p>These apply only when a meal has a verified label. “Avoiding gluten” does not guarantee allergen safety—always confirm with dining staff.</p>
         </fieldset>
+        <details class="optional-goals" id="optional-goals-panel">
+          <summary>Customize optional daily nutrition targets</summary>
+          <p>Calories and protein stay front and center. Add only the nutrients you personally want to track.</p>
+          <div id="optional-goal-picker" class="optional-goal-picker"></div>
+          <div id="optional-goal-inputs" class="optional-goal-inputs"></div>
+          <button class="save-optional-goals" type="submit" form="goals-form">Save optional targets</button>
+        </details>
         <div class="progress-grid">
           <div class="progress-card"><span>Calories remaining</span><strong id="remaining-calories">Set a goal</strong><small id="calorie-detail">No meals logged</small></div>
           <div class="progress-card"><span>Protein remaining</span><strong id="remaining-protein">Set a goal</strong><small id="protein-detail">No meals logged</small></div>
           <div class="progress-card"><span>Dining Dollars</span><strong id="remaining-balance">Set balance</strong><small id="balance-detail">Private planning estimate</small></div>
         </div>
+        <div id="optional-progress" class="optional-progress" aria-live="polite"></div>
         <div class="logged-meals"><div><strong>Today's meal log</strong><p id="log-note">Log a verified meal below to update your plan.</p></div><div id="log-list" class="log-list"></div><button id="clear-log" class="clear-button" type="button">Clear today</button></div>
       </section>
 
@@ -126,10 +132,6 @@
               <option value="vegetarian">Vegetarian</option>
               <option value="vegan">Vegan</option>
             </select>
-          </label>
-          <label class="toggle-label">Climate-friendly
-            <input id="climate-filter" type="checkbox" />
-            <span class="toggle" aria-hidden="true"></span>
           </label>
           <button id="clear-filters" class="clear-button" type="button">Clear all</button>
         </div>
@@ -175,6 +177,11 @@
         </div>
       </section>
     </main>
+
+    <dialog id="meal-detail-dialog" class="meal-detail-dialog" aria-labelledby="meal-detail-title">
+      <button id="close-meal-detail" class="detail-close" type="button" aria-label="Close meal details">×</button>
+      <div id="meal-detail-content"></div>
+    </dialog>
 
     <footer>
       <strong>CampusFuel SLO</strong>
