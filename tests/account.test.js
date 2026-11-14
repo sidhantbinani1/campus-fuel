@@ -93,6 +93,17 @@ test("account UI loads private state, onboards, charts, settings, gated rankings
   assert.equal(snap.goals.calories, "2000");
   assert.ok(document.querySelector("#settings-form"));
   assert.equal(account.hasMenus(), false);
+  for (const view of ["dashboard", "finder", "history", "board"]) {
+    assert.equal(account.allowView(view), false, `setup gates ${view}`);
+  }
+  assert.equal(account.canLog(), false);
+  assert.equal(document.querySelector("#hide-nickname").checked, false);
+  document.querySelector("#participating").checked = true;
+  document.querySelector("#participating").dispatchEvent(new dom.window.Event("change"));
+  assert.equal(document.querySelector("#nickname").required, true);
+  document.querySelector("#hide-nickname").checked = true;
+  document.querySelector("#hide-nickname").dispatchEvent(new dom.window.Event("change"));
+  assert.equal(document.querySelector("#nickname").required, false);
   document.querySelector("#school-search").value = "Cal Poly San Luis Obispo";
   document.querySelector("#accept-terms").checked = true;
   document
@@ -101,6 +112,8 @@ test("account UI loads private state, onboards, charts, settings, gated rankings
   await settle();
   assert.equal(account.hasMenus(), true);
   assert.equal(profile.show_nickname, false);
+  for (const view of ["dashboard", "finder", "history", "board"]) assert.equal(account.allowView(view), true);
+  assert.equal(document.body.classList.contains("setup-required"), false);
   account.view("account");
   assert.ok(document.querySelector(".chart-bars"));
   assert.equal(document.querySelectorAll(".metric-card").length, 4);

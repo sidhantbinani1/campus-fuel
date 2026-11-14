@@ -456,3 +456,39 @@
 .board-side { display:grid; gap:20px; align-content:start; }
 .discovery-number { display:block; font-size:54px; color:#416c39; margin:24px 0; line-height:1; }
 .discovery-number small { display:block; margin-top:10px; font-size:13px; font-weight:400; color:#72806d; }
+
+/* One required setup step after sign-in. */
+.setup-required .site-header .audience-nav,.setup-required .site-header .app-tabs,.setup-required #daily-summary,.setup-required #campus-notice { display:none!important; }
+.setup-required #account-view { max-width:620px; margin:38px auto; padding:0 24px; }
+.setup-welcome { text-align:center; margin-bottom:26px; }
+.setup-mark { display:grid;place-items:center;width:42px;height:42px;background:#e9f0df;border-radius:14px;color:#6d975b;font-size:25px;margin:0 auto 14px; }
+.setup-welcome h1 { font:500 35px/1.15 Fraunces,Georgia,serif;letter-spacing:-1px;margin:0 0 12px; }
+.setup-welcome>p:last-child { font-size:13px;color:#818c7a;margin:0; }
+.setup-welcome .eyebrow { font-size:9px;letter-spacing:1.7px;color:#7d906e; }
+.setup-card { background:white;border:1px solid #e2e8db;border-radius:18px;padding:28px 30px;box-shadow:0 5px 22px #304c2e04; }
+.setup-card>label,#setup-nickname>label:first-child { display:block;font-size:13px;font-weight:600;margin-bottom:7px; }
+.setup-card label small { font-size:10px;color:#8c9883;font-weight:400;margin-left:7px; }
+.setup-card input:not([type=checkbox]):not([type=radio]) { width:100%;height:45px;border:1px solid #dce4d4;border-radius:8px;background:#fafbf7;padding:0 12px;color:#355139;font-size:13px; }
+.setup-help { font-size:11px;color:#929b88;line-height:1.6;margin:7px 0 0; }
+.setup-divider { height:1px;background:#edf0e6;margin:25px 0; }
+.setup-card h2 { font-size:16px;margin:0;font-weight:650;letter-spacing:-.3px; }
+.setup-card .setup-choice { display:flex;align-items:flex-start;gap:10px;border:1px solid #e2e8db;border-radius:9px;padding:13px;margin-top:8px;cursor:pointer; }
+.setup-choice:has(input:checked) { background:#f3f7ed;border-color:#a9bf95; }
+.setup-card input[type=checkbox],.setup-card input[type=radio] { accent-color:#486d43;margin:3px 0 0;flex-shrink:0;width:14px;height:14px; }
+.setup-choice b { display:block;font-weight:550;font-size:12px;line-height:1.4; }
+.setup-card .setup-choice small,.setup-card .setup-privacy small { display:block;font-size:10px;color:#8a977e;line-height:1.6;margin:3px 0 0; }
+#setup-nickname { margin-top:19px; }
+.setup-card .setup-privacy { display:flex;gap:9px;align-items:flex-start;margin-top:12px;font-size:12px;font-weight:400;color:#566d4a;cursor:pointer; }
+.setup-private { font-size:11px;color:#8b9780;background:#f5f7ef;border-radius:8px;padding:12px 14px;margin:20px 0; }
+.setup-card .setup-terms { font-size:10px;line-height:1.6; }
+.setup-terms .text-button { font-size:10px; }
+.setup-card .setup-submit { margin-top:20px;width:100%;display:flex;justify-content:space-between;background:#3e6243;color:white;border-radius:9px;padding:13px 16px;border:0;font-size:13px; }
+.setup-submit:disabled { opacity:.6;cursor:wait; }
+.setup-signout { display:block;margin:14px auto 0;font-size:11px; }
+.setup-error { color:#a24d37;font-size:12px; }
+.setup-school { position:relative; }
+#setup-schools { position:absolute;top:calc(100% + 5px);left:0;right:0;max-height:220px;overflow:auto;background:white;border:1px solid #dce4d4;border-radius:9px;box-shadow:0 8px 20px #304c2e13;z-index:5;padding:5px; }
+#setup-schools button { display:block;width:100%;border:0;background:none;color:#405b39;text-align:left;padding:10px;font-size:12px;border-radius:5px; }
+#setup-schools button:hover,#setup-schools button[aria-selected=true] { background:#eef4e5; }
+#setup-schools p { font-size:11px;color:#87967b;margin:8px; }
+@media(max-width:600px) { .setup-card{padding:23px 20px;} .setup-welcome h1{font-size:30px;} }
