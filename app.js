@@ -4,6 +4,8 @@ const emptyState = $("#empty-state");
 const storedGoals = JSON.parse(localStorage.getItem("campusfuel-goals") || "{}");
 const storedLog = JSON.parse(localStorage.getItem("campusfuel-meal-history") || localStorage.getItem("campusfuel-today-log") || "[]");
 const storedDailyGoals = JSON.parse(localStorage.getItem("campusfuel-daily-goals") || "{}");
+const ALLERGENS = ["Milk", "Egg", "Fish", "Crustacean shellfish", "Tree nuts", "Peanuts", "Wheat", "Soy", "Sesame"];
+const storedAllergies = Array.isArray(storedGoals.allergies) ? storedGoals.allergies.filter(allergen => ALLERGENS.includes(allergen)) : [];
 const dateKey = (date = new Date()) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
 const normalizedEntries = Array.isArray(storedLog) ? storedLog.map((entry, index) => {
   const normalized = typeof entry === "string" ? { id: entry, date: dateKey() } : entry;
@@ -18,11 +20,11 @@ const OPTIONAL_NUTRIENTS = [
 const storedOptionalGoals = storedGoals.optionalGoals || {};
 const state = {
   query: "", maxCalories: "", minProtein: "", diet: "", location: "", mealType: "", restaurantTab: "", suggestionMode: false, selected: [],
-  goals: { calories: storedGoals.calories || "", protein: storedGoals.protein || "", vegetarian: Boolean(storedGoals.vegetarian), vegan: Boolean(storedGoals.vegan), avoidingGluten: Boolean(storedGoals.avoidingGluten), optionalGoals: storedOptionalGoals },
+  goals: { calories: storedGoals.calories || "", protein: storedGoals.protein || "", vegetarian: Boolean(storedGoals.vegetarian), vegan: Boolean(storedGoals.vegan), avoidingGluten: Boolean(storedGoals.avoidingGluten), allergies: storedAllergies, optionalGoals: storedOptionalGoals },
   entries: normalizedEntries, dailyGoals: storedDailyGoals,
   view: "dashboard", planMessage: "", planStatus: "idle"
 };
-let planDraft = { ...state.goals, optionalGoals: { ...state.goals.optionalGoals } };
+let planDraft = { ...state.goals, allergies: [...state.goals.allergies], optionalGoals: { ...state.goals.optionalGoals } };
 let planCategory = "Macros";
 const GOAL_CATEGORIES = { Macros: ["carbsGrams", "fatGrams", "fiberGrams", "sugarGrams", "saturatedFatGrams", "transFatGrams", "fatCalories"], Minerals: ["sodiumMilligrams", "cholesterolMilligrams", "potassiumMilligrams", "calciumMilligrams", "ironMilligrams"], Vitamins: ["vitaminARe", "vitaminCMilligrams", "vitaminDIu"] };
 
@@ -63,6 +65,30 @@ function missingIngredientNotes(meal, nutrients = CORE_NUTRIENTS) {
 }
 const badge = (label, kind = "neutral") => `<span class="badge ${kind}">${label}</span>`;
 
+function selectedAllergies() { return state.goals.allergies || []; }
+function allergenData(item) {
+  if (item?.allergenVerified === true && Array.isArray(item.allergens)) return { verified: true, allergens: item.allergens };
+  return { verified: false, allergens: [] };
+}
+function mealAllergenData(meal) {
+  const direct = allergenData(meal);
+  if (direct.verified) return direct;
+  if (!meal.components?.length) return direct;
+  const componentData = meal.components.map(allergenData);
+  if (!componentData.every(data => data.verified)) return direct;
+  return { verified: true, allergens: [...new Set(componentData.flatMap(data => data.allergens))] };
+}
+function mealHasSelectedAllergen(meal) {
+  const data = mealAllergenData(meal);
+  return data.verified && data.allergens.some(allergen => selectedAllergies().includes(allergen));
+}
+function allergyNotice(meal) {
+  if (!selectedAllergies().length) return "";
+  const data = mealAllergenData(meal);
+  if (!data.verified) return `<p class="allergy-warning" role="note">Allergen information unavailable — confirm with Cal Poly Dining before ordering.</p>`;
+  return `<p class="allergy-verified" role="note">No selected allergens are listed in the imported data. Confirm ingredients and cross-contact with Cal Poly Dining.</p>`;
+}
+
 const mealsForEntries = (entries) => entries.map(entry => window.MEALS.find(meal => meal.id === entry.id)).filter(Boolean);
 const todaysEntries = () => state.entries.filter(entry => entry.date === dateKey());
 const loggedMeals = () => mealsForEntries(todaysEntries());
@@ -99,6 +125,7 @@ function filteredMeals(applyPreferences = true) {
     if (state.maxCalories && (meal.calories === null || meal.calories > number(state.maxCalories))) return false;
     if (state.minProtein && (meal.proteinGrams === null || meal.proteinGrams < number(state.minProtein))) return false;
     if (state.diet && meal[state.diet] !== true) return false;
+    if (mealHasSelectedAllergen(meal)) return false;
     if (applyPreferences && state.goals.vegetarian && meal.vegetarian !== true) return false;
     if (applyPreferences && state.goals.vegan && meal.vegan !== true) return false;
     if (applyPreferences && state.goals.avoidingGluten && meal.avoidingGluten !== true) return false;
@@ -120,7 +147,7 @@ function mealCard(meal) {
   const chosen = state.selected.includes(meal.id);
   const missingNotes = missingIngredientNotes(meal);
   const labels = [meal.isMealIdea ? badge("Suggested combination") : "", meal.vegetarian === true ? badge("Vegetarian", "green") : "", meal.vegan === true ? badge("Vegan", "green") : ""].join("");
-  return `<article class="meal-card" data-meal-id="${meal.id}" tabindex="0" role="button" aria-label="View nutrition facts for ${meal.name}"><div class="card-top"><span class="location">${meal.location}</span></div><h3>${meal.name}</h3><p class="serving">${text(meal.servingSize, "Serving size unavailable")}</p><div class="stats"><div><strong>${nutritionText(meal, "calories", "", "—")}</strong><span>calories</span></div><div><strong>${proteinText(meal, "—")}</strong><span>protein</span></div><div><strong>${nutritionText(meal, "carbsGrams", "g", "—")}</strong><span>carbs</span></div><div><strong>${nutritionText(meal, "fatGrams", "g", "—")}</strong><span>fat</span></div></div>${missingNotes.length ? `<p class="partial-note">* Known subtotal. ${missingNotes.join(" ")} Known amounts are included in daily totals; missing amounts are unknown.</p>` : ""}<div class="badges">${labels || badge("More labels pending verification")}</div><p class="match-reason">${mealReason(meal)}</p><div class="card-actions"><button class="compare-button ${chosen ? "selected" : ""}" data-meal-id="${meal.id}" type="button" ${!chosen && state.selected.length >= 2 ? "disabled" : ""}>${chosen ? "Selected to compare ✓" : "Compare meal"}</button><button class="log-button" data-log-id="${meal.id}" type="button">Log meal +</button></div></article>`;
+  return `<article class="meal-card" data-meal-id="${meal.id}" tabindex="0" role="button" aria-label="View nutrition facts for ${meal.name}"><div class="card-top"><span class="location">${meal.location}</span></div><h3>${meal.name}</h3><p class="serving">${text(meal.servingSize, "Serving size unavailable")}</p><div class="stats"><div><strong>${nutritionText(meal, "calories", "", "—")}</strong><span>calories</span></div><div><strong>${proteinText(meal, "—")}</strong><span>protein</span></div><div><strong>${nutritionText(meal, "carbsGrams", "g", "—")}</strong><span>carbs</span></div><div><strong>${nutritionText(meal, "fatGrams", "g", "—")}</strong><span>fat</span></div></div>${missingNotes.length ? `<p class="partial-note">* Known subtotal. ${missingNotes.join(" ")} Known amounts are included in daily totals; missing amounts are unknown.</p>` : ""}${allergyNotice(meal)}<div class="badges">${labels || badge("More labels pending verification")}</div><p class="match-reason">${mealReason(meal)}</p><div class="card-actions"><button class="compare-button ${chosen ? "selected" : ""}" data-meal-id="${meal.id}" type="button" ${!chosen && state.selected.length >= 2 ? "disabled" : ""}>${chosen ? "Selected to compare ✓" : "Compare meal"}</button><button class="log-button" data-log-id="${meal.id}" type="button">Log meal +</button></div></article>`;
 }
 
 function scoreMeal(meal) {
@@ -183,6 +210,7 @@ function renderDashboard() {
   const proteinIncomplete = incompleteNutrient(todaysEntries(), "proteinGrams");
   $("#goal-calories").value = planDraft.calories; $("#goal-protein").value = planDraft.protein;
   $("#pref-vegetarian").checked = planDraft.vegetarian; $("#pref-vegan").checked = planDraft.vegan; $("#pref-avoiding-gluten").checked = planDraft.avoidingGluten;
+  document.querySelectorAll("[data-allergy]").forEach(input => { input.checked = planDraft.allergies.includes(input.dataset.allergy); });
   $("#remaining-calories").textContent = left.calories === null ? "Set a goal" : `${caloriesIncomplete ? "Up to " : ""}${Math.max(0, left.calories)} cal`;
   $("#calorie-detail").textContent = state.goals.calories === "" ? "No daily target set" : `${caloriesIncomplete ? "At least " : ""}${used.calories} of ${state.goals.calories} cal logged${caloriesIncomplete ? " (some values missing)" : ""}`;
   $("#remaining-protein").textContent = left.protein === null ? "Set a goal" : `${proteinIncomplete ? "Up to " : ""}${Math.max(0, left.protein)}g`;
@@ -269,7 +297,7 @@ function showMealDetails(meal) {
   const allNutrients = [...CORE_NUTRIENTS, ...OPTIONAL_NUTRIENTS.filter(({ key }) => !CORE_NUTRIENTS.some(core => core.key === key))];
   const missingNotes = missingIngredientNotes(meal, allNutrients);
   const componentsHtml = meal.components?.length ? `<section class="component-breakdown"><h3>Nutrition by item</h3><p class="detail-serving">Values use each listed serving size. Missing values are not shown.</p>${meal.components.map(item => `<article class="component-detail"><h4>${item.name}</h4><p class="detail-serving">${text(item.servingSize, "Serving size unavailable")}</p>${factsHtml(item)}${labelsHtml(item)}</article>`).join("")}</section>` : "";
-  $("#meal-detail-content").innerHTML = `<p class="eyebrow">${meal.location} · ${meal.category || "Menu item"}</p><h2 id="meal-detail-title">${meal.name}</h2><p class="detail-serving">${text(meal.servingSize, "Serving size unavailable")}</p>${meal.description ? `<p class="detail-description">${meal.description}</p>` : ""}${meal.isMealIdea ? `<p class="detail-description">Suggested combination using the listed servings. Confirm campus availability and portions; additions and sauces are not included.</p><h3 class="detail-section-title">Combined nutrition</h3>` : ""}${factsHtml(meal)}${missingNotes.length ? `<p class="detail-description">* Known subtotal. ${missingNotes.join(" ")} Known amounts are included in daily totals; missing amounts are unknown.</p>` : ""}${labelsHtml(meal)}${componentsHtml}<p class="detail-source">Nutrition source: Cal Poly Dining data · ${meal.verifiedAt}.</p>`;
+  $("#meal-detail-content").innerHTML = `<p class="eyebrow">${meal.location} · ${meal.category || "Menu item"}</p><h2 id="meal-detail-title">${meal.name}</h2><p class="detail-serving">${text(meal.servingSize, "Serving size unavailable")}</p>${meal.description ? `<p class="detail-description">${meal.description}</p>` : ""}${meal.isMealIdea ? `<p class="detail-description">Suggested combination using the listed servings. Confirm campus availability and portions; additions and sauces are not included.</p><h3 class="detail-section-title">Combined nutrition</h3>` : ""}${factsHtml(meal)}${missingNotes.length ? `<p class="detail-description">* Known subtotal. ${missingNotes.join(" ")} Known amounts are included in daily totals; missing amounts are unknown.</p>` : ""}${allergyNotice(meal)}${labelsHtml(meal)}${componentsHtml}<p class="detail-source">Nutrition source: Cal Poly Dining data · ${meal.verifiedAt}.</p>`;
   dialog.showModal();
 }
 
@@ -355,7 +383,8 @@ function render() {
   }).join("");
   mealGrid.hidden = meals.length === 0; emptyState.hidden = meals.length !== 0;
   document.querySelectorAll(".restaurant-tab").forEach(button => { const selected = button.dataset.restaurant === state.restaurantTab; button.classList.toggle("active", selected); button.setAttribute("aria-pressed", String(selected)); });
-  $("#browse-note").textContent = active ? "Showing results matching your search and saved dietary preferences. Choose a category to browse." : "Choose a restaurant and open a category to explore. This full browse is not filtered by saved dietary preferences; check labels before choosing.";
+  const allergyFilterNote = selectedAllergies().length ? ` Meals without official allergen information remain visible with a warning; confirm with Cal Poly Dining.` : "";
+  $("#browse-note").textContent = (active ? "Showing results matching your search and saved dietary preferences. Choose a category to browse." : "Choose a restaurant and open a category to explore. This full browse is not filtered by saved dietary preferences; check labels before choosing.") + allergyFilterNote;
   $("#empty-title").textContent = state.location && state.mealType ? `No verified ${state.mealType} options at ${state.location} yet.` : state.location ? `No verified ${state.location} meals yet.` : state.mealType ? `No verified ${state.mealType} options yet.` : "No verified exact matches yet.";
   $("#empty-copy").textContent = state.location || state.mealType ? "This is a data-coverage gap, not a negative result. Try another option or add verified records for this category." : "Try removing a filter. CampusFuel will show transparent alternatives as the verified dataset grows.";
   $("#result-summary").textContent = active ? `${meals.length} match${meals.length === 1 ? "" : "es"}` : `${meals.length} items and meal ideas`;
@@ -386,6 +415,7 @@ $("#search-form").addEventListener("submit", event => { event.preventDefault(); 
 $("#meal-query").addEventListener("input", event => { if (!event.target.value.trim()) clearAll(); });
 [["#goal-calories", "calories"], ["#goal-protein", "protein"]].forEach(([selector, key]) => $(selector).addEventListener("input", event => { planDraft[key] = event.target.value; updatePlanStatus("dirty", "Unsaved changes — select Save my plan."); renderGoalSummary(); }));
 [["#pref-vegetarian", "vegetarian"], ["#pref-vegan", "vegan"], ["#pref-avoiding-gluten", "avoidingGluten"]].forEach(([selector, key]) => $(selector).addEventListener("change", event => { planDraft[key] = event.target.checked; updatePlanStatus("dirty", "Unsaved changes — select Save my plan."); }));
+document.querySelectorAll("[data-allergy]").forEach(input => input.addEventListener("change", () => { planDraft.allergies = ALLERGENS.filter(allergen => document.querySelector(`[data-allergy="${allergen}"]`)?.checked); updatePlanStatus("dirty", "Unsaved changes — select Save my plan."); }));
 document.querySelectorAll(".goal-category").forEach(button => button.addEventListener("click", () => { planCategory = button.dataset.category; renderOptionalGoals(); }));
 $("#goals-form").addEventListener("submit", event => {
   event.preventDefault();
@@ -397,7 +427,7 @@ $("#goals-form").addEventListener("submit", event => {
     document.querySelector(`.optional-goal-value[data-nutrient="${invalid.key}"]`)?.focus();
     return;
   }
-  const savedPlan = { ...planDraft, optionalGoals: { ...planDraft.optionalGoals } };
+  const savedPlan = { ...planDraft, allergies: [...planDraft.allergies], optionalGoals: { ...planDraft.optionalGoals } };
   try { localStorage.setItem("campusfuel-goals", JSON.stringify(savedPlan)); }
   catch { updatePlanStatus("error", "Your browser couldn’t save this plan. Check your browser storage settings and try again."); return; }
   state.goals = savedPlan;
