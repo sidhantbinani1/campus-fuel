@@ -10,5 +10,5 @@ import { createClient } from "@supabase/supabase-js";
 import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "./public-config.js";
 const client = createClient(import.meta.env.VITE_SUPABASE_URL || SUPABASE_URL, import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || SUPABASE_PUBLISHABLE_KEY);
 client.auth.getSession().then(({ data }) => {
-  if (data.session) document.querySelector("#account-button").textContent = "Your account →";
+  if (data.session) location.replace(new URL("./app.html", location.href).href);
 });

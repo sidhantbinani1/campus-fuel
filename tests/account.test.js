@@ -112,6 +112,10 @@ test("account UI loads private state, onboards, charts, settings, gated rankings
   await settle();
   assert.equal(account.hasMenus(), true);
   assert.equal(profile.show_nickname, false);
+  assert.equal(document.querySelector('.brand').textContent, '✦Poly Plates');
+  assert.equal(document.querySelector('.brand').getAttribute('href'), 'app.html');
+  assert.equal(document.body.classList.contains('campus-branded'), true);
+  assert.equal(document.title, 'Poly Plates | Your daily fuel');
   for (const view of ["dashboard", "finder", "history", "board"]) assert.equal(account.allowView(view), true);
   assert.equal(document.body.classList.contains("setup-required"), false);
   account.view("account");
@@ -146,6 +150,8 @@ test("account UI loads private state, onboards, charts, settings, gated rankings
   document.querySelector("#signout").click();
   await settle();
   assert.equal(account.user, null);
+  assert.equal(document.querySelector('.brand').textContent, '✦University Plates');
+  assert.equal(document.body.classList.contains('campus-branded'), false);
   assert.equal(snap.goals.calories, "2100");
   assert.equal(
     document.querySelector("#account-button").textContent,

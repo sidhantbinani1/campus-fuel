@@ -93,6 +93,18 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
   function branding() {
     document.body.classList.toggle("setup-required", Boolean(user) && !setupComplete());
     const school = SCHOOLS.find((s) => s.id === profile?.school);
+    const campusBrand = user && school ? school.platesName : "University Plates";
+    document.body.classList.toggle("campus-branded", Boolean(user && school));
+    const brand = document.querySelector(".site-header .brand");
+    brand.replaceChildren();
+    const mark = document.createElement("span");
+    mark.className = "brand-mark"; mark.textContent = "✦"; mark.setAttribute("aria-hidden", "true");
+    brand.append(mark, document.createTextNode(campusBrand));
+    brand.href = user && school ? "app.html" : "index.html";
+    brand.setAttribute("aria-label", `${campusBrand} home`);
+    if (school && user) brand.title = school.name;
+    else brand.removeAttribute("title");
+    document.title = `${campusBrand} | Your daily fuel`;
     $("#account-button").textContent = user ? "Your account ↗" : "Sign in →";
     $("#guest-welcome").hidden = Boolean(user);
     $("#campus-notice").hidden = !user || !school || school.menus;

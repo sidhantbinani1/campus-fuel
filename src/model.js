@@ -22,6 +22,11 @@ export const SCHOOL_NAMES = [
   "Sonoma State",
   "Stanislaus State",
 ];
+const SCHOOL_BRANDS = [
+  "Poly", "Humboldt", "CPP", "CSUB", "CSUCI", "Chico", "CSUDH", "CSUEB",
+  "Fresno", "CSUF", "CSULB", "CSULA", "CSUMB", "CSUN", "Sac State", "CSUSB",
+  "SDSU", "SFSU", "SJSU", "CSUSM", "Sonoma", "Stanislaus",
+];
 export const SCHOOLS = SCHOOL_NAMES.map((name, i) => ({
   id:
     i === 0
@@ -33,6 +38,7 @@ export const SCHOOLS = SCHOOL_NAMES.map((name, i) => ({
           .replace(/[^a-z0-9]+/g, "-"),
   name,
   menus: i === 0,
+  platesName: `${SCHOOL_BRANDS[i]} Plates`,
 }));
 export const VERSION = "2026-11-14";
 export const escapeHtml = (value) =>
