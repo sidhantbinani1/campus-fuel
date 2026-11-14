@@ -1,0 +1,6956 @@
+[
+  {
+    "id": "57606d61e551b822269ecabd",
+    "name": "Fruit Cup",
+    "restaurant": "Chick-fil-A",
+    "category": "Sides",
+    "servingSize": "Medium",
+    "description": "A nutritious fruit mix made with chopped pieces of red and green apples, mandarin orange segments, fresh strawberry slices, and blueberries, served chilled. Prepared fresh daily.",
+    "calories": 60.0,
+    "proteinGrams": 1.0,
+    "fatGrams": 0.0,
+    "carbsGrams": 15.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 60.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 0.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 15.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 11.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.36,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.02,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68b0725fdc3d2d346c342f80",
+    "name": "Kale Crunch Side",
+    "restaurant": "Chick-fil-A",
+    "category": "Sides",
+    "servingSize": "1 ea",
+    "description": null,
+    "calories": 170.0,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 170.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "5fcfe61931d1ee1d424c01f8",
+    "name": "Large Chick-fil-A Waffle Potato Fries®",
+    "restaurant": "Chick-fil-A",
+    "category": "Sides",
+    "servingSize": "179g",
+    "description": "Waffle-shaped potatoes with the skin. Cooked in canola oil until crispy outside and tender inside.",
+    "calories": 600.0,
+    "proteinGrams": 7.0,
+    "fatGrams": 35.0,
+    "carbsGrams": 65.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 600.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 35.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 5.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 65.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 7.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 7.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68b071bcd015d26b8b3052ee",
+    "name": "Large Mac & Cheese",
+    "restaurant": "Chick-fil-A",
+    "category": "Sides",
+    "servingSize": "1 ea",
+    "description": null,
+    "calories": 840.0,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 840.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "5fcfe5a631d1ee1d2a38b64a",
+    "name": "Medium Chick-fil-A Waffle Potato Fries®",
+    "restaurant": "Chick-fil-A",
+    "category": "Sides",
+    "servingSize": "125g",
+    "description": "Waffle-shaped potatoes with the skin. Cooked in canola oil until crispy outside and tender inside.",
+    "calories": 420.0,
+    "proteinGrams": 5.0,
+    "fatGrams": 24.0,
+    "carbsGrams": 45.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 420.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 24.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 4.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 45.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 5.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 5.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68b06f63570fefd82add22e6",
+    "name": "Small Mac & Cheese",
+    "restaurant": "Chick-fil-A",
+    "category": "Sides",
+    "servingSize": "1 ea",
+    "description": null,
+    "calories": 270.0,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 270.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "5fcfe6ac31d1ee1d1fbd2a87",
+    "name": "Waffle Potato Chips",
+    "restaurant": "Chick-fil-A",
+    "category": "Sides",
+    "servingSize": "43g",
+    "description": "Kettle-cooked waffle cut potato chips lightly sprinkled with Sea Salt.",
+    "calories": 220.0,
+    "proteinGrams": 3.0,
+    "fatGrams": 13.0,
+    "carbsGrams": 25.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 220.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 13.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 3.5,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 25.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 3.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d61e551b822269ecab5",
+    "name": "Waffle Potato Fries",
+    "restaurant": "Chick-fil-A",
+    "category": "Sides",
+    "servingSize": "Large",
+    "description": null,
+    "calories": 520.0,
+    "proteinGrams": 6.0,
+    "fatGrams": 27.0,
+    "carbsGrams": 62.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 520.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 243.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 27.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 4.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": 240.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 62.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 7.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 6.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 20.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.02,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 1.8,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.1,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d61e551b822269ecab3",
+    "name": "Waffle Potato Fries",
+    "restaurant": "Chick-fil-A",
+    "category": "Sides",
+    "servingSize": "Small",
+    "description": null,
+    "calories": 300.0,
+    "proteinGrams": 4.0,
+    "fatGrams": 16.0,
+    "carbsGrams": 36.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 300.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 144.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 16.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": 140.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 36.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 4.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 4.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 20.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.02,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 1.08,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.06,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "66e058bf351d53069904013a",
+    "name": "10 ct Chick-fil-A Chick-n-Minis",
+    "restaurant": "Chick-fil-A",
+    "category": "Breakfast",
+    "servingSize": "1 each",
+    "description": "Bite-sized Chick-fil-A® Nuggets nestled in warm, mini yeast rolls that are lightly brushed with a honey butter spread.",
+    "calories": 360.0,
+    "proteinGrams": 20.0,
+    "fatGrams": 13.0,
+    "carbsGrams": 41.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 360.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 13.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 41.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 20.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "63fe1384c625af08892ea355",
+    "name": "Bacon, Egg & Cheese Biscuit",
+    "restaurant": "Chick-fil-A",
+    "category": "Breakfast",
+    "servingSize": "1 each",
+    "description": "Bacon, Egg & Cheese Biscuit",
+    "calories": 420.0,
+    "proteinGrams": 15.0,
+    "fatGrams": 23.0,
+    "carbsGrams": 38.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 420.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 207.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 23.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 11.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 180.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 38.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 4.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 15.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "63fe1595c625af08b3418081",
+    "name": "Buttered Biscuit",
+    "restaurant": "Chick-fil-A",
+    "category": "Breakfast",
+    "servingSize": "1 each",
+    "description": "Buttered Biscuit",
+    "calories": 290.0,
+    "proteinGrams": 4.0,
+    "fatGrams": 15.0,
+    "carbsGrams": 37.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 290.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 135.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 15.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 6.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 37.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 4.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 4.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d61e551b822269ecac8",
+    "name": "Chick-n-Minis",
+    "restaurant": "Chick-fil-A",
+    "category": "Breakfast",
+    "servingSize": "4 count",
+    "description": "4 count Chicken Minis",
+    "calories": 360.0,
+    "proteinGrams": 20.0,
+    "fatGrams": 13.0,
+    "carbsGrams": 41.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 360.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 117.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 13.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 4.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 60.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 41.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 8.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 20.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.02,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.3,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "63fe1334e45d43080f316798",
+    "name": "Chicken, Egg & Cheese Biscuit",
+    "restaurant": "Chick-fil-A",
+    "category": "Breakfast",
+    "servingSize": "1 each",
+    "description": "Chicken, Egg & Cheese Biscuit",
+    "calories": 530.0,
+    "proteinGrams": 26.0,
+    "fatGrams": 27.0,
+    "carbsGrams": 45.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 530.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 243.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 27.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 11.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 215.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 45.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 7.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 26.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "63fe230bc625af089eb1eb14",
+    "name": "Fruit Cup",
+    "restaurant": "Chick-fil-A",
+    "category": "Breakfast",
+    "servingSize": "Small",
+    "description": "Fruit Cup",
+    "calories": 50.0,
+    "proteinGrams": 1.0,
+    "fatGrams": 0.0,
+    "carbsGrams": 13.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 50.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 0.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 13.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 9.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "63fe22c7c625af08b346a5cd",
+    "name": "Greek Yogurt Parfait",
+    "restaurant": "Chick-fil-A",
+    "category": "Breakfast",
+    "servingSize": "1 each",
+    "description": "With Granola",
+    "calories": 270.0,
+    "proteinGrams": 13.0,
+    "fatGrams": 9.0,
+    "carbsGrams": 36.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 270.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 81.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 9.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 3.5,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 20.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 36.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 26.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 13.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "63fe2281c625af089eb1a9b8",
+    "name": "Hash Brown",
+    "restaurant": "Chick-fil-A",
+    "category": "Breakfast",
+    "servingSize": "77 grams",
+    "description": "Hash Brown",
+    "calories": 270.0,
+    "proteinGrams": 3.0,
+    "fatGrams": 18.0,
+    "carbsGrams": 23.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 270.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 162.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 18.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 23.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 3.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 3.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d61e551b822269ecac6",
+    "name": "Sausage, Egg & Cheese Biscuit",
+    "restaurant": "Chick-fil-A",
+    "category": "Breakfast",
+    "servingSize": "1 each",
+    "description": "Sausage, Egg & Cheese Biscuit",
+    "calories": 610.0,
+    "proteinGrams": 22.0,
+    "fatGrams": 42.0,
+    "carbsGrams": 28.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 610.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 378.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 42.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 18.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 205.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 28.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 4.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 22.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.2,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.25,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d61e551b822269ecac7",
+    "name": "Spicy Chicken Biscuit",
+    "restaurant": "Chick-fil-A",
+    "category": "Breakfast",
+    "servingSize": "1 each",
+    "description": "Spicy Chicken Biscuit",
+    "calories": 430.0,
+    "proteinGrams": 17.0,
+    "fatGrams": 21.0,
+    "carbsGrams": 43.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 430.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 189.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 21.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 8.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 35.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 43.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 5.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 17.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.08,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.15,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606dfae551b822269edba6",
+    "name": "Brownie",
+    "restaurant": "Chick-fil-A",
+    "category": "Desserts",
+    "servingSize": "1 serving",
+    "description": "chocolate brownie",
+    "calories": 440.0,
+    "proteinGrams": 4.0,
+    "fatGrams": 20.0,
+    "carbsGrams": 61.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 440.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 0.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 20.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": 239.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 61.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 38.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 4.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d62e551b822269ecad7",
+    "name": "Chocolate Milkshake",
+    "restaurant": "Chick-fil-A",
+    "category": "Desserts",
+    "servingSize": "Small",
+    "description": null,
+    "calories": 600.0,
+    "proteinGrams": 13.0,
+    "fatGrams": 23.0,
+    "carbsGrams": 90.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 600.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 207.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 23.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 14.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 75.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": 410.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 90.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 86.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 13.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 450.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.45,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.36,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.02,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d62e551b822269ecad9",
+    "name": "Cookies & Cream Milkshake",
+    "restaurant": "Chick-fil-A",
+    "category": "Desserts",
+    "servingSize": "Small",
+    "description": null,
+    "calories": 570.0,
+    "proteinGrams": 14.0,
+    "fatGrams": 26.0,
+    "carbsGrams": 81.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 570.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 234.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 26.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 14.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 75.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": 430.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 81.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 77.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 14.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 450.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.45,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 1.8,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.1,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "66e059fb351d5306ebdd54ba",
+    "name": "Frosted Coffee",
+    "restaurant": "Chick-fil-A",
+    "category": "Desserts",
+    "servingSize": "1 each",
+    "description": "Frozen Coffee",
+    "calories": 230.0,
+    "proteinGrams": null,
+    "fatGrams": 6.0,
+    "carbsGrams": 25.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 230.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 6.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 25.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "66e059aa351d5306d6e3ce9b",
+    "name": "Frosted Lemonade",
+    "restaurant": "Chick-fil-A",
+    "category": "Desserts",
+    "servingSize": "1 each",
+    "description": "frozen lemonade",
+    "calories": 320.0,
+    "proteinGrams": 6.0,
+    "fatGrams": 6.0,
+    "carbsGrams": 65.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 320.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 6.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 65.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 6.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d62e551b822269ecae3",
+    "name": "Icedream",
+    "restaurant": "Chick-fil-A",
+    "category": "Desserts",
+    "servingSize": "cone",
+    "description": null,
+    "calories": 170.0,
+    "proteinGrams": 5.0,
+    "fatGrams": 4.0,
+    "carbsGrams": 31.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 170.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 36.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 4.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 15.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": 115.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 31.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 25.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 5.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 150.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.15,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.36,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.02,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d62e551b822269ecae2",
+    "name": "Icedream",
+    "restaurant": "Chick-fil-A",
+    "category": "Desserts",
+    "servingSize": "cup",
+    "description": null,
+    "calories": 290.0,
+    "proteinGrams": 8.0,
+    "fatGrams": 7.0,
+    "carbsGrams": 50.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 290.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 63.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 7.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 4.5,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 25.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": 200.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 50.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 49.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 8.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 300.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.3,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d62e551b822269ecadb",
+    "name": "Strawberry Milkshake",
+    "restaurant": "Chick-fil-A",
+    "category": "Desserts",
+    "servingSize": "Small",
+    "description": null,
+    "calories": 610.0,
+    "proteinGrams": 13.0,
+    "fatGrams": 23.0,
+    "carbsGrams": 93.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 610.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 207.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 23.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 13.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 75.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": 410.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 93.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 85.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 13.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 450.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.45,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.36,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.02,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d62e551b822269ecadd",
+    "name": "Vanilla Milkshake",
+    "restaurant": "Chick-fil-A",
+    "category": "Desserts",
+    "servingSize": "Small",
+    "description": null,
+    "calories": 550.0,
+    "proteinGrams": 13.0,
+    "fatGrams": 23.0,
+    "carbsGrams": 75.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 550.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 207.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 23.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 13.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 75.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": 400.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 75.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 75.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 13.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 450.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.45,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.36,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.02,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d64e551b822269ecb16",
+    "name": "Ketchup",
+    "restaurant": "Chick-fil-A",
+    "category": "Condiments",
+    "servingSize": "1 packet",
+    "description": null,
+    "calories": 25.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 0.0,
+    "carbsGrams": 7.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 25.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 0.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": 310.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 7.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 6.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d57e551b822269ec946",
+    "name": "Ketchup",
+    "restaurant": "Chick-fil-A",
+    "category": "Condiments",
+    "servingSize": "1 packet",
+    "description": "Numerous Options for a Balanced Meal",
+    "calories": 10.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 0.0,
+    "carbsGrams": 3.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 0.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": 95.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 3.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606dc4e551b822269ed629",
+    "name": "Mayonnaise",
+    "restaurant": "Chick-fil-A",
+    "category": "Condiments",
+    "servingSize": "1 Tbsp",
+    "description": "Made with eggs and canola oil",
+    "calories": null,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d64e551b822269ecb19",
+    "name": "Mixed Fruit Jelly",
+    "restaurant": "Chick-fil-A",
+    "category": "Condiments",
+    "servingSize": "1 packet",
+    "description": null,
+    "calories": 35.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 0.0,
+    "carbsGrams": 9.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 35.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 0.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 9.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 6.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d63e551b822269ecaf2",
+    "name": "Chick-fil-A® Diet Lemonade",
+    "restaurant": "Chick-fil-A",
+    "category": "Drinks",
+    "servingSize": "Medium",
+    "description": "Classic lemonade using three simple ingredients: real lemon juice—not from concentrate, cane sugar, and water. Diet Lemonade is sweetened with Splenda® No Calorie Sweetener.",
+    "calories": 50.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 0.0,
+    "carbsGrams": 14.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 50.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 0.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 14.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d63e551b822269ecaee",
+    "name": "Chick-fil-A® Lemonade",
+    "restaurant": "Chick-fil-A",
+    "category": "Drinks",
+    "servingSize": "Medium",
+    "description": "Classic lemonade using three simple ingredients: real lemon juice—not from concentrate, cane sugar, and water.",
+    "calories": 220.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 0.0,
+    "carbsGrams": 58.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 220.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 0.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 58.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 55.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "66e05a61351d530700d66345",
+    "name": "Cold Brew Iced Coffee",
+    "restaurant": "Chick-fil-A",
+    "category": "Drinks",
+    "servingSize": "1 each",
+    "description": "Iced Coffee",
+    "calories": 130.0,
+    "proteinGrams": null,
+    "fatGrams": 2.5,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 130.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 10.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d63e551b822269ecb00",
+    "name": "DASANI® Bottled Water",
+    "restaurant": "Chick-fil-A",
+    "category": "Drinks",
+    "servingSize": "1 bottle",
+    "description": "DASANI® combines the process of reverse osmosis filtration with a proprietary blend of minerals to create fresh, clean, and premium tasting water that is pure and delicious.",
+    "calories": 0.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 0.0,
+    "carbsGrams": 0.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 0.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 0.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.04,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "5c118c22bddf430df2e27248",
+    "name": "Freshly-Brewed Iced Tea (Large)",
+    "restaurant": "Chick-fil-A",
+    "category": "Drinks",
+    "servingSize": "1 each",
+    "description": "Sweetened tea",
+    "calories": 170.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 0.0,
+    "carbsGrams": 43.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 170.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 43.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 43.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 2.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "5c118bb4bddf430dfb34f3b9",
+    "name": "Freshly-Brewed Iced Tea Sweetened",
+    "restaurant": "Chick-fil-A",
+    "category": "Drinks",
+    "servingSize": "Medium",
+    "description": "Freshly-brewed each day from a blend of tea leaves. Available sweetened with real cane sugar.",
+    "calories": 120.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 0.0,
+    "carbsGrams": 31.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 120.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 31.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 31.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d62e551b822269ecae6",
+    "name": "Freshly-Brewed Iced Tea Unsweetened",
+    "restaurant": "Chick-fil-A",
+    "category": "Drinks",
+    "servingSize": "Medium",
+    "description": "Freshly-brewed each day from a blend of tea leaves. Available unsweetened.",
+    "calories": 0.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 0.0,
+    "carbsGrams": 0.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 0.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 0.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "66e05a2b351d5306850f3d5f",
+    "name": "Sunjoy",
+    "restaurant": "Chick-fil-A",
+    "category": "Drinks",
+    "servingSize": "1 each",
+    "description": "1/2 Sweet Tea, 1/2 Lemonade",
+    "calories": 120.0,
+    "proteinGrams": null,
+    "fatGrams": 0.0,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 120.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "58b434d3ee596fdc81ec1e00",
+    "name": "12 ct Grilled Nuggets",
+    "restaurant": "Chick-fil-A",
+    "category": "Entrees",
+    "servingSize": "12 Count",
+    "description": "Bite-sized pieces of freshly marinated boneless breast of chicken, grilled for a tender and juicy backyard-smoky taste.",
+    "calories": 170.0,
+    "proteinGrams": 31.0,
+    "fatGrams": 4.0,
+    "carbsGrams": 2.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 170.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 4.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 105.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 31.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "5c11884abddf430dfb31d767",
+    "name": "12 ct. Chick-fil-A Nuggets",
+    "restaurant": "Chick-fil-A",
+    "category": "Entrees",
+    "servingSize": "12 Count",
+    "description": "Bite-sized pieces of boneless chicken breast, seasoned to perfection, freshly-breaded and pressure cooked in 100% refined peanut oil.",
+    "calories": 390.0,
+    "proteinGrams": 41.0,
+    "fatGrams": 18.0,
+    "carbsGrams": 14.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 390.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 18.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 115.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 14.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 41.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 8.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 4.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 8.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "5c118701bddf430e0d46efda",
+    "name": "8 ct. Chick-fil-A Nuggets",
+    "restaurant": "Chick-fil-A",
+    "category": "Entrees",
+    "servingSize": "8 Count",
+    "description": "Bite-sized pieces of boneless chicken breast, seasoned to perfection, freshly-breaded and pressure cooked in 100% refined peanut oil.",
+    "calories": 260.0,
+    "proteinGrams": 28.0,
+    "fatGrams": 12.0,
+    "carbsGrams": 9.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 260.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 12.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 75.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 9.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 28.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 4.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 2.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 6.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "5c1188d5bddf430dfb326692",
+    "name": "8 ct. Grilled Nuggets",
+    "restaurant": "Chick-fil-A",
+    "category": "Entrees",
+    "servingSize": "8 Count",
+    "description": "Bite-sized pieces of freshly marinated boneless breast of chicken, grilled for a tender and juicy backyard-smoky taste.",
+    "calories": 110.0,
+    "proteinGrams": 21.0,
+    "fatGrams": 2.5,
+    "carbsGrams": 1.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 110.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.5,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 70.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 21.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": 0.0,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 10.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 2.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 2.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d60e551b822269eca9d",
+    "name": "Chick-fil-A® Chicken Sandwich",
+    "restaurant": "Chick-fil-A",
+    "category": "Entrees",
+    "servingSize": "1 each",
+    "description": "A boneless breast of chicken seasoned to perfection, hand-breaded, pressure cooked in 100% refined peanut oil and served on a toasted, buttered bun with dill pickle chips.",
+    "calories": 440.0,
+    "proteinGrams": 29.0,
+    "fatGrams": 17.0,
+    "carbsGrams": 41.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 440.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 153.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 17.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 4.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 70.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 41.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 6.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 29.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.15,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.15,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "5fcfe40431d1ee1d1fbca254",
+    "name": "Chick-fil-A® Deluxe Sandwich",
+    "restaurant": "Chick-fil-A",
+    "category": "Entrees",
+    "servingSize": "1 Sandwich",
+    "description": "A boneless breast of chicken seasoned to perfection, hand-breaded, pressure cooked in 100% refined peanut oil and served on a toasted, buttered bun with dill pickle chips, Green Leaf lettuce, tomato and American cheese.",
+    "calories": 500.0,
+    "proteinGrams": 32.0,
+    "fatGrams": 22.0,
+    "carbsGrams": 44.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 500.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 22.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 7.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 85.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 44.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 7.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 32.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "5fcfe4ba31d1ee1d2a38916e",
+    "name": "Chick-fil-A® Grilled Chicken Club Sandwich",
+    "restaurant": "Chick-fil-A",
+    "category": "Entrees",
+    "servingSize": "1 Sandwich",
+    "description": "A lemon-herb marinated boneless breast of chicken, grilled for a tender and juicy backyard-smokey taste, served on a toasted Multigrain Brioche bun with Colby-Jack cheese, applewood smoked bacon, Green Leaf lettuce and tomato. Served with Honey Roasted BBQ Sauce.",
+    "calories": 520.0,
+    "proteinGrams": 37.0,
+    "fatGrams": 22.0,
+    "carbsGrams": 44.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 520.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 198.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 22.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 8.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 105.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 44.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 3.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 12.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 37.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "5c118994bddf430dfb32fe74",
+    "name": "Grilled Chicken Sandwich",
+    "restaurant": "Chick-fil-A",
+    "category": "Entrees",
+    "servingSize": "1 each",
+    "description": "A lemon-herb marinated boneless breast of chicken, grilled for a tender and juicy backyard-smokey taste, served on a toasted Multigrain Brioche bun with Green Leaf lettuce and tomato.",
+    "calories": 380.0,
+    "proteinGrams": 28.0,
+    "fatGrams": 12.0,
+    "carbsGrams": 43.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 380.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 108.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 12.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 75.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 43.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 3.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 11.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 28.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d60e551b822269eca9f",
+    "name": "Spicy Chicken Sandwich",
+    "restaurant": "Chick-fil-A",
+    "category": "Entrees",
+    "servingSize": "1 each",
+    "description": "A boneless breast of chicken seasoned with a spicy blend of peppers, hand-breaded, pressure cooked in 100% refined peanut oil and served on a toasted, buttered bun with dill pickle chips.",
+    "calories": 460.0,
+    "proteinGrams": 28.0,
+    "fatGrams": 19.0,
+    "carbsGrams": 45.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 460.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 171.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 19.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 4.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 65.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 45.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 6.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 28.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.15,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.2,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d60e551b822269ecaa0",
+    "name": "Spicy Chicken Sandwich Deluxe",
+    "restaurant": "Chick-fil-A",
+    "category": "Entrees",
+    "servingSize": "1 each",
+    "description": "A boneless breast of chicken seasoned with a spicy blend of peppers, hand-breaded, pressure cooked in 100% refined peanut oil and served on a toasted, buttered bun with dill pickle chips, Green Leaf lettuce, tomato and Pepper Jack Cheese.",
+    "calories": 550.0,
+    "proteinGrams": 33.0,
+    "fatGrams": 25.0,
+    "carbsGrams": 47.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 550.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 225.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 25.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 8.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 85.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 47.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 3.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 7.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 33.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.3,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.2,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d63e551b822269ecb05",
+    "name": "Barbecue Sauce",
+    "restaurant": "Chick-fil-A",
+    "category": "Dipping Sauces",
+    "servingSize": "1 packet",
+    "description": "Barbecue Sauce",
+    "calories": 45.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 0.0,
+    "carbsGrams": 11.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 45.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 0.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 11.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 9.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 20.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.02,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.36,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.02,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d64e551b822269ecb0b",
+    "name": "Chick-fil-A® Sauce",
+    "restaurant": "Chick-fil-A",
+    "category": "Dipping Sauces",
+    "servingSize": "1 packet",
+    "description": "Chick-Fil-A Sauce",
+    "calories": 140.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 13.0,
+    "carbsGrams": 6.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 140.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 117.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 13.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 10.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 6.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 6.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d64e551b822269ecb09",
+    "name": "Garden Herb Ranch Sauce",
+    "restaurant": "Chick-fil-A",
+    "category": "Dipping Sauces",
+    "servingSize": "1 packet",
+    "description": "Garden Herb Ranch Sauce",
+    "calories": 140.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 14.0,
+    "carbsGrams": 1.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 140.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 108.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 14.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 10.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d64e551b822269ecb0d",
+    "name": "Honey Mustard Sauce",
+    "restaurant": "Chick-fil-A",
+    "category": "Dipping Sauces",
+    "servingSize": "1 packet",
+    "description": "Honey Mustard Sauce",
+    "calories": 45.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 0.0,
+    "carbsGrams": 11.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 45.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 0.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 11.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 10.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d64e551b822269ecb0e",
+    "name": "Honey Roasted BBQ Sauce",
+    "restaurant": "Chick-fil-A",
+    "category": "Dipping Sauces",
+    "servingSize": "1 packet",
+    "description": "Honey Roasted BBQ Sauce",
+    "calories": 60.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 5.0,
+    "carbsGrams": 3.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 60.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 45.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 5.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 5.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 3.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 2.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d64e551b822269ecb10",
+    "name": "Polynesian Sauce",
+    "restaurant": "Chick-fil-A",
+    "category": "Dipping Sauces",
+    "servingSize": "1 packet",
+    "description": "Polynesian Sauce",
+    "calories": 110.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 6.0,
+    "carbsGrams": 14.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 110.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 54.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 6.0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 14.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 13.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "57606d63e551b822269ecb07",
+    "name": "Zesty Buffalo Sauce",
+    "restaurant": "Chick-fil-A",
+    "category": "Dipping Sauces",
+    "servingSize": "1 packet",
+    "description": "Buffalo Sauce",
+    "calories": 25.0,
+    "proteinGrams": 0.0,
+    "fatGrams": 2.5,
+    "carbsGrams": 1.0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 25.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": 0.0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": 5.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": 0.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": 0.0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": 0.0,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  }
+]
