@@ -9,17 +9,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="src/navigation.css" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="University Plates home"><span class="brand-mark">✦</span> University Plates</a>
-      <nav class="audience-nav" aria-label="Audience"><a href="index.html">For universities</a><a href="app.html" aria-current="page">For students</a></nav><nav class="app-tabs" aria-label="University Plates views">
+      <nav class="audience-nav" aria-label="Audience"><a href="index.html">For universities</a><a href="app.html" aria-current="page">For students</a></nav>
+      <button id="account-button" class="campus-pill" type="button">Sign in →</button>
+    </header>
+    <div class="student-navigation"><nav class="app-tabs" aria-label="University Plates views">
         <button class="app-tab active" data-view="dashboard" type="button" aria-current="page">Daily plan</button>
         <button class="app-tab" data-view="finder" type="button">Find meals</button>
         <button class="app-tab" data-view="history" type="button">History</button><button class="app-tab" data-view="board" type="button">The Fuel Board</button>
       </nav>
-      <button id="account-button" class="campus-pill" type="button">Sign in →</button>
-    </header>
+</div>
 
     <main id="top"><div id="account-status" class="account-status" role="status" aria-live="polite"></div><section id="guest-welcome" class="guest-welcome student-intro"><p class="eyebrow">GOOD FOOD. YOUR ROUTINE.</p><h1>University Plates<span>Make room for your goals.</span></h1><p>Build your daily plan. Sign in to save your progress and find your campus favorites.</p><p class="student-coverage">Starting with Cal Poly SLO menus. Other listed campuses: menus coming soon. <a href="index.html">Learn about University Plates →</a></p></section><section id="campus-notice" class="account-notice" hidden></section>
       <section id="daily-summary" class="daily-dashboard daily-summary" aria-label="Today's nutrition summary">

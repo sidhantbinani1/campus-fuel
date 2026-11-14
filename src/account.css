@@ -433,3 +433,26 @@
     margin-left: 0;
   }
 }
+
+.board-periods { display:flex; gap:4px; padding:5px; background:#eaf0e5; border:1px solid #dbe5d5; border-radius:14px; }
+.board-periods button { border:0; border-radius:10px; padding:11px 18px; color:#63745d; background:transparent; font-size:13px; font-weight:600; white-space:nowrap; transition:background .15s,color .15s; }
+.board-periods button:hover { background:#f6f9f2; color:#254c32; }
+.board-periods button[aria-pressed="true"] { background:#254c32; color:#fff; box-shadow:0 2px 5px #254c3220; }
+.board-card { border:1px solid #dfe8d8; border-radius:20px; padding:24px; background:#fff; }
+.board-card-heading { display:flex; align-items:center; gap:12px; }
+.board-card-heading h2 { margin:0; font-size:23px; }
+.board-icon { display:grid; place-items:center; width:38px; height:38px; border-radius:12px; background:#edf4e5; color:#487343; font-size:23px; flex-shrink:0; }
+.board-card > p { color:#72806d; font-size:13px; line-height:1.6; }
+.board-list { list-style:none; padding:0; counter-reset:rank; }
+.board-list li { counter-increment:rank; display:flex; align-items:center; gap:12px; padding:15px 0; border-top:1px solid #edf0e8; }
+.board-list li::before { content:counter(rank,decimal-leading-zero); color:#8fa083; font-size:12px; font-variant-numeric:tabular-nums; }
+.board-list li > div { flex:1; }
+.board-list small { display:block; margin-top:5px; color:#788571; line-height:1.5; }
+.board-count { background:#edf4e5; color:#416438; padding:6px 9px; border-radius:8px; font-size:12px; white-space:nowrap; }
+@media(max-width:650px) { #board-view .panel-heading { align-items:flex-start; flex-direction:column; } .board-periods { width:100%; } .board-periods button { flex:1; } }
+.board-meal { padding:0; text-align:left; border:0; background:none; color:#254c32; font-size:14px; font-weight:600; line-height:1.4; }
+.board-meal:hover { text-decoration:underline; }
+.board-meal span { color:#89a577; }
+.board-side { display:grid; gap:20px; align-content:start; }
+.discovery-number { display:block; font-size:54px; color:#416c39; margin:24px 0; line-height:1; }
+.discovery-number small { display:block; margin-top:10px; font-size:13px; font-weight:400; color:#72806d; }

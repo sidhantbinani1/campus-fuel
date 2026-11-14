@@ -849,7 +849,8 @@ function switchView(view) {
   $("#dashboard-view").hidden = view !== "dashboard";
   $("#finder-view").hidden = view !== "finder";
   $("#finder-results").hidden = view !== "finder";
-  $("#daily-summary").hidden = !["dashboard", "finder"].includes(view);
+  $("#daily-summary").hidden = false;
+  $(".logged-meals").hidden = !["dashboard", "finder"].includes(view);
   $("#history-view").hidden = view !== "history";
   document.querySelectorAll(".app-tab").forEach((button) => {
     const selected = button.dataset.view === view;
@@ -1199,6 +1200,7 @@ account = createAccount({
   },
   nutrients: OPTIONAL_NUTRIENTS,
   meals: window.MEALS,
+  openMeal: id => { const meal = window.MEALS.find(m => m.id === id); if (meal) showMealDetails(meal); },
 });
 
 // Marketing links use the same account dialog as the student application.
