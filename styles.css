@@ -50,13 +50,6 @@ main { display: flex; flex-direction: column; }
 .one-meal .compare-head, .one-meal .compare-row { grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); }
 .compare-head > *, .compare-row > * { min-width: 0; overflow-wrap: anywhere; }
 .compare-head > *:last-child { border-right: 0; }
-dialog.comparison-dialog { position: fixed; inset: 0; width: min(760px, calc(100vw - 28px)); max-width: none; max-height: min(82vh, 820px); overflow-y: auto; margin: auto; padding: 26px; border: 0; border-radius: 18px; background: #fafcf8; color: var(--ink); box-shadow: 0 24px 70px rgba(0,0,0,.28); }
-.comparison-dialog::backdrop { background: rgba(14, 38, 27, .58); }
-.comparison-dialog .comparison-heading { align-items: start; gap: 12px; margin-bottom: 24px; }
-.comparison-dialog .comparison-heading h2 { font-size: clamp(27px, 4vw, 40px); }
-.comparison-close { flex: none; display: grid; place-items: center; width: 38px; height: 38px; padding: 0; border: 0; border-radius: 50%; background: #e7f2e8; color: #315c40; font-size: 27px; line-height: 1; }
-.comparison-close:hover { background: #d4e9d6; }.comparison-close:focus-visible { outline: 3px solid #397e50; outline-offset: 2px; }
-@media (max-width: 540px) { dialog.comparison-dialog { padding: 20px 14px; } }
 .comparison-help { margin: -12px 0 16px; color: var(--muted); font-size: 13px; line-height: 1.5; }
 .compare-fit { display: block; margin-top: 8px; color: #28613b; font-size: 11px; font-weight: 700; line-height: 1.35; }
 .comparison-advice { margin: 14px 0 0; color: #49665a; font-size: 13px; line-height: 1.55; }
@@ -65,6 +58,11 @@ dialog.comparison-dialog { position: fixed; inset: 0; width: min(760px, calc(100
 .log-confirmation { position: fixed; z-index: 100; left: 50%; bottom: max(22px, env(safe-area-inset-bottom)); transform: translateX(-50%); width: max-content; max-width: calc(100vw - 32px); padding: 13px 18px; border: 1px solid #a6d29f; border-radius: 12px; color: #173b27; background: #e6f8d1; box-shadow: 0 8px 25px rgba(23, 51, 45, .2); font-size: 14px; font-weight: 700; text-align: center; }
 .log-confirmation[hidden] { display: none; }
 @media (max-width: 540px) { .compare-head > *, .compare-row > * { padding: 11px 8px; } .compare-row > span, .compare-head > span, .compare-row strong, .compare-head strong { font-size: 12px; } }
+
+/* Keep the marketing and student experiences connected on every screen. */
+.bridge-home { color: var(--ink); font-size: 12px; white-space: nowrap; }
+.student-coverage { font-size: 14px; line-height: 1.6; }
+@media (max-width: 850px) { .site-header { height: auto; min-height: 76px; flex-wrap: wrap; padding-top: 14px; padding-bottom: 14px; } .app-tabs { order: 4; width: 100%; justify-content: center; } .bridge-home { margin-left: auto; } }
 
 /* Daily plan: category-based dashboard, adapted from draft 3. */
 .plan-view { max-width: 1210px; margin: 0 auto; padding: 0 clamp(22px, 5vw, 54px) 30px; border-radius: 0; background: transparent; color: var(--ink); }
@@ -86,3 +84,5 @@ dialog.comparison-dialog { position: fixed; inset: 0; width: min(760px, calc(100
 .save-plan.is-saved { background: #d5f1cf; color: #205b35; box-shadow: inset 0 0 0 1px #9bcda2; }.save-plan.is-saved + .plan-status { color: #245c38; font-weight: 700; }
 @media (max-width: 800px) { .plan-view { margin: 0 auto; padding: 0 22px 25px; }.plan-hero { grid-template-columns: 1fr 240px; }.goal-explorer-layout { grid-template-columns: 140px 1fr; }.plan-view .optional-goal-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 540px) { .plan-view { padding: 0 17px 22px; }.plan-hero { grid-template-columns: 1fr; gap: 18px; padding: 34px 0 25px; }.plan-hero h1 { font-size: 43px; letter-spacing: -2px; }.plan-overview { min-height: 100px; padding: 18px; }.plan-card { padding: 20px; margin-bottom: 12px; }.plan-card h2 { font-size: 21px; }.plan-view .goals-form { grid-template-columns: 1fr 1fr; }.plan-view .goals-form label { padding: 12px; }.plan-view .goals-form input { font-size: 21px; }.goal-explorer-layout { grid-template-columns: 1fr; }.goal-categories { flex-direction: row; overflow-x: auto; }.goal-category { flex: 1; white-space: nowrap; padding: 10px; }.goal-category span { display: none; }.goal-tracking { flex-direction: column; gap: 6px; }.plan-preferences { align-items: start; flex-direction: column; }.plan-actions { align-items: stretch; flex-direction: column; }.save-plan { display: flex; justify-content: space-between; } }
+
+.audience-nav { display:flex;gap:18px;font-size:13px;white-space:nowrap; }.audience-nav a{color:var(--muted);text-decoration:none}.audience-nav a[aria-current]{color:var(--ink);font-weight:700;border-bottom:2px solid #4f9870}.student-intro{display:none!important}.site-header{height:auto;min-height:84px;flex-wrap:wrap;padding-top:15px;padding-bottom:15px}.app-tabs{order:4;width:100%;max-width:500px;margin:0 auto 0 0}.site-header #account-button{display:block;margin-left:auto}.plan-view .goal-tile input[type=checkbox]{position:static;opacity:1;width:16px;height:16px;accent-color:#397d4f}.goal-check{display:none}.plan-view .goal-tile{flex-wrap:wrap}.plan-view .goal-tile-input input{width:85px}.plan-view input:focus-visible{outline:2px solid #397d4f;outline-offset:3px}@media(max-width:540px){.site-header{gap:12px}.brand{font-size:19px}.audience-nav{order:3;width:100%;justify-content:center}.app-tabs{order:4;max-width:none}.plan-view .goals-form label{grid-column:auto}.goal-tile strong{font-size:12px}}

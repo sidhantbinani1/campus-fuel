@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="University Plates helps you plan meals, track your nutrition and discover campus favorites." />
+    <title>University Plates | Your daily fuel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="University Plates home"><span class="brand-mark">✦</span> University Plates</a>
+      <nav class="audience-nav" aria-label="Audience"><a href="index.html">For universities</a><a href="app.html" aria-current="page">For students</a></nav><nav class="app-tabs" aria-label="University Plates views">
+        <button class="app-tab active" data-view="dashboard" type="button" aria-current="page">Daily plan</button>
+        <button class="app-tab" data-view="finder" type="button">Find meals</button>
+        <button class="app-tab" data-view="history" type="button">History</button><button class="app-tab" data-view="board" type="button">The Fuel Board</button>
+      </nav>
+      <button id="account-button" class="campus-pill" type="button">Sign in →</button>
+    </header>
+
+    <main id="top"><div id="account-status" class="account-status" role="status" aria-live="polite"></div><section id="guest-welcome" class="guest-welcome student-intro"><p class="eyebrow">GOOD FOOD. YOUR ROUTINE.</p><h1>University Plates<span>Make room for your goals.</span></h1><p>Build your daily plan. Sign in to save your progress and find your campus favorites.</p><p class="student-coverage">Starting with Cal Poly SLO menus. Other listed campuses: menus coming soon. <a href="index.html">Learn about University Plates →</a></p></section><section id="campus-notice" class="account-notice" hidden></section>
+      <section id="daily-summary" class="daily-dashboard daily-summary" aria-label="Today's nutrition summary">
+        <p class="eyebrow summary-heading">TODAY'S PROGRESS</p>
+        <div class="progress-grid">
+          <div class="progress-card"><span>Calories remaining</span><strong id="remaining-calories">Set a goal</strong><small id="calorie-detail">No meals logged</small></div>
+          <div class="progress-card"><span>Protein remaining</span><strong id="remaining-protein">Set a goal</strong><small id="protein-detail">No meals logged</small></div>
+        </div>
+        <div id="optional-progress" class="optional-progress" aria-live="polite"></div>
+        <div class="logged-meals"><div><strong>Today's meal log</strong><p id="log-note">Log a meal to update your plan.</p></div><div id="log-list" class="log-list"></div><button id="clear-log" class="clear-button" type="button">Clear today</button></div>
+      </section>
+      <div id="finder-view" hidden>
+      <section class="hero">
+        <p class="eyebrow">FUEL YOUR CAMPUS ROUTINE</p>
+        <h1>Keep your goals.<br /><i>Eat on campus.</i></h1>
+        <p class="hero-copy">University Plates helps students find campus meals that fit their protein, macro, and calorie goals.</p>
+
+        <form id="search-form" class="search-shell">
+          <label class="sr-only" for="meal-query">Describe the meal you want</label>
+          <span class="search-icon">⌕</span>
+          <input id="meal-query" type="search" placeholder="Try “I need protein under 700 calories”" autocomplete="off" />
+          <button type="submit">Find meals <span>→</span></button>
+        </form>
+        <div class="quick-browse" aria-label="Quick meal browsing">
+          <div class="browse-group" aria-label="Browse the currently verified restaurants">
+            <span>Available now</span>
+            <button class="browse-chip location-chip" data-location="Chick-fil-A" type="button">Chick-fil-A</button>
+            <button class="browse-chip location-chip" data-location="Panda Express" type="button">Panda Express</button>
+            <button class="browse-chip location-chip" data-location="Red Radish" type="button">Red Radish</button>
+          </div>
+          <div class="browse-group" aria-label="Browse all campus food by type">
+            <span>Across campus</span>
+            <button class="browse-chip type-chip" data-meal-type="snack" type="button">Snack</button>
+            <button class="browse-chip type-chip" data-meal-type="meal" type="button">Meal</button>
+          </div>
+          <button id="suggest-next" class="suggest-chip" type="button">Suggest my next meal ✦</button>
+        </div>
+        <p id="quick-status" class="quick-status" aria-live="polite"></p>
+      </section>
+      </div>
+
+      <section id="dashboard-view" class="daily-dashboard plan-view" aria-labelledby="dashboard-title">
+        <div class="plan-hero"><div><p class="eyebrow">YOUR PLAN, MADE SIMPLE</p><h1 id="dashboard-title">Fuel your<br /><i>everyday.</i></h1><p>A few goals, a little flexibility, a plan that feels like yours.</p></div><aside class="plan-overview"><span>✦</span><p>WHAT YOU’RE TRACKING</p><strong id="plan-goal-count">0 daily goals</strong><small>Change your plan any time.</small></aside></div>
+        <form id="goals-form">
+          <section class="plan-card"><p class="plan-kicker">YOUR FOUNDATION</p><h2>Set the essentials</h2><p class="plan-help">Set your daily targets. Sign in to save your plan across devices.</p><div class="goals-form"><label>Daily calories <input id="goal-calories" type="number" min="0" step="1" placeholder="e.g. 2200" /></label><label>Daily protein (g) <input id="goal-protein" type="number" min="0" step="1" placeholder="e.g. 150" /></label></div></section>
+          <section class="plan-card goal-explorer" aria-labelledby="optional-goals-title"><div class="plan-section-heading"><div><p class="plan-kicker">ADD MORE IF YOU’D LIKE</p><h2 id="optional-goals-title">Explore other goals <span>↗</span></h2><p class="plan-help">Choose a category, then select what you want to track.</p></div><span id="optional-goal-count" class="plan-count">0 selected</span></div><div class="goal-explorer-layout"><div class="goal-categories" role="group" aria-label="Goal categories"><button type="button" class="goal-category active" data-category="Macros" aria-pressed="true">◒ &nbsp; Macros <span>→</span></button><button type="button" class="goal-category" data-category="Minerals" aria-pressed="false">✳ &nbsp; Minerals <span>→</span></button><button type="button" class="goal-category" data-category="Vitamins" aria-pressed="false">✦ &nbsp; Vitamins <span>→</span></button></div><div class="goal-category-content"><div class="goal-category-heading"><strong id="goal-category-title">Macros</strong><small>Choose any</small></div><div id="optional-goal-picker" class="optional-goal-picker"></div></div></div><div class="goal-tracking"><span>ALSO TRACKING</span><div id="optional-goal-summary"></div></div></section>
+          <fieldset class="plan-card plan-preferences"><legend class="sr-only">Dietary preferences</legend><div><p class="plan-kicker">MAKE IT YOURS</p><h2>Dietary preferences <small>optional</small></h2><p class="plan-help">We’ll use these when suggesting meals.</p></div><div class="plan-preference-options"><label><input id="pref-vegetarian" type="checkbox" /> Vegetarian</label><label><input id="pref-vegan" type="checkbox" /> Vegan</label><label><input id="pref-avoiding-gluten" type="checkbox" /> Avoiding gluten</label></div><p class="plan-safety">Dietary labels may be incomplete. “Avoiding gluten” does not guarantee allergen safety—always confirm with dining staff.</p></fieldset>
+          <div class="plan-actions"><button id="save-plan" class="save-plan" type="submit">Save my plan ↗</button><p id="plan-status" class="plan-status" role="status" aria-live="polite">Draft your plan here. Sign in when you’re ready to save.</p></div>
+        </form>
+      </section>
+
+      <div id="finder-results" hidden>
+      <section class="discover-section" aria-labelledby="discover-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">DISCOVER</p>
+            <h2 id="discover-title">Meals for you</h2>
+          </div>
+          <p id="result-summary" class="result-summary" aria-live="polite"></p>
+        </div>
+
+        <section id="best-match" class="best-match" aria-live="polite"></section>
+
+        <div class="browse-heading"><h3>Browse by restaurant</h3><p id="browse-note">Browse all available foods and suggested combinations.</p></div>
+        <div class="restaurant-tabs" role="group" aria-label="Browse restaurants">
+          <button class="restaurant-tab active" type="button" data-restaurant="" aria-pressed="true">All restaurants</button>
+          <button class="restaurant-tab" type="button" data-restaurant="Chick-fil-A" aria-pressed="false">Chick-fil-A</button>
+          <button class="restaurant-tab" type="button" data-restaurant="Panda Express" aria-pressed="false">Panda Express</button>
+          <button class="restaurant-tab" type="button" data-restaurant="Red Radish" aria-pressed="false">Red Radish</button>
+        </div>
+        <div id="meal-grid"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <span>⌕</span>
+          <h3 id="empty-title">No verified exact matches yet.</h3>
+          <p id="empty-copy">Try removing a filter. University Plates will show transparent alternatives as the verified dataset grows.</p>
+          <button id="reset-empty" type="button">Show all meals</button>
+        </div>
+      </section>
+
+      <section id="comparison" class="comparison" hidden aria-labelledby="compare-title">
+        <div class="comparison-heading">
+          <div>
+            <p class="eyebrow">COMPARE</p>
+            <h2 id="compare-title">Your meal choices</h2>
+          </div>
+          <button id="close-comparison" class="clear-button" type="button">Clear comparison</button>
+        </div>
+        <p class="comparison-help">Compare up to two meals. To choose a different meal, deselect one above or clear the comparison.</p>
+        <div id="comparison-content"></div>
+      </section>
+      </div>
+
+      <section id="history-view" class="history-view" hidden aria-labelledby="history-title">
+        <div class="history-heading">
+          <div>
+            <p class="eyebrow">YOUR PRIVATE RECORD</p>
+            <h1 id="history-title">Your fuel history</h1>
+            <p>Review your logged campus meals and daily verified totals, newest first.</p>
+          </div>
+          <button id="clear-history" class="clear-button" type="button">Clear all history</button>
+        </div>
+        <div id="history-list" class="history-list"></div>
+        <div id="empty-history" class="empty-state history-empty">
+          <span>◷</span>
+          <h3>Your log will appear here.</h3>
+          <p>Log a meal from Find meals to build a day-by-day picture of your campus dining.</p>
+          <button class="go-finder" type="button">Find meals</button>
+        </div>
+      </section>
+      <section id="account-view" class="fuel-panel" hidden></section>
+      <section id="board-view" class="fuel-panel" hidden></section>
+    </main>
+
+    <dialog id="meal-detail-dialog" class="meal-detail-dialog" aria-labelledby="meal-detail-title">
+      <button id="close-meal-detail" class="detail-close" type="button" aria-label="Close meal details">×</button>
+      <div id="meal-detail-content"></div>
+    </dialog>
+    <div id="log-confirmation" class="log-confirmation" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+
+    <dialog id="auth-dialog" class="fuel-dialog" aria-labelledby="auth-title"><button class="dialog-close" data-close="auth-dialog" aria-label="Close sign in">×</button><p class="eyebrow">YOUR NEXT CHAPTER</p><h2 id="auth-title">Keep your fuel flowing.</h2><p>Save your plan, follow your progress, and discover your campus.</p><p id="auth-setup" class="account-notice" hidden>Sign-in is awaiting the University Plates Supabase configuration. You can still draft your plan.</p><button id="google-login" class="primary wide">Continue with Google</button><p class="auth-divider">or use your email</p><form id="email-form"><label>Email address<input id="auth-email" type="email" autocomplete="email" required placeholder="you@example.com"></label><button class="primary wide">Email me a code</button></form><form id="code-form" hidden><label>Code from your email<input id="auth-code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6,10}" required></label><button class="primary wide">Verify and continue</button></form><p id="auth-message" role="status" aria-live="polite"></p><p class="fine-print">Your school is selected after sign-in. No school email required. <button data-legal="terms" class="text-button">Terms</button> · <button data-legal="privacy" class="text-button">Privacy</button></p></dialog>
+    <dialog id="legal-dialog" class="fuel-dialog" aria-labelledby="legal-title"><button class="dialog-close" data-close="legal-dialog" aria-label="Close document">×</button><div id="legal-content"></div></dialog>
+    <footer>
+      <strong>University Plates</strong>
+      <p>Showing a selected dining snapshot. Availability may change.</p>
+      <p id="coverage-note"></p><p><button class="text-button" data-legal="terms">Terms</button> · <button class="text-button" data-legal="privacy">Privacy</button></p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

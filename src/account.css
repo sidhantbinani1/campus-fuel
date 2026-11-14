@@ -1,0 +1,435 @@
+[hidden] {
+  display: none !important;
+}
+.site-header {
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.campus-pill {
+  cursor: pointer;
+  font: inherit;
+}
+.guest-welcome {
+  max-width: 1120px;
+  margin: 32px auto 12px;
+  padding: 34px 32px;
+  border-radius: 22px;
+  background: #e8efdd;
+  border: 1px solid #d1ddc1;
+}
+.guest-welcome h1 {
+  font-family: Fraunces, serif;
+  font-size: clamp(32px, 5vw, 52px);
+  margin: 12px 0;
+}
+.guest-welcome h1 span {
+  display: block;
+  font:
+    500 18px "DM Sans",
+    sans-serif;
+  margin-top: 12px;
+  color: #516549;
+}
+.guest-welcome p {
+  max-width: 560px;
+}
+.account-status {
+  max-width: 1120px;
+  margin: 12px auto;
+  color: #42553c;
+  min-height: 20px;
+  font-size: 14px;
+}
+.account-status.error {
+  color: #9b3028;
+  background: #fff1ed;
+  padding: 14px;
+  border-radius: 12px;
+}
+.account-notice {
+  padding: 20px;
+  background: #f3edda;
+  border-radius: 14px;
+  max-width: 1120px;
+  margin: 20px auto;
+}
+.fuel-panel {
+  max-width: 1120px;
+  margin: 40px auto;
+  padding: 0 24px 40px;
+}
+.fuel-panel h1 {
+  font:
+    600 clamp(32px, 5vw, 48px) Fraunces,
+    serif;
+  margin: 10px 0;
+}
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.fuel-dialog {
+  border: 1px solid #d7ddcf;
+  border-radius: 24px;
+  width: min(520px, 92vw);
+  padding: 36px;
+  color: #243521;
+  max-height: 88vh;
+  overflow: auto;
+  box-shadow: 0 24px 80px #17241440;
+}
+.fuel-dialog::backdrop {
+  background: #14241070;
+  backdrop-filter: blur(4px);
+}
+.fuel-dialog h2 {
+  font:
+    600 32px Fraunces,
+    serif;
+}
+.dialog-close {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  border: 0;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+.fuel-dialog label,
+.settings-card label {
+  display: block;
+  margin: 16px 0;
+  font-size: 14px;
+}
+.fuel-dialog input,
+.settings-card input,
+.settings-card select,
+.fuel-panel select {
+  border: 1px solid #bcc8b3;
+  border-radius: 9px;
+  padding: 12px;
+  font: inherit;
+  background: white;
+  color: #243521;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.fuel-dialog input:not([type="checkbox"]),
+.settings-card input:not([type="checkbox"]),
+.settings-card select {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+}
+.fuel-panel button,
+.fuel-dialog button {
+  cursor: pointer;
+  font: inherit;
+}
+.primary {
+  background: #294b2c;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: 13px 20px;
+}
+.secondary {
+  background: #fff;
+  color: #294b2c;
+  border: 1px solid #c6d2bf;
+  border-radius: 10px;
+  padding: 11px 18px;
+}
+.wide {
+  width: 100%;
+  margin: 10px 0;
+}
+.text-button {
+  background: none;
+  border: 0;
+  text-decoration: underline;
+  color: inherit;
+  padding: 3px;
+}
+.auth-divider {
+  text-align: center;
+  font-size: 13px;
+  color: #6c7567;
+}
+.fine-print,
+.chart-note {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #606b59;
+}
+.settings-card,
+.metric-card,
+.board-card {
+  background: #fff;
+  border: 1px solid #dfe5d6;
+  border-radius: 18px;
+  padding: 24px;
+}
+.settings-grid,
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+.settings-card h2,
+.board-card h2 {
+  font:
+    600 24px Fraunces,
+    serif;
+  margin: 0 0 12px;
+}
+.board-card p {
+  font-size: 14px;
+  color: #606b59;
+}
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px 0;
+}
+.metric-card strong {
+  display: block;
+  font-size: 26px;
+  margin: 12px 0;
+}
+.metric-card small {
+  color: #66725e;
+}
+.chart-card {
+  border: 1px solid #dfe5d6;
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  margin: 20px 0;
+}
+.chart-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.chart-bars {
+  height: 190px;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  border-bottom: 1px solid #ccd7c0;
+  position: relative;
+  margin-top: 24px;
+}
+.chart-bar {
+  flex: 1;
+  min-width: 1px;
+  background: #71945d;
+  border-radius: 4px 4px 0 0;
+  max-height: 100%;
+  position: relative;
+}
+.chart-bar.untracked {
+  height: 3px !important;
+  background: #d8ddcf;
+}
+.chart-bar.incomplete {
+  background: repeating-linear-gradient(
+    45deg,
+    #71945d,
+    #71945d 3px,
+    #b4c8a7 3px,
+    #b4c8a7 6px
+  );
+}
+.goal-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 2px dashed #b78232;
+  z-index: 1;
+  pointer-events: none;
+}
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.chart-table {
+  max-height: 240px;
+  overflow: auto;
+}
+.chart-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.chart-table td,
+.chart-table th {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+.board-list {
+  list-style: none;
+  padding: 0;
+}
+.board-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 0;
+  border-top: 1px solid #e5e9df;
+}
+.board-list small {
+  display: block;
+  color: #727b6a;
+  margin-top: 4px;
+}
+.board-count {
+  white-space: nowrap;
+  font-weight: 600;
+}
+.pill-note {
+  display: inline-block;
+  border-radius: 20px;
+  background: #edf2e5;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+.danger-button {
+  color: #a22d26;
+  background: #fff;
+  border: 1px solid #cfa8a3;
+  border-radius: 9px;
+  padding: 10px;
+}
+.favorite-button {
+  background: #f5f1e4;
+  border: 1px solid #ded9c9;
+  border-radius: 8px;
+  padding: 8px;
+  color: #3c5036;
+}
+.card-actions {
+  flex-wrap: wrap;
+}
+.check-row {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+.check-row input {
+  margin-top: 4px;
+}
+.dashboard-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.fuel-panel li {
+  line-height: 1.5;
+}
+.fuel-panel details {
+  margin-top: 16px;
+}
+.fuel-panel summary {
+  cursor: pointer;
+}
+.school-label {
+  font-size: 14px;
+  color: #65765b;
+}
+.sync-retry {
+  margin-left: 12px;
+}
+.edit-log {
+  border: 0;
+  border-radius: 5px;
+  padding: 3px 8px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+.account-banner {
+  padding: 14px;
+  background: #f1f5e9;
+  border-radius: 12px;
+  margin: 16px 0;
+}
+.account-email {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 700px) {
+  .settings-grid,
+  .board-grid {
+    grid-template-columns: 1fr;
+  }
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .fuel-panel {
+    padding: 0 16px 30px;
+    margin-top: 24px;
+  }
+  .guest-welcome {
+    margin: 20px 16px;
+    padding: 24px;
+  }
+  .app-tabs {
+    order: 3;
+    width: 100%;
+    overflow: auto;
+  }
+  .app-tab {
+    white-space: nowrap;
+  }
+  .account-status {
+    margin: 12px 16px;
+  }
+  .fuel-dialog {
+    padding: 28px 20px;
+  }
+  .chart-card {
+    padding: 16px;
+  }
+  .site-header .brand {
+    font-size: 23px;
+  }
+}
+/* The account control stays visible when the header wraps on small screens. */
+.site-header {
+  height: auto;
+  min-height: 76px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.site-header .campus-pill {
+  display: block;
+}
+.fuel-panel h2,
+.fuel-dialog h2 {
+  letter-spacing: -0.6px;
+}
+.guest-welcome {
+  box-sizing: border-box;
+}
+@media (max-width: 700px) {
+  .site-header {
+    min-height: 64px;
+  }
+  .site-header .campus-pill {
+    margin-left: auto;
+  }
+  .app-tabs {
+    margin-left: 0;
+  }
+}
