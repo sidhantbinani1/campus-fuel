@@ -141,7 +141,7 @@ function renderBestMatch(meals) {
   target.innerHTML = `<div class="best-mark">✦ <span>TOP PICK</span></div><div class="best-copy"><p class="eyebrow">${title}</p><h3><button class="best-detail" type="button">${meal.name}</button></h3><p>${meal.location} · ${mealReason(meal)}</p></div><div class="best-stats"><strong>${text(meal.calories)}</strong><span>${meal.calories === null ? "Calories unavailable" : "calories"}</span></div><button class="best-compare" type="button">${compareLabel}</button>`;
   target.onclick = event => { if (!event.target.closest(".best-compare")) showMealDetails(meal); };
   $(".best-compare").addEventListener("click", () => {
-    if (state.selected.length === 2) $("#comparison").scrollIntoView({ behavior: "smooth", block: "start" });
+    if (state.selected.length === 2) openComparison();
     else if (!state.selected.includes(meal.id)) toggleCompare(meal.id);
   });
 }
@@ -233,7 +233,7 @@ function comparisonAdvice(meals) {
 }
 
 function renderComparison() {
-  const section = $("#comparison"); const meals = state.selected.map(id => window.MEALS.find(meal => meal.id === id)); section.hidden = meals.length === 0; if (!meals.length) return;
+  const meals = state.selected.map(id => window.MEALS.find(meal => meal.id === id)); if (!meals.length) return;
   const known = key => meal => meal[key] !== null && meal[key] !== undefined;
   const labeled = key => meal => typeof meal[key] === "boolean";
   const rows = [
@@ -368,8 +368,9 @@ function toggleCompare(id) {
   else if (state.selected.length < 2) state.selected = [...state.selected, id];
   else return;
   render();
-  if (addingMeal && state.selected.length === 2) $("#comparison").scrollIntoView({ behavior: "smooth", block: "start" });
+  if (addingMeal && state.selected.length === 2) openComparison();
 }
+function openComparison() { const dialog = $("#comparison"); if (state.selected.length === 2 && !dialog.open) dialog.showModal(); }
 function clearAll() { Object.assign(state, { query: "", maxCalories: "", minProtein: "", diet: "", location: "", mealType: "", restaurantTab: "", suggestionMode: false }); $("#meal-query").value = ""; updateBrowseButtons(); render(); }
 function updateBrowseButtons() { document.querySelectorAll(".browse-chip").forEach(button => { const selected = button.dataset.location ? button.dataset.location === state.location : button.dataset.mealType === state.mealType; button.classList.toggle("selected", selected); }); }
 
@@ -380,13 +381,26 @@ $("#meal-query").addEventListener("input", event => { if (!event.target.value.tr
 document.querySelectorAll(".goal-category").forEach(button => button.addEventListener("click", () => { planCategory = button.dataset.category; renderOptionalGoals(); }));
 $("#goals-form").addEventListener("submit", event => {
   event.preventDefault();
-  state.goals = { ...planDraft, optionalGoals: { ...planDraft.optionalGoals } };
+  const invalid = OPTIONAL_NUTRIENTS.find(({ key }) => { const value = planDraft.optionalGoals[key]; return value !== undefined && value !== "" && (!Number.isFinite(Number(value)) || Number(value) < 0); });
+  if (invalid) {
+    planCategory = Object.keys(GOAL_CATEGORIES).find(category => GOAL_CATEGORIES[category].includes(invalid.key));
+    renderOptionalGoals();
+    state.planMessage = `Please enter a non-negative ${invalid.label.toLowerCase()} target before saving.`;
+    $("#plan-status").textContent = state.planMessage;
+    document.querySelector(`.optional-goal-value[data-nutrient="${invalid.key}"]`)?.focus();
+    return;
+  }
+  const savedPlan = { ...planDraft, optionalGoals: { ...planDraft.optionalGoals } };
+  try { localStorage.setItem("campusfuel-goals", JSON.stringify(savedPlan)); }
+  catch { state.planMessage = "Your browser couldn’t save this plan. Check your browser storage settings and try again."; $("#plan-status").textContent = state.planMessage; return; }
+  state.goals = savedPlan;
   state.planMessage = "Saved — these targets will stay on this device until you change them.";
-  localStorage.setItem("campusfuel-goals", JSON.stringify(state.goals));
   if (todaysEntries().length) saveTodaysGoals();
   render();
 });
-$("#reset-empty").addEventListener("click", clearAll); $("#close-comparison").addEventListener("click", () => { state.selected = []; render(); });
+$("#reset-empty").addEventListener("click", clearAll);
+$("#close-comparison").addEventListener("click", () => $("#comparison").close());
+$("#comparison").addEventListener("close", () => { state.selected = []; render(); });
 $("#clear-log").addEventListener("click", () => { state.entries = state.entries.filter(entry => entry.date !== dateKey()); localStorage.setItem("campusfuel-meal-history", JSON.stringify(state.entries)); render(); });
 $("#clear-history").addEventListener("click", () => { state.entries = []; localStorage.removeItem("campusfuel-meal-history"); localStorage.removeItem("campusfuel-today-log"); renderHistory(); render(); });
 document.querySelectorAll(".app-tab").forEach(button => button.addEventListener("click", () => switchView(button.dataset.view)));

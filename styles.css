@@ -50,6 +50,13 @@ main { display: flex; flex-direction: column; }
 .one-meal .compare-head, .one-meal .compare-row { grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); }
 .compare-head > *, .compare-row > * { min-width: 0; overflow-wrap: anywhere; }
 .compare-head > *:last-child { border-right: 0; }
+dialog.comparison-dialog { position: fixed; inset: 0; width: min(760px, calc(100vw - 28px)); max-width: none; max-height: min(82vh, 820px); overflow-y: auto; margin: auto; padding: 26px; border: 0; border-radius: 18px; background: #fafcf8; color: var(--ink); box-shadow: 0 24px 70px rgba(0,0,0,.28); }
+.comparison-dialog::backdrop { background: rgba(14, 38, 27, .58); }
+.comparison-dialog .comparison-heading { align-items: start; gap: 12px; margin-bottom: 24px; }
+.comparison-dialog .comparison-heading h2 { font-size: clamp(27px, 4vw, 40px); }
+.comparison-close { flex: none; display: grid; place-items: center; width: 38px; height: 38px; padding: 0; border: 0; border-radius: 50%; background: #e7f2e8; color: #315c40; font-size: 27px; line-height: 1; }
+.comparison-close:hover { background: #d4e9d6; }.comparison-close:focus-visible { outline: 3px solid #397e50; outline-offset: 2px; }
+@media (max-width: 540px) { dialog.comparison-dialog { padding: 20px 14px; } }
 .comparison-help { margin: -12px 0 16px; color: var(--muted); font-size: 13px; line-height: 1.5; }
 .compare-fit { display: block; margin-top: 8px; color: #28613b; font-size: 11px; font-weight: 700; line-height: 1.35; }
 .comparison-advice { margin: 14px 0 0; color: #49665a; font-size: 13px; line-height: 1.55; }
