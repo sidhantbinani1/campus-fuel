@@ -20,7 +20,8 @@ const state = {
   query: "", maxCalories: "", minProtein: "", diet: "", location: "", mealType: "", restaurantTab: "", suggestionMode: false, selected: [],
   goals: { calories: storedGoals.calories || "", protein: storedGoals.protein || "", vegetarian: Boolean(storedGoals.vegetarian), vegan: Boolean(storedGoals.vegan), avoidingGluten: Boolean(storedGoals.avoidingGluten), optionalGoals: storedOptionalGoals },
   entries: normalizedEntries, dailyGoals: storedDailyGoals,
-  view: "dashboard", planMessage: "", planStatus: "idle"
+  view: "dashboard", planMessage: "", planStatus: "idle",
+  builder: { restaurant: "Panda Express", selections: {} }
 };
 let planDraft = { ...state.goals, optionalGoals: { ...state.goals.optionalGoals } };
 let planCategory = "Macros";
@@ -28,13 +29,12 @@ const GOAL_CATEGORIES = { Macros: ["carbsGrams", "fatGrams", "fiberGrams", "suga
 
 let logConfirmationTimer;
 
-function confirmMealLogged(mealId) {
-  const meal = window.MEALS.find(item => item.id === mealId);
+function confirmMealLogged(meal) {
   const confirmation = $("#log-confirmation");
   confirmation.textContent = `✓ ${meal?.name || "Meal"} logged to today's meal log`;
   confirmation.hidden = false;
   document.querySelectorAll(".log-button").forEach(button => {
-    if (button.dataset.logId === mealId) button.textContent = "✓ Meal logged";
+    if (button.dataset.logId === meal?.id) button.textContent = "✓ Meal logged";
   });
   clearTimeout(logConfirmationTimer);
   logConfirmationTimer = setTimeout(() => {
@@ -53,6 +53,24 @@ const nutritionText = (meal, key, unit, fallback = "Unavailable") => {
 };
 const proteinText = (meal, fallback = "Unavailable") => nutritionText(meal, "proteinGrams", "g", fallback);
 const CORE_NUTRIENTS = [{ key: "calories", label: "calories" }, { key: "proteinGrams", label: "protein" }, { key: "carbsGrams", label: "carbs" }, { key: "fatGrams", label: "fat" }];
+const ALL_NUTRIENT_KEYS = ["calories", "proteinGrams", ...OPTIONAL_NUTRIENTS.map(({ key }) => key)];
+const BUILDER_CONFIG = {
+  "Panda Express": [
+    { id: "entree", label: "Choose one entrée", categories: ["Chicken", "Beef", "Seafood", "Vegetables"], required: true, max: 1 },
+    { id: "side", label: "Choose one side", categories: ["Sides"], required: true, max: 1 }
+  ],
+  "Red Radish": [
+    { id: "base", label: "Choose a base", categories: ["BYO - Base Greens"], required: true, max: 1 },
+    { id: "protein", label: "Choose a protein", categories: ["BYO - Protein Toppings"], required: true, max: 1 },
+    { id: "toppings", label: "Add toppings", categories: ["BYO - Base Toppings", "BYO - Premium Toppings"], required: false, max: 3 },
+    { id: "dressing", label: "Add a dressing", categories: ["BYO - Dressings"], required: false, max: 1 }
+  ],
+  "Chick-fil-A": [
+    { id: "entree", label: "Choose one entrée", categories: ["Entrees"], required: true, max: 1 },
+    { id: "side", label: "Choose one side", categories: ["Sides"], required: true, max: 1 },
+    { id: "drink", label: "Add a drink", categories: ["Drinks"], required: false, max: 1 }
+  ]
+};
 function missingIngredientNotes(meal, nutrients = CORE_NUTRIENTS) {
   if (!meal.components) return [];
   const partialKeys = nutrients.filter(({ key }) => meal[key] == null && typeof meal.partialNutrition?.[key] === "number" && !(key === "proteinGrams" && meal.proteinDisplay));
@@ -63,7 +81,90 @@ function missingIngredientNotes(meal, nutrients = CORE_NUTRIENTS) {
 }
 const badge = (label, kind = "neutral") => `<span class="badge ${kind}">${label}</span>`;
 
-const mealsForEntries = (entries) => entries.map(entry => window.MEALS.find(meal => meal.id === entry.id)).filter(Boolean);
+function builderGroups() { return BUILDER_CONFIG[state.builder.restaurant] || []; }
+function builderSelection(groupId) {
+  return state.builder.selections[state.builder.restaurant]?.[groupId] || [];
+}
+function builderItems(group) {
+  return window.MEALS.filter(item => !item.isMealIdea && item.location === state.builder.restaurant && group.categories.includes(item.category));
+}
+function selectedBuilderItems() {
+  return builderGroups().flatMap(group => builderSelection(group.id).map(id => window.MEALS.find(item => item.id === id)).filter(Boolean));
+}
+function buildCustomMeal() {
+  const components = selectedBuilderItems();
+  if (!components.length) return null;
+  const values = Object.fromEntries(ALL_NUTRIENT_KEYS.map(key => [key, components.every(item => typeof item[key] === "number") ? components.reduce((sum, item) => sum + item[key], 0) : null]));
+  const partialNutrition = Object.fromEntries(ALL_NUTRIENT_KEYS.flatMap(key => {
+    const known = components.filter(item => typeof item[key] === "number" && Number.isFinite(item[key]));
+    return known.length && known.length < components.length ? [[key, known.reduce((sum, item) => sum + item[key], 0)]] : [];
+  }));
+  const boundedProtein = components.every(item => typeof item.proteinGrams === "number" || item.proteinDisplay === "Less than 1g");
+  const uncertainProtein = components.filter(item => item.proteinDisplay === "Less than 1g").length;
+  const knownProtein = components.reduce((sum, item) => sum + (typeof item.proteinGrams === "number" ? item.proteinGrams : 0), 0);
+  const proteinDisplay = boundedProtein && uncertainProtein ? (knownProtein === 0 && uncertainProtein === 1 ? "Less than 1g" : `At least ${knownProtein}g and less than ${knownProtein + uncertainProtein}g`) : null;
+  const labels = Object.fromEntries(["vegetarian", "vegan", "avoidingGluten"].map(key => [key, components.every(item => item[key] === true) ? true : null]));
+  const restaurant = state.builder.restaurant;
+  const noun = restaurant === "Panda Express" ? "bowl" : restaurant === "Red Radish" ? "salad" : "meal";
+  return {
+    id: `custom-${restaurant.toLowerCase().replaceAll(/[^a-z]+/g, "-")}-${components.map(item => item.id).join("-")}`,
+    name: `Your ${restaurant} ${noun}`,
+    location: restaurant,
+    category: "Custom meal",
+    mealType: "meal",
+    servingSize: "Your selected components",
+    description: components.map(item => `${item.name} (${item.servingSize || "serving size not specified"})`).join(" + "),
+    components: components.map(item => ({ ...item })),
+    customBuilder: true,
+    verifiedAt: components.map(item => item.verifiedAt).filter(Boolean).sort()[0],
+    proteinDisplay,
+    partialNutrition,
+    ...values,
+    ...labels
+  };
+}
+function builderIsComplete() {
+  return builderGroups().filter(group => group.required).every(group => builderSelection(group.id).length > 0);
+}
+function renderMealBuilder() {
+  const restaurant = state.builder.restaurant;
+  document.querySelectorAll(".builder-restaurant").forEach(button => {
+    const active = button.dataset.builderRestaurant === restaurant;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-selected", String(active));
+  });
+  $("#meal-builder-options").innerHTML = builderGroups().map(group => {
+    const selected = builderSelection(group.id);
+    const limit = group.max > 1 ? `Choose up to ${group.max}` : group.required ? "Required" : "Optional";
+    return `<section class="builder-group"><div class="builder-group-heading"><h3>${group.label}</h3><span>${limit}</span></div><div class="builder-options">${builderItems(group).map(item => `<button class="builder-option ${selected.includes(item.id) ? "selected" : ""}" data-builder-group="${group.id}" data-builder-id="${item.id}" type="button" aria-pressed="${selected.includes(item.id)}"><strong>${item.name}</strong><small>${text(item.servingSize, "Serving size unavailable")} · ${nutritionText(item, "calories", " cal", "Calories unavailable")} · ${proteinText(item, "Protein unavailable")}</small></button>`).join("")}</div></section>`;
+  }).join("");
+  const summary = $("#meal-builder-summary");
+  if (!builderIsComplete()) {
+    summary.innerHTML = `<p><strong>Start by completing the required choices.</strong> Live nutrition totals will appear here.</p>`;
+  } else {
+    const meal = buildCustomMeal();
+    const notes = missingIngredientNotes(meal);
+    summary.innerHTML = `<p class="eyebrow">YOUR BUILD</p><h3>${meal.name}</h3><p>${meal.description}</p><div class="builder-stats"><span><strong>${nutritionText(meal, "calories", " cal", "—")}</strong>calories</span><span><strong>${proteinText(meal, "—")}</strong>protein</span><span><strong>${nutritionText(meal, "carbsGrams", "g", "—")}</strong>carbs</span><span><strong>${nutritionText(meal, "fatGrams", "g", "—")}</strong>fat</span></div><p class="builder-fit">${mealReason(meal)}</p>${notes.length ? `<p class="partial-note">* Known subtotal. ${notes.join(" ")} Known amounts are included in daily totals; missing amounts are unknown.</p>` : ""}<div class="builder-actions"><button id="builder-view-details" type="button">View full nutrition</button><button id="builder-log-meal" type="button">Log this meal +</button></div>`;
+  }
+  document.querySelectorAll(".builder-option").forEach(button => button.addEventListener("click", () => {
+    const group = builderGroups().find(item => item.id === button.dataset.builderGroup);
+    const previous = builderSelection(group.id);
+    let next;
+    if (previous.includes(button.dataset.builderId)) next = previous.filter(id => id !== button.dataset.builderId);
+    else if (group.max === 1) next = [button.dataset.builderId];
+    else next = previous.length < group.max ? [...previous, button.dataset.builderId] : previous;
+    state.builder.selections[restaurant] = { ...(state.builder.selections[restaurant] || {}), [group.id]: next };
+    renderMealBuilder();
+  }));
+  $("#builder-view-details")?.addEventListener("click", () => showMealDetails(buildCustomMeal()));
+  $("#builder-log-meal")?.addEventListener("click", () => {
+    const meal = buildCustomMeal();
+    if (meal) { logMeal(meal); $("#meal-builder-dialog").close(); }
+  });
+}
+
+const mealForEntry = (entry) => entry.mealSnapshot || window.MEALS.find(meal => meal.id === entry.id);
+const mealsForEntries = (entries) => entries.map(mealForEntry).filter(Boolean);
 const todaysEntries = () => state.entries.filter(entry => entry.date === dateKey());
 const loggedMeals = () => mealsForEntries(todaysEntries());
 const knownNutrient = (meal, key) => typeof meal[key] === "number" && Number.isFinite(meal[key]) ? meal[key] : typeof meal.partialNutrition?.[key] === "number" ? meal.partialNutrition[key] : 0;
@@ -188,7 +289,7 @@ function renderDashboard() {
   $("#remaining-protein").textContent = left.protein === null ? "Set a goal" : `${proteinIncomplete ? "Up to " : ""}${Math.max(0, left.protein)}g`;
   $("#protein-detail").textContent = state.goals.protein === "" ? "No daily target set" : `${proteinIncomplete ? "At least " : ""}${used.protein}g of ${state.goals.protein}g logged${proteinIncomplete ? " (some values missing)" : ""}`;
   $("#log-note").textContent = logged.length ? `${logged.length} meal${logged.length === 1 ? "" : "s"} logged today. Known amounts are included; missing values may make totals incomplete.` : "Log a meal below to update your plan.";
-  const todaysPairs = todaysEntries().map(entry => ({ entry, meal: window.MEALS.find(meal => meal.id === entry.id) })).filter(pair => pair.meal);
+  const todaysPairs = todaysEntries().map(entry => ({ entry, meal: mealForEntry(entry) })).filter(pair => pair.meal);
   $("#log-list").innerHTML = todaysPairs.map(({ entry, meal }) => `<span>${meal.name}<button class="remove-log" data-entry-id="${entry.entryId}" type="button" aria-label="Remove ${meal.name} from today's log">×</button></span>`).join("") || "<span class=\"empty-log\">Nothing logged yet</span>";
   updatePlanStatus(state.planStatus, state.planMessage || "Your plan stays in this browser until you change it.");
   renderOptionalGoals();
@@ -269,7 +370,7 @@ function showMealDetails(meal) {
   const allNutrients = [...CORE_NUTRIENTS, ...OPTIONAL_NUTRIENTS.filter(({ key }) => !CORE_NUTRIENTS.some(core => core.key === key))];
   const missingNotes = missingIngredientNotes(meal, allNutrients);
   const componentsHtml = meal.components?.length ? `<section class="component-breakdown"><h3>Nutrition by item</h3><p class="detail-serving">Values use each listed serving size. Missing values are not shown.</p>${meal.components.map(item => `<article class="component-detail"><h4>${item.name}</h4><p class="detail-serving">${text(item.servingSize, "Serving size unavailable")}</p>${factsHtml(item)}${labelsHtml(item)}</article>`).join("")}</section>` : "";
-  $("#meal-detail-content").innerHTML = `<p class="eyebrow">${meal.location} · ${meal.category || "Menu item"}</p><h2 id="meal-detail-title">${meal.name}</h2><p class="detail-serving">${text(meal.servingSize, "Serving size unavailable")}</p>${meal.description ? `<p class="detail-description">${meal.description}</p>` : ""}${meal.isMealIdea ? `<p class="detail-description">Suggested combination using the listed servings. Confirm campus availability and portions; additions and sauces are not included.</p><h3 class="detail-section-title">Combined nutrition</h3>` : ""}${factsHtml(meal)}${missingNotes.length ? `<p class="detail-description">* Known subtotal. ${missingNotes.join(" ")} Known amounts are included in daily totals; missing amounts are unknown.</p>` : ""}${labelsHtml(meal)}${componentsHtml}<p class="detail-source">Nutrition source: Cal Poly Dining data · ${meal.verifiedAt}.</p>`;
+  $("#meal-detail-content").innerHTML = `<p class="eyebrow">${meal.location} · ${meal.category || "Menu item"}</p><h2 id="meal-detail-title">${meal.name}</h2><p class="detail-serving">${text(meal.servingSize, "Serving size unavailable")}</p>${meal.description ? `<p class="detail-description">${meal.description}</p>` : ""}${meal.isMealIdea || meal.customBuilder ? `<p class="detail-description">${meal.customBuilder ? "Your selected components, calculated from the imported dining data. Confirm availability, portions, and ordering details with the restaurant." : "Suggested combination using the listed servings. Confirm campus availability and portions; additions and sauces are not included."}</p><h3 class="detail-section-title">Combined nutrition</h3>` : ""}${factsHtml(meal)}${missingNotes.length ? `<p class="detail-description">* Known subtotal. ${missingNotes.join(" ")} Known amounts are included in daily totals; missing amounts are unknown.</p>` : ""}${labelsHtml(meal)}${componentsHtml}<p class="detail-source">Nutrition source: Cal Poly Dining data · ${meal.verifiedAt || "date unavailable"}.</p>`;
   dialog.showModal();
 }
 
@@ -278,6 +379,16 @@ function deleteLog(entryId) {
   localStorage.setItem("campusfuel-meal-history", JSON.stringify(state.entries));
   renderHistory();
   render();
+}
+
+function logMeal(meal) {
+  const entry = { id: meal.id, date: dateKey(), entryId: `${meal.id}-${Date.now()}-${Math.random().toString(36).slice(2)}` };
+  if (meal.customBuilder) entry.mealSnapshot = meal;
+  state.entries.push(entry);
+  localStorage.setItem("campusfuel-meal-history", JSON.stringify(state.entries));
+  saveTodaysGoals();
+  render();
+  confirmMealLogged(meal);
 }
 
 function scrollToResults() {
@@ -297,7 +408,7 @@ function renderHistory() {
   empty.hidden = dates.length !== 0;
   historyList.innerHTML = dates.map(date => {
     const entries = state.entries.filter(entry => entry.date === date);
-    const dayPairs = entries.map(entry => ({ entry, meal: window.MEALS.find(meal => meal.id === entry.id) })).filter(pair => pair.meal);
+    const dayPairs = entries.map(entry => ({ entry, meal: mealForEntry(entry) })).filter(pair => pair.meal);
     const dayMeals = dayPairs.map(pair => pair.meal);
     const dayTotals = totals(entries);
     const goals = date === dateKey() ? state.goals : state.dailyGoals[date];
@@ -361,7 +472,7 @@ function render() {
   $("#result-summary").textContent = active ? `${meals.length} match${meals.length === 1 ? "" : "es"}` : `${meals.length} items and meal ideas`;
   renderDashboard(); renderBestMatch(state.query.trim() ? recommendations.filter(meal => !state.restaurantTab || meal.location === state.restaurantTab) : []); renderQuickStatus(meals); renderComparison();
   document.querySelectorAll(".compare-button").forEach(button => button.addEventListener("click", () => toggleCompare(button.dataset.mealId)));
-  document.querySelectorAll(".log-button").forEach(button => button.addEventListener("click", () => { const mealId = button.dataset.logId; state.entries.push({ id: mealId, date: dateKey(), entryId: `${mealId}-${Date.now()}-${Math.random().toString(36).slice(2)}` }); localStorage.setItem("campusfuel-meal-history", JSON.stringify(state.entries)); saveTodaysGoals(); render(); confirmMealLogged(mealId); }));
+  document.querySelectorAll(".log-button").forEach(button => button.addEventListener("click", () => { const meal = window.MEALS.find(item => item.id === button.dataset.logId); if (meal) logMeal(meal); }));
   document.querySelectorAll(".meal-card").forEach(card => {
     const openDetails = event => { if (event.target.closest("button")) return; showMealDetails(window.MEALS.find(meal => meal.id === card.dataset.mealId)); };
     card.addEventListener("click", openDetails);
@@ -425,6 +536,9 @@ document.querySelectorAll(".browse-chip").forEach(button => button.addEventListe
 document.querySelectorAll(".restaurant-tab").forEach(button => button.addEventListener("click", () => { state.location = ""; state.restaurantTab = button.dataset.restaurant; updateBrowseButtons(); render(); }));
 $("#suggest-next").addEventListener("click", () => { Object.assign(state, { query: "meal", maxCalories: "", minProtein: "", diet: "", restaurantTab: "", suggestionMode: true }); $("#meal-query").value = "meal"; render(); scrollToResults(); });
 $("#close-meal-detail").addEventListener("click", () => $("#meal-detail-dialog").close());
+$("#open-meal-builder").addEventListener("click", () => { renderMealBuilder(); $("#meal-builder-dialog").showModal(); });
+$("#close-meal-builder").addEventListener("click", () => $("#meal-builder-dialog").close());
+document.querySelectorAll(".builder-restaurant").forEach(button => button.addEventListener("click", () => { state.builder.restaurant = button.dataset.builderRestaurant; renderMealBuilder(); }));
 $("#coverage-note").textContent = `Dataset last updated: ${[...new Set(window.MEALS.map(meal => meal.verifiedAt))].join(", ")}.`;
 render();
 let displayedDate = dateKey();

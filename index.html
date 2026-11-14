@@ -56,6 +56,7 @@
             <button class="browse-chip type-chip" data-meal-type="meal" type="button">Meal</button>
           </div>
           <button id="suggest-next" class="suggest-chip" type="button">Suggest my next meal ✦</button>
+          <button id="open-meal-builder" class="builder-launch" type="button">Build my meal ↗</button>
         </div>
         <p id="quick-status" class="quick-status" aria-live="polite"></p>
       </section>
@@ -134,6 +135,19 @@
     <dialog id="meal-detail-dialog" class="meal-detail-dialog" aria-labelledby="meal-detail-title">
       <button id="close-meal-detail" class="detail-close" type="button" aria-label="Close meal details">×</button>
       <div id="meal-detail-content"></div>
+    </dialog>
+    <dialog id="meal-builder-dialog" class="meal-builder-dialog" aria-labelledby="meal-builder-title">
+      <button id="close-meal-builder" class="detail-close" type="button" aria-label="Close meal builder">×</button>
+      <p class="eyebrow">BUILD FROM THE VERIFIED MENU</p>
+      <h2 id="meal-builder-title">Build your meal</h2>
+      <p class="builder-intro">Choose the components you would order. CampusFuel adds the imported nutrition facts and shows how the meal fits your plan. This is a planning tool, not the restaurant ordering system.</p>
+      <div class="builder-restaurants" role="tablist" aria-label="Choose a restaurant">
+        <button class="builder-restaurant active" data-builder-restaurant="Panda Express" type="button" role="tab" aria-selected="true">Panda</button>
+        <button class="builder-restaurant" data-builder-restaurant="Red Radish" type="button" role="tab" aria-selected="false">Red Radish</button>
+        <button class="builder-restaurant" data-builder-restaurant="Chick-fil-A" type="button" role="tab" aria-selected="false">Chick-fil-A</button>
+      </div>
+      <div id="meal-builder-options" class="meal-builder-options"></div>
+      <section id="meal-builder-summary" class="meal-builder-summary" aria-live="polite"></section>
     </dialog>
     <div id="log-confirmation" class="log-confirmation" role="status" aria-live="polite" aria-atomic="true" hidden></div>
 
