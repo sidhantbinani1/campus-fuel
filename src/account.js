@@ -9,6 +9,7 @@ import {
   mergeGuest,
 } from "./model.js";
 import { legal } from "./legal.js";
+import { mountSetup } from "./setup.js";
 const $ = (s) => document.querySelector(s);
 const supabaseUrl = import.meta.env?.VITE_SUPABASE_URL || SUPABASE_URL;
 const supabaseKey = import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY || SUPABASE_PUBLISHABLE_KEY;
@@ -53,6 +54,7 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
     const el = $("#account-status");
     el.textContent = message;
     el.classList.toggle("error", error);
+    el.hidden = !error && (!message || /^(Guest plan|Your account is up to date|All changes saved)/.test(message));
     if (error && user) {
       const b = document.createElement("button");
       b.className = "secondary sync-retry";
@@ -68,6 +70,7 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
       status(e.message || "Something went wrong. Please try again.", true);
     }
   };
+  const setupComplete = () => loaded && SCHOOLS.some(s => s.id === profile?.school) && profile?.terms_version === VERSION;
   const requireUser = () => {
     if (!user) {
       auth();
@@ -77,7 +80,7 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
       status("Your account is still loading. Please retry shortly.", true);
       return false;
     }
-    if (!profile?.school || profile.terms_version !== VERSION) {
+    if (!setupComplete()) {
       showAccount();
       return false;
     }
@@ -88,6 +91,7 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
     $("#auth-dialog").showModal();
   }
   function branding() {
+    document.body.classList.toggle("setup-required", Boolean(user) && !setupComplete());
     const school = SCHOOLS.find((s) => s.id === profile?.school);
     $("#account-button").textContent = user ? "Your account ↗" : "Sign in →";
     $("#guest-welcome").hidden = Boolean(user);
@@ -106,6 +110,7 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
   }
   function changed() {
     if (!user) return;
+    if (!setupComplete()) { showAccount(); return; }
     if (!loaded || conflict) {
       status(
         "Changes are not saved. Reload your account before editing.",
@@ -192,9 +197,11 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
       bridge.replace(guest);
       loaded = true;
       status("Guest plan · saved only in this browser.");
-      bridge.navigate("dashboard");
+      const requested = new URLSearchParams(location.search).get("view");
+      bridge.navigate(["dashboard", "finder", "history", "board"].includes(requested) ? requested : "dashboard");
       return;
     }
+    showAccount();
     status("Loading your private account…");
     try {
       const { data: payload, error } = await client.rpc("load_fuel_account");
@@ -223,10 +230,11 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
       loaded = true;
       branding();
       bridge.refresh();
-      status("Your account is up to date.");
-      if (!profile?.school || profile.terms_version !== VERSION) showAccount();
+      status("");
+      if (!setupComplete()) showAccount();
       else {
-        bridge.navigate("account");
+        const requested = new URLSearchParams(location.search).get("view");
+        bridge.navigate(["dashboard", "finder", "history", "board"].includes(requested) ? requested : "account");
         if (sessionStorage.getItem("fuel-pending-plan")) {
           const pending = JSON.parse(
             sessionStorage.getItem("fuel-pending-plan"),
@@ -246,13 +254,14 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
   async function saveSettings(event) {
     event.preventDefault();
     if (!loaded) return;
+    const completingSetup = !setupComplete();
     const school = SCHOOLS.find((s) => s.name === $("#school-search").value);
     if (!school) throw Error("Choose a school from the suggestions.");
     const participating = $("#participating").checked;
-    const showNickname = $("#show-nickname").checked;
+    const showNickname = participating && $("#show-nickname").checked;
     const nickname = $("#nickname").value.trim();
-    if (showNickname && !nickname)
-      throw Error("Choose a nickname before making it public.");
+    if (showNickname && !/^[A-Za-z0-9 _-]{2,24}$/.test(nickname))
+      throw Error("Choose a nickname with 2–24 letters, numbers, spaces, underscores or hyphens.");
     const accepting = !profile || profile.terms_version !== VERSION;
     if (accepting && !$("#accept-terms").checked)
       throw Error("Please read and accept the Terms and Privacy Notice.");
@@ -283,6 +292,7 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
       changed();
       await flush();
     }
+    if (completingSetup) bridge.navigate("dashboard");
   }
   function renderAccount() {
     const el = $("#account-view");
@@ -296,6 +306,18 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
       el.innerHTML =
         '<h1>Your account</h1><p>Your private records could not be loaded yet.</p><button id="retry-load" class="primary">Retry loading</button>';
       $("#retry-load").onclick = () => run(() => load(user));
+      return;
+    }
+    if (!setupComplete()) {
+      mountSetup(el, {
+        schools: SCHOOLS,
+        onSave: saveSettings,
+        onSignout: () => run(async () => {
+          const { error } = await client.auth.signOut();
+          if (error) throw error;
+          await load(null);
+        }),
+      });
       return;
     }
     const needsTerms = profile?.terms_version !== VERSION;
@@ -423,10 +445,28 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
   async function renderBoard() {
     const el = $("#board-view");
     const token = ++boardToken;
+    const periodControls = () => `<div class="board-periods" role="group" aria-label="Ranking period">${[["day", "Today"], ["week", "This week"], ["month", "This month"]].map(([v,l]) => `<button type="button" data-board-period="${v}" aria-pressed="${boardPeriod === v}">${l}</button>`).join("")}</div>`;
+    const bindPeriods = () => el.querySelectorAll("[data-board-period]").forEach(button => {
+      button.onclick = () => {
+        if (boardPeriod === button.dataset.boardPeriod) return;
+        boardPeriod = button.dataset.boardPeriod;
+        run(renderBoard);
+      };
+    });
     if (!user) {
       const picks = bridge.meals.filter(m => !m.isMealIdea && Number.isFinite(m.proteinGrams))
         .sort((a,b) => b.proteinGrams-a.proteinGrams).slice(0,6);
-      el.innerHTML = `<p class="eyebrow">CAL POLY SLO · GUEST PREVIEW</p><h1>The Fuel Board</h1><p>Explore without signing in. Protein Picks use listed menu nutrition; guest activity is saved only in this browser and does not contribute to campus rankings.</p><section class="settings-card"><h2>Protein Picks</h2><p>Protein per listed serving, not protein per dollar. Confirm current availability and portions with dining staff.</p><ul>${picks.map(m=>`<li><strong>${esc(m.name)}</strong> · ${m.proteinGrams}g protein<br><small>${esc(m.location)} · ${esc(m.servingSize)}</small></li>`).join("") || '<li>No menu nutrition records available.</li>'}</ul></section><section class="settings-card"><h2>Campus activity rankings</h2><p>Trending, Campus Favorites, Hidden Gems, and Dining Hall Showdown are not available in this guest preview. No activity counts are simulated.</p><h3>Best Value</h3><p>Verified prices are not available yet.</p><h3>Discovery Challenge</h3><p>Use Find meals to explore, then log meals you actually eat. Your guest history stays in this browser.</p></section>`;
+      const start = new Date(localDate() + "T12:00:00");
+      if (boardPeriod === "week") start.setDate(start.getDate() - (start.getDay() + 6) % 7);
+      if (boardPeriod === "month") start.setDate(1);
+      const startDate = `${start.getFullYear()}-${String(start.getMonth()+1).padStart(2,"0")}-${String(start.getDate()).padStart(2,"0")}`;
+      const entries = bridge.snapshot().entries.filter(e => e.date >= startDate && e.date <= localDate());
+      const distinct = new Set(entries.map(e => e.id)).size;
+      el.innerHTML = `<div class="panel-heading"><div><p class="eyebrow">CAL POLY SLO · GUEST PREVIEW</p><h1>The Fuel Board</h1><p>Your next campus favorite starts here.</p></div>${periodControls()}</div><div class="board-grid"><article class="board-card"><div class="board-card-heading"><span class="board-icon" aria-hidden="true">✦</span><h2>Protein Picks</h2></div><p>Browse the menu’s highest protein options. Tap a meal for nutrition details. Menu picks do not change by period.</p><ol class="board-list">${picks.map(m=>`<li><div><button class="board-meal" data-board-meal="${esc(m.id)}">${esc(m.name)} <span aria-hidden="true">↗</span></button><small>${esc(m.location)} · ${esc(m.servingSize)}</small></div><span class="board-count">${m.proteinGrams}g</span></li>`).join("") || '<li>No menu nutrition records available.</li>'}</ol></article><div class="board-side"><article class="board-card"><div class="board-card-heading"><span class="board-icon" aria-hidden="true">⌕</span><h2>Your discoveries</h2></div><p>${({day:"Today",week:"This week",month:"This month"})[boardPeriod]} · saved in this browser</p><strong class="discovery-number">${distinct}<small>different dishes logged</small></strong><button class="primary" id="board-explore">Find your next meal →</button></article><article class="board-card"><div class="board-card-heading"><span class="board-icon" aria-hidden="true">↗</span><h2>Campus favorites</h2></div><p>Sign in and choose your school to see qualifying campus trends. Rankings use real activity from at least five participating accounts.</p><button class="secondary" id="board-signin">Sign in to explore →</button></article></div></div><p class="fine-print">Protein is per listed serving. Confirm portions and availability with dining staff. Verified prices are not available yet.</p>`;
+      bindPeriods();
+      el.querySelectorAll("[data-board-meal]").forEach(button => button.onclick = () => bridge.openMeal?.(button.dataset.boardMeal));
+      $("#board-explore").onclick = () => bridge.navigate("finder");
+      $("#board-signin").onclick = auth;
       return;
     }
     if (
@@ -440,22 +480,14 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
       return;
     }
     const school = SCHOOLS.find((s) => s.id === profile.school);
-    el.innerHTML = `<div class="panel-heading"><div><p class="eyebrow">${esc(school.name)}</p><h1>The Fuel Board</h1><p>Your campus, on a plate.</p></div><select id="board-period" aria-label="Ranking period">${[
-      ["day", "Today"],
-      ["week", "This week"],
-      ["month", "This month"],
-    ]
-      .map(
-        ([v, l]) =>
-          `<option value="${v}" ${boardPeriod === v ? "selected" : ""}>${l}</option>`,
-      )
-      .join(
-        "",
-      )}</select></div><p class="fine-print">Meal rankings, never a competition to eat more. Activity rankings require five distinct participating accounts per meal or location. Weekly and monthly periods use the campus calendar in Pacific time.</p><div id="board-content">Loading campus trends…</div>`;
-    $("#board-period").onchange = (e) => {
-      boardPeriod = e.target.value;
-      run(renderBoard);
-    };
+    el.innerHTML = `<div class="panel-heading"><div><p class="eyebrow">${esc(school.name)}</p><h1>The Fuel Board</h1><p>Your campus, on a plate.</p></div><div class="board-periods" role="group" aria-label="Ranking period">${[["day", "Today"], ["week", "This week"], ["month", "This month"]].map(([v,l]) => `<button type="button" data-board-period="${v}" aria-pressed="${boardPeriod === v}">${l}</button>`).join("")}</div></div><p class="fine-print">Meal rankings, never a competition to eat more. Activity rankings require five distinct participating accounts per meal or location. Weekly and monthly periods use the campus calendar in Pacific time.</p><div id="board-content" aria-live="polite" aria-busy="true">Loading campus trends…</div>`;
+    el.querySelectorAll("[data-board-period]").forEach(button => {
+      button.onclick = () => {
+        if (boardPeriod === button.dataset.boardPeriod) return;
+        boardPeriod = button.dataset.boardPeriod;
+        run(renderBoard);
+      };
+    });
     if (!school.menus) {
       $("#board-content").innerHTML =
         '<div class="settings-card"><h2>Something good is coming.</h2><p>This campus does not have menus yet. Your school selection is saved.</p></div>';
@@ -465,6 +497,7 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
       p_period: boardPeriod,
     });
     if (token !== boardToken) return;
+    $("#board-content").setAttribute("aria-busy", "false");
     if (error) throw error;
     const rows = data?.meals || [];
     const catalog = bridge.meals;
@@ -488,7 +521,7 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
     const ranked = (r, field) =>
       `<li><div>${esc(r.name)}<small>${esc(r.location)}${r.nicknames?.length ? ` · Public contributors: ${r.nicknames.map(esc).join(", ")}` : ""}</small></div><span class="board-count">${r[field]} students</span></li>`;
     const card = (title, description, body) =>
-      `<article class="board-card"><h2>${title}</h2><p>${description}</p>${body}</article>`;
+      `<article class="board-card"><div class="board-card-heading"><span class="board-icon" aria-hidden="true">${({Trending:"↗", "Campus Favorites":"♡", "Protein Picks":"✦", "Hidden Gems":"◇", "Best Value":"◎", "Dining Hall Showdown":"⚑", "Discovery Challenge":"⌕"})[title] || "✦"}</span><h2>${title}</h2></div><p>${description}</p>${body}</article>`;
     const discovery = bridge
       .snapshot()
       .entries.filter(
@@ -640,13 +673,14 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
     changed,
     hasMenus: () =>
       Boolean(
-        !user || (loaded && SCHOOLS.find((s) => s.id === profile?.school)?.menus),
+        !user || (setupComplete() && SCHOOLS.find((s) => s.id === profile?.school)?.menus),
       ),
     allowView(view) {
-      if (user && ["finder", "history"].includes(view) && !requireUser()) return false;
+      if (user && view !== "account" && !requireUser()) return false;
       return true;
     },
     view(view) {
+      if (user && view !== "account" && !setupComplete()) { showAccount(); return; }
       currentView = view;
       $("#account-view").hidden = view !== "account";
       $("#board-view").hidden = view !== "board";

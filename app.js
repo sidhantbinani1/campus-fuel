@@ -482,23 +482,23 @@ function renderDashboard() {
   $("#pref-avoiding-gluten").checked = planDraft.avoidingGluten;
   $("#remaining-calories").textContent =
     left.calories === null
-      ? "Set a goal"
+      ? "Set your goal"
       : `${caloriesIncomplete ? "Up to " : ""}${Math.max(0, left.calories)} cal`;
   $("#calorie-detail").textContent =
     state.goals.calories === ""
-      ? "No daily target set"
+      ? ""
       : `${caloriesIncomplete ? "At least " : ""}${used.calories} of ${state.goals.calories} cal logged${caloriesIncomplete ? " (some values missing)" : ""}`;
   $("#remaining-protein").textContent =
     left.protein === null
-      ? "Set a goal"
+      ? "Set your goal"
       : `${proteinIncomplete ? "Up to " : ""}${Math.max(0, left.protein)}g`;
   $("#protein-detail").textContent =
     state.goals.protein === ""
-      ? "No daily target set"
+      ? ""
       : `${proteinIncomplete ? "At least " : ""}${used.protein}g of ${state.goals.protein}g logged${proteinIncomplete ? " (some values missing)" : ""}`;
   $("#log-note").textContent = logged.length
-    ? `${logged.length} meal${logged.length === 1 ? "" : "s"} logged today. Known amounts are included; missing values may make totals incomplete.`
-    : "Log a meal below to update your plan.";
+    ? `${logged.length} meal${logged.length === 1 ? "" : "s"} · view`
+    : "No meals logged";
   const todaysPairs = todaysEntries()
     .map((entry) => ({ entry, meal: entryMeal(entry) }))
     .filter((pair) => pair.meal);
@@ -849,7 +849,8 @@ function switchView(view) {
   $("#dashboard-view").hidden = view !== "dashboard";
   $("#finder-view").hidden = view !== "finder";
   $("#finder-results").hidden = view !== "finder";
-  $("#daily-summary").hidden = !["dashboard", "finder"].includes(view);
+  $("#daily-summary").hidden = false;
+  $(".logged-meals").hidden = false;
   $("#history-view").hidden = view !== "history";
   document.querySelectorAll(".app-tab").forEach((button) => {
     const selected = button.dataset.view === view;
@@ -1199,6 +1200,7 @@ account = createAccount({
   },
   nutrients: OPTIONAL_NUTRIENTS,
   meals: window.MEALS,
+  openMeal: id => { const meal = window.MEALS.find(m => m.id === id); if (meal) showMealDetails(meal); },
 });
 
 // Marketing links use the same account dialog as the student application.

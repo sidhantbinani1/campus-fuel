@@ -9,11 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="src/navigation.css" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="University Plates home"><span class="brand-mark">✦</span> University Plates</a>
-      <nav class="audience-nav" aria-label="Audience"><a href="index.html">For universities</a><a href="app.html" aria-current="page">For students</a></nav><nav class="app-tabs" aria-label="University Plates views">
+      <nav class="audience-nav" aria-label="Audience"><a href="index.html">For universities</a><a href="app.html" aria-current="page">For students</a></nav>
+<nav class="app-tabs" aria-label="University Plates views">
         <button class="app-tab active" data-view="dashboard" type="button" aria-current="page">Daily plan</button>
         <button class="app-tab" data-view="finder" type="button">Find meals</button>
         <button class="app-tab" data-view="history" type="button">History</button><button class="app-tab" data-view="board" type="button">The Fuel Board</button>
@@ -21,15 +23,16 @@
       <button id="account-button" class="campus-pill" type="button">Sign in →</button>
     </header>
 
+
     <main id="top"><div id="account-status" class="account-status" role="status" aria-live="polite"></div><section id="guest-welcome" class="guest-welcome student-intro"><p class="eyebrow">GOOD FOOD. YOUR ROUTINE.</p><h1>University Plates<span>Make room for your goals.</span></h1><p>Build your daily plan. Sign in to save your progress and find your campus favorites.</p><p class="student-coverage">Starting with Cal Poly SLO menus. Other listed campuses: menus coming soon. <a href="index.html">Learn about University Plates →</a></p></section><section id="campus-notice" class="account-notice" hidden></section>
       <section id="daily-summary" class="daily-dashboard daily-summary" aria-label="Today's nutrition summary">
         <p class="eyebrow summary-heading">TODAY'S PROGRESS</p>
         <div class="progress-grid">
-          <div class="progress-card"><span>Calories remaining</span><strong id="remaining-calories">Set a goal</strong><small id="calorie-detail">No meals logged</small></div>
-          <div class="progress-card"><span>Protein remaining</span><strong id="remaining-protein">Set a goal</strong><small id="protein-detail">No meals logged</small></div>
+          <div class="progress-card"><span>Calories remaining</span><strong id="remaining-calories">Set your goal</strong><small id="calorie-detail">No meals logged</small></div>
+          <div class="progress-card"><span>Protein remaining</span><strong id="remaining-protein">Set your goal</strong><small id="protein-detail">No meals logged</small></div>
         </div>
         <div id="optional-progress" class="optional-progress" aria-live="polite"></div>
-        <div class="logged-meals"><div><strong>Today's meal log</strong><p id="log-note">Log a meal to update your plan.</p></div><div id="log-list" class="log-list"></div><button id="clear-log" class="clear-button" type="button">Clear today</button></div>
+        <details class="logged-meals"><summary><strong>Today's meal log</strong><span id="log-note">No meals logged</span></summary><div class="meal-log-popover"><div id="log-list" class="log-list"></div><button id="clear-log" class="clear-button" type="button">Clear today</button></div></details>
       </section>
       <div id="finder-view" hidden>
       <section class="hero">
@@ -62,9 +65,8 @@
       </div>
 
       <section id="dashboard-view" class="daily-dashboard plan-view" aria-labelledby="dashboard-title">
-        <div class="plan-hero"><div><p class="eyebrow">YOUR PLAN, MADE SIMPLE</p><h1 id="dashboard-title">Fuel your<br /><i>everyday.</i></h1><p>A few goals, a little flexibility, a plan that feels like yours.</p></div><aside class="plan-overview"><span>✦</span><p>WHAT YOU’RE TRACKING</p><strong id="plan-goal-count">0 daily goals</strong><small>Change your plan any time.</small></aside></div>
         <form id="goals-form">
-          <section class="plan-card"><p class="plan-kicker">YOUR FOUNDATION</p><h2>Set the essentials</h2><p class="plan-help">Set your daily targets. Sign in to save your plan across devices.</p><div class="goals-form"><label>Daily calories <input id="goal-calories" type="number" min="0" step="1" placeholder="e.g. 2200" /></label><label>Daily protein (g) <input id="goal-protein" type="number" min="0" step="1" placeholder="e.g. 150" /></label></div></section>
+          <section class="plan-card"><p class="plan-kicker">YOUR FOUNDATION</p><h2 id="dashboard-title">Set the essentials</h2><span id="plan-goal-count" hidden></span><p class="plan-help">Set your daily targets. Sign in to save your plan across devices.</p><div class="goals-form"><label>Daily calories <input id="goal-calories" type="number" min="0" step="1" placeholder="e.g. 2200" /></label><label>Daily protein (g) <input id="goal-protein" type="number" min="0" step="1" placeholder="e.g. 150" /></label></div></section>
           <section class="plan-card goal-explorer" aria-labelledby="optional-goals-title"><div class="plan-section-heading"><div><p class="plan-kicker">ADD MORE IF YOU’D LIKE</p><h2 id="optional-goals-title">Explore other goals <span>↗</span></h2><p class="plan-help">Choose a category, then select what you want to track.</p></div><span id="optional-goal-count" class="plan-count">0 selected</span></div><div class="goal-explorer-layout"><div class="goal-categories" role="group" aria-label="Goal categories"><button type="button" class="goal-category active" data-category="Macros" aria-pressed="true">◒ &nbsp; Macros <span>→</span></button><button type="button" class="goal-category" data-category="Minerals" aria-pressed="false">✳ &nbsp; Minerals <span>→</span></button><button type="button" class="goal-category" data-category="Vitamins" aria-pressed="false">✦ &nbsp; Vitamins <span>→</span></button></div><div class="goal-category-content"><div class="goal-category-heading"><strong id="goal-category-title">Macros</strong><small>Choose any</small></div><div id="optional-goal-picker" class="optional-goal-picker"></div></div></div><div class="goal-tracking"><span>ALSO TRACKING</span><div id="optional-goal-summary"></div></div></section>
           <fieldset class="plan-card plan-preferences"><legend class="sr-only">Dietary preferences</legend><div><p class="plan-kicker">MAKE IT YOURS</p><h2>Dietary preferences <small>optional</small></h2><p class="plan-help">We’ll use these when suggesting meals.</p></div><div class="plan-preference-options"><label><input id="pref-vegetarian" type="checkbox" /> Vegetarian</label><label><input id="pref-vegan" type="checkbox" /> Vegan</label><label><input id="pref-avoiding-gluten" type="checkbox" /> Avoiding gluten</label></div><p class="plan-safety">Dietary labels may be incomplete. “Avoiding gluten” does not guarantee allergen safety—always confirm with dining staff.</p></fieldset>
           <div class="plan-actions"><button id="save-plan" class="save-plan" type="submit">Save my plan ↗</button><p id="plan-status" class="plan-status" role="status" aria-live="polite">Draft your plan here. Sign in when you’re ready to save.</p></div>
