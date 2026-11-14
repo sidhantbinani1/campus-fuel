@@ -230,3 +230,7 @@ main { display: flex; flex-direction: column; }
 .plan-view .bento-extras #goal-details { background:transparent;padding:13px 0 0;margin:18px 0 0;border-radius:0; }
 #daily-summary .progress-card,#daily-summary .optional-progress-card { width:max-content;min-width:170px; }
 @media(max-width:540px) { #daily-summary .progress-card,#daily-summary .optional-progress-card {width:max-content;min-width:160px;} }
+/* Keep nutrient picker labels readable against the pale cards. */
+.plan-view .nutrient-choice > span { color:#315c40; }
+.plan-view .nutrient-choice small { color:#55734b; }
+.plan-view .nutrient-choice > span:last-child { color:#416c48; }
