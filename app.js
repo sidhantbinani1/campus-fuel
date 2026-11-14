@@ -16,18 +16,41 @@ const OPTIONAL_NUTRIENTS = [
   ["calciumMilligrams", "Calcium", "mg"], ["ironMilligrams", "Iron", "mg"], ["vitaminARe", "Vitamin A", "RE"], ["vitaminCMilligrams", "Vitamin C", "mg"], ["vitaminDIu", "Vitamin D", "IU"]
 ].map(([key, label, unit]) => ({ key, label, unit }));
 const storedOptionalGoals = storedGoals.optionalGoals || {};
+const SCHOOLS = {
+  "cal-poly": { name: "Cal Poly SLO", productName: "Poly Plates", dataAvailable: true },
+  sdsu: { name: "San Diego State", productName: "Aztec Plates", dataAvailable: false }
+};
+const storedSchool = localStorage.getItem("university-plates-school");
 const state = {
   query: "", maxCalories: "", minProtein: "", diet: "", location: "", mealType: "", restaurantTab: "", suggestionMode: false, selected: [],
   goals: { calories: storedGoals.calories || "", protein: storedGoals.protein || "", vegetarian: Boolean(storedGoals.vegetarian), vegan: Boolean(storedGoals.vegan), avoidingGluten: Boolean(storedGoals.avoidingGluten), optionalGoals: storedOptionalGoals },
   entries: normalizedEntries, dailyGoals: storedDailyGoals,
   view: "dashboard", planMessage: "", planStatus: "idle",
-  builder: { restaurant: "Panda Express", selections: {} }
+  builder: { restaurant: "Panda Express", selections: {} },
+  school: SCHOOLS[storedSchool] ? storedSchool : "cal-poly"
 };
 let planDraft = { ...state.goals, optionalGoals: { ...state.goals.optionalGoals } };
 let planCategory = "Macros";
 const GOAL_CATEGORIES = { Macros: ["carbsGrams", "fatGrams", "fiberGrams", "sugarGrams", "saturatedFatGrams", "transFatGrams", "fatCalories"], Minerals: ["sodiumMilligrams", "cholesterolMilligrams", "potassiumMilligrams", "calciumMilligrams", "ironMilligrams"], Vitamins: ["vitaminARe", "vitaminCMilligrams", "vitaminDIu"] };
 
 let logConfirmationTimer;
+
+function currentSchool() { return SCHOOLS[state.school]; }
+function updateSchoolBrand() {
+  const school = currentSchool();
+  document.title = `${school.productName} | University Plates`;
+  $("#brand-name").textContent = school.productName;
+  $("#brand-link").setAttribute("aria-label", `${school.productName} home`);
+  $("#school-select").value = state.school;
+  $("#hero-copy").textContent = school.dataAvailable
+    ? `${school.productName} helps ${school.name} students find campus meals that fit their protein, macro, and calorie goals.`
+    : `${school.productName} is the University Plates experience for ${school.name}. This demo currently uses Cal Poly menu data while ${school.name} data is added.`;
+  $("#footer-brand").textContent = school.productName;
+  const dates = [...new Set(window.MEALS.map(meal => meal.verifiedAt))].join(", ");
+  $("#coverage-note").textContent = school.dataAvailable
+    ? `University Plates demo data: Cal Poly dining snapshot, last updated ${dates}. Availability may change.`
+    : `${school.productName} is in preview. The current menu records are Cal Poly data only; ${school.name} data has not been added yet.`;
+}
 
 function confirmMealLogged(meal) {
   const confirmation = $("#log-confirmation");
@@ -468,7 +491,7 @@ function render() {
   document.querySelectorAll(".restaurant-tab").forEach(button => { const selected = button.dataset.restaurant === state.restaurantTab; button.classList.toggle("active", selected); button.setAttribute("aria-pressed", String(selected)); });
   $("#browse-note").textContent = active ? "Showing results matching your search and saved dietary preferences. Choose a category to browse." : "Choose a restaurant and open a category to explore. This full browse is not filtered by saved dietary preferences; check labels before choosing.";
   $("#empty-title").textContent = state.location && state.mealType ? `No verified ${state.mealType} options at ${state.location} yet.` : state.location ? `No verified ${state.location} meals yet.` : state.mealType ? `No verified ${state.mealType} options yet.` : "No verified exact matches yet.";
-  $("#empty-copy").textContent = state.location || state.mealType ? "This is a data-coverage gap, not a negative result. Try another option or add verified records for this category." : "Try removing a filter. CampusFuel will show transparent alternatives as the verified dataset grows.";
+  $("#empty-copy").textContent = state.location || state.mealType ? "This is a data-coverage gap, not a negative result. Try another option or add verified records for this category." : "Try removing a filter. University Plates will show transparent alternatives as the verified dataset grows.";
   $("#result-summary").textContent = active ? `${meals.length} match${meals.length === 1 ? "" : "es"}` : `${meals.length} items and meal ideas`;
   renderDashboard(); renderBestMatch(state.query.trim() ? recommendations.filter(meal => !state.restaurantTab || meal.location === state.restaurantTab) : []); renderQuickStatus(meals); renderComparison();
   document.querySelectorAll(".compare-button").forEach(button => button.addEventListener("click", () => toggleCompare(button.dataset.mealId)));
@@ -539,7 +562,12 @@ $("#close-meal-detail").addEventListener("click", () => $("#meal-detail-dialog")
 $("#open-meal-builder").addEventListener("click", () => { renderMealBuilder(); $("#meal-builder-dialog").showModal(); });
 $("#close-meal-builder").addEventListener("click", () => $("#meal-builder-dialog").close());
 document.querySelectorAll(".builder-restaurant").forEach(button => button.addEventListener("click", () => { state.builder.restaurant = button.dataset.builderRestaurant; renderMealBuilder(); }));
-$("#coverage-note").textContent = `Dataset last updated: ${[...new Set(window.MEALS.map(meal => meal.verifiedAt))].join(", ")}.`;
+$("#school-select").addEventListener("change", event => {
+  state.school = SCHOOLS[event.target.value] ? event.target.value : "cal-poly";
+  localStorage.setItem("university-plates-school", state.school);
+  updateSchoolBrand();
+});
+updateSchoolBrand();
 render();
 let displayedDate = dateKey();
 let dayRefreshTimer;

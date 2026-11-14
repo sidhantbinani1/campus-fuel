@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Converts the team's untouched Cal Poly menu export into the compact format
-# used by the static CampusFuel prototype. Requires jq.
+# used by the static University Plates prototype. Requires jq.
 # Meal type is a UI browse tag based only on the source category, not a Cal Poly
 # nutrition or dietary claim.
 

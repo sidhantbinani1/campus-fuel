@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="EcoMenu AI helps Cal Poly students discover campus meals using verified dining data." />
-    <title>CampusFuel SLO | Cal Poly</title>
+    <title>University Plates</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
@@ -12,13 +12,13 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="CampusFuel SLO home"><span class="brand-mark">✦</span> CampusFuel <em>SLO</em></a>
-      <nav class="app-tabs" aria-label="CampusFuel views">
+      <a id="brand-link" class="brand" href="#top" aria-label="University Plates home"><span class="brand-mark">✦</span> <span id="brand-name">University Plates</span></a>
+      <nav class="app-tabs" aria-label="University Plates views">
         <button class="app-tab active" data-view="dashboard" type="button" aria-current="page">Daily plan</button>
         <button class="app-tab" data-view="finder" type="button">Find meals</button>
         <button class="app-tab" data-view="history" type="button">History</button>
       </nav>
-      <span class="campus-pill">Cal Poly SLO</span>
+      <label class="school-picker"><span class="sr-only">Choose your university</span><select id="school-select" aria-label="Choose your university"><option value="cal-poly">Cal Poly SLO</option><option value="sdsu">San Diego State</option></select></label>
     </header>
 
     <main id="top">
@@ -35,7 +35,7 @@
       <section class="hero">
         <p class="eyebrow">FUEL YOUR CAMPUS ROUTINE</p>
         <h1>Keep your goals.<br /><i>Eat on campus.</i></h1>
-        <p class="hero-copy">CampusFuel helps Cal Poly students find campus meals that fit their protein, macro, and calorie goals.</p>
+        <p id="hero-copy" class="hero-copy">Poly Plates helps Cal Poly students find campus meals that fit their protein, macro, and calorie goals.</p>
 
         <form id="search-form" class="search-shell">
           <label class="sr-only" for="meal-query">Describe the meal you want</label>
@@ -95,7 +95,7 @@
         <div id="empty-state" class="empty-state" hidden>
           <span>⌕</span>
           <h3 id="empty-title">No verified exact matches yet.</h3>
-          <p id="empty-copy">Try removing a filter. CampusFuel will show transparent alternatives as the verified dataset grows.</p>
+          <p id="empty-copy">Try removing a filter. University Plates will show transparent alternatives as the verified dataset grows.</p>
           <button id="reset-empty" type="button">Show all meals</button>
         </div>
       </section>
@@ -140,7 +140,7 @@
       <button id="close-meal-builder" class="detail-close" type="button" aria-label="Close meal builder">×</button>
       <p class="eyebrow">BUILD FROM THE VERIFIED MENU</p>
       <h2 id="meal-builder-title">Build your meal</h2>
-      <p class="builder-intro">Choose the components you would order. CampusFuel adds the imported nutrition facts and shows how the meal fits your plan. This is a planning tool, not the restaurant ordering system.</p>
+      <p class="builder-intro">Choose the components you would order. University Plates adds the imported nutrition facts and shows how the meal fits your plan. This is a planning tool, not the restaurant ordering system.</p>
       <div class="builder-restaurants" role="tablist" aria-label="Choose a restaurant">
         <button class="builder-restaurant active" data-builder-restaurant="Panda Express" type="button" role="tab" aria-selected="true">Panda</button>
         <button class="builder-restaurant" data-builder-restaurant="Red Radish" type="button" role="tab" aria-selected="false">Red Radish</button>
@@ -152,7 +152,7 @@
     <div id="log-confirmation" class="log-confirmation" role="status" aria-live="polite" aria-atomic="true" hidden></div>
 
     <footer>
-      <strong>CampusFuel SLO</strong>
+      <strong id="footer-brand">University Plates</strong>
       <p>Showing a selected dining snapshot. Availability may change.</p>
       <p id="coverage-note"></p>
     </footer>

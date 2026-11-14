@@ -1,6 +1,6 @@
-# Campus Fuel
+# University Plates
 
-An early interactive prototype for a Cal Poly SLO campus meal-planning and macro-tracking assistant.
+An early interactive campus meal-planning and macro-tracking platform. It currently contains Cal Poly SLO dining data and appears as **Poly Plates** when Cal Poly is selected. The interface also previews the school-specific name **Aztec Plates** for San Diego State; it does not claim SDSU data is available until verified menu data is added.
 
 Students can set calorie, protein, and optional nutrient goals, get recommendations from meal records, and log meals to update their on-device daily totals.
 
