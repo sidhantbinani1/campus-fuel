@@ -50,3 +50,8 @@ body > .site-header { gap:22px; }
 @media(min-width:701px) and (max-width:1100px) { .campus-branded > .site-header {gap:18px;} .campus-branded .site-header .brand{font-size:22px;margin-right:0;} .campus-branded .site-header .app-tabs{gap:6px;} .campus-branded .site-header .app-tab{font-size:14px;padding:10px 13px;} }
 @media(max-width:700px) { .campus-branded > .site-header {gap:12px;} .campus-branded .site-header .brand{font-size:24px;} .campus-branded .site-header .app-tabs{gap:7px;flex-basis:100%;padding:5px 0;} .campus-branded .site-header .app-tab{font-size:14px;padding:10px 14px;} }
 @media(min-width:701px) and (max-width:950px) { .campus-branded > .site-header{height:auto;min-height:84px;flex-wrap:wrap;padding-top:15px;padding-bottom:15px;gap:12px;} .campus-branded .site-header .app-tabs{order:3;flex-basis:100%;flex-shrink:1;overflow-x:auto;} }
+/* Only the selected campus tab carries the green pill. */
+.campus-branded .site-header .app-tab { border-color:transparent; background:transparent; color:#697b65; }
+.campus-branded .site-header .app-tab:hover { background:#f0f4ea; color:#315438; }
+.campus-branded .site-header .app-tab.active { border-color:#3d6244; background:#3d6244; color:white; }
+.campus-branded .site-header .app-tab.active:hover { border-color:#315438; background:#315438; color:white; }
