@@ -4,7 +4,7 @@ const emptyState = $("#empty-state");
 const storedGoals = JSON.parse(localStorage.getItem("campusfuel-goals") || "{}");
 const storedLog = JSON.parse(localStorage.getItem("campusfuel-meal-history") || localStorage.getItem("campusfuel-today-log") || "[]");
 const storedDailyGoals = JSON.parse(localStorage.getItem("campusfuel-daily-goals") || "{}");
-const dateKey = (date = new Date()) => date.toLocaleDateString("en-CA");
+const dateKey = (date = new Date()) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
 const normalizedEntries = Array.isArray(storedLog) ? storedLog.map((entry, index) => {
   const normalized = typeof entry === "string" ? { id: entry, date: dateKey() } : entry;
   return normalized && normalized.id && normalized.date ? { ...normalized, entryId: normalized.entryId || `${normalized.id}-${normalized.date}-${index}` } : null;
@@ -22,6 +22,9 @@ const state = {
   entries: normalizedEntries, dailyGoals: storedDailyGoals,
   view: "dashboard", planMessage: ""
 };
+let planDraft = { ...state.goals, optionalGoals: { ...state.goals.optionalGoals } };
+let planCategory = "Macros";
+const GOAL_CATEGORIES = { Macros: ["carbsGrams", "fatGrams", "fiberGrams", "sugarGrams", "saturatedFatGrams", "transFatGrams", "fatCalories"], Minerals: ["sodiumMilligrams", "cholesterolMilligrams", "potassiumMilligrams", "calciumMilligrams", "ironMilligrams"], Vitamins: ["vitaminARe", "vitaminCMilligrams", "vitaminDIu"] };
 
 let logConfirmationTimer;
 
@@ -143,20 +146,11 @@ function renderBestMatch(meals) {
   });
 }
 
-function renderOptionalGoalInputs() {
-  const draftValues = Object.fromEntries([...document.querySelectorAll(".optional-goal-value")].map(input => [input.dataset.nutrient, input.value]));
-  const selected = [...document.querySelectorAll(".optional-goal-toggle:checked")].map(input => input.value);
-  $("#optional-goal-inputs").innerHTML = selected.map(key => {
-    const nutrient = OPTIONAL_NUTRIENTS.find(item => item.key === key);
-    const value = draftValues[nutrient.key] ?? state.goals.optionalGoals[nutrient.key] ?? "";
-    return `<label>${nutrient.label} <span>(${nutrient.unit})</span><input class="optional-goal-value" data-nutrient="${nutrient.key}" type="number" min="0" step="any" value="${value}" placeholder="Daily target" /></label>`;
-  }).join("");
-}
-
-function saveOptionalGoalDraft() {
-  state.goals.optionalGoals = Object.fromEntries([...document.querySelectorAll(".optional-goal-toggle:checked")].map(input => [input.value, document.querySelector(`.optional-goal-value[data-nutrient="${input.value}"]`)?.value || ""]));
-  localStorage.setItem("campusfuel-goals", JSON.stringify(state.goals));
-  if (todaysEntries().length) saveTodaysGoals();
+function renderGoalSummary() {
+  const selected = OPTIONAL_NUTRIENTS.filter(({ key }) => Object.hasOwn(planDraft.optionalGoals, key));
+  $("#optional-goal-count").textContent = `${selected.length} selected`;
+  $("#plan-goal-count").textContent = `${selected.length + Number(planDraft.calories !== "") + Number(planDraft.protein !== "")} daily goals`;
+  $("#optional-goal-summary").innerHTML = selected.map(({ key, label, unit }) => `<span>${label} <b>${text(planDraft.optionalGoals[key], "—")}${unit}</b></span>`).join("") || '<span class="goal-summary-empty">No extra targets yet</span>';
 }
 
 function renderOptionalProgress() {
@@ -166,10 +160,12 @@ function renderOptionalProgress() {
 }
 
 function renderOptionalGoals() {
-  $("#optional-goal-picker").innerHTML = OPTIONAL_NUTRIENTS.map(({ key, label, unit }) => `<label><input class="optional-goal-toggle" type="checkbox" value="${key}" ${Object.hasOwn(state.goals.optionalGoals, key) ? "checked" : ""} /> ${label} <small>${unit}</small></label>`).join("");
-  document.querySelectorAll(".optional-goal-toggle").forEach(input => input.addEventListener("change", () => { saveOptionalGoalDraft(); renderOptionalGoalInputs(); renderOptionalProgress(); }));
-  renderOptionalGoalInputs();
-  document.querySelectorAll(".optional-goal-value").forEach(input => input.addEventListener("input", () => { saveOptionalGoalDraft(); renderOptionalProgress(); }));
+  $("#goal-category-title").textContent = planCategory;
+  document.querySelectorAll(".goal-category").forEach(button => { const selected = button.dataset.category === planCategory; button.classList.toggle("active", selected); button.setAttribute("aria-pressed", String(selected)); });
+  $("#optional-goal-picker").innerHTML = OPTIONAL_NUTRIENTS.filter(({ key }) => GOAL_CATEGORIES[planCategory].includes(key)).map(({ key, label, unit }) => { const selected = Object.hasOwn(planDraft.optionalGoals, key); return `<div class="goal-tile ${selected ? "selected" : ""}"><label><input class="optional-goal-toggle" type="checkbox" value="${key}" ${selected ? "checked" : ""} /><span class="goal-check">${selected ? "✓" : "+"}</span><span><strong>${label}</strong><small>Daily target · ${unit}</small></span></label>${selected ? `<label class="goal-tile-input"><span class="sr-only">${label} daily target (${unit})</span><input class="optional-goal-value" data-nutrient="${key}" type="number" min="0" step="any" value="${planDraft.optionalGoals[key]}" placeholder="0" /><small>${unit}</small></label>` : ""}</div>`; }).join("");
+  document.querySelectorAll(".optional-goal-toggle").forEach(input => input.addEventListener("change", () => { if (input.checked) planDraft.optionalGoals[input.value] = ""; else delete planDraft.optionalGoals[input.value]; state.planMessage = "Unsaved changes — select Save my plan."; renderOptionalGoals(); $("#plan-status").textContent = state.planMessage; }));
+  document.querySelectorAll(".optional-goal-value").forEach(input => input.addEventListener("input", () => { planDraft.optionalGoals[input.dataset.nutrient] = input.value; state.planMessage = "Unsaved changes — select Save my plan."; $("#plan-status").textContent = state.planMessage; renderGoalSummary(); }));
+  renderGoalSummary();
   renderOptionalProgress();
 }
 
@@ -177,8 +173,8 @@ function renderDashboard() {
   const used = totals(); const left = remaining(); const logged = loggedMeals();
   const caloriesIncomplete = incompleteNutrient(todaysEntries(), "calories");
   const proteinIncomplete = incompleteNutrient(todaysEntries(), "proteinGrams");
-  $("#goal-calories").value = state.goals.calories; $("#goal-protein").value = state.goals.protein;
-  $("#pref-vegetarian").checked = state.goals.vegetarian; $("#pref-vegan").checked = state.goals.vegan; $("#pref-avoiding-gluten").checked = state.goals.avoidingGluten;
+  $("#goal-calories").value = planDraft.calories; $("#goal-protein").value = planDraft.protein;
+  $("#pref-vegetarian").checked = planDraft.vegetarian; $("#pref-vegan").checked = planDraft.vegan; $("#pref-avoiding-gluten").checked = planDraft.avoidingGluten;
   $("#remaining-calories").textContent = left.calories === null ? "Set a goal" : `${caloriesIncomplete ? "Up to " : ""}${Math.max(0, left.calories)} cal`;
   $("#calorie-detail").textContent = state.goals.calories === "" ? "No daily target set" : `${caloriesIncomplete ? "At least " : ""}${used.calories} of ${state.goals.calories} cal logged${caloriesIncomplete ? " (some values missing)" : ""}`;
   $("#remaining-protein").textContent = left.protein === null ? "Set a goal" : `${proteinIncomplete ? "Up to " : ""}${Math.max(0, left.protein)}g`;
@@ -186,7 +182,7 @@ function renderDashboard() {
   $("#log-note").textContent = logged.length ? `${logged.length} meal${logged.length === 1 ? "" : "s"} logged today. Known amounts are included; missing values may make totals incomplete.` : "Log a meal below to update your plan.";
   const todaysPairs = todaysEntries().map(entry => ({ entry, meal: window.MEALS.find(meal => meal.id === entry.id) })).filter(pair => pair.meal);
   $("#log-list").innerHTML = todaysPairs.map(({ entry, meal }) => `<span>${meal.name}<button class="remove-log" data-entry-id="${entry.entryId}" type="button" aria-label="Remove ${meal.name} from today's log">×</button></span>`).join("") || "<span class=\"empty-log\">Nothing logged yet</span>";
-  $("#plan-status").textContent = state.planMessage;
+  $("#plan-status").textContent = state.planMessage || "Your plan stays in this browser until you change it.";
   renderOptionalGoals();
 }
 
@@ -379,10 +375,12 @@ function updateBrowseButtons() { document.querySelectorAll(".browse-chip").forEa
 
 $("#search-form").addEventListener("submit", event => { event.preventDefault(); Object.assign(state, { query: $("#meal-query").value.trim(), maxCalories: "", minProtein: "", diet: "", restaurantTab: "", suggestionMode: false }); interpretQuery(state.query); render(); scrollToResults(); });
 $("#meal-query").addEventListener("input", event => { if (!event.target.value.trim()) clearAll(); });
+[["#goal-calories", "calories"], ["#goal-protein", "protein"]].forEach(([selector, key]) => $(selector).addEventListener("input", event => { planDraft[key] = event.target.value; state.planMessage = "Unsaved changes — select Save my plan."; $("#plan-status").textContent = state.planMessage; renderGoalSummary(); }));
+[["#pref-vegetarian", "vegetarian"], ["#pref-vegan", "vegan"], ["#pref-avoiding-gluten", "avoidingGluten"]].forEach(([selector, key]) => $(selector).addEventListener("change", event => { planDraft[key] = event.target.checked; state.planMessage = "Unsaved changes — select Save my plan."; $("#plan-status").textContent = state.planMessage; }));
+document.querySelectorAll(".goal-category").forEach(button => button.addEventListener("click", () => { planCategory = button.dataset.category; renderOptionalGoals(); }));
 $("#goals-form").addEventListener("submit", event => {
   event.preventDefault();
-  const optionalGoals = Object.fromEntries([...document.querySelectorAll(".optional-goal-toggle:checked")].map(input => [input.value, document.querySelector(`.optional-goal-value[data-nutrient="${input.value}"]`)?.value || ""]));
-  state.goals = { calories: $("#goal-calories").value, protein: $("#goal-protein").value, vegetarian: $("#pref-vegetarian").checked, vegan: $("#pref-vegan").checked, avoidingGluten: $("#pref-avoiding-gluten").checked, optionalGoals };
+  state.goals = { ...planDraft, optionalGoals: { ...planDraft.optionalGoals } };
   state.planMessage = "Saved — these targets will stay on this device until you change them.";
   localStorage.setItem("campusfuel-goals", JSON.stringify(state.goals));
   if (todaysEntries().length) saveTodaysGoals();
@@ -408,3 +406,16 @@ $("#suggest-next").addEventListener("click", () => { Object.assign(state, { quer
 $("#close-meal-detail").addEventListener("click", () => $("#meal-detail-dialog").close());
 $("#coverage-note").textContent = `Dataset last updated: ${[...new Set(window.MEALS.map(meal => meal.verifiedAt))].join(", ")}.`;
 render();
+let displayedDate = dateKey();
+let dayRefreshTimer;
+function refreshForNewDay() {
+  if (dateKey() !== displayedDate) { displayedDate = dateKey(); render(); if (state.view === "history") switchView("history"); }
+}
+function scheduleDayRefresh() {
+  clearTimeout(dayRefreshTimer);
+  const next = new Date(); next.setHours(24, 0, 0, 0);
+  dayRefreshTimer = setTimeout(() => { refreshForNewDay(); scheduleDayRefresh(); }, Math.max(1000, next.getTime() - Date.now() + 100));
+}
+document.addEventListener("visibilitychange", () => { if (!document.hidden) { refreshForNewDay(); scheduleDayRefresh(); } });
+window.addEventListener("focus", () => { refreshForNewDay(); scheduleDayRefresh(); });
+scheduleDayRefresh();
