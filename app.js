@@ -1231,6 +1231,10 @@ if (new URLSearchParams(location.search).get("signin") === "1") {
 
 mealAssistant = mountMealAssistant(document.querySelector("#meal-assistant"), {
   getCatalog: () => account?.hasMenus() ? window.MEALS : [],
-  getContext: () => ({ school: account?.school, goals: structuredClone(state.goals) }),
+  getContext: () => ({
+    school: account?.school,
+    goals: structuredClone(state.goals),
+    remaining: remaining(),
+  }),
   openMeal: id => { const meal = window.MEALS.find(m => m.id === id); if (meal) showMealDetails(meal); },
 });

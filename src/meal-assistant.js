@@ -1,109 +1,281 @@
-// Provider contract: async ({message, history, catalog, context}) => {text, mealIds}.
-// Swap menuProvider for a server-backed provider later; the UI never needs API keys.
 const groups = {
-  chicken: /\b(chicken|nuggets?|poultry)\b/i,
-  beef: /\b(beef|steak)\b/i,
-  pork: /\b(pork|bacon|ham)\b/i,
-  fish: /\b(fish|salmon|tuna|shrimp|seafood)\b/i,
-  tofu: /\btofu\b/i,
-  vegetables: /\b(vegetables?|veggies|broccoli|greens|spinach|lettuce|cabbage|carrots?|salad)\b/i,
+  chicken: ['chicken', 'nugget', 'nuggets', 'chick-fil-a', 'chickfila'],
+  beef: ['beef', 'steak', 'burger'],
+  pork: ['pork', 'bacon', 'ham'],
+  fish: ['fish', 'salmon', 'tuna', 'shrimp'],
+  tofu: ['tofu', 'plant based'],
+  vegetables: ['vegetable', 'veggie', 'broccoli', 'kale', 'salad', 'greens']
 };
-const nutrients = [
-  ['calories','calories','cal','calories|calorie|kcal|cal'],
-  ['proteinGrams','protein','g','protein'], ['carbsGrams','carbs','g','carbs|carbohydrates'],
-  ['fatGrams','fat','g','fat'], ['fiberGrams','fiber','g','fiber'], ['sugarGrams','sugar','g','sugar'],
-  ['saturatedFatGrams','saturated fat','g','saturated fat'], ['transFatGrams','trans fat','g','trans fat'],
-  ['sodiumMilligrams','sodium','mg','sodium'], ['cholesterolMilligrams','cholesterol','mg','cholesterol'],
-  ['potassiumMilligrams','potassium','mg','potassium'], ['calciumMilligrams','calcium','mg','calcium'],
-  ['ironMilligrams','iron','mg','iron'], ['vitaminCMilligrams','vitamin C','mg','vitamin c'],
-  ['vitaminARe','vitamin A','RE','vitamin a'], ['vitaminDIu','vitamin D','IU','vitamin d'],
-];
-const description = m => `${m.name} ${m.description || ''} ${(m.components || []).map(c=>`${c.name} ${c.description||''}`).join(' ')}`;
-const finite = n => typeof n === 'number' && Number.isFinite(n);
 
-export function findMenuMatches({ message, history = [], catalog = [] }) {
-  if (/\bhow (many|much)\b.*\b(calories|protein|macros|vitamins|minerals)\b|\bshould (i|my)\b.*\b(calories|protein|target|intake)\b|\b(recommend|set)\b.*\b(daily|targets?|intake)\b/i.test(message)) {
-    return {text:'I help find meals using targets you enter. I don’t recommend daily calorie, protein, or nutrient targets. Tell me what kind of meal you’d like, or give me your own limits.', mealIds:[]};
-  }
-  if (!catalog.length) return {text:'There are no menu records for your selected campus yet. I can only suggest meals from available campus data; I won’t substitute another campus’s menu.',mealIds:[]};
-  const previous = history.filter(m=>m.role==='user').slice(-4).map(m=>m.text);
-  const fresh = /\b(start over|reset|new search|clear)\b/i.test(message);
-  const requests = fresh ? [message] : [...previous, message];
-  const excluded = new Set(), included = new Set();
-  const limits = new Map();
-  let recognized = false;
-  for (const request of requests) {
-    for (const [group,pattern] of Object.entries(groups)) {
-      if (!pattern.test(request)) continue;
-      recognized = true;
-      const term = `(?:${pattern.source})`;
-      const negative = new RegExp(`(?:no|not|without|avoid|skip|less|tired of|sick of|too much)\\s+(?:(?:any|more|much|some|of|the)\\s+){0,2}${term}|${term}[^.!?]{0,45}(?:too much|too often|again|something else)`, 'i');
-      if (negative.test(request)) { excluded.add(group); included.delete(group); }
-      else { included.add(group); excluded.delete(group); }
-    }
-    for (const [key,label,unit,terms] of nutrients) {
-      const match=request.match(new RegExp(`(under|below|at most|up to|max(?:imum)?|at least|min(?:imum)?)\\s*(\\d+(?:\\.\\d+)?)\\s*(mg|g|grams?|milligrams?|iu|re|kcal|cal)?\\s*(?:of\\s*)?(?:${terms})\\b`,'i'));
-      if(!match)continue;
-      let value=Number(match[2]), supplied=(match[3]||unit).toLowerCase().replace(/^grams?$/,'g').replace(/^milligrams?$/,'mg').replace('kcal','cal');
-      if(unit==='mg'&&supplied==='g')value*=1000;
-      else if(unit==='g'&&supplied==='mg')value/=1000;
-      else if(supplied!==unit.toLowerCase())return {text:`I can only compare ${label} in the menu's listed unit (${unit}). Please use that unit; I won’t guess a conversion.`,mealIds:[]};
-      limits.set(key,{value,min:/at least|min/i.test(match[1]),label,unit});recognized=true;
-    }
-  }
-  if (!recognized && !/\b(alternatives?|something else|anything|suggest|surprise|meal|food|hungry|options|reset|start over)\b/i.test(message)) {
-    return {text:'Try a request like “no chicken,” “more vegetables,” or “under 700 calories.” I can match listed menu descriptions and explicit calorie/protein limits. I don’t infer ingredients or allergens that aren’t listed.', mealIds:[]};
-  }
-  let candidates = catalog.filter(m => {
-    const text = description(m);
-    if ([...excluded].some(g=>groups[g].test(text))) return false;
-    if ([...included].some(g=>!groups[g].test(text))) return false;
-    for(const [key,limit] of limits) {
-      if(!finite(m[key]) || (limit.min ? m[key]<limit.value : m[key]>limit.value))return false;
-    }
-    return true;
-  });
-  // Prefer actual mains and assembled menu ideas over individual toppings.
-  const wholeMeals = candidates.filter(m => m.isMealIdea || /sandwich|wrap|bowl|plate|nuggets?/i.test(m.name) || /entr[eé]es?/i.test(m.category || '') || (/salad/i.test(m.name) && /bowl|plate|serving/i.test(m.servingSize || '')));
-  const componentsOnly = !wholeMeals.length && candidates.length > 0;
-  if (wholeMeals.length) candidates = wholeMeals;
-  const priorIds = new Set(history.filter(m=>m.role==='assistant').flatMap(m=>m.mealIds||[]));
-  if (/\b(alternative|something else|different|more options)\b/i.test(message)) {
-    const unseen=candidates.filter(m=>!priorIds.has(m.id));
-    if(unseen.length) candidates=unseen;
-  }
-  const constraints = [...excluded].map(x=>`without ${x}`).concat([...included].map(x=>`with ${x}`));
-  for(const limit of limits.values())constraints.push(`${limit.min?'at least':'at most'} ${limit.value}${limit.unit} ${limit.label}`);
-  if(!candidates.length) return {text:`I couldn’t find a listed match${constraints.length?' '+constraints.join(', '):''}. I haven’t relaxed your request. Try changing a preference or limit.`,mealIds:[]};
-  return {text:`${componentsOnly ? "Only individual menu components match, rather than complete meals. " : ""}Here are ${Math.min(3,candidates.length)} options from your campus menu records${constraints.length?' '+constraints.join(', '):''}. Nutrition uses the listed serving; confirm current availability with dining staff.`,mealIds:candidates.slice(0,3).map(m=>m.id)};
+const locations = {
+  'Panda Express': ['panda', 'panda express'],
+  'Chick-fil-A': ['chick-fil-a', 'chick fil a', 'chickfila', 'cfa'],
+  'Red Radish': ['red radish', 'radish']
+};
+
+const nutrients = [
+  {key: 'calories', words: ['calorie', 'calories', 'cal'], unit: 'cal'},
+  {key: 'proteinGrams', words: ['protein'], unit: 'g'},
+  {key: 'carbsGrams', words: ['carb', 'carbs', 'carbohydrate', 'carbohydrates'], unit: 'g'},
+  {key: 'fatGrams', words: ['fat'], unit: 'g'},
+  {key: 'fiberGrams', words: ['fiber', 'fibre'], unit: 'g'},
+  {key: 'sugarGrams', words: ['sugar'], unit: 'g'},
+  {key: 'saturatedFatGrams', words: ['saturated fat'], unit: 'g'},
+  {key: 'transFatGrams', words: ['trans fat'], unit: 'g'},
+  {key: 'sodiumMilligrams', words: ['sodium'], unit: 'mg'},
+  {key: 'cholesterolMilligrams', words: ['cholesterol'], unit: 'mg'},
+  {key: 'potassiumMilligrams', words: ['potassium'], unit: 'mg'},
+  {key: 'calciumMilligrams', words: ['calcium'], unit: 'mg'},
+  {key: 'ironMilligrams', words: ['iron'], unit: 'mg'},
+  {key: 'vitaminCMilligrams', words: ['vitamin c'], unit: 'mg'},
+  {key: 'vitaminARe', words: ['vitamin a'], unit: 're'},
+  {key: 'vitaminDIu', words: ['vitamin d'], unit: 'iu'}
+];
+
+const normalize = value => String(value || '').toLowerCase().replace(/[–—]/g, '-').replace(/\s+/g, ' ').trim();
+const recordText = meal => normalize([
+  meal.name, meal.description, meal.location, meal.category, meal.type,
+  ...(meal.components || []).flatMap(component => [component.name, component.description])
+].filter(Boolean).join(' '));
+const mealValue = (meal, key) => meal[key] !== null && meal[key] !== '' && meal[key] !== undefined && Number.isFinite(Number(meal[key])) ? Number(meal[key]) : null;
+
+function groupsIn(text) {
+  return Object.entries(groups).filter(([, words]) => words.some(word => text.includes(word))).map(([key]) => key);
 }
+
+function locationIn(text) {
+  return Object.entries(locations).find(([, aliases]) => aliases.some(alias => text.includes(alias)))?.[0] || null;
+}
+
+function hasNegativeBefore(text, word) {
+  const escaped = word.replace(/[.*+?^$()|[\]\\]/g, '\\$&');
+  return new RegExp('(no|not|without|avoid|instead of|less|change from|other than)\\s+(?:more\\s+)?' + escaped, 'i').test(text)
+    || new RegExp('(?:tired of|too much)\\s+' + escaped, 'i').test(text)
+    || new RegExp(escaped + '[^.!?]{0,45}(?:too much|too often|again|something else)', 'i').test(text);
+}
+
+function parseLimits(text) {
+  const results = [];
+  for (const nutrient of nutrients) {
+    const label = nutrient.words.slice().sort((a, b) => b.length - a.length).map(word => word.replace(/[.*+?^$()|[\]\\]/g, '\\$&')).join('|');
+    const before = new RegExp('(under|below|less than|at most|no more than|up to)\\s*(\\d+(?:\\.\\d+)?)\\s*(g|mg|cal)?\\s*(?:of\\s*)?(?:' + label + ')\\b', 'ig');
+    const after = new RegExp('(?:' + label + ')\\s*(?:under|below|less than|at most|no more than|up to)\\s*(\\d+(?:\\.\\d+)?)\\s*(g|mg|cal)?', 'ig');
+    const atLeast = new RegExp('(at least|more than|over|minimum of)\\s*(\\d+(?:\\.\\d+)?)\\s*(g|mg|cal)?\\s*(?:of\\s*)?(?:' + label + ')\\b', 'ig');
+    for (const match of text.matchAll(before)) results.push({key: nutrient.key, type: 'max', value: convertLimit(match[2], match[3], nutrient)});
+    for (const match of text.matchAll(after)) results.push({key: nutrient.key, type: 'max', value: convertLimit(match[1], match[2], nutrient)});
+    for (const match of text.matchAll(atLeast)) results.push({key: nutrient.key, type: 'min', value: convertLimit(match[2], match[3], nutrient)});
+  }
+  return results.filter(limit => Number.isFinite(limit.value));
+}
+
+function convertLimit(value, statedUnit, nutrient) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return null;
+  if (nutrient.unit === 'mg' && normalize(statedUnit) === 'g') return number * 1000;
+  return number;
+}
+
+function getConstraints(message, history) {
+  const turns = [...history.filter(turn => turn.role === 'user').slice(-4).map(turn => turn.text), message];
+  const fullText = normalize(turns.join(' '));
+  const excluded = new Set();
+  const included = new Set();
+  for (const group of groupsIn(fullText)) {
+    if (hasNegativeBefore(fullText, group)) excluded.add(group);
+    else if (group !== 'vegetables') included.add(group);
+  }
+  const directLocation = locationIn(normalize(message));
+  const rememberedLocation = locationIn(fullText);
+  const wantsVegetables = /\b(vegetable|vegetables|veggie|veggies|greens|salad|produce)\b/.test(fullText);
+  const snack = /\b(snack|quick bite|small bite)\b/.test(fullText);
+  const breakfast = /\b(breakfast|morning)\b/.test(fullText);
+  const filling = /\b(filling|full meal|hungry|hearty|substantial)\b/.test(fullText);
+  const light = /\b(light|lighter)\b/.test(fullText);
+  const alternatives = /\b(alternative|another|something else|different|change it up)\b/.test(normalize(message));
+  const usePlan = /\b(my plan|what.*left|remaining|fit.*today|fit.*plan|today.?s goal|goals?)\b/.test(normalize(message));
+  return {
+    fullText, excluded, included, location: directLocation || rememberedLocation, wantsVegetables,
+    snack, breakfast, filling, light, alternatives, usePlan, limits: parseLimits(fullText)
+  };
+}
+
+function matchesIntent(meal, constraints) {
+  const text = recordText(meal);
+  if (constraints.location && normalize(meal.location) !== normalize(constraints.location) && !text.includes(normalize(constraints.location))) return false;
+  for (const group of constraints.excluded) if (groups[group].some(word => text.includes(word))) return false;
+  if (constraints.wantsVegetables && !groups.vegetables.some(word => text.includes(word))) return false;
+  for (const limit of constraints.limits) {
+    const value = mealValue(meal, limit.key);
+    if (value === null || (limit.type === 'max' && value > limit.value) || (limit.type === 'min' && value < limit.value)) return false;
+  }
+  return true;
+}
+
+function scoreMeal(meal, constraints, context) {
+  const text = recordText(meal);
+  let score = 0;
+  if (meal.isSuggestedCombination || meal.isMealIdea || meal.isMeal || /\bmeal\b/.test(text)) score += 5;
+  if (constraints.wantsVegetables && groups.vegetables.some(word => text.includes(word))) score += 16;
+  for (const group of constraints.included) if (groups[group].some(word => text.includes(word))) score += 10;
+  if (constraints.snack && /\b(snack|fruit|cup|bar|yogurt|cookie)\b/.test(text)) score += 12;
+  if (constraints.breakfast && /\b(breakfast|biscuit|egg|oatmeal|coffee)\b/.test(text)) score += 12;
+  const calories = mealValue(meal, 'calories');
+  const protein = mealValue(meal, 'proteinGrams');
+  if (constraints.filling && calories !== null) score += Math.min(calories, 950) / 75;
+  if (constraints.light && calories !== null) score += Math.max(0, 700 - calories) / 55;
+  if (constraints.usePlan && context?.remaining) {
+    const remainingCalories = Number(context.remaining.calories);
+    const remainingProtein = Number(context.remaining.protein);
+    if (Number.isFinite(remainingCalories) && calories !== null) {
+      score += calories <= remainingCalories ? 22 - ((remainingCalories - calories) / Math.max(remainingCalories, 1)) * 5 : -30;
+    }
+    if (Number.isFinite(remainingProtein) && protein !== null) {
+      score += protein <= remainingProtein ? 16 + protein / Math.max(remainingProtein, 1) * 9 : -20;
+    }
+  }
+  return score;
+}
+
+function hasPlanRemaining(context) {
+  return Number.isFinite(Number(context?.remaining?.calories)) || Number.isFinite(Number(context?.remaining?.protein));
+}
+
+function planPhrase(context) {
+  const parts = [];
+  const calories = Number(context?.remaining?.calories);
+  const protein = Number(context?.remaining?.protein);
+  if (Number.isFinite(calories)) parts.push(Math.max(0, Math.round(calories)) + ' calories left');
+  if (Number.isFinite(protein)) parts.push(Math.max(0, Math.round(protein)) + 'g protein left');
+  return parts.join(' and ');
+}
+
+function rememberedMealIds(history) {
+  return new Set(history.filter(turn => turn.role === 'assistant' && Array.isArray(turn.mealIds)).flatMap(turn => turn.mealIds));
+}
+
+function describeConstraints(constraints, context) {
+  const pieces = [];
+  if (constraints.location) pieces.push(constraints.location);
+  if (constraints.excluded.size) pieces.push('no ' + [...constraints.excluded].join(' or '));
+  if (constraints.wantsVegetables) pieces.push('vegetable-forward');
+  if (constraints.snack) pieces.push('a snack');
+  if (constraints.breakfast) pieces.push('breakfast');
+  if (constraints.filling) pieces.push('something filling');
+  if (constraints.light) pieces.push('something lighter');
+  if (constraints.usePlan && hasPlanRemaining(context)) pieces.push('what fits ' + planPhrase(context));
+  return pieces;
+}
+
+export function findMenuMatches({message, history = [], catalog = [], context = {}}) {
+  const cleanMessage = String(message || '').trim();
+  if (!catalog.length) return {text: 'There are no menu records for this school yet, so I cannot safely recommend a meal.', mealIds: []};
+  if (/\b(recommend|set|create|calculate)\b.*\b(daily|target|goal)\b|\bhow many calories should i\b/.test(normalize(cleanMessage))) {
+    return {text: 'I can help you choose from the campus menu, but I do not set nutrition targets. Your saved plan stays in your control.', mealIds: []};
+  }
+  const constraints = getConstraints(cleanMessage, history);
+  if (constraints.usePlan && !hasPlanRemaining(context)) {
+    return {text: 'I can match meals to what is left today after you save a Daily Plan. Or tell me a preference like “vegetable-forward” or “under 700 calories.”', mealIds: []};
+  }
+  const hasIntent = constraints.location || constraints.excluded.size || constraints.included.size || constraints.wantsVegetables || constraints.snack || constraints.breakfast || constraints.filling || constraints.light || constraints.usePlan || constraints.limits.length;
+  if (!hasIntent) {
+    return {text: 'Tell me what you want in plain language—try “something filling, not chicken,” “Panda with vegetables,” or “what fits what I have left today.” I will only use listed campus menu records.', mealIds: []};
+  }
+  const priorIds = rememberedMealIds(history);
+  let matches = catalog.filter(meal => matchesIntent(meal, constraints));
+  if (constraints.alternatives) {
+    const fresh = matches.filter(meal => !priorIds.has(meal.id));
+    if (fresh.length) matches = fresh;
+  }
+  matches = matches.sort((a, b) => scoreMeal(b, constraints, context) - scoreMeal(a, constraints, context) || String(a.name).localeCompare(String(b.name)));
+  const mealIds = matches.slice(0, 3).map(meal => meal.id);
+  if (!mealIds.length) {
+    const sought = describeConstraints(constraints, context);
+    return {text: 'I could not find an exact listed match' + (sought.length ? ' for ' + sought.join(', ') : '') + '. I did not loosen your request. Try another restaurant, a wider calorie limit, or fewer constraints.', mealIds: []};
+  }
+  const heard = describeConstraints(constraints, context);
+  const intro = heard.length ? 'I looked for ' + heard.join(', ') + '.' : 'Here are the closest listed campus options.';
+  const planNote = constraints.usePlan && hasPlanRemaining(context) ? ' Ranked using ' + planPhrase(context) + '.' : '';
+  return {text: intro + planNote + ' These are real menu records—open one for the full nutrition details.', mealIds};
+}
+
 export const menuProvider = async request => findMenuMatches(request);
 
-export function mountMealAssistant(root, { getCatalog, getContext, openMeal, provider = menuProvider }) {
-  let history = [], version = 0, busy = false;
-  const messages=root.querySelector('.assistant-messages'),form=root.querySelector('form'),input=form.querySelector('input'),submit=form.querySelector('button');
-  function add(role,text,meals=[]){
-    const block=document.createElement('div');block.className=`assistant-message ${role}`;
-    const p=document.createElement('p');p.textContent=text;block.append(p);
-    for(const meal of meals){const button=document.createElement('button');button.type='button';button.className='assistant-meal';const title=document.createElement('strong');title.textContent=meal.name;const details=document.createElement('small');details.textContent=`${meal.location} · ${finite(meal.calories)?meal.calories+' cal':'Calories unavailable'} · ${finite(meal.proteinGrams)?meal.proteinGrams+'g protein':'Protein unavailable'}`;button.append(title,details);button.onclick=()=>openMeal(meal.id);block.append(button);}
-    messages.append(block);messages.scrollTop=messages.scrollHeight;
+export function mountMealAssistant(root, {getCatalog, getContext = () => ({}), openMeal, provider = menuProvider}) {
+  const messages = root.querySelector('.assistant-messages');
+  const form = root.querySelector('form');
+  const input = root.querySelector('input');
+  const resetButton = root.querySelector('.assistant-reset');
+  const promptButtons = [...root.querySelectorAll('[data-meal-prompt]')];
+  let history = [];
+  let requestVersion = 0;
+
+  function addMessage(role, text, mealIds = []) {
+    const message = document.createElement('div');
+    message.className = 'assistant-message assistant-' + role;
+    const copy = document.createElement('p');
+    copy.textContent = text;
+    message.append(copy);
+    if (role === 'assistant' && mealIds.length) {
+      const mealList = document.createElement('div');
+      mealList.className = 'assistant-meal-list';
+      const catalog = getCatalog();
+      for (const id of mealIds) {
+        const meal = catalog.find(item => item.id === id);
+        if (!meal) continue;
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'assistant-meal';
+        button.textContent = meal.name + (meal.location ? ' · ' + meal.location : '');
+        button.addEventListener('click', () => openMeal(id));
+        mealList.append(button);
+      }
+      if (mealList.children.length) message.append(mealList);
+    }
+    messages.append(message);
+    messages.scrollTop = messages.scrollHeight;
   }
-  function reset(){version++;history=[];busy=false;submit.disabled=false;input.value='';messages.replaceChildren();add('assistant','What sounds good? Ask for vegetables, a change from chicken, or meals within your own limits.');}
-  async function send(text){
-    if(busy||!text.trim())return;busy=true;submit.disabled=true;input.value='';
-    const current=version,catalog=getCatalog(),context=getContext();add('user',text);
-    try{
-      const response=await provider({message:text,history:structuredClone(history),catalog,context});
-      if(current!==version)return;
-      if(!response||typeof response.text!=='string'||!Array.isArray(response.mealIds))throw Error('Invalid assistant response');
-      // Only render recommendations that resolve to this campus's current catalog.
-      const ids=[...new Set(response.mealIds)].slice(0,3),meals=ids.map(id=>catalog.find(m=>m.id===id)).filter(Boolean);
-      add('assistant',response.text,meals);history.push({role:'user',text},{role:'assistant',text:response.text,mealIds:meals.map(m=>m.id)});history=history.slice(-12);
-    }catch{if(current===version)add('assistant','I couldn’t complete that request. Please try again, or use Find meals.');}
-    finally{if(current===version){busy=false;submit.disabled=false;}}
+
+  async function send(text) {
+    const clean = String(text || '').trim();
+    if (!clean) return;
+    const version = ++requestVersion;
+    addMessage('user', clean);
+    history.push({role: 'user', text: clean});
+    input.value = '';
+    input.disabled = true;
+    try {
+      const response = await provider({message: clean, history, catalog: getCatalog(), context: getContext()});
+      if (version !== requestVersion) return;
+      const validIds = Array.isArray(response?.mealIds) ? response.mealIds.filter(id => getCatalog().some(meal => meal.id === id)) : [];
+      const textResponse = String(response?.text || 'I could not complete that menu search. Please try again.');
+      addMessage('assistant', textResponse, validIds);
+      history.push({role: 'assistant', text: textResponse, mealIds: validIds});
+    } catch {
+      if (version === requestVersion) {
+        const textResponse = 'I could not search the menu just now. Please try again.';
+        addMessage('assistant', textResponse);
+        history.push({role: 'assistant', text: textResponse, mealIds: []});
+      }
+    } finally {
+      if (version === requestVersion) input.disabled = false;
+    }
   }
-  form.onsubmit=e=>{e.preventDefault();send(input.value.trim());};
-  root.querySelectorAll('[data-meal-prompt]').forEach(b=>b.onclick=()=>send(b.dataset.mealPrompt));
-  root.querySelector('.assistant-reset').onclick=reset;
-  reset();return {reset};
+
+  function reset() {
+    requestVersion += 1;
+    history = [];
+    messages.replaceChildren();
+    addMessage('assistant', 'What sounds good? I can use what you have left today, a restaurant, or preferences like “something filling, not chicken.”');
+    input.value = '';
+    input.disabled = false;
+  }
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    send(input.value);
+  });
+  promptButtons.forEach(button => button.addEventListener('click', () => send(button.dataset.mealPrompt)));
+  resetButton?.addEventListener('click', reset);
+  reset();
+  return {reset, send};
 }
