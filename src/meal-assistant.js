@@ -173,7 +173,7 @@ function matchesIntent(meal, constraints, context) {
   if (constraints.location && normalize(meal.location) !== normalize(constraints.location) && !text.includes(normalize(constraints.location))) return false;
   if (constraints.mealType && meal.mealType !== constraints.mealType) return false;
   if (constraints.completeMeal && !isCompleteMeal(meal)) return false;
-  const remainingCalories = Number(context?.remaining?.calories);
+  const remainingCalories = planNumber(context?.remaining?.calories);
   const calories = mealValue(meal, 'calories');
   if (constraints.mealsLeft && Number.isFinite(remainingCalories) && calories !== null) {
     const mealTarget = remainingCalories / constraints.mealsLeft;
@@ -215,8 +215,8 @@ function scoreMeal(meal, constraints, context) {
     if (/\b(fries|waffle potato|fried|breaded|cookie|brownie|orange chicken)\b/.test(text)) score -= 45;
   }
   if (constraints.usePlan && context?.remaining) {
-    const remainingCalories = Number(context.remaining.calories);
-    const remainingProtein = Number(context.remaining.protein);
+    const remainingCalories = planNumber(context.remaining.calories);
+    const remainingProtein = planNumber(context.remaining.protein);
     if (Number.isFinite(remainingCalories) && calories !== null) {
       const mealTarget = constraints.mealsLeft
         ? remainingCalories / constraints.mealsLeft
@@ -231,14 +231,18 @@ function scoreMeal(meal, constraints, context) {
   return score;
 }
 
+// A goal that was never set arrives as null or "". Number(null) is 0, which
+// would read as "0 calories left", so missing stays missing.
+const planNumber = value => value === null || value === undefined || value === '' ? NaN : Number(value);
+
 function hasPlanRemaining(context) {
-  return Number.isFinite(Number(context?.remaining?.calories)) || Number.isFinite(Number(context?.remaining?.protein));
+  return Number.isFinite(planNumber(context?.remaining?.calories)) || Number.isFinite(planNumber(context?.remaining?.protein));
 }
 
 function planPhrase(context) {
   const parts = [];
-  const calories = Number(context?.remaining?.calories);
-  const protein = Number(context?.remaining?.protein);
+  const calories = planNumber(context?.remaining?.calories);
+  const protein = planNumber(context?.remaining?.protein);
   if (Number.isFinite(calories)) parts.push(Math.max(0, Math.round(calories)) + ' calories left');
   if (Number.isFinite(protein)) parts.push(Math.max(0, Math.round(protein)) + 'g protein left');
   return parts.join(' and ');
@@ -377,25 +381,31 @@ export function mountMealAssistant(root, {getCatalog, getContext = () => ({}), o
     message.append(copy);
     messages.append(message);
     messages.scrollTop = messages.scrollHeight;
+    return message;
   }
 
-  async function send(text, {showUser = true} = {}) {
+  async function send(text, {showUser = true, label = ''} = {}) {
     const clean = String(text || '').trim();
     if (!clean) return;
     const version = ++requestVersion;
-    if (showUser) addMessage('user', clean);
+    if (showUser) addMessage('user', label || clean);
+    // Show something at once: an AI answer can take a few seconds.
+    const pending = addMessage('assistant', 'Finding a meal for you…');
+    pending.classList.add('assistant-pending');
     input.value = '';
     input.disabled = true;
     try {
       // Every submitted request starts a new meal search. The visible chat is
       // a record for the user, not hidden context for their next decision.
       const response = await provider({message: clean, history: [], catalog: getCatalog(), context: getContext()});
+      pending.remove();
       if (version !== requestVersion) return;
       const validIds = Array.isArray(response?.mealIds) ? response.mealIds.filter(id => getCatalog().some(meal => meal.id === id)) : [];
       const textResponse = String(response?.text || 'I could not complete that menu search. Please try again.');
       addMessage('assistant', textResponse, validIds);
       showSuggestions({text: textResponse, mealIds: validIds});
     } catch {
+      pending.remove();
       if (version === requestVersion) {
         const textResponse = 'I could not search the menu just now. Please try again.';
         addMessage('assistant', textResponse);
@@ -427,5 +437,5 @@ export function mountMealAssistant(root, {getCatalog, getContext = () => ({}), o
   promptButtons.forEach(button => button.addEventListener('click', () => send(button.dataset.mealPrompt)));
   resetButton?.addEventListener('click', reset);
   reset();
-  return {reset, send, suggest: text => send(text, {showUser: false})};
+  return {reset, send, suggest: (text, label = '') => send(text, {showUser: Boolean(label), label})};
 }

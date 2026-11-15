@@ -101,3 +101,29 @@ test('"highest / lowest <nutrient>" ranks the listed menu exactly and skips add-
  assert.equal(findMenuMatches({message:'high calories',catalog}).mealIds[0],'b','plural "calories" is understood');
  assert.equal(findMenuMatches({message:'highest calories',catalog:[{id:'x',name:'Water',calories:null}]}).reason,'no-match');
 });
+
+test('"Suggest my next meal" shows the request and a placeholder at once, then the answer',async()=>{
+ const dom=new JSDOM('<aside><div class="assistant-messages"></div><form><input><button>Send</button></form><button class="assistant-reset">Reset</button></aside>');
+ const {document}=dom.window;global.document=document;
+ let finish;const shown=[];
+ const ui=mountMealAssistant(document.querySelector('aside'),{getCatalog:()=>catalog,openMeal(){},showSuggestions:s=>shown.push(s),provider:()=>new Promise(r=>{finish=r;})});
+ const bubbles=()=>[...document.querySelectorAll('.assistant-message')].map(m=>[m.className.replace('assistant-message ',''),m.textContent]);
+ const done=ui.suggest('Find the best balanced, filling meal for right now.','Suggest my next meal');
+ assert.deepEqual(bubbles().slice(1),[['assistant-user','Suggest my next meal'],['assistant-assistant assistant-pending','Finding a meal for you…']],'feedback appears before any answer');
+ finish({text:'Try the Beef bowl.',mealIds:['b']});await done;
+ assert.deepEqual(bubbles().slice(1),[['assistant-user','Suggest my next meal'],['assistant-assistant','Try the Beef bowl.']],'the placeholder is replaced by the answer');
+ assert.deepEqual(shown.at(-1).mealIds,['b']);
+ const failing=mountMealAssistant(document.querySelector('aside'),{getCatalog:()=>catalog,openMeal(){},provider:async()=>{throw new Error('offline');}});
+ await failing.suggest('x','Suggest my next meal');
+ assert.equal(document.querySelectorAll('.assistant-pending').length,0,'a failure never leaves the placeholder spinning');
+ dom.window.close();delete global.document;
+});
+
+test('a plan that was never saved is not read as "0 calories left"',()=>{
+ const noPlan=findMenuMatches({message:'Find the best balanced option that fits what I have left today.',catalog,context:{remaining:{calories:null,protein:null}}});
+ assert.equal(noPlan.reason,'plan-needed');
+ assert.doesNotMatch(noPlan.text,/0 calories left/);
+ const withPlan=findMenuMatches({message:'Find the best balanced option that fits what I have left today.',catalog,context:{remaining:{calories:700,protein:40}}});
+ assert.match(withPlan.text,/700 calories left and 40g protein left/);
+ assert.equal(findMenuMatches({message:'Find the best balanced, filling meal for right now.',catalog:catalog.map(m=>({...m,mealType:'meal'})),context:{remaining:{calories:null,protein:null}}}).reason,'matched','the no-plan wording still gets an answer');
+});

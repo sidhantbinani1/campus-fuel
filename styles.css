@@ -279,6 +279,7 @@ main { display: flex; flex-direction: column; }
 /* Student messages: right side, green. */
 #meal-assistant .assistant-user { align-self: flex-end; background: #3d6244; color: #fff; border-bottom-right-radius: 5px; }
 /* Assistant replies: left side, gray, with a small green mark. */
+#meal-assistant .assistant-pending { opacity: .7; font-style: italic; }
 #meal-assistant .assistant-assistant { position: relative; align-self: flex-start; margin-left: 38px; background: #eceeea; color: #17332d; border-bottom-left-radius: 5px; }
 #meal-assistant .assistant-assistant::before { content: "✦"; position: absolute; left: -38px; bottom: 0; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: #dcebd3; color: #3d6244; font-size: 13px; }
 #meal-assistant .assistant-form { margin-top: 14px; padding: 8px 8px 8px 14px; border-color: #cfe0c4; border-radius: 14px; background: #fff; }
