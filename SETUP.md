@@ -22,8 +22,8 @@ Create a free project in https://supabase.com/dashboard. Save the database passw
 
 In the project's SQL editor, run these migrations **once, in order**:
 
-1. `supabase/migrations/202611140001_accounts.sql`
-2. `supabase/migrations/202611140002_catalog.sql`
+1. `supabase/migrations/20261114203831_campus_fuel_accounts.sql`
+2. `supabase/migrations/20261114203849_campus_fuel_catalog.sql`
 
 The second is a generated seed for 22 CSU schools and the 342 imported menu items / planning suggestions. To refresh it after verified menu changes, run `npm run catalog`; use a new migration filename for databases that have already applied the original migration. Historical meal snapshots remain intact when catalog data changes.
 

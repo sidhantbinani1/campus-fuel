@@ -36,6 +36,8 @@ No real test inquiry is left in production: the live submission check ran inside
 
 ## Deployment and checks
 
+Migration filenames match the versions already recorded in this Supabase project, including the admin migration applied through the Supabase connector. Do not reapply migrations to an existing project.
+
 `npm test` covers database roles, direct-table denial, self-promotion denial, revoked/deleted admin accounts, public inquiry validation/idempotency/rate limits, conflict detection, XSS-safe rendering, sign-out clearing and submission failure/retry. `npm run build` includes `admin.html` in Vite's multi-page output.
 
 Supabase redirect allowlist includes the exact production `/admin.html` URL and `http://127.0.0.1:4181/admin.html`, alongside the existing student-app paths. This uses the existing Google and email sign-in configuration. No service-role key is shipped to the browser.

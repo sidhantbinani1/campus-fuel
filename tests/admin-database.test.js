@@ -10,7 +10,7 @@ test('admin RPCs enforce membership, minimize student data and validate public i
  create table auth.users(id uuid primary key,email text,created_at timestamptz default now(),email_confirmed_at timestamptz,deleted_at timestamptz,raw_user_meta_data jsonb default '{}');
  create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;
  grant usage on schema auth,public to authenticated,anon;grant execute on function auth.uid() to authenticated,anon;`);
- for(const name of ['202611140001_accounts.sql','202611140002_catalog.sql','20261115000341_admin_portal.sql'])await db.exec(readFileSync(new URL(`../supabase/migrations/${name}`,import.meta.url),'utf8'));
+ for(const name of ['20261114203831_campus_fuel_accounts.sql','20261114203849_campus_fuel_catalog.sql','20261115001110_admin_portal.sql'])await db.exec(readFileSync(new URL(`../supabase/migrations/${name}`,import.meta.url),'utf8'));
  const admin='00000000-0000-0000-0000-000000000001',student='00000000-0000-0000-0000-000000000002';
  await db.query(`insert into auth.users(id,email,email_confirmed_at,raw_user_meta_data) values($1,'admin@example.invalid',now(),'{}'),($2,'student@example.invalid',now(),'{"full_name":"Student Name","goals":"must never appear"}')`,[admin,student]);
  await db.query('insert into admin_private.admin_users(user_id) values($1)',[admin]);
