@@ -120,8 +120,11 @@ function getConstraints(message, history, context = {}, catalog = []) {
     else if (group !== 'vegetables') included.add(group);
   }
   const directLocation = locationIn(fullText, catalog);
-  // Only the student's own words choose snack vs. meal.
-  const selectedMealType = /\b(snack|quick bite|small bite)\b/.test(fullText) ? 'snack' : null;
+  // A restaurant or type the student picked in "Narrow it down" narrows the
+  // search; otherwise only their own words can. Browse state is never used.
+  const chosenLocation = catalog.find(meal => context.chosenLocation && normalize(meal.location) === normalize(context.chosenLocation))?.location || null;
+  const chosenMealType = ['snack', 'meal'].includes(context.chosenMealType) ? context.chosenMealType : null;
+  const selectedMealType = chosenMealType || (/\b(snack|quick bite|small bite)\b/.test(fullText) ? 'snack' : null);
   const wantsVegetables = /\b(vegetable|vegetables|veggie|veggies|greens|salad|produce)\b/.test(fullText);
   const snack = selectedMealType === 'snack' || /\b(snack|quick bite|small bite)\b/.test(fullText);
   const breakfast = /\b(breakfast|morning)\b/.test(fullText);
@@ -138,7 +141,7 @@ function getConstraints(message, history, context = {}, catalog = []) {
   const alternatives = /\b(alternative|another|something else|different|change it up)\b/.test(normalize(message));
   const usePlan = /\b(my plan|what.*left|remaining|fit.*today|fit.*plan|today.?s goal|goals?)\b/.test(normalize(message));
   return {
-    fullText, excluded, included, location: directLocation, mealType: selectedMealType, wantsVegetables,
+    fullText, excluded, included, location: chosenLocation || directLocation, mealType: selectedMealType, wantsVegetables,
     snack, breakfast, filling, light, healthy, highCalories, lowCalories, highProtein, requestedFoods, dietary, mealsLeft, alternatives, usePlan,
     completeMeal: selectedMealType === 'meal' || (!snack && (filling || healthy || Boolean(mealsLeft) || usePlan)),
     limits: parseLimits(fullText)

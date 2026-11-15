@@ -7,6 +7,7 @@ import {
   buildMessages,
   cleanContext,
   cleanMessage,
+  narrowRows,
   FALLBACK_REPLY,
   menuLine,
   parseReply,
@@ -43,6 +44,14 @@ test("meal chat prompt lists real menu facts, keeps unknowns unknown, and carrie
   assert.match(messages[1].content, /It is midday/);
   assert.match(messages[1].content, /EARLIER TURNS \(context only, not constraints\)\nuser: no chicken/);
   assert.match(messages[1].content, /REQUEST\nsomething light$/);
+  assert.equal(context.chosenLocation, "", "nothing is narrowed unless the student picked it");
+  const narrowed = cleanContext({ chosenLocation: "Panda Express", chosenMealType: "meal" });
+  assert.match(buildMessages("lunch", rows, narrowed)[1].content, /They narrowed this search to: restaurant Panda Express, meals only\./);
+  assert.equal(cleanContext({ chosenMealType: "dessert" }).chosenMealType, "");
+  const typed = [{ id: "m", snapshot: { location: "Panda Express", mealType: "meal" } }, { id: "s", snapshot: { location: "Panda Express", mealType: "snack" } }, { id: "c", snapshot: { location: "Chick-fil-A", mealType: "meal" } }];
+  assert.deepEqual(narrowRows(typed, cleanContext()).map((r) => r.id), ["m", "s", "c"]);
+  assert.deepEqual(narrowRows(typed, narrowed).map((r) => r.id), ["m"]);
+  assert.deepEqual(narrowRows(typed, cleanContext({ chosenMealType: "meal" })).map((r) => r.id), ["m", "c"]);
   const bare = buildMessages("lunch", rows, cleanContext());
   assert.match(bare[1].content, /No daily calorie or protein goal saved/);
   assert.doesNotMatch(bare[1].content, /EARLIER TURNS|HINT/);

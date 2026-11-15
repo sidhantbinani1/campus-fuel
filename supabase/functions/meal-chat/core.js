@@ -24,8 +24,8 @@ const textList = (value, maxItems, maxLength) =>
 
 /**
  * Keep only the context fields the function understands, in safe shapes.
- * Restaurant and meal-type filters are intentionally NOT accepted: the AI
- * always considers every restaurant and reads each message fresh.
+ * chosenLocation / chosenMealType come only from the student's own picks in
+ * "Narrow it down"; when empty, the AI considers every restaurant.
  */
 export function cleanContext(raw = {}) {
   const goals = raw?.goals || {};
@@ -55,7 +55,19 @@ export function cleanContext(raw = {}) {
       .filter((turn) => turn.text)
       .slice(-4),
     localHour: Number.isInteger(raw?.localHour) && raw.localHour >= 0 && raw.localHour <= 23 ? raw.localHour : null,
+    chosenLocation: shortText(raw?.chosenLocation, 40),
+    chosenMealType: ["snack", "meal"].includes(raw?.chosenMealType) ? raw.chosenMealType : "",
   };
+}
+
+/** Narrow the menu to the restaurant / type the student picked, if any. */
+export function narrowRows(rows, context) {
+  const location = context.chosenLocation.toLowerCase();
+  return rows.filter(
+    (row) =>
+      (!location || String(row.snapshot?.location || "").toLowerCase() === location) &&
+      (!context.chosenMealType || row.snapshot?.mealType === context.chosenMealType),
+  );
 }
 
 const amount = (value, unit) =>
@@ -92,6 +104,7 @@ Nutrition key: cal, p = protein g, c = carbs g, f = fat g, fib = fiber g, sug = 
 How to answer:
 - Read the newest REQUEST on its own. Apply only the preferences it states. Never add a restaurant, food, or limit the student did not say in that message. Use EARLIER TURNS only to understand words like "that one" or "something else".
 - Consider every restaurant on the menu, not just one. "Not chicken" means avoid chicken; it says nothing about which restaurant.
+- If PLAN says the student narrowed to a restaurant or type, the MENU is already limited to it. Say so naturally and pick only from it.
 - Pick up to ${MAX_PICKS} items that genuinely fit. Prefer variety across restaurants unless they named one.
 - Use the PLAN when it helps: what is left today, what they already ate (avoid repeating it), and their own preferences. Time of day can guide breakfast vs. dinner.
 - Explain WHY in plain language: how a pick fits what they have left, what makes it filling, a simple trade-off, or a practical tip (add a side for protein, swap fries for fruit, split a large plate). Mention a number only when it helps the decision.
@@ -120,6 +133,8 @@ function planText(context) {
   else lines.push("Nothing logged yet today.");
   const prefs = [g.vegetarian ? "vegetarian" : "", g.vegan ? "vegan" : "", g.avoidingGluten ? "avoiding gluten" : ""].filter(Boolean);
   if (prefs.length) lines.push(`Saved preferences: ${prefs.join(", ")}`);
+  const narrowed = [context.chosenLocation ? `restaurant ${context.chosenLocation}` : "", context.chosenMealType ? `${context.chosenMealType}s only` : ""].filter(Boolean);
+  if (narrowed.length) lines.push(`They narrowed this search to: ${narrowed.join(", ")}.`);
   const when = partOfDay(context.localHour);
   if (when) lines.push(`It is ${when} for them.`);
   return lines.join("\n");

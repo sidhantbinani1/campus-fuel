@@ -922,7 +922,7 @@ function renderRestaurantControls() {
   const locations = menuLocations();
   const quickBrowse = $("#location-browse-chips");
   const quickLabel = document.createElement("span");
-  quickLabel.textContent = "Available now";
+  quickLabel.textContent = "Restaurant";
   quickBrowse.replaceChildren(quickLabel);
   locations.forEach((location) => {
     const button = createControlButton({
@@ -1143,7 +1143,24 @@ function updateBrowseButtons() {
       ? button.dataset.location === state.location
       : button.dataset.mealType === state.mealType;
     button.classList.toggle("selected", selected);
+    button.setAttribute("aria-pressed", String(selected));
   });
+  // Tell the student exactly what the next assistant search will cover.
+  const scope = $("#assistant-scope");
+  if (scope) {
+    const type = state.mealType === "snack" ? "snacks" : state.mealType === "meal" ? "meals" : "";
+    const where = state.location || "all of campus";
+    scope.replaceChildren("Searching ", Object.assign(document.createElement("b"), { textContent: where }), type ? ` · ${type} only` : "");
+  }
+}
+
+// After every assistant search the optional restaurant / type filters clear,
+// so nothing carries into the next request unless the student picks it again.
+function clearAssistantFilters() {
+  if (!state.location && !state.mealType) return;
+  state.location = "";
+  state.mealType = "";
+  updateBrowseButtons();
 }
 
 [["#goal-calories", "calories"], ["#goal-protein", "protein"]].forEach(([selector, key]) => $(selector).addEventListener("input", event => { planDraft[key] = event.target.value; updatePlanStatus("dirty", "Unsaved changes — select Save my plan."); renderGoalSummary(); }));
@@ -1310,18 +1327,21 @@ if (new URLSearchParams(location.search).get("signin") === "1") {
 
 mealAssistant = mountMealAssistant(document.querySelector("#meal-assistant"), {
   getCatalog: () => account?.hasMenus() ? window.MEALS : [],
-  // Only the student's own saved plan and today's log. The restaurant and
-  // meal-type browse filters are deliberately left out: the assistant reads
-  // each message fresh across every restaurant.
+  // The student's saved plan, today's log, and any restaurant / type they
+  // chose in "Narrow it down". Nothing else is carried between messages.
   getContext: () => ({
     school: account?.school,
     goals: structuredClone(state.goals),
     remaining: remaining(),
     eatenToday: loggedMeals().map((meal) => meal.name),
     eatenTotals: totals(),
+    // Only what the student picked themselves in "Narrow it down"; empty by default.
+    chosenLocation: state.location || "",
+    chosenMealType: state.mealType || "",
   }),
   showSuggestions: ({ mealIds }) => {
     state.assistantSuggestionIds = mealIds;
+    clearAssistantFilters();
     render();
     if (mealIds.length)
       $("#assistant-suggestions").scrollIntoView({ behavior: "smooth", block: "start" });

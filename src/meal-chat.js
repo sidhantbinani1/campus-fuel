@@ -16,6 +16,8 @@ export async function askMealChat(client, message, context = {}) {
     hint: Array.isArray(context.hint) ? context.hint : [],
     history: Array.isArray(context.history) ? context.history : [],
     localHour: new Date().getHours(),
+    chosenLocation: typeof context.chosenLocation === "string" ? context.chosenLocation : "",
+    chosenMealType: typeof context.chosenMealType === "string" ? context.chosenMealType : "",
   };
   const { data, error } = await client.functions.invoke("meal-chat", { body });
   if (error) {

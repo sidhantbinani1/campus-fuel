@@ -40,7 +40,18 @@ a{color:inherit}
 @media (max-width:1099px){body > .site-header{position:relative;z-index:20}}
 /* The student app's own stylesheets nudge the shared header on small screens; mirror them so both pages stay identical. */
 @media (max-width:850px){.site-header .app-tabs{justify-content:center}}
-@media (max-width:700px){.site-header .brand{font-size:23px}}
+@media (max-width:700px){
+  body > header.site-header{min-height:0;height:auto;padding:10px 16px 2px;gap:4px 12px;flex-wrap:wrap;align-items:center}
+  body > header.site-header .brand{flex:1 1 auto;font-size:20px;min-width:0;min-height:40px}
+  body > header.site-header .brand-mark{font-size:21px}
+  body > header.site-header #account-button{order:2;margin-left:auto;width:auto;min-height:40px;padding:8px 14px;font-size:13px}
+  body > header.site-header .audience-nav{order:3;flex:1 1 100%;width:100%;gap:22px;justify-content:flex-start}
+  body > header.site-header .audience-nav a{width:auto!important;min-height:44px;display:inline-flex;align-items:center;padding:0;font-size:14px}
+  /* Student app tabs belong to the student app; on a phone this page stays focused. */
+  body > header.site-header .app-tabs{display:none}
+  .btn{min-height:48px}
+  footer a{display:inline-flex;align-items:center;min-height:40px}
+}
 .btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--cream)!important;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;transition:transform .25s var(--ease),background .25s}
 .btn:hover{transform:translateY(-2px);background:#0f2620}
 .btn i{font-style:normal;transition:transform .25s var(--ease)}

@@ -43,6 +43,12 @@ test('page browse filters never narrow the assistant, and "chicken" never select
  assert.deepEqual(findMenuMatches({message:'something from chick-fil-a',catalog:filteredCatalog}).mealIds,['chick-meal']);
  assert.equal(findMenuMatches({message:'chicken please',catalog:filteredCatalog}).reason,'matched');
  assert.equal(findMenuMatches({message:'hello there',catalog:filteredCatalog}).reason,'needs-intent');
+ // A restaurant or type the student picks in "Narrow it down" filters what they type.
+ const picked=findMenuMatches({message:'something filling',catalog:filteredCatalog,context:{chosenLocation:'Panda Express'}});
+ assert.deepEqual(picked.mealIds,['panda-meal']);assert.match(picked.text,/Panda Express/);
+ assert.deepEqual(findMenuMatches({message:'chicken please',catalog:filteredCatalog,context:{chosenLocation:'Panda Express'}}).mealIds,[]);
+ assert.deepEqual(findMenuMatches({message:'anything good',catalog:filteredCatalog,context:{chosenMealType:'snack'}}).mealIds,['panda-snack']);
+ assert.deepEqual(findMenuMatches({message:'something filling',catalog:filteredCatalog,context:{chosenLocation:'Not A Real Place'}}).mealIds.sort(),['chick-meal','panda-meal']);
 });
 test('decision rules use each school menu data instead of Cal Poly restaurant names',()=>{
  const futureSchoolCatalog=[

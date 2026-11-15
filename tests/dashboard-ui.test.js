@@ -99,8 +99,8 @@ test('guests can browse but entering goals or using the assistant asks them to s
  const dom = new JSDOM(read('app.html'),{url:'http://localhost/app.html',runScripts:'outside-only'});
  const w=dom.window; w.structuredClone=structuredClone;
  w.HTMLElement.prototype.scrollIntoView=function(){};
- w.mountMealAssistant=()=>({reset(){},suggest(){ suggested++; }});
- let prompts=0, suggested=0;
+ let prompts=0, suggested=0, assistant;
+ w.mountMealAssistant=(root,options)=>{assistant=options;return {reset(){},suggest(){ suggested++; }};};
  w.createAccount=()=>({user:null,hasMenus:()=>true,isFavorite:()=>false,requireSignIn:()=>{prompts++;return false;},savePlan(){}});
  w.eval(read('data/meals.js'));
  w.eval(read('app.js').replace(/^import .*;\n/gm,''));
@@ -116,5 +116,20 @@ test('guests can browse but entering goals or using the assistant asks them to s
  assert.equal(prompts,3,'quick prompts open sign-in');
  w.document.querySelector('#suggest-next').click();
  assert.equal(prompts,4);assert.equal(suggested,0,'no suggestion is sent for a guest');
+ // "Narrow it down": nothing preselected, picks feed the assistant, and they clear after each search.
+ const scope=()=>w.document.querySelector('#assistant-scope').textContent;
+ assert.equal(w.document.querySelectorAll('#meal-assistant .browse-chip.selected').length,0,'no filter is preselected');
+ assert.equal(scope(),'Searching all of campus');
+ assert.equal(assistant.getContext().chosenLocation,'');
+ const chip=w.document.querySelector('#meal-assistant .location-chip');
+ chip.click();w.document.querySelector('#meal-assistant [data-meal-type="meal"]').click();
+ assert.equal(prompts,4,'guests can still try the filters');
+ assert.equal(assistant.getContext().chosenLocation,chip.dataset.location);
+ assert.equal(assistant.getContext().chosenMealType,'meal');
+ assert.equal(scope(),`Searching ${chip.dataset.location} · meals only`);
+ assistant.showSuggestions({text:'done',mealIds:[]});
+ assert.equal(w.document.querySelectorAll('#meal-assistant .browse-chip.selected').length,0,'filters clear after a search');
+ assert.equal(assistant.getContext().chosenLocation,'');assert.equal(assistant.getContext().chosenMealType,'');
+ assert.equal(scope(),'Searching all of campus');
  dom.window.close();
 });
