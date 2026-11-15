@@ -5,7 +5,7 @@
 // their daily messages, ask the model to choose from that menu, then return
 // only ids that really exist on it.
 import { createClient } from "npm:@supabase/supabase-js@2";
-import { buildMessages, cleanContext, cleanMessage, parseReply } from "./core.js";
+import { buildMessages, cleanContext, cleanMessage, narrowRows, parseReply } from "./core.js";
 
 const cors = {
   "Access-Control-Allow-Origin": "*",
@@ -51,10 +51,13 @@ Deno.serve(async (req) => {
   const { data: profile } = await supabase.from("profiles").select("school").eq("user_id", auth.user.id).maybeSingle();
   if (!profile) return json({ error: "Finish setting up your account first." }, 403);
 
-  // The whole campus menu, every restaurant. No page filters are applied.
-  const { data: rows, error: menuError } = await supabase.from("meal_catalog").select("id,snapshot").eq("school_id", profile.school);
+  // Every restaurant, unless the student narrowed to one restaurant or type.
+  const { data: allRows, error: menuError } = await supabase.from("meal_catalog").select("id,snapshot").eq("school_id", profile.school);
   if (menuError) return json({ error: "The menu could not be loaded. Please try again." }, 500);
-  if (!rows?.length) return json({ error: "Menus for your campus are coming soon." }, 404);
+  if (!allRows?.length) return json({ error: "Menus for your campus are coming soon." }, 404);
+  const rows = narrowRows(allRows, context);
+  // Nothing matches their pick: answer for free instead of calling OpenAI.
+  if (!rows.length) return json({ reply: "Nothing on the listed menu matches the restaurant and type you picked. Try clearing one and ask again.", mealIds: [], remaining: null });
 
   // Spend the allowance before calling OpenAI so a failure can never be retried for free.
   const { data: remaining, error: limitError } = await supabase.rpc("use_meal_chat");

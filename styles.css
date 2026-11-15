@@ -316,3 +316,81 @@ main { display: flex; flex-direction: column; }
 @media (prefers-reduced-motion: reduce) {
   #daily-summary.daily-summary, #account-status:not(:empty), #dashboard-view, #finder-view, #finder-results, #history-view, #board-view, #account-view, #meal-assistant .assistant-message { animation: none; }
 }
+
+/* ---------- "Narrow it down": optional restaurant / type filters inside the assistant ---------- */
+#meal-assistant .assistant-narrow { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 14px 0 0; padding: 14px 16px; border: 1px dashed #cfe0c4; border-radius: 14px; background: #f7faf3; }
+#meal-assistant .narrow-title { margin: 0; font: 700 14px/1.3 "DM Sans", sans-serif; color: #17332d; letter-spacing: -.2px; }
+#meal-assistant .narrow-title span { margin-left: 6px; padding: 2px 7px; border-radius: 999px; background: #e4efdc; color: #4e7f58; font: 500 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .6px; vertical-align: 2px; }
+#meal-assistant .narrow-help { margin: 4px 0 0; color: #5b6f62; font-size: 12px; line-height: 1.5; max-width: 760px; }
+#meal-assistant .assistant-narrow .browse-group { gap: 7px; }
+#meal-assistant .assistant-narrow .browse-group + .browse-group { border-left: 0; padding-left: 0; }
+#meal-assistant .assistant-narrow .browse-group > span { min-width: 82px; color: #4e7f58; }
+#meal-assistant .assistant-narrow .browse-chip { padding: 7px 12px; font-size: 13px; background: #fff; }
+#meal-assistant .assistant-narrow .browse-chip.selected { background: #3d6244; border-color: #3d6244; color: #fff; }
+#meal-assistant .assistant-scope { margin: 2px 0 0; font-size: 12px; color: #4f6357; }
+#meal-assistant .assistant-scope b { color: #3d6244; }
+#meal-assistant .assistant-prompts .suggest-chip { font-size: 13px; padding: 9px 14px; }
+@media (max-width: 540px) { #meal-assistant .assistant-narrow .browse-group > span { min-width: 0; width: 100%; } }
+
+/* =====================================================================
+   Phones (700px and below). Thumb-first layout:
+   - compact two-row header: brand + Sign in, then the audience switch
+   - the four app tabs become a fixed bottom tab bar
+   - 44px tap targets, 16px inputs (stops iOS zoom), no text under 11px
+   ===================================================================== */
+@media (max-width: 700px) {
+  body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+
+  /* Header: brand and Sign in share row one, the audience switch is row two. */
+  body > header.site-header { min-height: 0; height: auto; padding: 10px 16px 0; gap: 4px 12px; flex-wrap: wrap; align-items: center; }
+  body > header.site-header .brand { flex: 1 1 auto; font-size: 20px; min-width: 0; min-height: 40px; }
+  body > header.site-header .brand-mark { font-size: 21px; }
+  body > header.site-header #account-button { order: 2; margin-left: auto; width: auto; min-height: 40px; padding: 8px 14px; font-size: 13px; }
+  body > header.site-header .audience-nav { order: 3; flex: 1 1 100%; width: 100%; gap: 22px; justify-content: flex-start; }
+  body > header.site-header .audience-nav a { width: auto !important; min-height: 44px; display: inline-flex; align-items: center; padding: 0; font-size: 14px; }
+
+  /* The four app tabs become a bottom tab bar within thumb reach. */
+  body > header.site-header .app-tabs {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; order: 0; flex: none; width: auto; max-width: none;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin: 0; overflow: visible;
+    padding: 6px 8px calc(6px + env(safe-area-inset-bottom)); border: 0; border-top: 1px solid #dfe7dc; border-radius: 0;
+    background: rgba(255, 255, 255, .96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 -10px 30px -22px rgba(23, 51, 45, .5);
+  }
+  body > header.site-header .app-tabs .app-tab {
+    min-height: 50px; display: flex; align-items: center; justify-content: center; text-align: center;
+    padding: 6px 4px; border: 0; border-radius: 12px; font: 600 12.5px/1.15 "DM Sans", sans-serif; white-space: normal; color: #5f7365; background: transparent;
+  }
+  body > header.site-header .app-tabs .app-tab.active { background: #3d6244; color: #fff; }
+
+  /* Today's progress: a tidy two-column strip instead of a row that runs off-screen. */
+  /* The header stacks above page content so the fixed tab bar inside it is never covered. */
+  body > header.site-header { position: relative; z-index: 50; }
+  #daily-summary.daily-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; height: auto; min-height: 0; padding: 10px 16px; flex-wrap: wrap; }
+  #daily-summary .progress-scroll { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; overflow: visible; padding: 0; }
+  #daily-summary .summary-heading { display: none; }
+  #daily-summary .progress-grid { display: contents; }
+  #daily-summary .progress-card { min-width: 0; padding: 0 0 0 12px; border-left: 2px solid #dbe7d3; }
+  #daily-summary .progress-card span, #daily-summary .progress-card small { font-size: 11.5px; }
+  #daily-summary .progress-card strong { font-size: 19px; }
+  #daily-summary .optional-progress { grid-column: 1 / -1; gap: 12px; }
+  #daily-summary .logged-meals { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
+  #daily-summary .logged-meals p, #daily-summary .log-list span { font-size: 12px; }
+
+  /* Comfortable tap targets. */
+  .browse-chip, .suggest-chip, #meal-assistant .assistant-prompts button, .clear-button, .restaurant-tab { min-height: 44px; padding-left: 14px; padding-right: 14px; font-size: 14px; }
+  #meal-assistant .assistant-reset { min-height: 40px; padding: 0 2px; font-size: 13px; }
+  .plan-view .bento-category, .plan-view [data-plan-category], .goal-category { min-height: 44px; font-size: 14px; }
+  footer a, footer button { display: inline-flex; align-items: center; min-height: 40px; padding: 0 6px; }
+
+  /* 16px inputs stop iPhones from zooming in when a field is tapped. */
+  input, select, textarea, #meal-assistant .assistant-form input { font-size: 16px; }
+  #meal-assistant .assistant-form button { width: 48px; height: 48px; }
+
+  /* Nothing smaller than 11px on a phone. */
+  .eyebrow, .plan-kicker, .bento-heading .plan-kicker, .summary-heading, .browse-group > span, .narrow-title span { font-size: 11px; }
+  .plan-view .bento-card .bento-tag, .plan-view [class*="bento"] small, .plan-help, .partial-note, .meal-card .serving, .meal-card .stats span, .badge { font-size: 11.5px; }
+
+  /* Keep the "logged" toast clear of the tab bar. */
+  .log-confirmation { bottom: calc(84px + env(safe-area-inset-bottom)); }
+}
