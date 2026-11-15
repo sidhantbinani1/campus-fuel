@@ -7,6 +7,8 @@ const groups = {
   vegetables: ['vegetable', 'veggie', 'broccoli', 'kale', 'salad', 'greens']
 };
 
+const foodKeywords = ['taco', 'pizza', 'sushi', 'ramen', 'burrito', 'sandwich', 'burger', 'pasta', 'noodle', 'rice', 'salad', 'wrap', 'bowl', 'fries', 'wings'];
+
 const locations = {
   'Panda Express': ['panda', 'panda express'],
   'Chick-fil-A': ['chick-fil-a', 'chick fil a', 'chickfila', 'cfa'],
@@ -101,13 +103,17 @@ function getConstraints(message, history, context = {}) {
   const filling = /\b(filling|full meal|hungry|hearty|substantial)\b/.test(fullText);
   const light = /\b(light|lighter)\b/.test(fullText);
   const healthy = /\b(healthy|healthier|balanced|nutritious|nourishing|good for me)\b/.test(fullText);
+  const highCalories = /\b(high[ -]?calorie|calorie[ -]?dense|calorie[ -]?heavy|a lot of calories|lots? of calories|more calories|need energy|more energy)\b/.test(fullText);
+  const lowCalories = /\b(low[ -]?calorie|fewer calories|less calories|not too many calories)\b/.test(fullText);
+  const highProtein = /\b(high[ -]?protein|protein[ -]?packed|a lot of protein|lots? of protein|more protein)\b/.test(fullText);
+  const requestedFoods = foodKeywords.filter(word => new RegExp('\\b' + word + 's?\\b').test(fullText));
   const mealsLeftMatch = fullText.match(/\b(\d+|one|two|three|four)\s+(?:more\s+)?(?:meals?|times?)\b/);
   const mealsLeft = mealsLeftMatch ? numberWord(mealsLeftMatch[1]) : null;
   const alternatives = /\b(alternative|another|something else|different|change it up)\b/.test(normalize(message));
   const usePlan = /\b(my plan|what.*left|remaining|fit.*today|fit.*plan|today.?s goal|goals?)\b/.test(normalize(message));
   return {
     fullText, excluded, included, location: selectedLocation || directLocation || rememberedLocation, mealType: selectedMealType, wantsVegetables,
-    snack, breakfast, filling, light, healthy, mealsLeft, alternatives, usePlan,
+    snack, breakfast, filling, light, healthy, highCalories, lowCalories, highProtein, requestedFoods, mealsLeft, alternatives, usePlan,
     completeMeal: selectedMealType === 'meal' || (!snack && (filling || healthy || Boolean(mealsLeft) || usePlan)),
     limits: parseLimits(fullText)
   };
@@ -126,6 +132,7 @@ function matchesIntent(meal, constraints, context) {
   }
   for (const group of constraints.excluded) if (groups[group].some(word => text.includes(word))) return false;
   for (const group of constraints.included) if (!groups[group].some(word => text.includes(word))) return false;
+  if (constraints.requestedFoods.length && !constraints.requestedFoods.some(word => new RegExp('\\b' + word).test(text))) return false;
   if (constraints.wantsVegetables && !groups.vegetables.some(word => text.includes(word))) return false;
   for (const limit of constraints.limits) {
     const value = mealValue(meal, limit.key);
@@ -146,6 +153,9 @@ function scoreMeal(meal, constraints, context) {
   const protein = mealValue(meal, 'proteinGrams');
   if (constraints.filling && calories !== null) score += Math.min(calories, 950) / 75;
   if (constraints.light && calories !== null) score += Math.max(0, 700 - calories) / 55;
+  if (constraints.highCalories && calories !== null) score += Math.min(calories, 1400) / 16;
+  if (constraints.lowCalories && calories !== null) score += Math.max(0, 900 - calories) / 16;
+  if (constraints.highProtein && protein !== null) score += Math.min(protein, 65) * 1.5;
   if (constraints.healthy) {
     if (groups.vegetables.some(word => text.includes(word))) score += 16;
     if (protein !== null) score += Math.min(protein, 45) / 2;
@@ -188,7 +198,7 @@ function rememberedMealIds(history) {
 }
 
 function chooseRecommendations(matches, constraints) {
-  if (constraints.location || !(constraints.healthy || constraints.usePlan || constraints.filling)) return matches.slice(0, 3);
+  if (constraints.location || !(constraints.healthy || constraints.usePlan || constraints.filling || constraints.highCalories || constraints.lowCalories || constraints.highProtein)) return matches.slice(0, 3);
   const choices = [];
   const representedLocations = new Set();
   for (const meal of matches) {
@@ -216,6 +226,10 @@ function describeConstraints(constraints, context) {
   if (constraints.filling) pieces.push('something filling');
   if (constraints.light) pieces.push('something lighter');
   if (constraints.healthy) pieces.push('healthier choices');
+  if (constraints.highCalories) pieces.push('higher-calorie choices');
+  if (constraints.lowCalories) pieces.push('lower-calorie choices');
+  if (constraints.highProtein) pieces.push('higher-protein choices');
+  if (constraints.requestedFoods.length) pieces.push(constraints.requestedFoods.join(' or '));
   if (constraints.mealsLeft) pieces.push(constraints.mealsLeft + ' meals still planned');
   if (constraints.usePlan && hasPlanRemaining(context)) pieces.push('what fits ' + planPhrase(context));
   return pieces;
@@ -231,7 +245,7 @@ export function findMenuMatches({message, history = [], catalog = [], context = 
   if (constraints.usePlan && !hasPlanRemaining(context)) {
     return {text: 'I can match meals to what is left today after you save a Daily Plan. Or tell me a preference like “vegetable-forward” or “under 700 calories.”', mealIds: []};
   }
-  const hasIntent = constraints.location || constraints.mealType || constraints.excluded.size || constraints.included.size || constraints.wantsVegetables || constraints.snack || constraints.breakfast || constraints.filling || constraints.light || constraints.healthy || constraints.mealsLeft || constraints.usePlan || constraints.limits.length;
+  const hasIntent = constraints.location || constraints.mealType || constraints.excluded.size || constraints.included.size || constraints.wantsVegetables || constraints.snack || constraints.breakfast || constraints.filling || constraints.light || constraints.healthy || constraints.highCalories || constraints.lowCalories || constraints.highProtein || constraints.requestedFoods.length || constraints.mealsLeft || constraints.usePlan || constraints.limits.length;
   if (!hasIntent) {
     return {text: 'Tell me what you want in plain language—try “something filling, not chicken,” “Panda with vegetables,” or “what fits what I have left today.” I will only use listed campus menu records.', mealIds: []};
   }
@@ -244,6 +258,9 @@ export function findMenuMatches({message, history = [], catalog = [], context = 
   matches = matches.sort((a, b) => scoreMeal(b, constraints, context) - scoreMeal(a, constraints, context) || String(a.name).localeCompare(String(b.name)));
   const mealIds = chooseRecommendations(matches, constraints).map(meal => meal.id);
   if (!mealIds.length) {
+    if (constraints.requestedFoods.length) {
+      return {text: 'There is no listed campus option matching ' + constraints.requestedFoods.join(' or ') + ' right now.', mealIds: []};
+    }
     const sought = describeConstraints(constraints, context);
     return {text: 'I could not find an exact listed match' + (sought.length ? ' for ' + sought.join(', ') : '') + '. I did not loosen your request. Try another restaurant, a wider calorie limit, or fewer constraints.', mealIds: []};
   }

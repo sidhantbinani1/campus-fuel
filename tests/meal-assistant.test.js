@@ -20,6 +20,11 @@ test('menu assistant preserves exclusions across turns and does not invent campu
  assert.deepEqual(findMenuMatches({message:'recommend a daily calorie target',catalog}).mealIds,[]);
  assert.match(findMenuMatches({message:'anything',catalog:[]}).text,/no menu records/);
  assert.deepEqual(findMenuMatches({message:'recommend chicken with at least 30g protein',catalog}).mealIds,['c']);
+ assert.equal(findMenuMatches({message:'I want a lot of calories',catalog}).mealIds[0],'b');
+ assert.equal(findMenuMatches({message:'Give me something protein-packed',catalog}).mealIds[0],'b');
+ assert.equal(findMenuMatches({message:'I want a low-calorie meal',catalog}).mealIds[0],'t');
+ assert.deepEqual(findMenuMatches({message:'I want tacos',catalog}).mealIds,[]);
+ assert.match(findMenuMatches({message:'I want tacos',catalog}).text,/no listed campus option matching taco/i);
 });
 test('selected location and meal-type filters constrain both plan-aware and conversational matches',()=>{
  const filteredCatalog=[
