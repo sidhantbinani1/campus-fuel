@@ -68,7 +68,7 @@ Deno.serve(async (req) => {
   if (limitError) {
     const limited = /limit/i.test(limitError.message);
     return json(
-      { error: limited ? "You have used today's 20 chat messages. Try again tomorrow." : "The meal chat is unavailable right now." },
+      { error: limited ? "You have used all of today's chat messages. Try again tomorrow." : "The meal chat is unavailable right now." },
       limited ? 429 : 500,
     );
   }

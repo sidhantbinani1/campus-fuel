@@ -90,8 +90,8 @@ test("browser chat client sends the message and reports server errors plainly", 
   await assert.rejects(askMealChat(client, "   "), /Type what you are looking for/);
   assert.equal(calls.length, 1, "an empty message never reaches the server");
   await assert.rejects(askMealChat(null, "hi"), /accounts to be configured/);
-  const limited = { functions: { invoke: async () => ({ data: null, error: { context: { json: async () => ({ error: "You have used today's 20 chat messages. Try again tomorrow." }) } } }) } };
-  await assert.rejects(askMealChat(limited, "hi"), /used today's 20 chat messages/);
+  const limited = { functions: { invoke: async () => ({ data: null, error: { context: { json: async () => ({ error: "You have used all of today's chat messages. Try again tomorrow." }) } } }) } };
+  await assert.rejects(askMealChat(limited, "hi"), /used all of today's chat messages/);
   const broken = { functions: { invoke: async () => ({ data: null, error: { context: { json: async () => { throw new Error("no body"); } } } }) } };
   await assert.rejects(askMealChat(broken, "hi"), /unavailable right now/);
 });
@@ -130,7 +130,7 @@ test("rules answer first; the AI is used only when the rules cannot answer or ad
   assert.deepEqual(await guest({ message: "what's good here", context: {} }), vague);
   assert.equal(asked.length, 2, "without sign-in the paid service is never called");
 
-  const limit = "You have used today's 20 chat messages. Try again tomorrow.";
+  const limit = "You have used all of today's chat messages. Try again tomorrow.";
   const failing = createMealProvider({ canAsk: () => true, ask: async () => { throw new Error(limit); }, fallback: rules });
   assert.deepEqual(await failing({ message: "what's good here", context: {} }), { ...vague, text: `${limit} Tell me what you want` }, "the student is told why the AI did not answer");
   rulesResult = matched;
@@ -142,12 +142,12 @@ test("rules answer first; the AI is used only when the rules cannot answer or ad
   assert.deepEqual((await noPicks({ message: "which is better?", context: {} })).mealIds, ["r"]);
 });
 
-test("database caps each student at 20 chat messages a day", async () => {
+test("database caps each student at 200 chat messages a day", async () => {
   const db = new PGlite();
   await db.exec(
     `create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema auth,public to authenticated,anon;grant execute on function auth.uid() to authenticated,anon;`,
   );
-  for (const file of ["20261114203831_campus_fuel_accounts.sql", "20261115020000_meal_chat.sql"])
+  for (const file of ["20261114203831_campus_fuel_accounts.sql", "20261115020000_meal_chat.sql", "20261115120000_meal_chat_limit_200.sql"])
     await db.exec(readFileSync(new URL(`../supabase/migrations/${file}`, import.meta.url), "utf8"));
   const [one, two] = ["00000000-0000-0000-0000-000000000001", "00000000-0000-0000-0000-000000000002"];
   for (const id of [one, two]) await db.query("insert into auth.users(id) values($1)", [id]);
@@ -159,8 +159,8 @@ test("database caps each student at 20 chat messages a day", async () => {
   const use = async () => (await db.query("select public.use_meal_chat() left_today")).rows[0].left_today;
 
   await as(one);
-  assert.equal(await use(), 19);
-  for (let i = 0; i < 18; i++) await use();
+  assert.equal(await use(), 199);
+  for (let i = 0; i < 198; i++) await use();
   assert.equal(await use(), 0);
   await assert.rejects(use(), /Daily chat limit reached/);
   await assert.rejects(use(), /Daily chat limit reached/);
@@ -168,7 +168,7 @@ test("database caps each student at 20 chat messages a day", async () => {
   await assert.rejects(db.query("update public.meal_chat_usage set messages=0"), /permission denied/);
 
   await as(two);
-  assert.equal(await use(), 19, "one student's usage never touches another's");
+  assert.equal(await use(), 199, "one student's usage never touches another's");
 
   await as("");
   await assert.rejects(use(), /Sign in required/);
@@ -176,7 +176,7 @@ test("database caps each student at 20 chat messages a day", async () => {
   await db.exec("reset role");
   assert.deepEqual(
     (await db.query("select messages from public.meal_chat_usage order by user_id")).rows.map((r) => r.messages),
-    [20, 1],
+    [200, 1],
   );
 });
 
