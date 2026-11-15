@@ -10,7 +10,7 @@ test("database enforces isolation, opt-in access, aggregation thresholds, atomic
   await db.exec(
     readFileSync(
       new URL(
-        "../supabase/migrations/202611140001_accounts.sql",
+        "../supabase/migrations/20261114203831_campus_fuel_accounts.sql",
         import.meta.url,
       ),
       "utf8",
@@ -19,7 +19,7 @@ test("database enforces isolation, opt-in access, aggregation thresholds, atomic
   await db.exec(
     readFileSync(
       new URL(
-        "../supabase/migrations/202611140002_catalog.sql",
+        "../supabase/migrations/20261114203849_campus_fuel_catalog.sql",
         import.meta.url,
       ),
       "utf8",
