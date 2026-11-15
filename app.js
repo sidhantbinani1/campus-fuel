@@ -1059,7 +1059,8 @@ function clearAll() {
     restaurantTab: "",
     suggestionMode: false,
   });
-  $("#meal-query").value = "";
+  const searchInput = $("#meal-query");
+  if (searchInput) searchInput.value = "";
   updateBrowseButtons();
   render();
 }
@@ -1072,32 +1073,6 @@ function updateBrowseButtons() {
   });
 }
 
-$("#search-form").addEventListener("submit", (event) => {
-  event.preventDefault();
-  const request = $("#meal-query").value.trim();
-  const soundsConversational = /\b(what.*left|remaining|fit.*today|fit.*plan|healthy|healthier|balanced|filling|hungry|light|lighter|another meal|two more|three more|not chicken|something else)\b/i.test(request);
-  Object.assign(state, {
-    query: request,
-    maxCalories: "",
-    minProtein: "",
-    diet: "",
-    restaurantTab: "",
-    suggestionMode: false,
-  });
-  interpretQuery(state.query);
-  if (soundsConversational && mealAssistant) {
-    Object.assign(state, { query: "" });
-    render();
-    mealAssistant.send(request);
-    document.querySelector("#meal-assistant").scrollIntoView({ behavior: "smooth", block: "start" });
-    return;
-  }
-  render();
-  scrollToResults();
-});
-$("#meal-query").addEventListener("input", (event) => {
-  if (!event.target.value.trim()) clearAll();
-});
 [["#goal-calories", "calories"], ["#goal-protein", "protein"]].forEach(([selector, key]) => $(selector).addEventListener("input", event => { planDraft[key] = event.target.value; updatePlanStatus("dirty", "Unsaved changes — select Save my plan."); renderGoalSummary(); }));
 [["#pref-vegetarian", "vegetarian"], ["#pref-vegan", "vegan"], ["#pref-avoiding-gluten", "avoidingGluten"]].forEach(([selector, key]) => $(selector).addEventListener("change", event => { planDraft[key] = event.target.checked; updatePlanStatus("dirty", "Unsaved changes — select Save my plan."); }));
 $("#add-nutrient").onclick = () => {
@@ -1177,17 +1152,8 @@ document.querySelectorAll(".restaurant-tab").forEach((button) =>
   }),
 );
 $("#suggest-next").addEventListener("click", () => {
-  Object.assign(state, {
-    query: "meal",
-    maxCalories: "",
-    minProtein: "",
-    diet: "",
-    restaurantTab: "",
-    suggestionMode: true,
-  });
-  $("#meal-query").value = "meal";
-  render();
-  scrollToResults();
+  mealAssistant?.send("What is a balanced, healthy meal that fits what I have left today?");
+  document.querySelector("#meal-assistant").scrollIntoView({ behavior: "smooth", block: "start" });
 });
 $("#close-meal-detail").addEventListener("click", () =>
   $("#meal-detail-dialog").close(),

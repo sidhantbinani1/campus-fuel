@@ -196,8 +196,8 @@ main { display: flex; flex-direction: column; }
 #daily-summary .progress-card,#daily-summary .optional-progress-card { flex:0 0 auto;width:170px;min-width:170px;padding-left:16px;border-left:1px solid #e0e8d7; }
 #daily-summary .progress-card small,#daily-summary .optional-progress-card small { display:inline; }
 #daily-summary .logged-meals { margin-left:0; }
-#finder-view .finder-with-assistant { display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:40px;align-items:start;background:radial-gradient(ellipse at 15% 80%,#dcebd5,transparent 60%),linear-gradient(110deg,#eef6e7,#faf9f3); }
-.finder-copy { min-width:0;align-self:center; }
+#finder-view .finder-with-assistant { display:block;background:radial-gradient(ellipse at 15% 80%,#dcebd5,transparent 60%),linear-gradient(110deg,#eef6e7,#faf9f3); }
+.finder-copy { min-width:0;max-width:900px;align-self:center; }
 #finder-view .hero h1 { font-size:clamp(38px,4.5vw,62px); }
 .finder-copy .hero-copy { max-width:560px;font-size:14px;line-height:1.65; }
 .finder-copy .search-shell { width:100%;max-width:none; }
@@ -222,7 +222,15 @@ main { display: flex; flex-direction: column; }
 .assistant-form input { min-width:0;flex:1;border:0;padding:8px;background:none;font-size:11px;color:#42613a; }
 .assistant-form button { border:0;border-radius:8px;background:#416c48;color:white;width:32px;height:32px; }
 .assistant-form button:disabled { opacity:.5; }
-@media(max-width:1000px) { #finder-view .finder-with-assistant { gap:24px;grid-template-columns:minmax(0,1fr) minmax(290px,.9fr);padding:32px 24px;} }
+.meal-assistant-primary { margin:26px 0 18px;max-width:860px;padding:24px;background:rgba(255,254,250,.92); }
+.meal-assistant-primary .assistant-heading h2 { font-size:clamp(27px,3vw,34px); }
+.meal-assistant-primary .assistant-note { font-size:11px; }
+.meal-assistant-primary .assistant-messages { max-height:260px; }
+.meal-assistant-primary .assistant-message { font-size:13px;max-width:88%; }
+.meal-assistant-primary .assistant-form { margin-top:16px;padding:8px; }
+.meal-assistant-primary .assistant-form input { padding:10px;font-size:14px; }
+.meal-assistant-primary .assistant-form button { width:40px;height:40px;font-size:18px; }
+@media(max-width:1000px) { #finder-view .finder-with-assistant { padding:32px 24px;} }
 @media(max-width:800px) { #finder-view .finder-with-assistant{grid-template-columns:1fr;} .finder-copy{text-align:center;} .finder-copy .quick-browse{justify-content:center;} .finder-copy .hero-copy{margin:16px auto 22px;} .meal-assistant{width:100%;max-width:600px;margin:0 auto;} .bento-goals{grid-template-columns:repeat(2,minmax(0,1fr));} .bento-extras{grid-column:auto;} }
 @media(max-width:540px) { .bento-goals{grid-template-columns:1fr;} .bento-tile{min-height:230px;} #daily-summary.daily-summary{height:56px;flex-wrap:nowrap;padding:6px 18px;gap:14px;} #daily-summary .summary-heading{flex-basis:auto;} .progress-scroll{gap:18px;} #daily-summary .progress-card,#daily-summary .optional-progress-card{width:160px;min-width:160px;} #daily-summary .logged-meals{flex-shrink:0;} }
 .suggest-chip { background:var(--sage);border-color:#b4c9a4;color:var(--forest); }

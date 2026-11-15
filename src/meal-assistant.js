@@ -122,6 +122,7 @@ function matchesIntent(meal, constraints, context) {
     if (calories < Math.min(450, mealTarget * 0.35)) return false;
   }
   for (const group of constraints.excluded) if (groups[group].some(word => text.includes(word))) return false;
+  for (const group of constraints.included) if (!groups[group].some(word => text.includes(word))) return false;
   if (constraints.wantsVegetables && !groups.vegetables.some(word => text.includes(word))) return false;
   for (const limit of constraints.limits) {
     const value = mealValue(meal, limit.key);
@@ -147,7 +148,7 @@ function scoreMeal(meal, constraints, context) {
     if (protein !== null) score += Math.min(protein, 45) / 2;
     if (calories !== null && calories < 150) score -= 20;
     if (/\b(grilled|fruit|greens|salad|kale|spinach)\b/.test(text)) score += 12;
-    if (/\b(fries|waffle potato|fried|breaded|cookie|brownie)\b/.test(text)) score -= 45;
+    if (/\b(fries|waffle potato|fried|breaded|cookie|brownie|orange chicken)\b/.test(text)) score -= 45;
   }
   if (constraints.usePlan && context?.remaining) {
     const remainingCalories = Number(context.remaining.calories);

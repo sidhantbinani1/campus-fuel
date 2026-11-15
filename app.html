@@ -39,13 +39,7 @@
         <p class="eyebrow">FUEL YOUR CAMPUS ROUTINE</p>
         <h1>Keep your goals.<br /><i>Eat on campus.</i></h1>
         <p class="hero-copy">University Plates helps students find campus meals that fit their protein, macro, and calorie goals.</p>
-
-        <form id="search-form" class="search-shell">
-          <label class="sr-only" for="meal-query">Describe the meal you want</label>
-          <span class="search-icon">⌕</span>
-          <input id="meal-query" type="search" placeholder="Try “I need protein under 700 calories”" autocomplete="off" />
-          <button type="submit">Find meals <span>→</span></button>
-        </form>
+        <aside id="meal-assistant" class="meal-assistant meal-assistant-primary" aria-label="Campus meal assistant"><div class="assistant-heading"><div><p class="eyebrow">YOUR CAMPUS MEAL GUIDE</p><h2>Tell us what sounds good.</h2></div><button class="assistant-reset" type="button">Start over</button></div><p class="assistant-note">Ask naturally—we use your saved plan and real campus menu records.</p><div class="assistant-prompts"><button type="button" data-meal-prompt="What fits what I have left today?">What fits my plan?</button><button type="button" data-meal-prompt="I want something filling, not chicken">Filling, not chicken</button><button type="button" data-meal-prompt="I want something vegetable-forward">More vegetables</button></div><div class="assistant-messages" role="log" aria-live="polite" aria-label="Meal conversation"></div><form class="assistant-form"><label class="sr-only" for="assistant-request">Tell us what sounds good</label><input id="assistant-request" maxlength="500" placeholder="e.g. “Two meals left—healthy and filling, not chicken”" autocomplete="off"><button type="submit" aria-label="Send meal request">↑</button></form><p class="assistant-note">Real listed meals only. Open any suggestion for its full nutrition details.</p></aside>
         <div class="quick-browse" aria-label="Quick meal browsing">
           <div class="browse-group" aria-label="Browse the currently verified restaurants">
             <span>Available now</span>
@@ -61,7 +55,6 @@
           <button id="suggest-next" class="suggest-chip" type="button">Suggest my next meal ✦</button>
         </div>
         <p id="quick-status" class="quick-status" aria-live="polite"></p></div>
-        <aside id="meal-assistant" class="meal-assistant" aria-label="Campus meal assistant"><div class="assistant-heading"><div><p class="eyebrow">LET'S FIND YOUR NEXT MEAL</p><h2>Tell us what sounds good.</h2></div><button class="assistant-reset" type="button">Reset</button></div><p class="assistant-note">Menu-based assistant · available campus records only</p><div class="assistant-prompts"><button type="button" data-meal-prompt="What fits what I have left today?">What fits my plan?</button><button type="button" data-meal-prompt="I want something filling, not chicken">Filling, not chicken</button><button type="button" data-meal-prompt="I want something vegetable-forward">More vegetables</button></div><div class="assistant-messages" role="log" aria-live="polite" aria-label="Meal conversation"></div><form class="assistant-form"><label class="sr-only" for="assistant-request">Ask for meals or alternatives</label><input id="assistant-request" maxlength="500" placeholder="Try “Panda with vegetables” or “something light, not chicken”" autocomplete="off"><button type="submit" aria-label="Send meal request">↑</button></form><p class="assistant-note">Your targets are yours. I suggest real listed meals, not nutrition targets.</p></aside>
       </section>
       </div>
 
