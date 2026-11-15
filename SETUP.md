@@ -138,7 +138,7 @@ The meal assistant in Find meals works for everyone with the built-in rule-based
 
 One-time setup in the Supabase dashboard:
 
-1. SQL editor: run `supabase/migrations/20261115020000_meal_chat.sql` once. It adds the 20-messages-per-student-per-day counter.
+1. SQL editor: run `supabase/migrations/20261115020000_meal_chat.sql` once. It adds the per-student daily message counter. Then run `supabase/migrations/20261115120000_meal_chat_limit_200.sql`, which sets the limit to 200 a day.
 2. Edge Functions / Secrets: add `OPENAI_API_KEY`. Optional: `OPENAI_MODEL` (defaults to `gpt-4o-mini`).
 3. Deploy a function named exactly `meal-chat` from `supabase/functions/meal-chat/` (`index.ts`, `core.js` and `language.js`). With the Supabase CLI: `supabase functions deploy meal-chat`. Keep JWT verification on.
 4. In the OpenAI dashboard, set a monthly spending limit on the key's project.
