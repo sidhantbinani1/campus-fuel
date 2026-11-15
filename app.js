@@ -1241,7 +1241,15 @@ $("#restaurant-tabs").addEventListener("click", (event) => {
 });
 $("#suggest-next").addEventListener("click", () => {
   if (!account?.requireSignIn()) return;
-  mealAssistant?.suggest("Find the best balanced option that fits what I have left today.");
+  // With a saved plan, fit what is left today; without one, still answer.
+  const plan = remaining();
+  const hasPlan = plan.calories !== null || plan.protein !== null;
+  mealAssistant?.suggest(
+    hasPlan
+      ? "Find the best balanced option that fits what I have left today."
+      : "Find the best balanced, filling meal for right now.",
+    "Suggest my next meal",
+  );
 });
 
 // Guests can look around everything. Entering goals or talking to the
