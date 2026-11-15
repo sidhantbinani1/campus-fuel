@@ -38,6 +38,14 @@ test('selected location and meal-type filters constrain both plan-aware and conv
  const snackResult=findMenuMatches({message:'Give me a snack',catalog:filteredCatalog,context:{...context,mealType:'snack'}});
  assert.deepEqual(snackResult.mealIds,['panda-snack']);
 });
+test('decision rules use each school menu data instead of Cal Poly restaurant names',()=>{
+ const futureSchoolCatalog=[
+  {id:'garden',name:'Garden Power Bowl',description:'Roasted vegetables and tofu',location:'Mesa Commons',locationAliases:['mesa'],mealType:'meal',calories:680,proteinGrams:32,ingredients:['kale','tofu'],dietaryLabels:['Vegan']},
+  {id:'grill',name:'Campus Grill Burger',description:'Beef burger and fries',location:'Oak Hall Grill',mealType:'meal',calories:920,proteinGrams:38,ingredients:['beef']}
+ ];
+ assert.deepEqual(findMenuMatches({message:'mesa vegan meal',catalog:futureSchoolCatalog}).mealIds,['garden']);
+ assert.deepEqual(findMenuMatches({message:'I want a high-calorie meal',catalog:futureSchoolCatalog}).mealIds,['grill','garden']);
+});
 test('assistant provider can be swapped, unknown meal ids are dropped, text is escaped, and reset invalidates in-flight responses',async()=>{
  const dom=new JSDOM('<aside><div class="assistant-messages"></div><form><input><button>Send</button></form><button class="assistant-reset">Reset</button></aside>');
  globalThis.document=dom.window.document;

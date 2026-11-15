@@ -1,5 +1,5 @@
 const groups = {
-  chicken: ['chicken', 'nugget', 'nuggets', 'chick-fil-a', 'chickfila'],
+  chicken: ['chicken', 'nugget', 'nuggets'],
   beef: ['beef', 'steak', 'burger'],
   pork: ['pork', 'bacon', 'ham'],
   fish: ['fish', 'salmon', 'tuna', 'shrimp'],
@@ -8,11 +8,10 @@ const groups = {
 };
 
 const foodKeywords = ['taco', 'pizza', 'sushi', 'ramen', 'burrito', 'sandwich', 'burger', 'pasta', 'noodle', 'rice', 'salad', 'wrap', 'bowl', 'fries', 'wings'];
-
-const locations = {
-  'Panda Express': ['panda', 'panda express'],
-  'Chick-fil-A': ['chick-fil-a', 'chick fil a', 'chickfila', 'cfa'],
-  'Red Radish': ['red radish', 'radish']
+const dietaryRequests = {
+  vegetarian: /\bvegetarian\b/,
+  vegan: /\bvegan\b/,
+  avoidingGluten: /\b(gluten[ -]?free|avoid(?:ing)? gluten|no gluten)\b/
 };
 
 const nutrients = [
@@ -35,9 +34,11 @@ const nutrients = [
 ];
 
 const normalize = value => String(value || '').toLowerCase().replace(/[–—]/g, '-').replace(/\s+/g, ' ').trim();
+const asList = value => Array.isArray(value) ? value : value ? [value] : [];
 const recordText = meal => normalize([
   meal.name, meal.description, meal.location, meal.category, meal.type,
-  ...(meal.components || []).flatMap(component => [component.name, component.description])
+  ...asList(meal.ingredients), ...asList(meal.dietaryLabels), ...asList(meal.tags), ...asList(meal.searchTerms),
+  ...(meal.components || []).flatMap(component => [component.name, component.description, ...asList(component.ingredients)])
 ].filter(Boolean).join(' '));
 const mealValue = (meal, key) => meal[key] !== null && meal[key] !== '' && meal[key] !== undefined && Number.isFinite(Number(meal[key])) ? Number(meal[key]) : null;
 const numberWord = value => ({one: 1, two: 2, three: 3, four: 4}[value] || Number(value) || null);
@@ -45,15 +46,32 @@ const numberWord = value => ({one: 1, two: 2, three: 3, four: 4}[value] || Numbe
 function isCompleteMeal(meal) {
   return meal.mealType === 'meal'
     || meal.isMealIdea
-    || (meal.location === 'Red Radish' && meal.category === 'Salad' && /salad/i.test(meal.name) && /bowl|plate|serving/i.test(meal.servingSize || ''));
+    || (/salad|bowl|plate/i.test(`${meal.category || ''} ${meal.name || ''}`) && /bowl|plate|serving/i.test(meal.servingSize || ''));
 }
 
 function groupsIn(text) {
   return Object.entries(groups).filter(([, words]) => words.some(word => text.includes(word))).map(([key]) => key);
 }
 
-function locationIn(text) {
-  return Object.entries(locations).find(([, aliases]) => aliases.some(alias => text.includes(alias)))?.[0] || null;
+function locationIn(text, catalog) {
+  const locations = [...new Map(catalog.filter(meal => meal.location).map(meal => [normalize(meal.location), meal.location])).values()];
+  const aliasEntries = catalog.flatMap(meal => (meal.locationAliases || meal.searchAliases || []).map(alias => [normalize(alias), meal.location]));
+  const direct = [...locations.map(location => [normalize(location), location]), ...aliasEntries]
+    .sort(([a], [b]) => b.length - a.length)
+    .find(([alias]) => alias && text.includes(alias));
+  if (direct) return direct[1];
+  return locations.find(location => normalize(location).split(/[^a-z0-9]+/).filter(word => word.length >= 4).some(word => text.includes(word))) || null;
+}
+
+function mealHasDietaryLabel(meal, key) {
+  if (meal[key] === true) return true;
+  const labels = asList(meal.dietaryLabels).map(label => normalize(typeof label === 'string' ? label : label?.name));
+  const names = {
+    vegetarian: ['vegetarian'],
+    vegan: ['vegan'],
+    avoidingGluten: ['avoiding gluten', 'gluten free', 'gluten-free']
+  };
+  return names[key].some(name => labels.includes(name));
 }
 
 function hasNegativeBefore(text, word) {
@@ -84,7 +102,7 @@ function convertLimit(value, statedUnit, nutrient) {
   return number;
 }
 
-function getConstraints(message, history, context = {}) {
+function getConstraints(message, history, context = {}, catalog = []) {
   const turns = [...history.filter(turn => turn.role === 'user').slice(-4).map(turn => turn.text), message];
   const fullText = normalize(turns.join(' '));
   const excluded = new Set();
@@ -93,9 +111,9 @@ function getConstraints(message, history, context = {}) {
     if (hasNegativeBefore(fullText, group)) excluded.add(group);
     else if (group !== 'vegetables') included.add(group);
   }
-  const directLocation = locationIn(normalize(message));
-  const rememberedLocation = locationIn(fullText);
-  const selectedLocation = Object.hasOwn(locations, context.location) ? context.location : null;
+  const directLocation = locationIn(normalize(message), catalog);
+  const rememberedLocation = locationIn(fullText, catalog);
+  const selectedLocation = catalog.some(meal => normalize(meal.location) === normalize(context.location)) ? context.location : null;
   const selectedMealType = ['snack', 'meal'].includes(context.mealType) ? context.mealType : null;
   const wantsVegetables = /\b(vegetable|vegetables|veggie|veggies|greens|salad|produce)\b/.test(fullText);
   const snack = selectedMealType === 'snack' || /\b(snack|quick bite|small bite)\b/.test(fullText);
@@ -107,13 +125,14 @@ function getConstraints(message, history, context = {}) {
   const lowCalories = /\b(low[ -]?calorie|fewer calories|less calories|not too many calories)\b/.test(fullText);
   const highProtein = /\b(high[ -]?protein|protein[ -]?packed|a lot of protein|lots? of protein|more protein)\b/.test(fullText);
   const requestedFoods = foodKeywords.filter(word => new RegExp('\\b' + word + 's?\\b').test(fullText));
+  const dietary = Object.entries(dietaryRequests).filter(([, expression]) => expression.test(fullText)).map(([key]) => key);
   const mealsLeftMatch = fullText.match(/\b(\d+|one|two|three|four)\s+(?:more\s+)?(?:meals?|times?)\b/);
   const mealsLeft = mealsLeftMatch ? numberWord(mealsLeftMatch[1]) : null;
   const alternatives = /\b(alternative|another|something else|different|change it up)\b/.test(normalize(message));
   const usePlan = /\b(my plan|what.*left|remaining|fit.*today|fit.*plan|today.?s goal|goals?)\b/.test(normalize(message));
   return {
     fullText, excluded, included, location: selectedLocation || directLocation || rememberedLocation, mealType: selectedMealType, wantsVegetables,
-    snack, breakfast, filling, light, healthy, highCalories, lowCalories, highProtein, requestedFoods, mealsLeft, alternatives, usePlan,
+    snack, breakfast, filling, light, healthy, highCalories, lowCalories, highProtein, requestedFoods, dietary, mealsLeft, alternatives, usePlan,
     completeMeal: selectedMealType === 'meal' || (!snack && (filling || healthy || Boolean(mealsLeft) || usePlan)),
     limits: parseLimits(fullText)
   };
@@ -133,6 +152,8 @@ function matchesIntent(meal, constraints, context) {
   for (const group of constraints.excluded) if (groups[group].some(word => text.includes(word))) return false;
   for (const group of constraints.included) if (!groups[group].some(word => text.includes(word))) return false;
   if (constraints.requestedFoods.length && !constraints.requestedFoods.some(word => new RegExp('\\b' + word).test(text))) return false;
+  const requiredDietary = constraints.dietary.includes('vegan') ? ['vegan'] : constraints.dietary;
+  if (requiredDietary.some(key => !mealHasDietaryLabel(meal, key))) return false;
   if (constraints.wantsVegetables && !groups.vegetables.some(word => text.includes(word))) return false;
   for (const limit of constraints.limits) {
     const value = mealValue(meal, limit.key);
@@ -230,6 +251,7 @@ function describeConstraints(constraints, context) {
   if (constraints.lowCalories) pieces.push('lower-calorie choices');
   if (constraints.highProtein) pieces.push('higher-protein choices');
   if (constraints.requestedFoods.length) pieces.push(constraints.requestedFoods.join(' or '));
+  if (constraints.dietary.length) pieces.push(constraints.dietary.map(key => key === 'avoidingGluten' ? 'gluten-free' : key).join(' and '));
   if (constraints.mealsLeft) pieces.push(constraints.mealsLeft + ' meals still planned');
   if (constraints.usePlan && hasPlanRemaining(context)) pieces.push('what fits ' + planPhrase(context));
   return pieces;
@@ -241,13 +263,13 @@ export function findMenuMatches({message, history = [], catalog = [], context = 
   if (/\b(recommend|set|create|calculate)\b.*\b(daily|target|goal)\b|\bhow many calories should i\b/.test(normalize(cleanMessage))) {
     return {text: 'I can help you choose from the campus menu, but I do not set nutrition targets. Your saved plan stays in your control.', mealIds: []};
   }
-  const constraints = getConstraints(cleanMessage, history, context);
+  const constraints = getConstraints(cleanMessage, history, context, catalog);
   if (constraints.usePlan && !hasPlanRemaining(context)) {
     return {text: 'I can match meals to what is left today after you save a Daily Plan. Or tell me a preference like “vegetable-forward” or “under 700 calories.”', mealIds: []};
   }
-  const hasIntent = constraints.location || constraints.mealType || constraints.excluded.size || constraints.included.size || constraints.wantsVegetables || constraints.snack || constraints.breakfast || constraints.filling || constraints.light || constraints.healthy || constraints.highCalories || constraints.lowCalories || constraints.highProtein || constraints.requestedFoods.length || constraints.mealsLeft || constraints.usePlan || constraints.limits.length;
+  const hasIntent = constraints.location || constraints.mealType || constraints.excluded.size || constraints.included.size || constraints.wantsVegetables || constraints.snack || constraints.breakfast || constraints.filling || constraints.light || constraints.healthy || constraints.highCalories || constraints.lowCalories || constraints.highProtein || constraints.requestedFoods.length || constraints.dietary.length || constraints.mealsLeft || constraints.usePlan || constraints.limits.length;
   if (!hasIntent) {
-    return {text: 'Tell me what you want in plain language—try “something filling, not chicken,” “Panda with vegetables,” or “what fits what I have left today.” I will only use listed campus menu records.', mealIds: []};
+    return {text: 'Tell me what you want in plain language—try “something filling, not chicken,” “a restaurant with vegetables,” or “what fits what I have left today.” I will only use listed campus menu records.', mealIds: []};
   }
   const priorIds = rememberedMealIds(history);
   let matches = catalog.filter(meal => matchesIntent(meal, constraints, context));
