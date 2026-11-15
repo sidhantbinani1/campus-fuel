@@ -313,6 +313,11 @@ export function mountMealAssistant(root, {getCatalog, getContext = () => ({}), o
     event.preventDefault();
     send(input.value);
   });
+  input.addEventListener('keydown', event => {
+    if (event.key !== 'Enter' || event.isComposing) return;
+    event.preventDefault();
+    send(input.value);
+  });
   promptButtons.forEach(button => button.addEventListener('click', () => send(button.dataset.mealPrompt)));
   resetButton?.addEventListener('click', reset);
   reset();

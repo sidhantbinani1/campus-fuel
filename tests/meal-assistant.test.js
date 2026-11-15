@@ -45,3 +45,14 @@ test('assistant provider can be swapped, unknown meal ids are dropped, text is e
  send();ui.reset();resolve({text:'OLD SESSION',mealIds:['c']});await new Promise(r=>setTimeout(r,0));
  assert.ok(!root.textContent.includes('OLD SESSION'));assert.equal(root.querySelectorAll('.assistant-meal').length,0);dom.window.close();
 });
+test('pressing Enter in the assistant input sends the same request as the arrow button',async()=>{
+ const dom=new JSDOM('<aside><div class="assistant-messages"></div><form><input><button>Send</button></form><button class="assistant-reset">Reset</button></aside>');
+ globalThis.document=dom.window.document;
+ const root=document.querySelector('aside');let request;
+ mountMealAssistant(root,{getCatalog:()=>catalog,getContext:()=>({}),openMeal(){},provider:async data=>{request=data;return {text:'Done',mealIds:[]};}});
+ const input=root.querySelector('input');input.value='Panda meal please';
+ input.dispatchEvent(new dom.window.KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true}));
+ await new Promise(resolve=>setTimeout(resolve,0));
+ assert.equal(request.message,'Panda meal please');
+ dom.window.close();
+});
