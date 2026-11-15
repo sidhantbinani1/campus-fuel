@@ -261,7 +261,6 @@ export function mountMealAssistant(root, {getCatalog, getContext = () => ({}), o
   const input = root.querySelector('input');
   const resetButton = root.querySelector('.assistant-reset');
   const promptButtons = [...root.querySelectorAll('[data-meal-prompt]')];
-  let history = [];
   let requestVersion = 0;
 
   function addMessage(role, text, mealIds = []) {
@@ -279,22 +278,21 @@ export function mountMealAssistant(root, {getCatalog, getContext = () => ({}), o
     if (!clean) return;
     const version = ++requestVersion;
     if (showUser) addMessage('user', clean);
-    history.push({role: 'user', text: clean});
     input.value = '';
     input.disabled = true;
     try {
-      const response = await provider({message: clean, history, catalog: getCatalog(), context: getContext()});
+      // Every submitted request starts a new meal search. The visible chat is
+      // a record for the user, not hidden context for their next decision.
+      const response = await provider({message: clean, history: [], catalog: getCatalog(), context: getContext()});
       if (version !== requestVersion) return;
       const validIds = Array.isArray(response?.mealIds) ? response.mealIds.filter(id => getCatalog().some(meal => meal.id === id)) : [];
       const textResponse = String(response?.text || 'I could not complete that menu search. Please try again.');
       addMessage('assistant', textResponse, validIds);
-      history.push({role: 'assistant', text: textResponse, mealIds: validIds});
       showSuggestions({text: textResponse, mealIds: validIds});
     } catch {
       if (version === requestVersion) {
         const textResponse = 'I could not search the menu just now. Please try again.';
         addMessage('assistant', textResponse);
-        history.push({role: 'assistant', text: textResponse, mealIds: []});
         showSuggestions({text: textResponse, mealIds: []});
       }
     } finally {
@@ -304,7 +302,6 @@ export function mountMealAssistant(root, {getCatalog, getContext = () => ({}), o
 
   function reset() {
     requestVersion += 1;
-    history = [];
     showSuggestions({text: '', mealIds: []});
     messages.replaceChildren();
     addMessage('assistant', 'What sounds good? I can use what you have left today, a restaurant, or preferences like “something filling, not chicken.”');
