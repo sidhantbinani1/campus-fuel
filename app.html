@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="src/navigation.css" />
+  <!-- Opt in to smooth page-to-page transitions; inline so it is present on first render. -->
+  <style>@view-transition{navigation:auto}</style>
   </head>
   <body>
     <header class="site-header">
@@ -36,10 +38,8 @@
       </section>
       <div id="finder-view" hidden>
       <section class="hero finder-with-assistant"><div class="finder-copy">
-        <p class="eyebrow">FUEL YOUR CAMPUS ROUTINE</p>
-        <h1>Keep your goals.<br /><i>Eat on campus.</i></h1>
-        <p class="hero-copy">University Plates helps students find campus meals that fit their protein, macro, and calorie goals.</p>
-        <aside id="meal-assistant" class="meal-assistant meal-assistant-primary" aria-label="Campus meal assistant"><div class="assistant-heading"><div><p class="eyebrow">YOUR CAMPUS MEAL GUIDE</p><h2>Tell us what sounds good.</h2></div><button class="assistant-reset" type="button">Start over</button></div><p class="assistant-note">Ask naturally—we use your saved plan and real campus menu records.</p><div class="assistant-prompts"><button type="button" data-meal-prompt="What healthy meals fit what I have left today?">Healthy meals for my plan</button><button type="button" data-meal-prompt="I want something filling, not chicken">Filling, not chicken</button><button type="button" data-meal-prompt="I want something vegetable-forward">More vegetables</button></div><div class="assistant-messages" role="log" aria-live="polite" aria-label="Meal conversation"></div><form class="assistant-form"><label class="sr-only" for="assistant-request">Tell us what sounds good</label><input id="assistant-request" maxlength="500" placeholder="e.g. “Two meals left—healthy and filling, not chicken”" autocomplete="off"><button type="submit" aria-label="Send meal request">↑</button></form><p class="assistant-note">Real listed meals only. Open any suggestion for its full nutrition details.</p></aside>
+        <div class="finder-title"><h1>Keep your goals. <i>Eat on campus.</i></h1><p class="hero-copy">University Plates helps students find campus meals that fit their protein, macro, and calorie goals.</p></div>
+        <aside id="meal-assistant" class="meal-assistant meal-assistant-primary" aria-label="Campus meal assistant"><div class="assistant-heading"><div><p class="eyebrow">YOUR PERSONALIZED ASSISTANT</p><h2>Tell it what you’re craving. <i>It finds what fits.</i></h2></div><button class="assistant-reset" type="button">Start over</button></div><p class="assistant-intro">Ask in plain words. It searches real campus menus, works around what’s left in your daily plan, and handles requests like “no chicken,” “under 700 calories,” or “something from Panda Express.”</p><div class="assistant-prompts"><button type="button" data-meal-prompt="What healthy meals fit what I have left today?">Healthy meals for my plan</button><button type="button" data-meal-prompt="I want something filling, not chicken">Filling, not chicken</button><button type="button" data-meal-prompt="I want something vegetable-forward">More vegetables</button></div><div class="assistant-messages" role="log" aria-live="polite" aria-label="Meal conversation"></div><form class="assistant-form"><label class="sr-only" for="assistant-request">Tell us what sounds good</label><input id="assistant-request" maxlength="500" placeholder="e.g. “Two meals left—healthy and filling, not chicken”" autocomplete="off"><button type="submit" aria-label="Send meal request">↑</button></form><p class="assistant-note">Real listed meals only. Open any suggestion for its full nutrition details.</p></aside>
         <div class="quick-browse" aria-label="Quick meal browsing">
           <div id="location-browse-chips" class="browse-group" aria-label="Browse the currently verified restaurants">
             <span>Available now</span>
@@ -110,7 +110,7 @@
         <div class="history-heading">
           <div>
             <p class="eyebrow">YOUR PRIVATE RECORD</p>
-            <h1 id="history-title">Your fuel history</h1>
+            <h1 id="history-title">Your fuel <i>history</i></h1>
             <p>Review your logged campus meals and daily verified totals, newest first.</p>
           </div>
           <button id="clear-history" class="clear-button" type="button">Clear all history</button>
