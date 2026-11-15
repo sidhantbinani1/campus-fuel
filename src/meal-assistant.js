@@ -60,7 +60,12 @@ function locationIn(text, catalog) {
     .sort(([a], [b]) => b.length - a.length)
     .find(([alias]) => alias && text.includes(alias));
   if (direct) return direct[1];
-  return locations.find(location => normalize(location).split(/[^a-z0-9]+/).filter(word => word.length >= 4).some(word => text.includes(word))) || null;
+  // Match whole words only, so "chicken" never selects "Chick-fil-A" and generic
+  // words like "express" or "grill" never select a restaurant on their own.
+  const generic = new Set(['express', 'grill', 'kitchen', 'cafe', 'market', 'house', 'campus', 'dining', 'station']);
+  return locations.find(location => normalize(location).split(/[^a-z0-9]+/)
+    .filter(word => word.length >= 4 && !generic.has(word))
+    .some(word => new RegExp('\\b' + word + '\\b').test(text))) || null;
 }
 
 function mealHasDietaryLabel(meal, key) {
@@ -78,6 +83,8 @@ function hasNegativeBefore(text, word) {
   const escaped = word.replace(/[.*+?^$()|[\]\\]/g, '\\$&');
   return new RegExp('(no|not|without|avoid|instead of|less|change from|other than)\\s+(?:more\\s+)?' + escaped, 'i').test(text)
     || new RegExp('(?:tired of|too much)\\s+' + escaped, 'i').test(text)
+    || new RegExp("(?:don['’]?t|do not|not|no longer)\\s+(?:really\\s+)?(?:want|feel(?:ing)? like|feel(?:ing)?|like|need|craving|in the mood for)\\s+(?:any\\s+|more\\s+|a\\s+|the\\s+)?" + escaped, 'i').test(text)
+    || new RegExp('(?:sick of|over|done with|had enough)\\s+(?:the\\s+)?' + escaped, 'i').test(text)
     || new RegExp(escaped + '[^.!?]{0,45}(?:too much|too often|again|something else)', 'i').test(text);
 }
 
@@ -103,18 +110,18 @@ function convertLimit(value, statedUnit, nutrient) {
 }
 
 function getConstraints(message, history, context = {}, catalog = []) {
-  const turns = [...history.filter(turn => turn.role === 'user').slice(-4).map(turn => turn.text), message];
-  const fullText = normalize(turns.join(' '));
+  // Each request is read on its own: nothing from earlier turns or from the
+  // page's browse filters is carried in unless the student says it again.
+  const fullText = normalize(message);
   const excluded = new Set();
   const included = new Set();
   for (const group of groupsIn(fullText)) {
     if (hasNegativeBefore(fullText, group)) excluded.add(group);
     else if (group !== 'vegetables') included.add(group);
   }
-  const directLocation = locationIn(normalize(message), catalog);
-  const rememberedLocation = locationIn(fullText, catalog);
-  const selectedLocation = catalog.some(meal => normalize(meal.location) === normalize(context.location)) ? context.location : null;
-  const selectedMealType = ['snack', 'meal'].includes(context.mealType) ? context.mealType : null;
+  const directLocation = locationIn(fullText, catalog);
+  // Only the student's own words choose snack vs. meal.
+  const selectedMealType = /\b(snack|quick bite|small bite)\b/.test(fullText) ? 'snack' : null;
   const wantsVegetables = /\b(vegetable|vegetables|veggie|veggies|greens|salad|produce)\b/.test(fullText);
   const snack = selectedMealType === 'snack' || /\b(snack|quick bite|small bite)\b/.test(fullText);
   const breakfast = /\b(breakfast|morning)\b/.test(fullText);
@@ -131,7 +138,7 @@ function getConstraints(message, history, context = {}, catalog = []) {
   const alternatives = /\b(alternative|another|something else|different|change it up)\b/.test(normalize(message));
   const usePlan = /\b(my plan|what.*left|remaining|fit.*today|fit.*plan|today.?s goal|goals?)\b/.test(normalize(message));
   return {
-    fullText, excluded, included, location: selectedLocation || directLocation || rememberedLocation, mealType: selectedMealType, wantsVegetables,
+    fullText, excluded, included, location: directLocation, mealType: selectedMealType, wantsVegetables,
     snack, breakfast, filling, light, healthy, highCalories, lowCalories, highProtein, requestedFoods, dietary, mealsLeft, alternatives, usePlan,
     completeMeal: selectedMealType === 'meal' || (!snack && (filling || healthy || Boolean(mealsLeft) || usePlan)),
     limits: parseLimits(fullText)
@@ -259,17 +266,17 @@ function describeConstraints(constraints, context) {
 
 export function findMenuMatches({message, history = [], catalog = [], context = {}}) {
   const cleanMessage = String(message || '').trim();
-  if (!catalog.length) return {text: 'There are no menu records for this school yet, so I cannot safely recommend a meal.', mealIds: []};
+  if (!catalog.length) return {text: 'There are no menu records for this school yet, so I cannot safely recommend a meal.', mealIds: [], reason: 'no-menu'};
   if (/\b(recommend|set|create|calculate)\b.*\b(daily|target|goal)\b|\bhow many calories should i\b/.test(normalize(cleanMessage))) {
-    return {text: 'I can help you choose from the campus menu, but I do not set nutrition targets. Your saved plan stays in your control.', mealIds: []};
+    return {text: 'I can help you choose from the campus menu, but I do not set nutrition targets. Your saved plan stays in your control.', mealIds: [], reason: 'policy'};
   }
   const constraints = getConstraints(cleanMessage, history, context, catalog);
   if (constraints.usePlan && !hasPlanRemaining(context)) {
-    return {text: 'I can match meals to what is left today after you save a Daily Plan. Or tell me a preference like “vegetable-forward” or “under 700 calories.”', mealIds: []};
+    return {text: 'I can match meals to what is left today after you save a Daily Plan. Or tell me a preference like “vegetable-forward” or “under 700 calories.”', mealIds: [], reason: 'plan-needed'};
   }
   const hasIntent = constraints.location || constraints.mealType || constraints.excluded.size || constraints.included.size || constraints.wantsVegetables || constraints.snack || constraints.breakfast || constraints.filling || constraints.light || constraints.healthy || constraints.highCalories || constraints.lowCalories || constraints.highProtein || constraints.requestedFoods.length || constraints.dietary.length || constraints.mealsLeft || constraints.usePlan || constraints.limits.length;
   if (!hasIntent) {
-    return {text: 'Tell me what you want in plain language—try “something filling, not chicken,” “a restaurant with vegetables,” or “what fits what I have left today.” I will only use listed campus menu records.', mealIds: []};
+    return {text: 'Tell me what you want in plain language—try “something filling, not chicken,” “a restaurant with vegetables,” or “what fits what I have left today.” I will only use listed campus menu records.', mealIds: [], reason: 'needs-intent'};
   }
   const priorIds = rememberedMealIds(history);
   let matches = catalog.filter(meal => matchesIntent(meal, constraints, context));
@@ -281,15 +288,15 @@ export function findMenuMatches({message, history = [], catalog = [], context = 
   const mealIds = chooseRecommendations(matches, constraints).map(meal => meal.id);
   if (!mealIds.length) {
     if (constraints.requestedFoods.length) {
-      return {text: 'There is no listed campus option matching ' + constraints.requestedFoods.join(' or ') + ' right now.', mealIds: []};
+      return {text: 'There is no listed campus option matching ' + constraints.requestedFoods.join(' or ') + ' right now.', mealIds: [], reason: 'no-food'};
     }
     const sought = describeConstraints(constraints, context);
-    return {text: 'I could not find an exact listed match' + (sought.length ? ' for ' + sought.join(', ') : '') + '. I did not loosen your request. Try another restaurant, a wider calorie limit, or fewer constraints.', mealIds: []};
+    return {text: 'I could not find an exact listed match' + (sought.length ? ' for ' + sought.join(', ') : '') + '. I did not loosen your request. Try another restaurant, a wider calorie limit, or fewer constraints.', mealIds: [], reason: 'no-match'};
   }
   const heard = describeConstraints(constraints, context);
   const intro = heard.length ? 'I looked for ' + heard.join(', ') + '.' : 'Here are the closest listed campus options.';
   const planNote = constraints.usePlan && hasPlanRemaining(context) ? ' Ranked using ' + planPhrase(context) + '.' : '';
-  return {text: intro + planNote + ' These are real menu records—open one for the full nutrition details.', mealIds};
+  return {text: intro + planNote + ' These are real menu records—open one for the full nutrition details.', mealIds, reason: 'matched'};
 }
 
 export const menuProvider = async request => findMenuMatches(request);

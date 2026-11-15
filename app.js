@@ -1223,8 +1223,27 @@ $("#restaurant-tabs").addEventListener("click", (event) => {
   render();
 });
 $("#suggest-next").addEventListener("click", () => {
+  if (!account?.requireSignIn()) return;
   mealAssistant?.suggest("Find the best balanced option that fits what I have left today.");
 });
+
+// Guests can look around everything. Entering goals or talking to the
+// assistant asks them to sign in first, so every real user is counted.
+const gateForGuests = (root, selector) =>
+  ["focusin", "click", "submit"].forEach((type) =>
+    root.addEventListener(type, (event) => {
+      if (account?.user) return;
+      if (type !== "submit" && !event.target.closest(selector)) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      event.target.blur?.();
+      if (!$("#auth-dialog")?.open) account?.requireSignIn();
+    }, true),
+  );
+// Typing a goal or picking one to track needs an account; browsing the
+// categories and reading the page does not.
+gateForGuests($("#goals-form"), "input, select, textarea, button[type=submit]");
+gateForGuests($("#meal-assistant"), "input, [data-meal-prompt], button[type=submit]");
 $("#close-meal-detail").addEventListener("click", () =>
   $("#meal-detail-dialog").close(),
 );
@@ -1291,12 +1310,15 @@ if (new URLSearchParams(location.search).get("signin") === "1") {
 
 mealAssistant = mountMealAssistant(document.querySelector("#meal-assistant"), {
   getCatalog: () => account?.hasMenus() ? window.MEALS : [],
+  // Only the student's own saved plan and today's log. The restaurant and
+  // meal-type browse filters are deliberately left out: the assistant reads
+  // each message fresh across every restaurant.
   getContext: () => ({
     school: account?.school,
     goals: structuredClone(state.goals),
     remaining: remaining(),
-    location: state.location,
-    mealType: state.mealType,
+    eatenToday: loggedMeals().map((meal) => meal.name),
+    eatenTotals: totals(),
   }),
   showSuggestions: ({ mealIds }) => {
     state.assistantSuggestionIds = mealIds;
@@ -1309,3 +1331,5 @@ mealAssistant = mountMealAssistant(document.querySelector("#meal-assistant"), {
   // server failure, gets the built-in rule-based search (see src/meal-chat.js).
   provider: account?.mealProvider,
 });
+// "Start over" also clears what the AI remembers of the conversation.
+$("#meal-assistant .assistant-reset")?.addEventListener("click", () => account?.mealProvider?.reset?.());

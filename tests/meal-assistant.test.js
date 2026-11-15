@@ -7,11 +7,12 @@ const catalog=[
  {id:'t',name:'Tofu and broccoli bowl',description:'Tofu, vegetables and rice',location:'Campus kitchen',calories:550,proteinGrams:25,sodiumMilligrams:500,vitaminCMilligrams:30},
  {id:'b',name:'Beef bowl',description:'Beef with rice',location:'Campus kitchen',calories:750,proteinGrams:40,sodiumMilligrams:null,vitaminCMilligrams:null},
 ];
-test('menu assistant preserves exclusions across turns and does not invent campus coverage or nutrition targets',()=>{
+test('menu assistant reads each message fresh and does not invent campus coverage or nutrition targets',()=>{
  const first=findMenuMatches({message:"I've had chicken too much this week. Something else?",catalog});
  assert.ok(first.mealIds.length);assert.ok(!first.mealIds.includes('c'));
+ // An earlier "no chicken" is not carried into the next message: each request is read on its own.
  const second=findMenuMatches({message:'I want vegetables',catalog,history:[{role:'user',text:"I've had chicken too much this week. Something else?"}]});
- assert.deepEqual(second.mealIds,['t']);
+ assert.ok(second.mealIds.includes('c'));assert.ok(second.mealIds.includes('t'));
  assert.deepEqual(findMenuMatches({message:'no chicken and I want vegetables',catalog}).mealIds,['t']);
  assert.deepEqual(findMenuMatches({message:'under 650 calories and at least 30g protein',catalog}).mealIds,['c']);
  assert.deepEqual(findMenuMatches({message:'at most 600mg sodium and at least 25mg vitamin c',catalog}).mealIds,['t']);
@@ -26,7 +27,7 @@ test('menu assistant preserves exclusions across turns and does not invent campu
  assert.deepEqual(findMenuMatches({message:'I want tacos',catalog}).mealIds,[]);
  assert.match(findMenuMatches({message:'I want tacos',catalog}).text,/no listed campus option matching taco/i);
 });
-test('selected location and meal-type filters constrain both plan-aware and conversational matches',()=>{
+test('page browse filters never narrow the assistant, and "chicken" never selects Chick-fil-A',()=>{
  const filteredCatalog=[
   {id:'panda-meal',name:'Panda veggie bowl',description:'Tofu, broccoli and rice',location:'Panda Express',mealType:'meal',calories:650,proteinGrams:30},
   {id:'panda-snack',name:'Panda fruit cup',description:'Fruit snack',location:'Panda Express',mealType:'snack',calories:120,proteinGrams:1},
@@ -34,9 +35,14 @@ test('selected location and meal-type filters constrain both plan-aware and conv
  ];
  const context={remaining:{calories:1400,protein:80},location:'Panda Express',mealType:'meal'};
  const result=findMenuMatches({message:'What fits what I have left today?',catalog:filteredCatalog,context});
- assert.deepEqual(result.mealIds,['panda-meal']);
- const snackResult=findMenuMatches({message:'Give me a snack',catalog:filteredCatalog,context:{...context,mealType:'snack'}});
- assert.deepEqual(snackResult.mealIds,['panda-snack']);
+ assert.deepEqual([...result.mealIds].sort(),['chick-meal','panda-meal']);
+ assert.deepEqual(findMenuMatches({message:'Give me a snack',catalog:filteredCatalog,context}).mealIds,['panda-snack']);
+ const noChicken=findMenuMatches({message:"I don't feel like chicken, something filling",catalog:filteredCatalog});
+ assert.deepEqual(noChicken.mealIds,['panda-meal']);assert.doesNotMatch(noChicken.text,/Chick-fil-A/);
+ assert.deepEqual(findMenuMatches({message:'chicken please',catalog:filteredCatalog}).mealIds,['chick-meal']);
+ assert.deepEqual(findMenuMatches({message:'something from chick-fil-a',catalog:filteredCatalog}).mealIds,['chick-meal']);
+ assert.equal(findMenuMatches({message:'chicken please',catalog:filteredCatalog}).reason,'matched');
+ assert.equal(findMenuMatches({message:'hello there',catalog:filteredCatalog}).reason,'needs-intent');
 });
 test('decision rules use each school menu data instead of Cal Poly restaurant names',()=>{
  const futureSchoolCatalog=[
