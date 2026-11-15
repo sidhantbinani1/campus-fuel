@@ -41,11 +41,8 @@
         <p class="hero-copy">University Plates helps students find campus meals that fit their protein, macro, and calorie goals.</p>
         <aside id="meal-assistant" class="meal-assistant meal-assistant-primary" aria-label="Campus meal assistant"><div class="assistant-heading"><div><p class="eyebrow">YOUR CAMPUS MEAL GUIDE</p><h2>Tell us what sounds good.</h2></div><button class="assistant-reset" type="button">Start over</button></div><p class="assistant-note">Ask naturally—we use your saved plan and real campus menu records.</p><div class="assistant-prompts"><button type="button" data-meal-prompt="What healthy meals fit what I have left today?">Healthy meals for my plan</button><button type="button" data-meal-prompt="I want something filling, not chicken">Filling, not chicken</button><button type="button" data-meal-prompt="I want something vegetable-forward">More vegetables</button></div><div class="assistant-messages" role="log" aria-live="polite" aria-label="Meal conversation"></div><form class="assistant-form"><label class="sr-only" for="assistant-request">Tell us what sounds good</label><input id="assistant-request" maxlength="500" placeholder="e.g. “Two meals left—healthy and filling, not chicken”" autocomplete="off"><button type="submit" aria-label="Send meal request">↑</button></form><p class="assistant-note">Real listed meals only. Open any suggestion for its full nutrition details.</p></aside>
         <div class="quick-browse" aria-label="Quick meal browsing">
-          <div class="browse-group" aria-label="Browse the currently verified restaurants">
+          <div id="location-browse-chips" class="browse-group" aria-label="Browse the currently verified restaurants">
             <span>Available now</span>
-            <button class="browse-chip location-chip" data-location="Chick-fil-A" type="button">Chick-fil-A</button>
-            <button class="browse-chip location-chip" data-location="Panda Express" type="button">Panda Express</button>
-            <button class="browse-chip location-chip" data-location="Red Radish" type="button">Red Radish</button>
           </div>
           <div class="browse-group" aria-label="Browse all campus food by type">
             <span>Across campus</span>
@@ -86,12 +83,7 @@
         <section id="assistant-suggestions" class="assistant-suggestions" aria-live="polite" hidden></section>
 
         <div class="browse-heading"><h3>Browse by restaurant</h3><p id="browse-note">Browse all available foods and suggested combinations.</p></div>
-        <div class="restaurant-tabs" role="group" aria-label="Browse restaurants">
-          <button class="restaurant-tab active" type="button" data-restaurant="" aria-pressed="true">All restaurants</button>
-          <button class="restaurant-tab" type="button" data-restaurant="Chick-fil-A" aria-pressed="false">Chick-fil-A</button>
-          <button class="restaurant-tab" type="button" data-restaurant="Panda Express" aria-pressed="false">Panda Express</button>
-          <button class="restaurant-tab" type="button" data-restaurant="Red Radish" aria-pressed="false">Red Radish</button>
-        </div>
+        <div id="restaurant-tabs" class="restaurant-tabs" role="group" aria-label="Browse restaurants"></div>
         <div id="meal-grid"></div>
         <div id="empty-state" class="empty-state" hidden>
           <span>⌕</span>

@@ -68,3 +68,27 @@ test('inline nutrient cards retain all targets and save/reload the full plan', (
  assert.equal(w.document.querySelector('[data-nutrient="fiberGrams"]').value,'25');
  dom.window.close();
 });
+
+test('restaurant controls are built from the imported menu locations', () => {
+ const dom = new JSDOM(read('app.html'),{url:'http://localhost/app.html',runScripts:'outside-only'});
+ const w=dom.window; w.structuredClone=structuredClone;
+ w.HTMLElement.prototype.scrollIntoView=function(){};
+ w.mountMealAssistant=()=>({reset(){}});
+ w.createAccount=()=>({user:null,hasMenus:()=>true,isFavorite:()=>false});
+ w.eval(read('data/meals.js'));
+ w.eval(read('app.js').replace(/^import .*;\n/gm,''));
+ const locations=["Chick-fil-A","Julian's","Panda Express","PolyChoice","Pom & Honey","Red Radish"];
+ assert.deepEqual(
+   [...w.document.querySelectorAll('#location-browse-chips .location-chip')].map((button)=>button.dataset.location),
+   locations,
+ );
+ assert.deepEqual(
+   [...w.document.querySelectorAll('#restaurant-tabs .restaurant-tab')].map((button)=>button.dataset.restaurant),
+   ['',...locations],
+ );
+ const juliansQuick=w.document.querySelector('[data-location="Julian\\\'s"]');
+ juliansQuick.click();
+ assert.equal(w.document.querySelector('.location-chip.selected').dataset.location,"Julian's");
+ assert.equal(w.document.querySelector('#meal-grid').textContent.includes("Julian's"),true);
+ dom.window.close();
+});

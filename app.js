@@ -899,10 +899,66 @@ function browseCategory(meal) {
   return category || "Other items";
 }
 
+function menuLocations() {
+  return [...new Set(
+    window.MEALS
+      .filter((meal) => !meal.isMealIdea && meal.location)
+      .map((meal) => meal.location),
+  )].sort((a, b) => a.localeCompare(b));
+}
+
+function createControlButton({ label, className, dataset, pressed }) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = className;
+  button.textContent = label;
+  Object.assign(button.dataset, dataset);
+  if (pressed !== undefined) button.setAttribute("aria-pressed", String(pressed));
+  return button;
+}
+
+function renderRestaurantControls() {
+  const locations = menuLocations();
+  const quickBrowse = $("#location-browse-chips");
+  const quickLabel = document.createElement("span");
+  quickLabel.textContent = "Available now";
+  quickBrowse.replaceChildren(quickLabel);
+  locations.forEach((location) => {
+    const button = createControlButton({
+      label: location,
+      className: "browse-chip location-chip",
+      dataset: { location },
+    });
+    button.classList.toggle("selected", state.location === location);
+    quickBrowse.append(button);
+  });
+
+  const tabs = $("#restaurant-tabs");
+  tabs.replaceChildren(
+    createControlButton({
+      label: "All restaurants",
+      className: "restaurant-tab",
+      dataset: { restaurant: "" },
+      pressed: state.restaurantTab === "",
+    }),
+  );
+  locations.forEach((location) => {
+    tabs.append(
+      createControlButton({
+        label: location,
+        className: "restaurant-tab",
+        dataset: { restaurant: location },
+        pressed: state.restaurantTab === location,
+      }),
+    );
+  });
+}
+
 function render() {
   document
     .querySelectorAll(".favorite-button")
     .forEach((b) => (b.onclick = null));
+  renderRestaurantControls();
   const openCategories = new Set(
     [...mealGrid.querySelectorAll(".browse-category[open]")].map(
       (group) => group.dataset.group,
@@ -1142,31 +1198,29 @@ document
   .forEach((button) =>
     button.addEventListener("click", () => switchView("finder")),
   );
-document.querySelectorAll(".browse-chip").forEach((button) =>
-  button.addEventListener("click", () => {
-    const isLocation = Boolean(button.dataset.location);
-    const value = isLocation
-      ? button.dataset.location
-      : button.dataset.mealType;
-    const wasSelected = isLocation
-      ? state.location === value
-      : state.mealType === value;
+$(".quick-browse").addEventListener("click", (event) => {
+  const button = event.target.closest(".browse-chip");
+  if (!button) return;
+  const isLocation = Boolean(button.dataset.location);
+  const value = isLocation ? button.dataset.location : button.dataset.mealType;
+  const wasSelected = isLocation
+    ? state.location === value
+    : state.mealType === value;
     state.suggestionMode = false;
     if (isLocation) state.location = wasSelected ? "" : value;
     else state.mealType = wasSelected ? "" : value;
     state.restaurantTab = "";
     updateBrowseButtons();
     render();
-  }),
-);
-document.querySelectorAll(".restaurant-tab").forEach((button) =>
-  button.addEventListener("click", () => {
-    state.location = "";
-    state.restaurantTab = button.dataset.restaurant;
-    updateBrowseButtons();
-    render();
-  }),
-);
+});
+$("#restaurant-tabs").addEventListener("click", (event) => {
+  const button = event.target.closest(".restaurant-tab");
+  if (!button) return;
+  state.location = "";
+  state.restaurantTab = button.dataset.restaurant;
+  updateBrowseButtons();
+  render();
+});
 $("#suggest-next").addEventListener("click", () => {
   mealAssistant?.suggest("Find the best balanced option that fits what I have left today.");
 });

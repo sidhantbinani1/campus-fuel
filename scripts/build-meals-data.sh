@@ -39,7 +39,7 @@ jq '[
     vegan,
     avoidingGluten,
     description,
-    mealType: (if (["Sides", "Desserts", "Drinks", "Condiments", "Dipping Sauces"] | index($category)) then "snack" else "meal" end),
+    mealType: (if ($category | ascii_downcase | test("side|dessert|drink|beverage|condiment|sauce|snack|pastr|bagel|spread|coffee|tea|smoothie")) then "snack" else "meal" end),
     menuSource: .sourceUrl,
     verifiedAt: .sourceDate
   }
