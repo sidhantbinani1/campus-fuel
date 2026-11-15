@@ -73,6 +73,7 @@ const state = {
   mealType: "",
   restaurantTab: "",
   suggestionMode: false,
+  assistantSuggestionIds: [],
   selected: [],
   goals: {
     calories: storedGoals.calories || "",
@@ -975,6 +976,7 @@ function render() {
   $("#result-summary").textContent = active
     ? `${meals.length} match${meals.length === 1 ? "" : "es"}`
     : `${meals.length} items and meal ideas`;
+  renderAssistantSuggestions();
   renderDashboard();
   renderBestMatch(
     state.query.trim()
@@ -1036,6 +1038,19 @@ function render() {
     .forEach((button) =>
       button.addEventListener("click", () => deleteLog(button.dataset.entryId)),
     );
+}
+
+function renderAssistantSuggestions() {
+  const section = $("#assistant-suggestions");
+  const suggestions = state.assistantSuggestionIds
+    .map((id) => window.MEALS.find((meal) => meal.id === id))
+    .filter(Boolean);
+  section.hidden = suggestions.length === 0;
+  if (!suggestions.length) {
+    section.replaceChildren();
+    return;
+  }
+  section.innerHTML = '<div class="assistant-suggestion-copy"><p>Giving you a suggestion</p><small>Here’s what I found works best for you right now.</small></div><div class="meal-grid assistant-suggestion-grid">' + suggestions.map(mealCard).join("") + '</div>';
 }
 
 function toggleCompare(id) {
@@ -1211,5 +1226,11 @@ mealAssistant = mountMealAssistant(document.querySelector("#meal-assistant"), {
     goals: structuredClone(state.goals),
     remaining: remaining(),
   }),
+  showSuggestions: ({ mealIds }) => {
+    state.assistantSuggestionIds = mealIds;
+    render();
+    if (mealIds.length)
+      $("#assistant-suggestions").scrollIntoView({ behavior: "smooth", block: "start" });
+  },
   openMeal: id => { const meal = window.MEALS.find(m => m.id === id); if (meal) showMealDetails(meal); },
 });

@@ -24,12 +24,12 @@ test('menu assistant preserves exclusions across turns and does not invent campu
 test('assistant provider can be swapped, unknown meal ids are dropped, text is escaped, and reset invalidates in-flight responses',async()=>{
  const dom=new JSDOM('<aside><div class="assistant-messages"></div><form><input><button>Send</button></form><button class="assistant-reset">Reset</button></aside>');
  globalThis.document=dom.window.document;
- const root=document.querySelector('aside');let resolve,request;
- const ui=mountMealAssistant(root,{getCatalog:()=>catalog,getContext:()=>({school:'cal-poly-slo'}),openMeal(){},provider:async data=>{request=data;return await new Promise(r=>resolve=r);}});
+ const root=document.querySelector('aside');let resolve,request,suggestions;
+ const ui=mountMealAssistant(root,{getCatalog:()=>catalog,getContext:()=>({school:'cal-poly-slo'}),openMeal(){},showSuggestions:value=>{suggestions=value;},provider:async data=>{request=data;return await new Promise(r=>resolve=r);}});
  const send=()=>{root.querySelector('input').value='alternatives';root.querySelector('form').dispatchEvent(new dom.window.Event('submit',{cancelable:true}));};
  send();assert.equal(request.context.school,'cal-poly-slo');
  resolve({text:'<img src=x onerror=alert(1)>',mealIds:['t','nonexistent']});await new Promise(r=>setTimeout(r,0));
- assert.equal(root.querySelectorAll('.assistant-meal').length,1);assert.equal(root.querySelector('img'),null);
+ assert.deepEqual(suggestions.mealIds,['t']);assert.equal(root.querySelectorAll('.assistant-meal').length,0);assert.equal(root.querySelector('img'),null);
  send();ui.reset();resolve({text:'OLD SESSION',mealIds:['c']});await new Promise(r=>setTimeout(r,0));
  assert.ok(!root.textContent.includes('OLD SESSION'));assert.equal(root.querySelectorAll('.assistant-meal').length,0);dom.window.close();
 });

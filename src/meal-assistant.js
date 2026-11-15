@@ -251,7 +251,7 @@ export function findMenuMatches({message, history = [], catalog = [], context = 
 
 export const menuProvider = async request => findMenuMatches(request);
 
-export function mountMealAssistant(root, {getCatalog, getContext = () => ({}), openMeal, provider = menuProvider}) {
+export function mountMealAssistant(root, {getCatalog, getContext = () => ({}), openMeal, showSuggestions = () => {}, provider = menuProvider}) {
   const messages = root.querySelector('.assistant-messages');
   const form = root.querySelector('form');
   const input = root.querySelector('input');
@@ -266,22 +266,6 @@ export function mountMealAssistant(root, {getCatalog, getContext = () => ({}), o
     const copy = document.createElement('p');
     copy.textContent = text;
     message.append(copy);
-    if (role === 'assistant' && mealIds.length) {
-      const mealList = document.createElement('div');
-      mealList.className = 'assistant-meal-list';
-      const catalog = getCatalog();
-      for (const id of mealIds) {
-        const meal = catalog.find(item => item.id === id);
-        if (!meal) continue;
-        const button = document.createElement('button');
-        button.type = 'button';
-        button.className = 'assistant-meal';
-        button.textContent = meal.name + (meal.location ? ' · ' + meal.location : '');
-        button.addEventListener('click', () => openMeal(id));
-        mealList.append(button);
-      }
-      if (mealList.children.length) message.append(mealList);
-    }
     messages.append(message);
     messages.scrollTop = messages.scrollHeight;
   }
@@ -301,11 +285,13 @@ export function mountMealAssistant(root, {getCatalog, getContext = () => ({}), o
       const textResponse = String(response?.text || 'I could not complete that menu search. Please try again.');
       addMessage('assistant', textResponse, validIds);
       history.push({role: 'assistant', text: textResponse, mealIds: validIds});
+      showSuggestions({text: textResponse, mealIds: validIds});
     } catch {
       if (version === requestVersion) {
         const textResponse = 'I could not search the menu just now. Please try again.';
         addMessage('assistant', textResponse);
         history.push({role: 'assistant', text: textResponse, mealIds: []});
+        showSuggestions({text: textResponse, mealIds: []});
       }
     } finally {
       if (version === requestVersion) input.disabled = false;
@@ -315,6 +301,7 @@ export function mountMealAssistant(root, {getCatalog, getContext = () => ({}), o
   function reset() {
     requestVersion += 1;
     history = [];
+    showSuggestions({text: '', mealIds: []});
     messages.replaceChildren();
     addMessage('assistant', 'What sounds good? I can use what you have left today, a restaurant, or preferences like “something filling, not chicken.”');
     input.value = '';
