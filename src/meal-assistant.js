@@ -1,3 +1,4 @@
+import {fixRequest} from '../supabase/functions/meal-chat/language.js';
 const groups = {
   chicken: ['chicken', 'nugget', 'nuggets'],
   beef: ['beef', 'steak', 'burger'],
@@ -102,6 +103,24 @@ function parseLimits(text) {
   return results.filter(limit => Number.isFinite(limit.value));
 }
 
+// "highest calories", "most protein", "which has the least sodium": a request
+// to rank the whole menu by one nutrient. Longer nutrient names win, so
+// "saturated fat" is never read as "fat".
+const rankingNutrients = [...nutrients].sort((a, b) => Math.max(...b.words.map(w => w.length)) - Math.max(...a.words.map(w => w.length)));
+export function rankingIn(text) {
+  const clean = normalize(text);
+  const superlative = /\b(highest|most|max(?:imum)?|biggest|largest|greatest|top|heaviest|lowest|least|fewest|min(?:imum)?|smallest|lightest)\b/g;
+  for (const match of clean.matchAll(superlative)) {
+    const after = clean.slice(match.index + match[0].length, match.index + match[0].length + 30);
+    const nutrient = rankingNutrients.find(n => n.words.some(word => new RegExp('^(?:(?:in|of|on|the|amount|amounts|total|grams?|content|count)\\s+){0,3}' + word.replace(/ /g, '\\s+') + 's?\\b').test(after.trim())));
+    if (nutrient) {
+      const direction = /^(lowest|least|fewest|min|minimum|smallest|lightest)$/.test(match[1]) ? 'asc' : 'desc';
+      return {key: nutrient.key, direction, label: {calories: 'calories', carbsGrams: 'carbs'}[nutrient.key] || nutrient.words[0], unit: nutrient.unit};
+    }
+  }
+  return null;
+}
+
 function convertLimit(value, statedUnit, nutrient) {
   const number = Number(value);
   if (!Number.isFinite(number)) return null;
@@ -131,8 +150,8 @@ function getConstraints(message, history, context = {}, catalog = []) {
   const filling = /\b(filling|full meal|hungry|hearty|substantial)\b/.test(fullText);
   const light = /\b(light|lighter)\b/.test(fullText);
   const healthy = /\b(healthy|healthier|balanced|nutritious|nourishing|good for me)\b/.test(fullText);
-  const highCalories = /\b(high[ -]?calorie|calorie[ -]?dense|calorie[ -]?heavy|a lot of calories|lots? of calories|more calories|need energy|more energy)\b/.test(fullText);
-  const lowCalories = /\b(low[ -]?calorie|fewer calories|less calories|not too many calories)\b/.test(fullText);
+  const highCalories = /\b(high[ -]?calories?|calorie[ -]?dense|calorie[ -]?heavy|a lot of calories|lots? of calories|more calories|need energy|more energy)\b/.test(fullText);
+  const lowCalories = /\b(low[ -]?calories?|fewer calories|less calories|not too many calories)\b/.test(fullText);
   const highProtein = /\b(high[ -]?protein|protein[ -]?packed|a lot of protein|lots? of protein|more protein)\b/.test(fullText);
   const requestedFoods = foodKeywords.filter(word => new RegExp('\\b' + word + 's?\\b').test(fullText));
   const dietary = Object.entries(dietaryRequests).filter(([, expression]) => expression.test(fullText)).map(([key]) => key);
@@ -143,6 +162,7 @@ function getConstraints(message, history, context = {}, catalog = []) {
   return {
     fullText, excluded, included, location: chosenLocation || directLocation, mealType: selectedMealType, wantsVegetables,
     snack, breakfast, filling, light, healthy, highCalories, lowCalories, highProtein, requestedFoods, dietary, mealsLeft, alternatives, usePlan,
+    ranking: rankingIn(message),
     completeMeal: selectedMealType === 'meal' || (!snack && (filling || healthy || Boolean(mealsLeft) || usePlan)),
     limits: parseLimits(fullText)
   };
@@ -268,7 +288,8 @@ function describeConstraints(constraints, context) {
 }
 
 export function findMenuMatches({message, history = [], catalog = [], context = {}}) {
-  const cleanMessage = String(message || '').trim();
+  // Typos, abbreviations and slang are read as plain words before matching.
+  const cleanMessage = fixRequest(String(message || '').trim());
   if (!catalog.length) return {text: 'There are no menu records for this school yet, so I cannot safely recommend a meal.', mealIds: [], reason: 'no-menu'};
   if (/\b(recommend|set|create|calculate)\b.*\b(daily|target|goal)\b|\bhow many calories should i\b/.test(normalize(cleanMessage))) {
     return {text: 'I can help you choose from the campus menu, but I do not set nutrition targets. Your saved plan stays in your control.', mealIds: [], reason: 'policy'};
@@ -277,7 +298,7 @@ export function findMenuMatches({message, history = [], catalog = [], context = 
   if (constraints.usePlan && !hasPlanRemaining(context)) {
     return {text: 'I can match meals to what is left today after you save a Daily Plan. Or tell me a preference like “vegetable-forward” or “under 700 calories.”', mealIds: [], reason: 'plan-needed'};
   }
-  const hasIntent = constraints.location || constraints.mealType || constraints.excluded.size || constraints.included.size || constraints.wantsVegetables || constraints.snack || constraints.breakfast || constraints.filling || constraints.light || constraints.healthy || constraints.highCalories || constraints.lowCalories || constraints.highProtein || constraints.requestedFoods.length || constraints.dietary.length || constraints.mealsLeft || constraints.usePlan || constraints.limits.length;
+  const hasIntent = constraints.ranking || constraints.location || constraints.mealType || constraints.excluded.size || constraints.included.size || constraints.wantsVegetables || constraints.snack || constraints.breakfast || constraints.filling || constraints.light || constraints.healthy || constraints.highCalories || constraints.lowCalories || constraints.highProtein || constraints.requestedFoods.length || constraints.dietary.length || constraints.mealsLeft || constraints.usePlan || constraints.limits.length;
   if (!hasIntent) {
     return {text: 'Tell me what you want in plain language—try “something filling, not chicken,” “a restaurant with vegetables,” or “what fits what I have left today.” I will only use listed campus menu records.', mealIds: [], reason: 'needs-intent'};
   }
@@ -287,6 +308,7 @@ export function findMenuMatches({message, history = [], catalog = [], context = 
     const fresh = matches.filter(meal => !priorIds.has(meal.id));
     if (fresh.length) matches = fresh;
   }
+  if (constraints.ranking) return rankedAnswer(matches, constraints);
   matches = matches.sort((a, b) => scoreMeal(b, constraints, context) - scoreMeal(a, constraints, context) || String(a.name).localeCompare(String(b.name)));
   const mealIds = chooseRecommendations(matches, constraints).map(meal => meal.id);
   if (!mealIds.length) {
@@ -300,6 +322,41 @@ export function findMenuMatches({message, history = [], catalog = [], context = 
   const intro = heard.length ? 'I looked for ' + heard.join(', ') + '.' : 'Here are the closest listed campus options.';
   const planNote = constraints.usePlan && hasPlanRemaining(context) ? ' Ranked using ' + planPhrase(context) + '.' : '';
   return {text: intro + planNote + ' These are real menu records—open one for the full nutrition details.', mealIds, reason: 'matched'};
+}
+
+const formatNumber = value => Number(value).toLocaleString('en-US', {maximumFractionDigits: 1});
+
+// Exact answer for "highest / lowest <nutrient>": sort the listed menu by that
+// value. Items with the value missing are left out rather than guessed.
+// For "lowest", toppings and garnishes (under 150 calories) would always win,
+// so only real portions count. Sauces, dressings, toppings and other add-ons are
+// never ranked: they are not something you order on their own.
+const LOWEST_MIN_CALORIES = 150;
+const ADD_ON = /\b(condiments?|sauces?|dipping|dressings?|toppings?|spreads?|extras?|bases?|filler)\b/i;
+const ADD_ON_NAME = /\b(oil|vinaigrette|dressing|sauce)\b/i;
+const isAddOn = meal => ADD_ON.test(meal.category || '') || ADD_ON_NAME.test(meal.name || '');
+function rankedAnswer(matches, constraints) {
+  const {key, direction, label, unit} = constraints.ranking;
+  const lowest = direction === 'asc';
+  const seen = new Set();
+  const ranked = matches
+    .filter(meal => mealValue(meal, key) !== null && !isAddOn(meal))
+    .filter(meal => !lowest || (mealValue(meal, 'calories') ?? 0) >= LOWEST_MIN_CALORIES)
+    .sort((a, b) => (lowest ? 1 : -1) * (mealValue(a, key) - mealValue(b, key)) || String(a.name).trim().localeCompare(String(b.name).trim()))
+    .filter(meal => {
+      const id = normalize(meal.name) + '|' + normalize(meal.location);
+      if (seen.has(id)) return false;
+      seen.add(id);
+      return true;
+    })
+    .slice(0, 3);
+  if (!ranked.length) return {text: 'No listed item matching that has ' + label + ' on record, so I cannot rank it.', mealIds: [], reason: 'no-match'};
+  const amount = meal => formatNumber(mealValue(meal, key)) + (unit === 'cal' ? ' cal' : unit === 'g' ? 'g ' + label : ' ' + unit + ' ' + label);
+  const named = meal => String(meal.name || '').trim() + (meal.location && !constraints.location ? ' at ' + meal.location : '') + ' (' + amount(meal) + ')';
+  const [top, ...rest] = ranked;
+  const scope = (constraints.location ? ' at ' + constraints.location : ' on the listed menu') + (lowest ? ' (portions over ' + LOWEST_MIN_CALORIES + ' cal)' : '');
+  const runnersUp = rest.length ? ' Next: ' + rest.map(named).join(', then ') + '.' : '';
+  return {text: (lowest ? 'Lowest ' : 'Highest ') + label + scope + ': ' + named(top) + '.' + runnersUp, mealIds: ranked.map(meal => meal.id), reason: 'matched'};
 }
 
 export const menuProvider = async request => findMenuMatches(request);

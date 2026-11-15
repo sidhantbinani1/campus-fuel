@@ -81,3 +81,23 @@ test('pressing Enter in the assistant input sends the same request as the arrow 
  assert.equal(request.message,'Panda meal please');
  dom.window.close();
 });
+
+test('"highest / lowest <nutrient>" ranks the listed menu exactly and skips add-ons',()=>{
+ const menu=[
+  ...catalog,
+  {id:'mac',name:'Large Mac & Cheese',location:'Chick-fil-A',category:'Sides',calories:840,proteinGrams:22},
+  {id:'mac2',name:' Large Mac & Cheese',location:'Chick-fil-A',category:'Sides',calories:840,proteinGrams:22},
+  {id:'ranch',name:'Avocado Lime Ranch',location:'Red Radish',category:'BYO - Dressings',calories:900,proteinGrams:1,sodiumMilligrams:0},
+  {id:'oil',name:'Extra Virgin Olive Oil',location:'PolyChoice',category:'Displayed Items',calories:240,sodiumMilligrams:0},
+  {id:'onion',name:'Green onions',location:'PolyChoice',category:'Displayed Items',calories:5,sodiumMilligrams:0},
+ ];
+ const high=findMenuMatches({message:'highest calories',catalog:menu});
+ assert.deepEqual(high.mealIds,['mac','b','c'],'duplicates and dressings are skipped');
+ assert.match(high.text,/^Highest calories on the listed menu: Large Mac & Cheese at Chick-fil-A \(840 cal\)\. Next: Beef bowl at Campus kitchen \(750 cal\)/);
+ const low=findMenuMatches({message:'what has the least sodium',catalog:menu});
+ assert.deepEqual(low.mealIds,['t','c'],'oils and garnishes never win "lowest"; missing values are not guessed');
+ assert.match(low.text,/portions over 150 cal/);
+ assert.deepEqual(findMenuMatches({message:'most protein, no beef',catalog}).mealIds,['c','t']);
+ assert.equal(findMenuMatches({message:'high calories',catalog}).mealIds[0],'b','plural "calories" is understood');
+ assert.equal(findMenuMatches({message:'highest calories',catalog:[{id:'x',name:'Water',calories:null}]}).reason,'no-match');
+});

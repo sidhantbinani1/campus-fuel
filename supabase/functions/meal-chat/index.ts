@@ -5,7 +5,7 @@
 // their daily messages, ask the model to choose from that menu, then return
 // only ids that really exist on it.
 import { createClient } from "npm:@supabase/supabase-js@2";
-import { buildMessages, cleanContext, cleanMessage, narrowRows, parseReply } from "./core.js";
+import { buildMessages, cleanContext, cleanMessage, narrowRows, parseReply, shortlistRows } from "./core.js";
 
 const cors = {
   "Access-Control-Allow-Origin": "*",
@@ -59,6 +59,10 @@ Deno.serve(async (req) => {
   // Nothing matches their pick: answer for free instead of calling OpenAI.
   if (!rows.length) return json({ reply: "Nothing on the listed menu matches the restaurant and type you picked. Try clearing one and ask again.", mealIds: [], remaining: null });
 
+  // Send the model the best ~40 matches, not the whole menu: sharper answers and
+  // about 85% fewer input tokens per message.
+  const shortlist = shortlistRows(rows, message, context);
+
   // Spend the allowance before calling OpenAI so a failure can never be retried for free.
   const { data: remaining, error: limitError } = await supabase.rpc("use_meal_chat");
   if (limitError) {
@@ -76,10 +80,10 @@ Deno.serve(async (req) => {
       headers: { Authorization: `Bearer ${openaiKey}`, "Content-Type": "application/json" },
       body: JSON.stringify({
         model: Deno.env.get("OPENAI_MODEL") ?? "gpt-4o-mini",
-        messages: buildMessages(message, rows, context),
+        messages: buildMessages(message, shortlist, context, rows.length),
         response_format: { type: "json_object" },
         max_completion_tokens: 700,
-        temperature: 0.6,
+        temperature: 0.4,
       }),
       signal: AbortSignal.timeout(25000),
     });
@@ -93,5 +97,5 @@ Deno.serve(async (req) => {
     return json({ error: "The meal chat took too long. Please try again." }, 504);
   }
 
-  return json({ ...parseReply(content, new Set(rows.map((row) => row.id))), remaining });
+  return json({ ...parseReply(content, new Set(shortlist.map((row) => row.id))), remaining });
 });

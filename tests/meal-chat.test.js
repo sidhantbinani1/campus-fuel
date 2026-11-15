@@ -11,6 +11,9 @@ import {
   FALLBACK_REPLY,
   menuLine,
   parseReply,
+  rankingIn,
+  shortlistRows,
+  SHORTLIST_SIZE,
 } from "../supabase/functions/meal-chat/core.js";
 
 test("meal chat prompt lists real menu facts, keeps unknowns unknown, and carries the student plan", () => {
@@ -127,8 +130,12 @@ test("rules answer first; the AI is used only when the rules cannot answer or ad
   assert.deepEqual(await guest({ message: "what's good here", context: {} }), vague);
   assert.equal(asked.length, 2, "without sign-in the paid service is never called");
 
-  const failing = createMealProvider({ canAsk: () => true, ask: async () => { throw new Error("limit"); }, fallback: rules });
-  assert.deepEqual(await failing({ message: "what's good here", context: {} }), vague);
+  const limit = "You have used today's 20 chat messages. Try again tomorrow.";
+  const failing = createMealProvider({ canAsk: () => true, ask: async () => { throw new Error(limit); }, fallback: rules });
+  assert.deepEqual(await failing({ message: "what's good here", context: {} }), { ...vague, text: `${limit} Tell me what you want` }, "the student is told why the AI did not answer");
+  rulesResult = matched;
+  assert.equal((await failing({ message: "which is better?", context: {} })).text, `${limit} Here is what the menu search found instead. rules list`);
+  rulesResult = vague;
   const empty = createMealProvider({ canAsk: () => true, ask: async () => ({ reply: "", mealIds: [] }), fallback: rules });
   assert.deepEqual(await empty({ message: "what's good here", context: {} }), vague);
   const noPicks = createMealProvider({ canAsk: () => true, ask: async () => ({ reply: "Nothing fits.", mealIds: [] }), fallback: async () => ({ text: "x", mealIds: ["r"], reason: "matched" }) });
@@ -171,4 +178,51 @@ test("database caps each student at 20 chat messages a day", async () => {
     (await db.query("select messages from public.meal_chat_usage order by user_id")).rows.map((r) => r.messages),
     [20, 1],
   );
+});
+
+const menuRow = (id, location, name, calories, extra = {}) => ({ id, snapshot: { name, location, category: "Entrees", mealType: "meal", calories, proteinGrams: 20, ...extra } });
+
+test("superlative requests are read as a nutrient ranking", () => {
+  assert.deepEqual(rankingIn("highest calories"), { key: "calories", direction: "desc" });
+  assert.deepEqual(rankingIn("which one is lowest in sodium?"), { key: "sodiumMilligrams", direction: "asc" });
+  assert.deepEqual(rankingIn("most saturated fat"), { key: "saturatedFatGrams", direction: "desc" });
+  assert.equal(rankingIn("high calories"), null);
+  assert.equal(rankingIn("under 700 calories"), null);
+  assert.equal(rankingIn("most filling meal with protein"), null);
+});
+
+test("the model sees a ranked shortlist, not the whole campus menu", () => {
+  const places = ["Chick-fil-A", "Panda Express", "Red Radish", "PolyChoice"];
+  const rows = Array.from({ length: 200 }, (_, i) => menuRow(`m${i}`, places[i % 4], i % 10 === 0 ? `Chicken plate ${i}` : `Veggie bowl ${i}`, 200 + i * 5));
+  rows.push(menuRow("sauce", "Chick-fil-A", "Polynesian Sauce", 2000, { category: "Dipping Sauces" }));
+
+  const top = shortlistRows(rows, "highest calories", cleanContext());
+  assert.equal(top.length, SHORTLIST_SIZE);
+  assert.deepEqual(top.slice(0, 3).map((r) => r.id), ["m199", "m198", "m197"], "true highest first");
+  assert.ok(!top.some((r) => r.id === "sauce"), "a sauce never wins a ranking");
+
+  const low = shortlistRows(rows, "least calories", cleanContext());
+  assert.equal(low[0].id, "m0");
+
+  const noChicken = shortlistRows(rows, "something filling, not chicken", cleanContext());
+  assert.ok(!noChicken.some((r) => /Chicken/.test(r.snapshot.name)), "negated foods are left out");
+  assert.deepEqual(new Set(noChicken.map((r) => r.snapshot.location)), new Set(places), "top-up keeps every restaurant in view");
+
+  const filling = shortlistRows(rows, "something filling", cleanContext());
+  assert.ok(filling.slice(0, 4).every((r) => r.snapshot.calories >= 1100), "filling leans toward bigger portions");
+  const veg = shortlistRows([...rows, menuRow("tofu", "Panda Express", "Tofu bowl", 500, { vegetarian: true })], "vegetarian with protein", cleanContext());
+  assert.ok(!veg.some((r) => /Chicken/.test(r.snapshot.name)), "meat is left out of vegetarian requests");
+
+  const hinted = shortlistRows(rows, "something", cleanContext({ hint: ["m150", "m42"] }));
+  assert.deepEqual(hinted.slice(0, 2).map((r) => r.id), ["m150", "m42"], "rule-search hits lead");
+
+  const small = rows.slice(0, 10);
+  assert.equal(shortlistRows(small, "anything", cleanContext()), small, "short menus are sent whole");
+
+  const prompt = buildMessages("highest calories", top, cleanContext(), rows.length);
+  assert.match(prompt[1].content, /MENU shows the 40 best matches out of 201 listed items\./);
+  assert.match(prompt[1].content, /sorted by calories, highest first/);
+  assert.match(prompt[0].content, /Answer the exact question in your first sentence/);
+  assert.match(prompt[0].content, /Give calories and protein for every item you name/);
+  assert.doesNotMatch(prompt[0].content, /Mention a number only when it helps/);
 });
