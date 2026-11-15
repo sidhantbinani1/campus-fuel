@@ -24555,5 +24555,6959 @@
     "climateFriendly": null,
     "sourceDate": "2026-11-13",
     "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6a84e1d8fe8359adbe3d0970",
+    "name": "Pumpkin Frappe",
+    "restaurant": "Julian's",
+    "category": "Fall Limited Time Offer",
+    "servingSize": "16 oz",
+    "description": null,
+    "calories": 420,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 420,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c8544614cd556f6ae20b76",
+    "name": "Americano",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": "Available hot or iced.",
+    "calories": 15,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 15,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c85409bbf27f2d5d126c88",
+    "name": "Brewed Coffee",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": null,
+    "calories": 5,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 5,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c85425daf0f521f8e7c595",
+    "name": "Cafe Au Lait",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": null,
+    "calories": 190,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 190,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c8545a62d59c0b1208e162",
+    "name": "Cappuccino",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": null,
+    "calories": 140,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 140,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c856597c542b6614d1d884",
+    "name": "Chai Latte",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": "Available hot or iced.",
+    "calories": 240,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 240,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c856cbcd124f378fff4700",
+    "name": "Cold Brew",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": null,
+    "calories": 5,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 5,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c859baf722e7fa21075654",
+    "name": "Espresso",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": "Available in double or triple.",
+    "calories": 0,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c859d65c43b7ea63dd4478",
+    "name": "Espresso Macchiato",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": "Available in double or triple.",
+    "calories": 15,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 15,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c8564a14cd556f6ae367b1",
+    "name": "Hot Chocolate",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": null,
+    "calories": 270,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 270,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c85616df724abcc5e8da1e",
+    "name": "Hot Tea",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": null,
+    "calories": 0,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c8562ecd124f378ffeed88",
+    "name": "Iced Tea",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": null,
+    "calories": 0,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c8546962d59c0b1208e9e9",
+    "name": "Latte",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": "Available hot or iced.",
+    "calories": 230,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 230,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c85727df724abcc5e970dd",
+    "name": "Mango Smoothie",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": null,
+    "calories": 220,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 220,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c856bf748c71b3d80f540b",
+    "name": "Matcha Latte",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": "Available hot or iced.",
+    "calories": 240,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 240,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c854ac14cd556f6ae23bca",
+    "name": "Mocha",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": "Available hot or iced.",
+    "calories": 230,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 230,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6a84e21ace27f8074d6ed97c",
+    "name": "Peach Pear Apricot Smoothie",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": "16 oz",
+    "description": null,
+    "calories": 300,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 300,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c8571962d59c0b120afe01",
+    "name": "Strawberry Smoothies",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": null,
+    "calories": 280,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 280,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c85609748c71b3d80ed09a",
+    "name": "White Mocha",
+    "restaurant": "Julian's",
+    "category": "Beverages",
+    "servingSize": null,
+    "description": "Available hot or iced.",
+    "calories": 290,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 290,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88956cd124f378f18ac5d",
+    "name": "Add Lemonade",
+    "restaurant": "Julian's",
+    "category": "Extras",
+    "servingSize": null,
+    "description": null,
+    "calories": 309,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 309,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c8892062d59c0b1232401a",
+    "name": "Add Shot",
+    "restaurant": "Julian's",
+    "category": "Extras",
+    "servingSize": null,
+    "description": null,
+    "calories": 0,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c8892cab43ed3d55e890b1",
+    "name": "Add Whip",
+    "restaurant": "Julian's",
+    "category": "Extras",
+    "servingSize": null,
+    "description": null,
+    "calories": 70,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 70,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c85a9c62d59c0b120d1c29",
+    "name": "Add syrup",
+    "restaurant": "Julian's",
+    "category": "Extras",
+    "servingSize": null,
+    "description": "Vanilla, Sugar-free vanilla, caramel, sugar-free caramel, peppermint, raspberry, hazelnut, lavender and cane sugar options",
+    "calories": null,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88962ab43ed3d55e8c5f4",
+    "name": "Oat Milk",
+    "restaurant": "Julian's",
+    "category": "Extras",
+    "servingSize": null,
+    "description": null,
+    "calories": 65,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 65,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c8896ecd124f378f18b438",
+    "name": "Soy Milk",
+    "restaurant": "Julian's",
+    "category": "Extras",
+    "servingSize": null,
+    "description": null,
+    "calories": 65,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 65,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6a84e32f34aebba0e423ebba",
+    "name": "Banana Loaf",
+    "restaurant": "Julian's",
+    "category": "Pastries",
+    "servingSize": "1 Loaf",
+    "description": null,
+    "calories": 280,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 280,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c893be085904985ac393f3",
+    "name": "Butter Croissant | V | PR",
+    "restaurant": "Julian's",
+    "category": "Pastries",
+    "servingSize": null,
+    "description": null,
+    "calories": 270,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 270,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c893e7729a48dd671918f3",
+    "name": "Chocolate Croissant | V",
+    "restaurant": "Julian's",
+    "category": "Pastries",
+    "servingSize": null,
+    "description": null,
+    "calories": 230,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 230,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c893f8b649f08bc5c3a734",
+    "name": "Cinnamon Bun | V | PR",
+    "restaurant": "Julian's",
+    "category": "Pastries",
+    "servingSize": null,
+    "description": null,
+    "calories": 390,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 390,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6a84e325ce27f8074d6ee3f1",
+    "name": "Lemon Loaf",
+    "restaurant": "Julian's",
+    "category": "Pastries",
+    "servingSize": "1 Loaf",
+    "description": null,
+    "calories": 520,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 520,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c894763d119b570f18b4e3",
+    "name": "Vegan Chocolate Brownie | VG",
+    "restaurant": "Julian's",
+    "category": "Pastries",
+    "servingSize": null,
+    "description": null,
+    "calories": 295,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 295,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "694496d0813382967a74140d",
+    "name": "Cottage Cheese | V | AG | PR",
+    "restaurant": "Julian's",
+    "category": "Breakfast Bowl Cold Bases",
+    "servingSize": null,
+    "description": null,
+    "calories": 270,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 270,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c8899d5c43b7ea63f3162b",
+    "name": "Greek Yogurt | V | AG | PR",
+    "restaurant": "Julian's",
+    "category": "Breakfast Bowl Cold Bases",
+    "servingSize": null,
+    "description": null,
+    "calories": 255,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 255,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c889d1748c71b3d83b4cac",
+    "name": "Strawberry Chia Overnight Oats | VG | PR",
+    "restaurant": "Julian's",
+    "category": "Breakfast Bowl Cold Bases",
+    "servingSize": null,
+    "description": null,
+    "calories": 500,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 500,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c8898922ae0ed32bd73ab1",
+    "name": "Strawberry Yogurt | V | AG | PR",
+    "restaurant": "Julian's",
+    "category": "Breakfast Bowl Cold Bases",
+    "servingSize": null,
+    "description": null,
+    "calories": 225,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 225,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c889fd748c71b3d83b92dc",
+    "name": "Apple Cinnamon Oatmeal | VG",
+    "restaurant": "Julian's",
+    "category": "Breakfast Bowl Hot Bases",
+    "servingSize": null,
+    "description": null,
+    "calories": 229,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 229,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c889e9197cc9990fcf2866",
+    "name": "Whole Grain Steel Cut Oats | VG",
+    "restaurant": "Julian's",
+    "category": "Breakfast Bowl Hot Bases",
+    "servingSize": null,
+    "description": null,
+    "calories": 206,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 206,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6944974e3b56033f6bbd5d34",
+    "name": "Blueberry Lemon Compote | V | AG",
+    "restaurant": "Julian's",
+    "category": "Breakfast Bowl Toppings",
+    "servingSize": null,
+    "description": null,
+    "calories": 40,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 40,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88a49b5af7fa85ee35899",
+    "name": "Brown Sugar | VG | AG",
+    "restaurant": "Julian's",
+    "category": "Breakfast Bowl Toppings",
+    "servingSize": null,
+    "description": null,
+    "calories": 53,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 53,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88a95daf0f521f8126a7a",
+    "name": "Chocolate Chips | V",
+    "restaurant": "Julian's",
+    "category": "Breakfast Bowl Toppings",
+    "servingSize": null,
+    "description": null,
+    "calories": 70,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 70,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88a5a7c542b6614dd963d",
+    "name": "Dried Cranberries | VG | AG",
+    "restaurant": "Julian's",
+    "category": "Breakfast Bowl Toppings",
+    "servingSize": null,
+    "description": null,
+    "calories": 55,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 55,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88a2adaf0f521f811e2c4",
+    "name": "Granola | V",
+    "restaurant": "Julian's",
+    "category": "Breakfast Bowl Toppings",
+    "servingSize": null,
+    "description": null,
+    "calories": 250,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 250,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88a1c5c43b7ea63f37cd4",
+    "name": "Mixed Seasonal Fruit | VG | AG",
+    "restaurant": "Julian's",
+    "category": "Breakfast Bowl Toppings",
+    "servingSize": null,
+    "description": null,
+    "calories": 20,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 20,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88a84f722e7fa2126fa8d",
+    "name": "Roasted Pepitas | VG",
+    "restaurant": "Julian's",
+    "category": "Breakfast Bowl Toppings",
+    "servingSize": null,
+    "description": null,
+    "calories": 82,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 82,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88a0c7c542b6614dd7d6f",
+    "name": "Sliced Bananas | VG | AG",
+    "restaurant": "Julian's",
+    "category": "Breakfast Bowl Toppings",
+    "servingSize": null,
+    "description": null,
+    "calories": 26,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 26,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88a3b548b7bfc79ca334d",
+    "name": "Toasted Coconut | VG | AG",
+    "restaurant": "Julian's",
+    "category": "Breakfast Bowl Toppings",
+    "servingSize": null,
+    "description": null,
+    "calories": 29,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 29,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88accbbf27f2d5d4a0640",
+    "name": "Cheddar Jalapeno Bagel | V | PR",
+    "restaurant": "Julian's",
+    "category": "Bagels",
+    "servingSize": null,
+    "description": null,
+    "calories": 340,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 340,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88ab762d59c0b1233d203",
+    "name": "Everything Bagel | VG | PR",
+    "restaurant": "Julian's",
+    "category": "Bagels",
+    "servingSize": null,
+    "description": null,
+    "calories": 360,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 360,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88aa6daf0f521f81279ac",
+    "name": "Plain Bagel | VG | PR",
+    "restaurant": "Julian's",
+    "category": "Bagels",
+    "servingSize": null,
+    "description": null,
+    "calories": 279,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 279,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88f6ca4ae54b7353c4a03",
+    "name": "Avocado Spread | VG",
+    "restaurant": "Julian's",
+    "category": "Spreads",
+    "servingSize": null,
+    "description": null,
+    "calories": 90,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 90,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6a84e408fe8359adbe3d2397",
+    "name": "Blueberry Lemon Cream Cheese | V",
+    "restaurant": "Julian's",
+    "category": "Spreads",
+    "servingSize": null,
+    "description": null,
+    "calories": 235,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 235,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "694498fc3b56033f6bbd5d3f",
+    "name": "Garden Vegetable Cream Cheese | V | AG",
+    "restaurant": "Julian's",
+    "category": "Spreads",
+    "servingSize": null,
+    "description": null,
+    "calories": 185,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 185,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88f579c099db3ffee75b6",
+    "name": "Garlic and Herb Cream Cheese | V | AG",
+    "restaurant": "Julian's",
+    "category": "Spreads",
+    "servingSize": null,
+    "description": null,
+    "calories": 190,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 190,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "68c88ae17b37ac2fead2eb8d",
+    "name": "Plain Cream Cheese | V | AG",
+    "restaurant": "Julian's",
+    "category": "Spreads",
+    "servingSize": null,
+    "description": null,
+    "calories": 200,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 200,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "694498293b56033f6bbd5d37",
+    "name": "Hot Honey Bagel | V | PR",
+    "restaurant": "Julian's",
+    "category": "Signature Bagels",
+    "servingSize": "1 Bagel",
+    "description": "Avocado, cottage cheese, honey and chili flakes.",
+    "calories": 660,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 660,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6a84e474ce27f8074d6ef60a",
+    "name": "Summer Garden Bagel | V | PR",
+    "restaurant": "Julian's",
+    "category": "Signature Bagels",
+    "servingSize": "1 Bagel",
+    "description": "Plain bagel, garden vegetable cream cheese, tomato, cucumbers, fresh herb mix, olive oil and sea salt.",
+    "calories": 565,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 565,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6a84e49a34aebba0e423f101",
+    "name": "Seasonal Fruit Cup | VG | AG",
+    "restaurant": "Julian's",
+    "category": "Other Food Items",
+    "servingSize": null,
+    "description": null,
+    "calories": 80,
+    "proteinGrams": null,
+    "fatGrams": null,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 80,
+        "unit": "kcal"
+      },
+      {
+        "name": "Fat Calories",
+        "value": null,
+        "unit": "kcal"
+      },
+      {
+        "name": "Total Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Trans Fat",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Sodium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Total Carbohydrates",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Dietary Fiber",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Sugars",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Protein",
+        "value": null,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin A",
+        "value": null,
+        "unit": "RE"
+      },
+      {
+        "name": "Vitamin A (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Vitamin C (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (%)",
+        "value": null,
+        "unit": "% DV"
+      },
+      {
+        "name": "Iron",
+        "value": null,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (%)",
+        "value": null,
+        "unit": "% DV"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-13",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
   }
 ]
