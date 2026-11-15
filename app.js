@@ -1073,6 +1073,7 @@ function clearAll() {
     mealType: "",
     restaurantTab: "",
     suggestionMode: false,
+    assistantSuggestionIds: [],
   });
   const searchInput = $("#meal-query");
   if (searchInput) searchInput.value = "";
@@ -1156,6 +1157,12 @@ document.querySelectorAll(".browse-chip").forEach((button) =>
     state.restaurantTab = "";
     updateBrowseButtons();
     render();
+    if (state.location || state.mealType) {
+      mealAssistant?.suggest("Find the best balanced option that fits what I have left today.");
+    } else {
+      state.assistantSuggestionIds = [];
+      render();
+    }
   }),
 );
 document.querySelectorAll(".restaurant-tab").forEach((button) =>
@@ -1225,6 +1232,8 @@ mealAssistant = mountMealAssistant(document.querySelector("#meal-assistant"), {
     school: account?.school,
     goals: structuredClone(state.goals),
     remaining: remaining(),
+    location: state.location,
+    mealType: state.mealType,
   }),
   showSuggestions: ({ mealIds }) => {
     state.assistantSuggestionIds = mealIds;

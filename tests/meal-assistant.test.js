@@ -21,6 +21,18 @@ test('menu assistant preserves exclusions across turns and does not invent campu
  assert.match(findMenuMatches({message:'anything',catalog:[]}).text,/no menu records/);
  assert.deepEqual(findMenuMatches({message:'recommend chicken with at least 30g protein',catalog}).mealIds,['c']);
 });
+test('selected location and meal-type filters constrain both plan-aware and conversational matches',()=>{
+ const filteredCatalog=[
+  {id:'panda-meal',name:'Panda veggie bowl',description:'Tofu, broccoli and rice',location:'Panda Express',mealType:'meal',calories:650,proteinGrams:30},
+  {id:'panda-snack',name:'Panda fruit cup',description:'Fruit snack',location:'Panda Express',mealType:'snack',calories:120,proteinGrams:1},
+  {id:'chick-meal',name:'Chicken salad',description:'Grilled chicken and greens',location:'Chick-fil-A',mealType:'meal',calories:500,proteinGrams:36},
+ ];
+ const context={remaining:{calories:1400,protein:80},location:'Panda Express',mealType:'meal'};
+ const result=findMenuMatches({message:'What fits what I have left today?',catalog:filteredCatalog,context});
+ assert.deepEqual(result.mealIds,['panda-meal']);
+ const snackResult=findMenuMatches({message:'Give me a snack',catalog:filteredCatalog,context:{...context,mealType:'snack'}});
+ assert.deepEqual(snackResult.mealIds,['panda-snack']);
+});
 test('assistant provider can be swapped, unknown meal ids are dropped, text is escaped, and reset invalidates in-flight responses',async()=>{
  const dom=new JSDOM('<aside><div class="assistant-messages"></div><form><input><button>Send</button></form><button class="assistant-reset">Reset</button></aside>');
  globalThis.document=dom.window.document;

@@ -82,7 +82,7 @@ function convertLimit(value, statedUnit, nutrient) {
   return number;
 }
 
-function getConstraints(message, history) {
+function getConstraints(message, history, context = {}) {
   const turns = [...history.filter(turn => turn.role === 'user').slice(-4).map(turn => turn.text), message];
   const fullText = normalize(turns.join(' '));
   const excluded = new Set();
@@ -93,8 +93,10 @@ function getConstraints(message, history) {
   }
   const directLocation = locationIn(normalize(message));
   const rememberedLocation = locationIn(fullText);
+  const selectedLocation = Object.hasOwn(locations, context.location) ? context.location : null;
+  const selectedMealType = ['snack', 'meal'].includes(context.mealType) ? context.mealType : null;
   const wantsVegetables = /\b(vegetable|vegetables|veggie|veggies|greens|salad|produce)\b/.test(fullText);
-  const snack = /\b(snack|quick bite|small bite)\b/.test(fullText);
+  const snack = selectedMealType === 'snack' || /\b(snack|quick bite|small bite)\b/.test(fullText);
   const breakfast = /\b(breakfast|morning)\b/.test(fullText);
   const filling = /\b(filling|full meal|hungry|hearty|substantial)\b/.test(fullText);
   const light = /\b(light|lighter)\b/.test(fullText);
@@ -104,9 +106,9 @@ function getConstraints(message, history) {
   const alternatives = /\b(alternative|another|something else|different|change it up)\b/.test(normalize(message));
   const usePlan = /\b(my plan|what.*left|remaining|fit.*today|fit.*plan|today.?s goal|goals?)\b/.test(normalize(message));
   return {
-    fullText, excluded, included, location: directLocation || rememberedLocation, wantsVegetables,
+    fullText, excluded, included, location: selectedLocation || directLocation || rememberedLocation, mealType: selectedMealType, wantsVegetables,
     snack, breakfast, filling, light, healthy, mealsLeft, alternatives, usePlan,
-    completeMeal: !snack && (filling || healthy || Boolean(mealsLeft) || usePlan),
+    completeMeal: selectedMealType === 'meal' || (!snack && (filling || healthy || Boolean(mealsLeft) || usePlan)),
     limits: parseLimits(fullText)
   };
 }
@@ -114,6 +116,7 @@ function getConstraints(message, history) {
 function matchesIntent(meal, constraints, context) {
   const text = recordText(meal);
   if (constraints.location && normalize(meal.location) !== normalize(constraints.location) && !text.includes(normalize(constraints.location))) return false;
+  if (constraints.mealType && meal.mealType !== constraints.mealType) return false;
   if (constraints.completeMeal && !isCompleteMeal(meal)) return false;
   const remainingCalories = Number(context?.remaining?.calories);
   const calories = mealValue(meal, 'calories');
@@ -207,7 +210,8 @@ function describeConstraints(constraints, context) {
   if (constraints.location) pieces.push(constraints.location);
   if (constraints.excluded.size) pieces.push('no ' + [...constraints.excluded].join(' or '));
   if (constraints.wantsVegetables) pieces.push('vegetable-forward');
-  if (constraints.snack) pieces.push('a snack');
+  if (constraints.mealType === 'meal') pieces.push('a meal');
+  else if (constraints.snack) pieces.push('a snack');
   if (constraints.breakfast) pieces.push('breakfast');
   if (constraints.filling) pieces.push('something filling');
   if (constraints.light) pieces.push('something lighter');
@@ -223,11 +227,11 @@ export function findMenuMatches({message, history = [], catalog = [], context = 
   if (/\b(recommend|set|create|calculate)\b.*\b(daily|target|goal)\b|\bhow many calories should i\b/.test(normalize(cleanMessage))) {
     return {text: 'I can help you choose from the campus menu, but I do not set nutrition targets. Your saved plan stays in your control.', mealIds: []};
   }
-  const constraints = getConstraints(cleanMessage, history);
+  const constraints = getConstraints(cleanMessage, history, context);
   if (constraints.usePlan && !hasPlanRemaining(context)) {
     return {text: 'I can match meals to what is left today after you save a Daily Plan. Or tell me a preference like “vegetable-forward” or “under 700 calories.”', mealIds: []};
   }
-  const hasIntent = constraints.location || constraints.excluded.size || constraints.included.size || constraints.wantsVegetables || constraints.snack || constraints.breakfast || constraints.filling || constraints.light || constraints.healthy || constraints.mealsLeft || constraints.usePlan || constraints.limits.length;
+  const hasIntent = constraints.location || constraints.mealType || constraints.excluded.size || constraints.included.size || constraints.wantsVegetables || constraints.snack || constraints.breakfast || constraints.filling || constraints.light || constraints.healthy || constraints.mealsLeft || constraints.usePlan || constraints.limits.length;
   if (!hasIntent) {
     return {text: 'Tell me what you want in plain language—try “something filling, not chicken,” “Panda with vegetables,” or “what fits what I have left today.” I will only use listed campus menu records.', mealIds: []};
   }
@@ -270,11 +274,11 @@ export function mountMealAssistant(root, {getCatalog, getContext = () => ({}), o
     messages.scrollTop = messages.scrollHeight;
   }
 
-  async function send(text) {
+  async function send(text, {showUser = true} = {}) {
     const clean = String(text || '').trim();
     if (!clean) return;
     const version = ++requestVersion;
-    addMessage('user', clean);
+    if (showUser) addMessage('user', clean);
     history.push({role: 'user', text: clean});
     input.value = '';
     input.disabled = true;
@@ -315,5 +319,5 @@ export function mountMealAssistant(root, {getCatalog, getContext = () => ({}), o
   promptButtons.forEach(button => button.addEventListener('click', () => send(button.dataset.mealPrompt)));
   resetButton?.addEventListener('click', reset);
   reset();
-  return {reset, send};
+  return {reset, send, suggest: text => send(text, {showUser: false})};
 }
