@@ -31509,5 +31509,8771 @@
     "climateFriendly": null,
     "sourceDate": "2026-11-13",
     "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a87b67e22f81a0c4e82",
+    "name": "Baked Potato",
+    "restaurant": "PolyChoice",
+    "category": "Bases",
+    "servingSize": "1 each",
+    "description": "Fluffy Idaho potato",
+    "calories": 300,
+    "proteinGrams": 6,
+    "fatGrams": 2.5,
+    "carbsGrams": 64,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 300,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 64,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 460,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 1170,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 38,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 25,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a87b67e22f81a0c4e62",
+    "name": "Baked Sweet Potato",
+    "restaurant": "PolyChoice",
+    "category": "Bases",
+    "servingSize": "1/2 each",
+    "description": "Delicious Baked Naturally",
+    "calories": 50,
+    "proteinGrams": 1,
+    "fatGrams": 0,
+    "carbsGrams": 11,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 50,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 11,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 260,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 11,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c5a7a",
+    "name": "Garlic Thyme Roasted Chicken Thigh",
+    "restaurant": "PolyChoice",
+    "category": "Proteins",
+    "servingSize": "4-1/2 oz meat",
+    "description": null,
+    "calories": 210,
+    "proteinGrams": 29,
+    "fatGrams": 9,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 210,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 29,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "0+",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 9,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 155,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 320,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 10,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 80,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "0+",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 5,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Good Source of Protein"
+    ],
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c5a8c",
+    "name": "Barbeque Pulled Pork",
+    "restaurant": "PolyChoice",
+    "category": "Proteins",
+    "servingSize": "4 ounce",
+    "description": "Tender Pulled Pork in Classic Barbeque Sauce",
+    "calories": 230,
+    "proteinGrams": 22,
+    "fatGrams": 7,
+    "carbsGrams": 20,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 230,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 22,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 20,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 13,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 7,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 70,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 740,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 480,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 2.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": "10+",
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": "0+",
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 60,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 5,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Good Source of Protein"
+    ],
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c5a9b",
+    "name": "Rosemary Roasted Mushroom",
+    "restaurant": "PolyChoice",
+    "category": "Proteins",
+    "servingSize": "1 cup",
+    "description": "Flavorful mushrooms with fresh rosemary",
+    "calories": 50,
+    "proteinGrams": 5,
+    "fatGrams": 2.5,
+    "carbsGrams": 6,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 50,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "3+",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 10,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 4,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 20,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "How Good Friendly",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": true,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c5aae",
+    "name": "Breaded Chicken Tender",
+    "restaurant": "PolyChoice",
+    "category": "Proteins",
+    "servingSize": "4 ounce",
+    "description": null,
+    "calories": 350,
+    "proteinGrams": 13,
+    "fatGrams": 25,
+    "carbsGrams": 20,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 350,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 13,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 20,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 25,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 35,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 600,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 220,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 220,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": 0,
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Good Source of Protein"
+    ],
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c595d",
+    "name": "Blue Cheese Crumbles",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "2 tbsp",
+    "description": null,
+    "calories": 60,
+    "proteinGrams": 4,
+    "fatGrams": 5,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 60,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 15,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 190,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 90,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 5,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 45,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 5,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c5971",
+    "name": "French Fried Onions",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "2 tbsp",
+    "description": null,
+    "calories": 45,
+    "proteinGrams": 0,
+    "fatGrams": 3.5,
+    "carbsGrams": 3,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 45,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 3.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 30,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": 0,
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c5981",
+    "name": "Fresh Herb Mix",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "1 tbsp",
+    "description": "Freshly chopped and mixed basil, oregano, parsley and thyme",
+    "calories": 0,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "0+",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 3,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c5990",
+    "name": "Diced Tomatoes",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 10,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 110,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 6,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c59a0",
+    "name": "Roasted Broccoli",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 35,
+    "proteinGrams": 2,
+    "fatGrams": 1.5,
+    "carbsGrams": 5,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 35,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 1.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 115,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 220,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 62,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 15,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c59b0",
+    "name": " Sliced Green Onions",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 10,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 70,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c59bf",
+    "name": "Roasted Red Peppers",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 10,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 3,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 115,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 80,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 82,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c59d0",
+    "name": "Bacon Bits",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "2 tbsp",
+    "description": null,
+    "calories": 70,
+    "proteinGrams": 5,
+    "fatGrams": 5,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 70,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 15,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 240,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 70,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 45,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": null,
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c59e1",
+    "name": "Shredded Cheddar Cheese",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "1 tbsp",
+    "description": null,
+    "calories": 30,
+    "proteinGrams": 2,
+    "fatGrams": 2.5,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 30,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 45,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 20,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c59f2",
+    "name": "Marinated Chickpeas",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "1/4 cup",
+    "description": "chickpeas, lemon juice, salt, mediterranean seasoning",
+    "calories": 110,
+    "proteinGrams": 4,
+    "fatGrams": 5,
+    "carbsGrams": 13,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 110,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 13,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 150,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 3,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 45,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c5a02",
+    "name": "Chopped Jalapeno Peppers",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "1 tbsp",
+    "description": null,
+    "calories": 0,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 9,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c5a12",
+    "name": "Baby Kale",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "1 cup",
+    "description": null,
+    "calories": 5,
+    "proteinGrams": null,
+    "fatGrams": 0,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 5,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 70,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 19,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c5a24",
+    "name": "Shaved Pickled Vegetables",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "2 tbsp",
+    "description": "cauliflower, carrots and jalapenos",
+    "calories": 20,
+    "proteinGrams": null,
+    "fatGrams": 0,
+    "carbsGrams": 5,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 20,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 180,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 17,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c5a34",
+    "name": "Marinated Black Beans",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "1/4 cup",
+    "description": "black beans, lime, cumin, cilantro",
+    "calories": 100,
+    "proteinGrams": 5,
+    "fatGrams": 3,
+    "carbsGrams": 13,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 100,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 13,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.6,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 3,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 25,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c5a46",
+    "name": "Caramelized Onions",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "1 ounce",
+    "description": "golden onions",
+    "calories": 40,
+    "proteinGrams": 0,
+    "fatGrams": 3.5,
+    "carbsGrams": 3,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 40,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 3.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 2,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 30,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c5a57",
+    "name": "Fried Garlic",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "1/2 oz portion",
+    "description": null,
+    "calories": 270,
+    "proteinGrams": null,
+    "fatGrams": 28,
+    "carbsGrams": 5,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 270,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 28,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 4,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 260,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a89b67e22f81a0c5a68",
+    "name": "Tapenade",
+    "restaurant": "PolyChoice",
+    "category": "Toppings",
+    "servingSize": "2 tbsp",
+    "description": "Quick spread recipe with olives, garlic, lemon and olive oil",
+    "calories": 70,
+    "proteinGrams": 0,
+    "fatGrams": 7,
+    "carbsGrams": 1,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 70,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 7,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 60,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c92d5",
+    "name": "Sour Cream",
+    "restaurant": "PolyChoice",
+    "category": "Sauces",
+    "servingSize": "2 tbsp",
+    "description": null,
+    "calories": 60,
+    "proteinGrams": null,
+    "fatGrams": 6,
+    "carbsGrams": 1,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 60,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 15,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 50,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 5,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c92e7",
+    "name": "Nacho Cheese Sauce",
+    "restaurant": "PolyChoice",
+    "category": "Sauces",
+    "servingSize": "2 floz",
+    "description": null,
+    "calories": 80,
+    "proteinGrams": 1,
+    "fatGrams": 5,
+    "carbsGrams": 6,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 80,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 430,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 70,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": "-",
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": "-",
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 45,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c92f5",
+    "name": "Frank's Buffalo Sauce",
+    "restaurant": "PolyChoice",
+    "category": "Sauces",
+    "servingSize": "2 floz",
+    "description": null,
+    "calories": 10,
+    "proteinGrams": null,
+    "fatGrams": 0,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 1980,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 90,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": "-",
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c9304",
+    "name": "Pico de Gallo",
+    "restaurant": "PolyChoice",
+    "category": "Sauces",
+    "servingSize": "2 oz portion",
+    "description": "Traditional salsa vegetables, diced fresh in house and made in small batches for quality",
+    "calories": 15,
+    "proteinGrams": 0,
+    "fatGrams": 0.5,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 15,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 65,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 70,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 5,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c9314",
+    "name": "Greek Vinaigrette",
+    "restaurant": "PolyChoice",
+    "category": "Sauces",
+    "servingSize": "1-1/2 floz",
+    "description": null,
+    "calories": 100,
+    "proteinGrams": 0,
+    "fatGrams": 10,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 100,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 10,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": "0+",
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 90,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": "0+",
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 2,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 90,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c9322",
+    "name": "Greek Goddess Hummus",
+    "restaurant": "PolyChoice",
+    "category": "Sauces",
+    "servingSize": "2 oz portion",
+    "description": "Zesty herb filled Hummus",
+    "calories": 70,
+    "proteinGrams": 2,
+    "fatGrams": 3.5,
+    "carbsGrams": 7,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 70,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 7,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "1+",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 3.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 270,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": "80+",
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 30,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "0+",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c9332",
+    "name": "Tex Mex BBQ Sauce",
+    "restaurant": "PolyChoice",
+    "category": "Sauces",
+    "servingSize": "2 tbsp",
+    "description": "BBQ sauce enhanced with chipotle and cilantro",
+    "calories": 50,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 12,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 50,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 12,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 7,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 290,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 90,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 5,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": "0+",
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c933f",
+    "name": "Homestyle Ranch Dressing",
+    "restaurant": "PolyChoice",
+    "category": "Sauces",
+    "servingSize": "2 floz",
+    "description": null,
+    "calories": 200,
+    "proteinGrams": 0,
+    "fatGrams": 22,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 200,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 22,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 200,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 5,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c934e",
+    "name": "Guacamole",
+    "restaurant": "PolyChoice",
+    "category": "Sauces",
+    "servingSize": "1-1/2 oz portion",
+    "description": "Ripe avocado, smashed and mixed with fresh vegetables and citrus juice",
+    "calories": 50,
+    "proteinGrams": null,
+    "fatGrams": 4.5,
+    "carbsGrams": 3,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 50,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 4.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 170,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 40,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c935b",
+    "name": "Vegetarian Chili",
+    "restaurant": "PolyChoice",
+    "category": "Sauces",
+    "servingSize": "1 ladle-4oz",
+    "description": null,
+    "calories": 70,
+    "proteinGrams": 3,
+    "fatGrams": 2.5,
+    "carbsGrams": 10,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 70,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 10,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 85,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 9,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 20,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c936a",
+    "name": "Baked Potato",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Classic",
+    "servingSize": "1 each",
+    "description": "Fluffy Idaho potato",
+    "calories": 300,
+    "proteinGrams": 6,
+    "fatGrams": 2.5,
+    "carbsGrams": 64,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 300,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 64,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 460,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 1170,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 38,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 25,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c937a",
+    "name": "Whipped Butter",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Classic",
+    "servingSize": "1 tbsp",
+    "description": "Whipped Butter",
+    "calories": 100,
+    "proteinGrams": 0,
+    "fatGrams": 12,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 100,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 12,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 7,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 90,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 100,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 10,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c9389",
+    "name": " Sliced Green Onions",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Classic",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 10,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 70,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c9396",
+    "name": "Sour Cream",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Classic",
+    "servingSize": "1 tbsp",
+    "description": null,
+    "calories": 30,
+    "proteinGrams": 0,
+    "fatGrams": 3,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 30,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 25,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c93a6",
+    "name": "Baked Potato",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Nacho",
+    "servingSize": "1 each",
+    "description": "Fluffy Idaho potato",
+    "calories": 300,
+    "proteinGrams": 6,
+    "fatGrams": 2.5,
+    "carbsGrams": 64,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 300,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 64,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 460,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 1170,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 38,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 25,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c93b5",
+    "name": "Whipped Butter",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Nacho",
+    "servingSize": "1 tbsp",
+    "description": "Whipped Butter",
+    "calories": 100,
+    "proteinGrams": 0,
+    "fatGrams": 12,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 100,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 12,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 7,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 90,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 100,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 10,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c93c4",
+    "name": " Sliced Green Onions",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Nacho",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 10,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 70,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c93d3",
+    "name": "Diced Tomatoes",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Nacho",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 10,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 110,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 6,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c93f0",
+    "name": "Shaved Pickled Vegetables",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Nacho",
+    "servingSize": "1 tbsp",
+    "description": "cauliflower, carrots and jalapenos",
+    "calories": 10,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 3,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 125,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 90,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 9,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c93e1",
+    "name": "Three Bean Vegetarian Chili",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Nacho",
+    "servingSize": "1 cup",
+    "description": "Beans and peppers, in a tomato base with mild chili powder",
+    "calories": 140,
+    "proteinGrams": 5,
+    "fatGrams": 5,
+    "carbsGrams": 20,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 140,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 20,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "6+",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 7,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 270,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 600,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 80,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 2.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": "15+",
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 45,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "0+",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": "0+",
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c9400",
+    "name": "Nacho Cheese Sauce",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Nacho",
+    "servingSize": "2 floz",
+    "description": null,
+    "calories": 80,
+    "proteinGrams": 1,
+    "fatGrams": 5,
+    "carbsGrams": 6,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 80,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 430,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 70,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": "-",
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": "-",
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 45,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c940e",
+    "name": "Baked Potato",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Mustang BBQ",
+    "servingSize": "1 each",
+    "description": "Fluffy Idaho potato",
+    "calories": 300,
+    "proteinGrams": 6,
+    "fatGrams": 2.5,
+    "carbsGrams": 64,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 300,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 64,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 460,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 1170,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 38,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 25,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c941c",
+    "name": "Whipped Butter",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Mustang BBQ",
+    "servingSize": "1 tbsp",
+    "description": "Whipped Butter",
+    "calories": 100,
+    "proteinGrams": 0,
+    "fatGrams": 12,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 100,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 12,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 7,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 90,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 100,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 10,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c942a",
+    "name": "Barbeque Pulled Pork",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Mustang BBQ",
+    "servingSize": "4 ounce",
+    "description": "Tender Pulled Pork in Classic Barbeque Sauce",
+    "calories": 230,
+    "proteinGrams": 22,
+    "fatGrams": 7,
+    "carbsGrams": 20,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 230,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 22,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 20,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 13,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 7,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 70,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 740,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 480,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 2.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": "10+",
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": "0+",
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 60,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 5,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Good Source of Protein"
+    ],
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c943a",
+    "name": "Diced Tomatoes",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Mustang BBQ",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 10,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 110,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 6,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c9449",
+    "name": "Keys BBQ Sauce",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Mustang BBQ",
+    "servingSize": "2 tbsp",
+    "description": "BBQ sauce enhanced with citrus",
+    "calories": 40,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 10,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 40,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 10,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 190,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 90,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 5,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": "9+",
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c9458",
+    "name": "French Fried Onions",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Mustang BBQ",
+    "servingSize": "2 tbsp",
+    "description": null,
+    "calories": 45,
+    "proteinGrams": 0,
+    "fatGrams": 3.5,
+    "carbsGrams": 3,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 45,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 3.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 30,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": 0,
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c9467",
+    "name": "Baked Sweet Potato",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Hearty Greens",
+    "servingSize": "1/2 each",
+    "description": "Delicious Baked Naturally",
+    "calories": 50,
+    "proteinGrams": 1,
+    "fatGrams": 0,
+    "carbsGrams": 11,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 50,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 11,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 260,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 11,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c9475",
+    "name": "Extra Virgin Olive Oil",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Hearty Greens",
+    "servingSize": "1 floz",
+    "description": null,
+    "calories": 240,
+    "proteinGrams": 0,
+    "fatGrams": 27,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 240,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 27,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 3.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 240,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 5,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c9481",
+    "name": "Rosemary Roasted Mushroom",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Hearty Greens",
+    "servingSize": "1 cup",
+    "description": "Flavorful mushrooms with fresh rosemary",
+    "calories": 50,
+    "proteinGrams": 5,
+    "fatGrams": 2.5,
+    "carbsGrams": 6,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 50,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "3+",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 10,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 4,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 20,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "How Good Friendly",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": true,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c948f",
+    "name": "Baby Kale",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Hearty Greens",
+    "servingSize": "1 cup",
+    "description": null,
+    "calories": 5,
+    "proteinGrams": null,
+    "fatGrams": 0,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 5,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 70,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 19,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c949e",
+    "name": "Roasted Broccoli",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Hearty Greens",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 35,
+    "proteinGrams": 2,
+    "fatGrams": 1.5,
+    "carbsGrams": 5,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 35,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 1.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 115,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 220,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 62,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 15,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c94af",
+    "name": "Caramelized Onions",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Hearty Greens",
+    "servingSize": "1 ounce",
+    "description": "golden onions",
+    "calories": 40,
+    "proteinGrams": 0,
+    "fatGrams": 3.5,
+    "carbsGrams": 3,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 40,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 3.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 2,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 30,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c94bf",
+    "name": "Marinated Chickpeas",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Hearty Greens",
+    "servingSize": "1/4 cup",
+    "description": "chickpeas, lemon juice, salt, mediterranean seasoning",
+    "calories": 110,
+    "proteinGrams": 4,
+    "fatGrams": 5,
+    "carbsGrams": 13,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 110,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 13,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 150,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 3,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 45,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c94d1",
+    "name": "Greek Vinaigrette",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Hearty Greens",
+    "servingSize": "1 floz",
+    "description": null,
+    "calories": 60,
+    "proteinGrams": 0,
+    "fatGrams": 7,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 60,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 7,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": "0+",
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": "0+",
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 60,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c94e0",
+    "name": "Baked Potato",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Mediterranean",
+    "servingSize": "1 each",
+    "description": "Fluffy Idaho potato",
+    "calories": 300,
+    "proteinGrams": 6,
+    "fatGrams": 2.5,
+    "carbsGrams": 64,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 300,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 64,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 460,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 1170,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 38,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 25,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c94ee",
+    "name": "Extra Virgin Olive Oil",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Mediterranean",
+    "servingSize": "1 floz",
+    "description": null,
+    "calories": 240,
+    "proteinGrams": 0,
+    "fatGrams": 27,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 240,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 27,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 3.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 240,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 5,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c94fd",
+    "name": "Garlic Thyme Roasted Chicken Thigh",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Mediterranean",
+    "servingSize": "4 oz meat",
+    "description": null,
+    "calories": 180,
+    "proteinGrams": 25,
+    "fatGrams": 8,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 180,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 25,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "0+",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 8,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 135,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 180,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 280,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 5,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 80,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "0+",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Good Source of Protein"
+    ],
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c950e",
+    "name": "Diced Tomatoes",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Mediterranean",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 10,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 110,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 6,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c951c",
+    "name": "Fresh Herb Mix",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Mediterranean",
+    "servingSize": "1 tbsp",
+    "description": "Fresh parsley, thyme and basil mix",
+    "calories": 0,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "0+",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 3,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c952d",
+    "name": "Roasted Red Peppers",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Mediterranean",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 10,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 3,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 115,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 80,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 82,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c953c",
+    "name": "Tapenade",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Mediterranean",
+    "servingSize": "2 tbsp",
+    "description": "Quick spread recipe with olives, garlic, lemon and olive oil",
+    "calories": 70,
+    "proteinGrams": 0,
+    "fatGrams": 7,
+    "carbsGrams": 1,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 70,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 7,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 60,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c954b",
+    "name": "Greek Goddess Hummus",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Mediterranean",
+    "servingSize": "2 oz portion",
+    "description": "Zesty herb filled Hummus",
+    "calories": 70,
+    "proteinGrams": 2,
+    "fatGrams": 3.5,
+    "carbsGrams": 7,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 70,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 7,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "1+",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 3.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 270,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": "80+",
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 30,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "0+",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c95c4",
+    "name": "Baked Potato",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Southwestern",
+    "servingSize": "1 each",
+    "description": "Fluffy Idaho potato",
+    "calories": 300,
+    "proteinGrams": 6,
+    "fatGrams": 2.5,
+    "carbsGrams": 64,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 300,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 64,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 460,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 1170,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 38,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 25,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c955c",
+    "name": "Whipped Butter",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Southwestern",
+    "servingSize": "1 tbsp",
+    "description": "Whipped Butter",
+    "calories": 100,
+    "proteinGrams": 0,
+    "fatGrams": 12,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 100,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 12,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 7,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 90,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 100,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 10,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c956d",
+    "name": "Breaded Chicken Tender",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Southwestern",
+    "servingSize": "4 ounce",
+    "description": null,
+    "calories": 350,
+    "proteinGrams": 13,
+    "fatGrams": 25,
+    "carbsGrams": 20,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 350,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 13,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 20,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 25,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 35,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 600,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 220,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 220,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": 0,
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Good Source of Protein"
+    ],
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c957b",
+    "name": "Shredded Pepper Jack Cheese",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Southwestern",
+    "servingSize": "2 tbsp",
+    "description": null,
+    "calories": 50,
+    "proteinGrams": 3,
+    "fatGrams": 4.5,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 50,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 4.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 15,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 85,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 110,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 5,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 40,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 5,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c958a",
+    "name": "Diced Tomatoes",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Southwestern",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 10,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 110,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 6,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c959b",
+    "name": "Shaved Pickled Vegetables",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Southwestern",
+    "servingSize": "2 tbsp",
+    "description": "cauliflower, carrots and jalapenos",
+    "calories": 20,
+    "proteinGrams": null,
+    "fatGrams": 0,
+    "carbsGrams": 5,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 20,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 180,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 17,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c95a8",
+    "name": "Pico de Gallo",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Southwestern",
+    "servingSize": "2 oz portion",
+    "description": "Traditional salsa vegetables, diced fresh in house and made in small batches for quality",
+    "calories": 15,
+    "proteinGrams": 0,
+    "fatGrams": 0.5,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 15,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 65,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 70,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 5,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a90b67e22f81a0c95b6",
+    "name": "Nacho Cheese Sauce",
+    "restaurant": "PolyChoice",
+    "category": "Signature - Southwestern",
+    "servingSize": "2 floz",
+    "description": null,
+    "calories": 80,
+    "proteinGrams": 1,
+    "fatGrams": 5,
+    "carbsGrams": 6,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 80,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 430,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 70,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": "-",
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": "-",
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 45,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a87b67e22f81a0c4754",
+    "name": "Raspberry White Chocolate Cheesecake",
+    "restaurant": "PolyChoice",
+    "category": "Displayed Items",
+    "servingSize": "1 slice",
+    "description": null,
+    "calories": 620,
+    "proteinGrams": 8,
+    "fatGrams": 43,
+    "carbsGrams": 50,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 620,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 8,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 33,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 43,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 26,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 95,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 450,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 190,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 90,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 2,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 390,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": 300,
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 25,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Good Source of Protein",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a87b67e22f81a0c4770",
+    "name": "Lemon Blueberry Cookie",
+    "restaurant": "PolyChoice",
+    "category": "Displayed Items",
+    "servingSize": "2 each",
+    "description": null,
+    "calories": 700,
+    "proteinGrams": 8,
+    "fatGrams": 26,
+    "carbsGrams": 108,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 700,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 8,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 108,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 60,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 26,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 16,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 120,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 380,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 120,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 2.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": "-",
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 230,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 15,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Good Source of Protein",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
   }
 ]
