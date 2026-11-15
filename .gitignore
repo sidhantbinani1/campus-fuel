@@ -6,3 +6,5 @@ dist/
 .vercel/
 
 node_modules
+
+supabase/.temp/

@@ -1,0 +1,64 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { PGlite } from '@electric-sql/pglite';
+
+test('admin RPCs enforce membership, minimize student data and validate public inquiries',async()=>{
+ const db=new PGlite();
+ try {
+ await db.exec(`create role anon;create role authenticated;create schema auth;
+ create table auth.users(id uuid primary key,email text,created_at timestamptz default now(),email_confirmed_at timestamptz,deleted_at timestamptz,raw_user_meta_data jsonb default '{}');
+ create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;
+ grant usage on schema auth,public to authenticated,anon;grant execute on function auth.uid() to authenticated,anon;`);
+ for(const name of ['202611140001_accounts.sql','202611140002_catalog.sql','20261115000341_admin_portal.sql'])await db.exec(readFileSync(new URL(`../supabase/migrations/${name}`,import.meta.url),'utf8'));
+ const admin='00000000-0000-0000-0000-000000000001',student='00000000-0000-0000-0000-000000000002';
+ await db.query(`insert into auth.users(id,email,email_confirmed_at,raw_user_meta_data) values($1,'admin@example.invalid',now(),'{}'),($2,'student@example.invalid',now(),'{"full_name":"Student Name","goals":"must never appear"}')`,[admin,student]);
+ await db.query('insert into admin_private.admin_users(user_id) values($1)',[admin]);
+ const as=async(id,role='authenticated')=>{await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[id || '']);await db.exec(`set role ${role}`);};
+ const get=async(sql,params=[]) => (await db.query(sql,params)).rows[0].data;
+ await as(student);
+ assert.equal(await get('select public.admin_access() data'),false);
+ for(const query of ['select public.admin_dashboard()','select public.admin_account_directory()','select public.admin_inquiry_list()'])await assert.rejects(db.query(query),/Admin access required/);
+ await assert.rejects(db.query(`insert into admin_private.admin_users(user_id) values('${student}')`),/permission denied/);
+ await assert.rejects(db.query('select * from admin_private.university_inquiries'),/permission denied/);
+ await db.query("select public.save_fuel_profile('cal-poly-slo','Nickname',false,false,'2026-11-14')");
+ await as(null,'anon');
+ await assert.rejects(db.query('select public.admin_access()'),/permission denied/);
+ await assert.rejects(db.query('select public.admin_dashboard()'),/permission denied/);
+ const payload={full_name:'Campus Contact',email:'contact@example.invalid',university:'Example University',role:'Dining services',provider:'Other',message:'Interested in a university pilot.',scope:'Next term',status:'closed',notes:'not allowed'};
+ const id='10000000-0000-0000-0000-000000000001';
+ const submit=(data,ref=id)=>get('select public.submit_university_inquiry($1,$2) data',[JSON.stringify(data),ref]);
+ await assert.rejects(submit({...payload,email:'invalid'}),/required fields/);
+ assert.equal((await submit(payload)).received,true);
+ assert.equal((await submit(payload)).received,true); // Same ID does not insert twice or count twice.
+ await submit({...payload,website:'spam'},'10000000-0000-0000-0000-000000000009');
+ await as(admin);
+ const summary=await get('select public.admin_dashboard() data');
+ assert.equal(summary.total_accounts,2);assert.equal(summary.completed_setup,1);assert.equal(summary.pending_setup,1);assert.equal(summary.total_inquiries,1);
+ const directory=await get('select public.admin_account_directory() data');
+ assert.equal(directory.total,2);const entry=directory.items.find(x=>x.user_id===student);
+ assert.equal(entry.name,'Student Name');assert.equal(entry.email,'student@example.invalid');
+ assert.deepEqual(Object.keys(entry).sort(),['user_id','name','email','signed_up_at','email_confirmed','school','setup_complete','is_admin'].sort());
+ assert.equal((await get("select public.admin_account_directory('student',0,1) data")).total,1);
+ await assert.rejects(db.query('select public.admin_account_directory(\'\',0,500)'),/Invalid pagination/);
+ const inquiries=await get('select public.admin_inquiry_list() data');
+ assert.equal(inquiries.items[0].status,'new');assert.equal(inquiries.items[0].notes,'');
+ let row=inquiries.items[0];
+ const updated=await get("select public.admin_update_inquiry($1,'contacted','Following up',$2) data",[id,row.updated_at]);
+ assert.equal(updated.status,'contacted');
+ await assert.rejects(db.query("select public.admin_update_inquiry($1,'closed','stale',$2)",[id,row.updated_at]),/Inquiry changed/);
+ await as(student);
+ await assert.rejects(db.query("select public.admin_update_inquiry($1,'closed','',$2)",[id,updated.updated_at]),/Admin access required/);
+ await as(null,'anon');
+ await submit(payload,'10000000-0000-0000-0000-000000000002');await submit(payload,'10000000-0000-0000-0000-000000000003');
+ await assert.rejects(submit(payload,'10000000-0000-0000-0000-000000000004'),/Too many inquiries/);
+ await db.exec('reset role');
+ assert.equal((await db.query('select count(*) n from admin_private.university_inquiries')).rows[0].n,3);
+ assert.equal((await db.query('select count(*) n from admin_private.admin_audit_log')).rows[0].n,1);
+ await db.query('update auth.users set deleted_at=now() where id=$1',[admin]);await as(admin);
+ assert.equal(await get('select public.admin_access() data'),false);
+ await assert.rejects(db.query('select public.admin_dashboard()'),/Admin access required/);
+ await db.exec('reset role');await db.query('update auth.users set deleted_at=null where id=$1',[admin]);await db.query('delete from admin_private.admin_users where user_id=$1',[admin]);await as(admin);
+ await assert.rejects(db.query('select public.admin_account_directory()'),/Admin access required/);
+ } finally {await db.close();}
+});
