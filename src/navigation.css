@@ -55,3 +55,9 @@ body > .site-header { gap:22px; }
 .campus-branded .site-header .app-tab:hover { background:#f0f4ea; color:#315438; }
 .campus-branded .site-header .app-tab.active { border-color:#3d6244; background:#3d6244; color:white; }
 .campus-branded .site-header .app-tab.active:hover { border-color:#315438; background:#315438; color:white; }
+
+/* Page-to-page: the header stays put while the new page's content eases in.
+   Browsers without cross-document view transitions simply load normally. */
+@view-transition { navigation: auto; }
+body > .site-header { view-transition-name: site-header; }
+::view-transition-old(root), ::view-transition-new(root) { animation: none; }

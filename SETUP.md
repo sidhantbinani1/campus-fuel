@@ -129,3 +129,20 @@ meals using explicit user inputs, never prescribe calorie or nutrient targets.
 Do not silently relax exclusions or invent menus for unsupported campuses. Unknown
 nutrition values must stay unknown. Return the response shape above; no UI rewrite
 is needed. The server should also enforce request limits and account authorization.
+
+## AI meal chat (signed-in students)
+
+The meal assistant in Find meals works for everyone with the built-in rule-based search (`src/meal-assistant.js`). For signed-in students whose campus has menus, it first asks the Supabase Edge Function `meal-chat`, which calls OpenAI. If that function is missing, errors, or the student is out of messages, the assistant silently uses the rule-based search, so nothing breaks before the steps below are done.
+
+**The OpenAI key never goes in the repository, in `.env`, in a `VITE_` variable, or in chat.** It lives only in the function's secrets.
+
+One-time setup in the Supabase dashboard:
+
+1. SQL editor: run `supabase/migrations/20261115020000_meal_chat.sql` once. It adds the 20-messages-per-student-per-day counter.
+2. Edge Functions / Secrets: add `OPENAI_API_KEY`. Optional: `OPENAI_MODEL` (defaults to `gpt-4o-mini`).
+3. Deploy a function named exactly `meal-chat` from `supabase/functions/meal-chat/` (both `index.ts` and `core.js`). With the Supabase CLI: `supabase functions deploy meal-chat`. Keep JWT verification on.
+4. In the OpenAI dashboard, set a monthly spending limit on the key's project.
+
+How it stays safe: the function rejects anyone without a valid session, reads `meal_catalog` as that student, applies the restaurant / meal-type filters they have on, spends one message from their daily allowance before calling OpenAI, and returns only meal ids that exist in the catalog. The app shows nutrition from its own records, so the model cannot invent a meal or a number. The function reads the database catalog, so restaurants added to `data/meals.js` only reach the AI after the catalog migration is applied.
+
+`npm test` covers the prompt builder, filters, reply filtering, the browser client, the fallback and the database limit. It does not call OpenAI or run the deployed function; verify those on a preview with a real account.

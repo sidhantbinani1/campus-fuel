@@ -849,6 +849,7 @@ function renderHistory() {
     .forEach((b) => (b.onclick = () => editLog(b.dataset.editEntry)));
 }
 
+let pendingStartView = null;
 function switchView(view) {
   if (account && !account.allowView(view)) return;
   state.view = view;
@@ -1256,7 +1257,11 @@ account = createAccount({
     render();
     if (state.view === "history") switchView("history");
   },
-  navigate: switchView,
+  navigate(view) {
+    const target = pendingStartView && view === "dashboard" ? pendingStartView : view;
+    pendingStartView = null;
+    switchView(target);
+  },
   message(value, status) {
     if (status === "saved" && JSON.stringify(planDraft) !== JSON.stringify(state.goals)) {
       updatePlanStatus("dirty", "Your earlier plan was saved. Save your new changes when ready.");
@@ -1266,6 +1271,17 @@ account = createAccount({
   meals: window.MEALS,
   openMeal: id => { const meal = window.MEALS.find(m => m.id === id); if (meal) showMealDetails(meal); },
 });
+
+// The universities page links straight to a view, e.g. app.html?view=finder.
+// Account start-up sends guests to the dashboard, so the requested view is
+// held until that first redirect (or the visitor's first tap) has passed.
+const requestedView = new URLSearchParams(location.search).get("view");
+if ([...document.querySelectorAll(".app-tab")].some((b) => b.dataset.view === requestedView)) {
+  pendingStartView = requestedView;
+  switchView(requestedView);
+  history.replaceState(null, "", location.pathname);
+  addEventListener("pointerdown", () => (pendingStartView = null), { once: true });
+}
 
 // Marketing links use the same account dialog as the student application.
 if (new URLSearchParams(location.search).get("signin") === "1") {
@@ -1289,4 +1305,7 @@ mealAssistant = mountMealAssistant(document.querySelector("#meal-assistant"), {
       $("#assistant-suggestions").scrollIntoView({ behavior: "smooth", block: "start" });
   },
   openMeal: id => { const meal = window.MEALS.find(m => m.id === id); if (meal) showMealDetails(meal); },
+  // Signed-in students get AI picks from the server; everyone else, and any
+  // server failure, gets the built-in rule-based search (see src/meal-chat.js).
+  provider: account?.mealProvider,
 });

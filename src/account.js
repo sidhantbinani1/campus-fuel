@@ -9,6 +9,8 @@ import {
   mergeGuest,
 } from "./model.js";
 import { legal } from "./legal.js";
+import { askMealChat, createMealProvider } from "./meal-chat.js";
+import { menuProvider } from "./meal-assistant.js";
 import { mountSetup } from "./setup.js";
 const $ = (s) => document.querySelector(s);
 const supabaseUrl = import.meta.env?.VITE_SUPABASE_URL || SUPABASE_URL;
@@ -680,6 +682,14 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
     get user() {
       return user;
     },
+    // AI meal chat for signed-in students with a campus menu. The server checks
+    // the session again; guests and failures use the rule-based search.
+    mealProvider: createMealProvider({
+      canAsk: () =>
+        Boolean(client && user && setupComplete() && SCHOOLS.find((s) => s.id === profile?.school)?.menus),
+      ask: (message, context) => askMealChat(client, message, context),
+      fallback: menuProvider,
+    }),
     get school() {
       return profile?.school || (!user ? "cal-poly-slo" : undefined);
     },
