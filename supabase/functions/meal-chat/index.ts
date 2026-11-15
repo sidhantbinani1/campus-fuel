@@ -5,13 +5,23 @@
 // their daily messages, ask the model to choose from that menu, then return
 // only ids that really exist on it.
 import { createClient } from "npm:@supabase/supabase-js@2";
-import { buildMessages, cleanContext, cleanMessage, filterRows, parseReply } from "./core.js";
+import { buildMessages, cleanContext, cleanMessage, parseReply } from "./core.js";
 
 const cors = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
+// Public (browser-safe) project key. Newer projects expose SUPABASE_PUBLISHABLE_KEYS;
+// older ones only SUPABASE_ANON_KEY.
+function publicKey(): string {
+  try {
+    const keys = JSON.parse(Deno.env.get("SUPABASE_PUBLISHABLE_KEYS") ?? "{}");
+    const first = Object.values(keys).find((value) => typeof value === "string");
+    if (first) return first as string;
+  } catch { /* fall back below */ }
+  return Deno.env.get("SUPABASE_ANON_KEY") ?? "";
+}
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { ...cors, "Content-Type": "application/json" } });
 
@@ -23,7 +33,7 @@ Deno.serve(async (req) => {
   if (!openaiKey) return json({ error: "The meal chat is not set up yet." }, 503);
 
   // Every database call below runs as the student, so row-level security applies.
-  const supabase = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_ANON_KEY")!, {
+  const supabase = createClient(Deno.env.get("SUPABASE_URL")!, publicKey(), {
     global: { headers: { Authorization: req.headers.get("Authorization") ?? "" } },
   });
   const { data: auth } = await supabase.auth.getUser();
@@ -41,12 +51,10 @@ Deno.serve(async (req) => {
   const { data: profile } = await supabase.from("profiles").select("school").eq("user_id", auth.user.id).maybeSingle();
   if (!profile) return json({ error: "Finish setting up your account first." }, 403);
 
-  const { data: allRows, error: menuError } = await supabase.from("meal_catalog").select("id,snapshot").eq("school_id", profile.school);
+  // The whole campus menu, every restaurant. No page filters are applied.
+  const { data: rows, error: menuError } = await supabase.from("meal_catalog").select("id,snapshot").eq("school_id", profile.school);
   if (menuError) return json({ error: "The menu could not be loaded. Please try again." }, 500);
-  if (!allRows?.length) return json({ error: "Menus for your campus are coming soon." }, 404);
-  // Respect the restaurant / meal-type filters the student has on. No match costs nothing.
-  const rows = filterRows(allRows, context);
-  if (!rows.length) return json({ reply: "Nothing on the listed menu matches the filters you have on. Clear a filter and ask again.", mealIds: [], remaining: null });
+  if (!rows?.length) return json({ error: "Menus for your campus are coming soon." }, 404);
 
   // Spend the allowance before calling OpenAI so a failure can never be retried for free.
   const { data: remaining, error: limitError } = await supabase.rpc("use_meal_chat");
@@ -67,7 +75,8 @@ Deno.serve(async (req) => {
         model: Deno.env.get("OPENAI_MODEL") ?? "gpt-4o-mini",
         messages: buildMessages(message, rows, context),
         response_format: { type: "json_object" },
-        max_completion_tokens: 400,
+        max_completion_tokens: 700,
+        temperature: 0.6,
       }),
       signal: AbortSignal.timeout(25000),
     });

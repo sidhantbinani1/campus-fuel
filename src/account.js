@@ -698,7 +698,19 @@ export function createAccount(bridge, { client = defaultClient } = {}) {
       Boolean(
         !user || (setupComplete() && SCHOOLS.find((s) => s.id === profile?.school)?.menus),
       ),
+    // Opens sign-in for guests; for signed-in students, finishes account setup.
+    requireSignIn() {
+      if (!user) {
+        auth();
+        return false;
+      }
+      return requireUser();
+    },
     allowView(view) {
+      if (!user && view === "board") {
+        auth();
+        return false;
+      }
       if (user && view !== "account" && !requireUser()) return false;
       return true;
     },

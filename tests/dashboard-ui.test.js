@@ -11,7 +11,8 @@ test('inline nutrient cards retain all targets and save/reload the full plan', (
  w.localStorage.setItem('campusfuel-goals',JSON.stringify(existingPreferences));
  w.mountMealAssistant=()=>({reset(){}});
  let bridge,saved;
- w.createAccount=b=>{bridge=b;return {user:null,hasMenus:()=>false,isFavorite:()=>false,savePlan:()=>{saved=b.snapshot();}}};
+ // Editing goals needs an account now, so this plan test runs as a signed-in student.
+ w.createAccount=b=>{bridge=b;return {user:{id:'student'},changed(){},requireSignIn:()=>true,hasMenus:()=>false,isFavorite:()=>false,savePlan:()=>{saved=b.snapshot();b.message('Saved to account','saved');}}};
  w.eval(read('data/meals.js'));
  w.eval(read('app.js').replace(/^import .*;\n/gm,''));
  const set=(selector,value)=>{const el=w.document.querySelector(selector);el.value=value;el.dispatchEvent(new w.Event('input',{bubbles:true}));};
@@ -49,7 +50,8 @@ test('inline nutrient cards retain all targets and save/reload the full plan', (
  assert.equal(w.document.querySelector('#goal-details').hidden,false,'show the invalid optional target');
  assert.match(w.document.querySelector('#plan-status').textContent,/Fiber target/);
  w.document.querySelector('[value="fiberGrams"]').click();
- const stored=JSON.parse(w.localStorage.getItem('campusfuel-goals'));
+ // Signed-in plans are saved to the account (not guest browser storage); reload from that copy.
+ const stored=JSON.parse(JSON.stringify(saved.goals));
  assert.deepEqual({...stored.optionalGoals},{carbsGrams:'250',sodiumMilligrams:'2000',vitaminCMilligrams:'85.5'});
  const reload=new JSDOM(read('app.html'),{url:'http://localhost/app.html',runScripts:'outside-only'});
  reload.window.structuredClone=structuredClone;
@@ -90,5 +92,29 @@ test('restaurant controls are built from the imported menu locations', () => {
  juliansQuick.click();
  assert.equal(w.document.querySelector('.location-chip.selected').dataset.location,"Julian's");
  assert.equal(w.document.querySelector('#meal-grid').textContent.includes("Julian's"),true);
+ dom.window.close();
+});
+
+test('guests can browse but entering goals or using the assistant asks them to sign in', () => {
+ const dom = new JSDOM(read('app.html'),{url:'http://localhost/app.html',runScripts:'outside-only'});
+ const w=dom.window; w.structuredClone=structuredClone;
+ w.HTMLElement.prototype.scrollIntoView=function(){};
+ w.mountMealAssistant=()=>({reset(){},suggest(){ suggested++; }});
+ let prompts=0, suggested=0;
+ w.createAccount=()=>({user:null,hasMenus:()=>true,isFavorite:()=>false,requireSignIn:()=>{prompts++;return false;},savePlan(){}});
+ w.eval(read('data/meals.js'));
+ w.eval(read('app.js').replace(/^import .*;\n/gm,''));
+ const goal=w.document.querySelector('#goal-calories');
+ goal.dispatchEvent(new w.FocusEvent('focusin',{bubbles:true}));
+ assert.equal(prompts,1,'focusing a goal opens sign-in');
+ w.document.querySelector('[data-plan-category="Minerals"]').click();
+ assert.equal(prompts,1,'browsing goal categories stays open to guests');
+ assert.equal(w.document.querySelector('#goal-details').hidden,false);
+ w.document.querySelector('#meal-assistant input').dispatchEvent(new w.FocusEvent('focusin',{bubbles:true}));
+ assert.equal(prompts,2,'starting a chat opens sign-in');
+ w.document.querySelector('[data-meal-prompt]').click();
+ assert.equal(prompts,3,'quick prompts open sign-in');
+ w.document.querySelector('#suggest-next').click();
+ assert.equal(prompts,4);assert.equal(suggested,0,'no suggestion is sent for a guest');
  dom.window.close();
 });
