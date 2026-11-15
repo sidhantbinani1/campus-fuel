@@ -1157,12 +1157,6 @@ document.querySelectorAll(".browse-chip").forEach((button) =>
     state.restaurantTab = "";
     updateBrowseButtons();
     render();
-    if (state.location || state.mealType) {
-      mealAssistant?.suggest("Find the best balanced option that fits what I have left today.");
-    } else {
-      state.assistantSuggestionIds = [];
-      render();
-    }
   }),
 );
 document.querySelectorAll(".restaurant-tab").forEach((button) =>
@@ -1174,8 +1168,7 @@ document.querySelectorAll(".restaurant-tab").forEach((button) =>
   }),
 );
 $("#suggest-next").addEventListener("click", () => {
-  mealAssistant?.send("What is a balanced, healthy meal that fits what I have left today?");
-  document.querySelector("#meal-assistant").scrollIntoView({ behavior: "smooth", block: "start" });
+  mealAssistant?.suggest("Find the best balanced option that fits what I have left today.");
 });
 $("#close-meal-detail").addEventListener("click", () =>
   $("#meal-detail-dialog").close(),
