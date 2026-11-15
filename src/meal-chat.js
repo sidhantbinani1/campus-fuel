@@ -77,10 +77,16 @@ export function createMealProvider({ canAsk, ask, fallback }) {
       remember("user", request.message);
       remember("assistant", answer.reply);
       return { text: answer.reply, mealIds: answer.mealIds.length ? answer.mealIds : rules.mealIds || [], source: "ai" };
-    } catch {
+    } catch (error) {
+      // Say why the AI did not answer (daily limit, timeout, not set up) instead
+      // of silently showing the rule search's generic prompt.
+      const reason = error?.message && error.message !== "empty" ? error.message : "";
+      const text = reason
+        ? `${reason} ${rules.mealIds?.length ? "Here is what the menu search found instead. " : ""}${rules.text}`
+        : rules.text;
       remember("user", request.message);
-      remember("assistant", rules.text);
-      return rules;
+      remember("assistant", text);
+      return { ...rules, text };
     }
   };
   provider.reset = () => { history = []; };

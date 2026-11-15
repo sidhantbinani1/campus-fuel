@@ -140,7 +140,7 @@ One-time setup in the Supabase dashboard:
 
 1. SQL editor: run `supabase/migrations/20261115020000_meal_chat.sql` once. It adds the 20-messages-per-student-per-day counter.
 2. Edge Functions / Secrets: add `OPENAI_API_KEY`. Optional: `OPENAI_MODEL` (defaults to `gpt-4o-mini`).
-3. Deploy a function named exactly `meal-chat` from `supabase/functions/meal-chat/` (both `index.ts` and `core.js`). With the Supabase CLI: `supabase functions deploy meal-chat`. Keep JWT verification on.
+3. Deploy a function named exactly `meal-chat` from `supabase/functions/meal-chat/` (`index.ts`, `core.js` and `language.js`). With the Supabase CLI: `supabase functions deploy meal-chat`. Keep JWT verification on.
 4. In the OpenAI dashboard, set a monthly spending limit on the key's project.
 
 How it stays safe: the function rejects anyone without a valid session, reads `meal_catalog` as that student, applies the restaurant / meal-type filters they have on, spends one message from their daily allowance before calling OpenAI, and returns only meal ids that exist in the catalog. The app shows nutrition from its own records, so the model cannot invent a meal or a number. The function reads the database catalog, so restaurants added to `data/meals.js` only reach the AI after the catalog migration is applied.
