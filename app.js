@@ -1074,8 +1074,10 @@ function updateBrowseButtons() {
 
 $("#search-form").addEventListener("submit", (event) => {
   event.preventDefault();
+  const request = $("#meal-query").value.trim();
+  const soundsConversational = /\b(what.*left|remaining|fit.*today|fit.*plan|healthy|healthier|balanced|filling|hungry|light|lighter|another meal|two more|three more|not chicken|something else)\b/i.test(request);
   Object.assign(state, {
-    query: $("#meal-query").value.trim(),
+    query: request,
     maxCalories: "",
     minProtein: "",
     diet: "",
@@ -1083,6 +1085,13 @@ $("#search-form").addEventListener("submit", (event) => {
     suggestionMode: false,
   });
   interpretQuery(state.query);
+  if (soundsConversational && mealAssistant) {
+    Object.assign(state, { query: "" });
+    render();
+    mealAssistant.send(request);
+    document.querySelector("#meal-assistant").scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
   render();
   scrollToResults();
 });
