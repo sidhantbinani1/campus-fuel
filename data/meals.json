@@ -40275,5 +40275,2894 @@
     "climateFriendly": null,
     "sourceDate": "2026-11-12",
     "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a93b67e22f81a0cae3c",
+    "name": "Kontos Tortilla Wrap 10\"",
+    "restaurant": "Pom & Honey",
+    "category": "Base",
+    "servingSize": "1 each",
+    "description": null,
+    "calories": 170,
+    "proteinGrams": 5,
+    "fatGrams": 6,
+    "carbsGrams": 35,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 170,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 35,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 410,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 50,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a93b67e22f81a0cae28",
+    "name": "Spring Mix",
+    "restaurant": "Pom & Honey",
+    "category": "Base",
+    "servingSize": "1 cup",
+    "description": null,
+    "calories": 5,
+    "proteinGrams": null,
+    "fatGrams": 0,
+    "carbsGrams": 1,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 5,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 130,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 2,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a93b67e22f81a0cb1cc",
+    "name": "Turmeric Rice",
+    "restaurant": "Pom & Honey",
+    "category": "Filler",
+    "servingSize": "1/2 cup",
+    "description": "Brown rice cooked with ginger, garlic, and spices",
+    "calories": 240,
+    "proteinGrams": 5,
+    "fatGrams": 2.5,
+    "carbsGrams": 49,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 240,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 49,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 220,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 190,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 20,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "0+",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a93b67e22f81a0cb1dd",
+    "name": "Minted Lentil Salad with Feta",
+    "restaurant": "Pom & Honey",
+    "category": "Filler",
+    "servingSize": "1/2 cup",
+    "description": null,
+    "calories": 130,
+    "proteinGrams": 8,
+    "fatGrams": 4,
+    "carbsGrams": 16,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 130,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 8,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 16,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "2+",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": "5+",
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 90,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 330,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 3.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": "0+",
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 18,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 35,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Good Source of Protein",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a95b67e22f81a0cc006",
+    "name": "Falafel",
+    "restaurant": "Pom & Honey",
+    "category": "Proteins",
+    "servingSize": "4 each",
+    "description": "A blend of chickpeas, spices, vegetables, and citrus",
+    "calories": 180,
+    "proteinGrams": 8,
+    "fatGrams": 2,
+    "carbsGrams": 34,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 180,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 8,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 34,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 530,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 110,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 3.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 15,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "0+",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Good Source of Protein",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a95b67e22f81a0cbfd9",
+    "name": "Lemon Oregano Chicken",
+    "restaurant": "Pom & Honey",
+    "category": "Proteins",
+    "servingSize": "4 oz meat",
+    "description": "Chicken thigh marinated in lemon juice, garlic, herbs, and spices",
+    "calories": 220,
+    "proteinGrams": 21,
+    "fatGrams": 14,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 220,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 21,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "0+",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 14,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 115,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 510,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 5,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 120,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 5,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Good Source of Protein"
+    ],
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a95b67e22f81a0cc021",
+    "name": "Moroccan Beef",
+    "restaurant": "Pom & Honey",
+    "category": "Proteins",
+    "servingSize": "4 oz meat",
+    "description": "Diced beef seasoned with onion, garlic, and spices",
+    "calories": 220,
+    "proteinGrams": 26,
+    "fatGrams": 10,
+    "carbsGrams": 6,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 220,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 26,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 10,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 65,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 350,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 3.7,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 5,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 6,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 90,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 5,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Good Source of Protein"
+    ],
+    "vegetarian": null,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a95b67e22f81a0cbff4",
+    "name": "Sweet Potato Hash",
+    "restaurant": "Pom & Honey",
+    "category": "Proteins",
+    "servingSize": "4 oz portion",
+    "description": "Sweet potatoes and garbanzo beans cooked with vegetables and spices",
+    "calories": 220,
+    "proteinGrams": 8,
+    "fatGrams": 6,
+    "carbsGrams": 37,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 220,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 8,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 37,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 9,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 8,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 930,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 490,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 90,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 3.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 32,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 50,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Good Source of Protein",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a96b67e22f81a0ccac9",
+    "name": "Diced Cucumber",
+    "restaurant": "Pom & Honey",
+    "category": "Toppings",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 0,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a96b67e22f81a0ccab7",
+    "name": "Diced Tomatoes",
+    "restaurant": "Pom & Honey",
+    "category": "Toppings",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 10,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 110,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 6,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a96b67e22f81a0ccaa6",
+    "name": "Kalamata Olives",
+    "restaurant": "Pom & Honey",
+    "category": "Toppings",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 50,
+    "proteinGrams": 0,
+    "fatGrams": 5,
+    "carbsGrams": 1,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 50,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 520,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 45,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a96b67e22f81a0cca94",
+    "name": "Shredded Romaine",
+    "restaurant": "Pom & Honey",
+    "category": "Toppings",
+    "servingSize": "1 cup",
+    "description": null,
+    "calories": 10,
+    "proteinGrams": null,
+    "fatGrams": 0,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 120,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.5,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 2,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a96b67e22f81a0cca7f",
+    "name": "Crumbled Feta Cheese",
+    "restaurant": "Pom & Honey",
+    "category": "Toppings",
+    "servingSize": "1 tbsp",
+    "description": null,
+    "calories": 25,
+    "proteinGrams": 1,
+    "fatGrams": 2,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 25,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 105,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 20,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a96b67e22f81a0ccb11",
+    "name": "Garlic Herb Garbanzo Beans",
+    "restaurant": "Pom & Honey",
+    "category": "Toppings",
+    "servingSize": "1/4 cup",
+    "description": "Garbanzo beans coated in a garlic herb seasoning",
+    "calories": 90,
+    "proteinGrams": 4,
+    "fatGrams": 3,
+    "carbsGrams": 12,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 90,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 12,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": "120+",
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 1.3,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": "0+",
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 25,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "0+",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a96b67e22f81a0ccadc",
+    "name": "Roasted Red Peppers",
+    "restaurant": "Pom & Honey",
+    "category": "Toppings",
+    "servingSize": "1/4 cup",
+    "description": null,
+    "calories": 10,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 3,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 10,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 115,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 80,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 82,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a96b67e22f81a0ccaee",
+    "name": "Sliced Pepperoncini Peppers",
+    "restaurant": "Pom & Honey",
+    "category": "Toppings",
+    "servingSize": "1 tbsp",
+    "description": null,
+    "calories": 0,
+    "proteinGrams": 0,
+    "fatGrams": 0,
+    "carbsGrams": 0,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 6,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a96b67e22f81a0ccb00",
+    "name": "Marinated Artichokes",
+    "restaurant": "Pom & Honey",
+    "category": "Toppings",
+    "servingSize": "1/4 cup",
+    "description": "Quatered Artichokes tossed with Olive Oil and Fresh Basil",
+    "calories": 50,
+    "proteinGrams": 2,
+    "fatGrams": 3,
+    "carbsGrams": 6,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 50,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 260,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 160,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 4,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 25,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a96b67e22f81a0ccb22",
+    "name": "Pickled Red Onions",
+    "restaurant": "Pom & Honey",
+    "category": "Toppings",
+    "servingSize": "1 oz portion",
+    "description": "Sweet and tangy julienned red onions pickled in red wine vinegar",
+    "calories": 90,
+    "proteinGrams": null,
+    "fatGrams": 0,
+    "carbsGrams": 20,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 90,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 20,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "16+",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": "0+",
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 1770,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.6,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": "0+",
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 4,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 0,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a95b67e22f81a0cc08f",
+    "name": "Pomegranate Honey Vinaigrette",
+    "restaurant": "Pom & Honey",
+    "category": "Sauces",
+    "servingSize": "1 floz",
+    "description": "Tangy and sweet light dressing with oregano and garlic",
+    "calories": 160,
+    "proteinGrams": 0,
+    "fatGrams": 17,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 160,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "1+",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 17,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 35,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 150,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a95b67e22f81a0cc0cd",
+    "name": "Preserved Lemon Aioli",
+    "restaurant": "Pom & Honey",
+    "category": "Sauces",
+    "servingSize": "1 floz",
+    "description": "Lemony and delicately spiced with traditional Mediterranean Zaatar, Aioli",
+    "calories": 160,
+    "proteinGrams": 0,
+    "fatGrams": 17,
+    "carbsGrams": 1,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 160,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 17,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 130,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": "0+",
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": "0+",
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": "0+",
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": "0+",
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": "0+",
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 150,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "0+",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 5,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a95b67e22f81a0cc0b2",
+    "name": "Lemon Tahini Dressing",
+    "restaurant": "Pom & Honey",
+    "category": "Sauces",
+    "servingSize": "1 floz",
+    "description": "Delicate toasted sesame seed dressing with hints of garlic and lemon",
+    "calories": 120,
+    "proteinGrams": null,
+    "fatGrams": 12,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 120,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 12,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 180,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.4,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 2,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 110,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "0+",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a95b67e22f81a0cc0ef",
+    "name": "Spicy Tzatziki",
+    "restaurant": "Pom & Honey",
+    "category": "Sauces",
+    "servingSize": "1 floz",
+    "description": "Mildly spicy Mediterranean Tzatziki",
+    "calories": 50,
+    "proteinGrams": null,
+    "fatGrams": 4,
+    "carbsGrams": 2,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 50,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 3.5,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 180,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": "0+",
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": "0+",
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 35,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "0+",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 5,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a95b67e22f81a0cc05f",
+    "name": "Roasted Red Pepper Hummus",
+    "restaurant": "Pom & Honey",
+    "category": "Sauces",
+    "servingSize": "1 floz",
+    "description": "Cumin Spiced Chickpea Hummus",
+    "calories": 80,
+    "proteinGrams": 2,
+    "fatGrams": 6,
+    "carbsGrams": 6,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 80,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 6,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 2,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 95,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 70,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.8,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 0,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 50,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "0+",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a95b67e22f81a0cc03d",
+    "name": "Tomato Herb Dressing",
+    "restaurant": "Pom & Honey",
+    "category": "Sauces",
+    "servingSize": "1 floz",
+    "description": null,
+    "calories": 70,
+    "proteinGrams": 0,
+    "fatGrams": 7,
+    "carbsGrams": null,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 70,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": "less than 1 gram",
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 7,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": "0+",
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": "-",
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": "0+",
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": "2+",
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 60,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "0+",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Avoiding Gluten",
+      "Vegan",
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": true,
+    "avoidingGluten": true,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
+  },
+  {
+    "id": "6af64a95b67e22f81a0cc074",
+    "name": "Sriracha Yogurt",
+    "restaurant": "Pom & Honey",
+    "category": "Sauces",
+    "servingSize": "2 oz portion",
+    "description": "Creamy Greek yogurt infused with sriracha sauce and seasoning",
+    "calories": 50,
+    "proteinGrams": 4,
+    "fatGrams": 1.5,
+    "carbsGrams": 5,
+    "nutritionValues": [
+      {
+        "name": "Calories",
+        "value": 50,
+        "unit": "kcal"
+      },
+      {
+        "name": "Protein (g)",
+        "value": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Total Carbohydrates (g)",
+        "value": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar (g)",
+        "value": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Total Fat (g)",
+        "value": 1.5,
+        "unit": "g"
+      },
+      {
+        "name": "Saturated Fat (g)",
+        "value": 1,
+        "unit": "g"
+      },
+      {
+        "name": "Cholesterol (mg)",
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "name": "Dietary Fiber (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Sodium (mg)",
+        "value": 540,
+        "unit": "mg"
+      },
+      {
+        "name": "Potassium (mg)",
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "name": "Calcium (mg)",
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "name": "Iron (mg)",
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "name": "Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      },
+      {
+        "name": "Vitamin D (IU)",
+        "value": 5,
+        "unit": "IU"
+      },
+      {
+        "name": "Vitamin C (mg)",
+        "value": "1+",
+        "unit": "mg"
+      },
+      {
+        "name": "Calories From Fat",
+        "value": 15,
+        "unit": "kcal"
+      },
+      {
+        "name": "Vitamin A (RE)",
+        "value": "-",
+        "unit": "RE"
+      },
+      {
+        "name": "Saturated Fat + Trans Fat (g)",
+        "value": 0,
+        "unit": "g"
+      }
+    ],
+    "price": null,
+    "dietaryLabels": [
+      "Vegetarian"
+    ],
+    "vegetarian": true,
+    "vegan": null,
+    "avoidingGluten": null,
+    "climateFriendly": null,
+    "sourceDate": "2026-11-12",
+    "sourceUrl": "https://dineoncampus.com/calpoly"
   }
 ]
